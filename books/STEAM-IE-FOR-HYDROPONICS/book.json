@@ -1,0 +1,120 @@
+{
+  "title": "STEAM-IE FOR HYDROPONICS",
+  "subtitle": "A practical guide for building and running a small hydroponic greenhouse in Addis Ababa.",
+  "author": "Prof. Frehun A. Demissie",
+
+  "series": "STEAM-IE",
+  "brand": "yoursite.com",
+  "editionLabel": "Edition 1.0",
+  "unit": "blocks",
+
+  "numbered": true,
+  "contents": true,
+  "index": true,
+  "insideCover": true,
+  "howToRead": true,
+  "backCover": true,
+
+  "cover": {
+    "kicker": "STEAM-IE curriculum",
+    "image": "images/Cover-page-Gemini_Generated.png",
+    "note": "One concept per page, ordered across the seven letters of STEAM-IE."
+  },
+  "copyright": {
+    "year": 2026,
+    "rights": "© 2026 Your Name. All rights reserved.",
+    "lines": [
+      "Set in Space Grotesk, Inter and JetBrains Mono.",
+      "Built with the paper engine: github.com/hassancs91/paper-engine"
+    ]
+  },
+
+  "parts": [
+    {
+      "name": "Science",
+      "eyebrow": "S",
+      "why": "Before you grow anything in water, understand how plants actually drink and eat.",
+      "blocks": [
+        "No Need for Soil",
+        "How Plants Drink",
+        "What Light Feeds",
+        "Water Chemistry",
+        "The Nutrient Solution",
+        "Temperature and Growth"
+      ]
+    },
+    {
+      "name": "Technology",
+      "eyebrow": "T",
+      "why": "The tools that replace what nature does for free, and that you can buy in Merkato.",
+      "blocks": [
+        "LED Grow Lights",
+        "The Water Pump",
+        "pH and EC Meters",
+        "Timers and Controllers",
+        "Climate Sensors"
+      ]
+    },
+    {
+      "name": "Engineering",
+      "eyebrow": "E",
+      "why": "The frame, the racks, and the pipes that hold the whole system up.",
+      "blocks": [
+        "The Greenhouse Frame",
+        "Vertical Rack Design",
+        "Channel Routing",
+        "Drainage and Overflow",
+        "Ventilation Basics"
+      ]
+    },
+    {
+      "name": "Arts",
+      "eyebrow": "A",
+      "why": "A greenhouse that is well laid out is a greenhouse people want to work in.",
+      "blocks": [
+        "Layout and Flow",
+        "Light as Design",
+        "Colour in the Greenhouse",
+        "Branding the Harvest"
+      ]
+    },
+    {
+      "name": "Mathematics",
+      "eyebrow": "M",
+      "why": "The numbers tell you, before you spend the money, whether this will pay back.",
+      "blocks": [
+        "Plants per Square Meter",
+        "Cost per Plant",
+        "Break-Even Analysis",
+        "Harvest Calendar"
+      ]
+    },
+    {
+      "name": "Innovation",
+      "eyebrow": "I",
+      "why": "What you swap, rebuild, or reinvent to make this work with what you can find in Addis.",
+      "blocks": [
+        "Local Materials",
+        "Aquaponics Hybrid",
+        "Solar Power",
+        "Floating Rafts"
+      ]
+    },
+    {
+      "name": "Entrepreneurship",
+      "eyebrow": "IE",
+      "why": "The science is wasted if no one buys what you grow. This is where the harvest becomes a business.",
+      "blocks": [
+        "Finding Buyers",
+        "Pricing Your Greens",
+        "Cash Flow Management",
+        "Raising Startup Funds",
+        "Record Keeping"
+      ]
+    }
+  ],
+
+  "editions": {
+    "free": []
+  }
+}

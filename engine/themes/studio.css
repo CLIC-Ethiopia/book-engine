@@ -28,9 +28,14 @@
    warm worksheet palette for book pages only. */
 .deck{ counter-reset:bbpage; }   /* page numbering for book pages (see .foot .pg) */
 
+/* Modern AI Studio tokens — declared on the page so they override the engine's
+   warm worksheet palette for book pages only. */
+.deck{ counter-reset:bbpage; }   /* page numbering for book pages (see .foot .pg) */
+
 .sheet.bb{
   --surface:#FAFAFC; --card:#FFFFFF; --ink:#1A1A2E; --muted:#5B6472; --line:#E7E9EF;
-  --accent:#6366F1; --accent-strong:#4F46E5;
+  --accent:#5441ff; --accent-strong:#5441ff;
+  --accent-bg:#F4F5FE; --accent-border:#DDE0FB;
   --signal:#0D9488; --danger:#DC2626; --warn:#B45309;
 
   background:var(--surface);
@@ -43,14 +48,44 @@
   counter-increment:bbpage;
 }
 
+/* ---- STEAM-IE Section Color Scoping ---- */
+.sheet.bb[data-section="S"], .sheet.bb.sec-s {
+  --accent: #e61358; --accent-strong: #e61358;
+  --accent-bg: #FDF2F5; --accent-border: #FBCFE8;
+}
+.sheet.bb[data-section="T"], .sheet.bb.sec-t {
+  --accent: #ed7d1f; --accent-strong: #ed7d1f;
+  --accent-bg: #FFF7ED; --accent-border: #FFEDD5;
+}
+.sheet.bb[data-section="E"], .sheet.bb.sec-e {
+  --accent: #a0c82f; --accent-strong: #a0c82f;
+  --accent-bg: #F7FCE8; --accent-border: #E4F5B2;
+}
+.sheet.bb[data-section="A"], .sheet.bb.sec-a {
+  --accent: #32b5d3; --accent-strong: #32b5d3;
+  --accent-bg: #F0FBFD; --accent-border: #BAE6F7;
+}
+.sheet.bb[data-section="M"], .sheet.bb.sec-m {
+  --accent: #b44b97; --accent-strong: #b44b97;
+  --accent-bg: #FDF4FF; --accent-border: #F5D0FE;
+}
+.sheet.bb[data-section="I"], .sheet.bb.sec-i {
+  --accent: #306a50; --accent-strong: #306a50;
+  --accent-bg: #F0FDF4; --accent-border: #BBF7D0;
+}
+.sheet.bb[data-section="IE"], .sheet.bb.sec-ie {
+  --accent: #5441ff; --accent-strong: #5441ff;
+  --accent-bg: #F4F5FE; --accent-border: #DDE0FB;
+}
+
 /* ---- header ---- */
 .bb .tab{ width:56px; height:7px; flex:0 0 7px; border-radius:99px; background:var(--accent); }  /* flex-basis pinned: an over-full column must overflow (caught by check.mjs), never silently crush the tab */
-.bb .top{ display:flex; justify-content:space-between; align-items:center; gap:14px; margin-top:18px; }
+.bb .top{ display:flex; justify-content:space-between; align-items:center; gap:14px; margin-top:16px; }
 .bb .eyebrow{ font-size:14px; color:var(--muted); }
 .bb .eyebrow b{ color:var(--accent); font-weight:600; }
 .bb .pill{
-  font-size:13px; font-weight:500; color:#4B5563; background:#F1F2F6;
-  border:1px solid var(--line); padding:6px 15px; border-radius:99px; white-space:nowrap;
+  font-size:12.5px; font-weight:600; color:var(--accent); background:var(--accent-bg);
+  border:1.5px solid var(--accent); padding:3.5px 13px; border-radius:99px; white-space:nowrap;
 }
 
 /* ---- title block ---- */
@@ -59,7 +94,7 @@
   letter-spacing:-.02em; color:var(--ink); margin:16px 0 0; line-height:1.04;
 }
 .bb .sub{ font-size:20px; color:var(--muted); margin-top:5px; }
-.bb .rule{ height:1px; flex:0 0 1px; background:var(--line); border:0; margin:18px 0; }
+.bb .rule{ height:1px; flex:0 0 1px; background:var(--line); border:0; margin:16px 0; }
 .bb .kicker{ font-size:14px; color:var(--muted); margin-bottom:10px; }
 
 /* ---- diagram: a modest fixed-size band (the text + Tell-the-AI box take the rest) ---- */
@@ -87,23 +122,24 @@
 .bb .explain p{ margin:0; color:var(--ink); }
 .bb .explain p + p{ margin-top:.85em; }              /* breathe between paragraphs */
 .bb .explain strong{ font-weight:600; color:var(--ink); }   /* key phrase, same ink */
-.bb .explain .hl{ font-weight:600; color:var(--accent-strong); }  /* the core idea / the fix, in indigo */
-.bb .explain .bad{ font-weight:600; color:var(--danger); }        /* the problem / pain, in red */
-.bb .explain .good{ font-weight:600; color:var(--signal); }       /* the good outcome, in teal */
+.bb .explain .hl{ font-weight:600; color:var(--accent); background:var(--accent-bg); padding:1px 5px; border-radius:4px; }  /* the core idea / the fix in section accent */
+.bb .explain .bad{ font-weight:600; color:var(--danger); background:#FEF2F2; padding:1px 5px; border-radius:4px; }        /* the problem / pain, in red with soft red bg */
+.bb .explain .good{ font-weight:600; color:var(--signal); background:#F0FDF4; padding:1px 5px; border-radius:4px; }       /* the good outcome, in teal with soft teal bg */
 .bb .explain p.close{ margin-top:14px; font-weight:600; color:var(--ink); }
 
 /* inline link to a real product/resource named in the copy — keep the ink color so it doesn't read as a
    role-emphasis span; the accent underline is what marks it as a link. */
 .bb a{ color:inherit; text-decoration:underline; text-decoration-color:var(--accent); text-decoration-thickness:1.5px; text-underline-offset:2.5px; }
-.bb a:hover{ color:var(--accent-strong); }
+.bb a:hover{ color:var(--accent); }
 
 /* recognition cue (optional, for situational blocks): "you'll know you need it when…" */
 .bb .cue{ font-size:14.5px; color:var(--muted); margin-top:14px; }
 .bb .cue b{ color:var(--ink); font-weight:600; }
 
 /* "Tell the AI" box — the copy-paste prompt. The book's thesis made literal, so it can go on every block. */
-.bb .ask{ margin-top:12px; background:#F4F5FE; border:1px solid #DDE0FB; border-radius:12px; padding:11px 16px; }
-.bb .ask .lbl{ display:block; font-size:11.5px; font-weight:700; letter-spacing:.5px; color:var(--accent-strong); margin-bottom:4px; }
+.bb .ask{ margin-top:12px; background:var(--accent-bg); border:1px solid var(--accent-border); border-radius:12px; padding:11px 16px; }
+.bb .ask .lbl{ display:block; font-size:11.5px; font-weight:700; letter-spacing:.5px; color:var(--accent); margin-bottom:4px; }
+.bb .ask p{ margin:0; font-size:15px; line-height:1.5; color:var(--ink); }
 .bb .ask p{ margin:0; font-size:15px; line-height:1.5; color:var(--ink); }
 
 /* ---- footer (brand left, series right) ---- */

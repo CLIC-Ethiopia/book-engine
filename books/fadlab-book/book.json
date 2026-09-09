@@ -1,0 +1,40 @@
+{
+  "title": "STEAM-IE",
+  "subtitle": "Applied STEAM for Innovation & Entrepreneurship.",
+  "author": "Dr. Frehun A. Demissie",
+
+  "series": "Fad Lab",
+  "brand": "clicethiopia.netlify.app",
+  "editionLabel": "Edition 1.0",
+  "unit": "blocks",
+
+  "numbered": true,
+  "contents": true,
+  "index": true,
+
+  "cover": {
+    "kicker": "STEAM-IE",
+    "note": "AI generated curiculum for founders."
+  },
+  "copyright": {
+    "year": 2026,
+    "rights": "© 2026 Fad.Lab. All rights reserved.",
+    "lines": [
+      "Set in Space Grotesk, Inter and JetBrains Mono.",
+      "Built with the paper engine: github.com/hassancs91/paper-engine"
+    ]
+  },
+
+  "parts": [
+    {
+      "name": "Your first part",
+      "eyebrow": "Where to start",
+      "why": "One line telling the reader why these pages belong together.",
+      "blocks": ["SSRF", "Vertical Hydroponics Farm"]
+    }
+  ],
+
+  "editions": {
+    "free": ["SSRF"]
+  }
+}

@@ -177,19 +177,56 @@ if (B.wantContents) {
 const contentsPages = tocBins.length;
 const indexPages = B.wantIndex ? Math.max(1, Math.ceil(allTitles.length / INDEX_MAX_PER_PAGE)) : 0;
 
-let pg = 2 + contentsPages;           // cover + copyright + contents
+const wantInsideCover = book.insideCover === true;
+const insideCoverPages = wantInsideCover ? 1 : 0;
+const wantHowToRead = book.howToRead === true;
+const howToReadPages = wantHowToRead ? 1 : 0;
+const wantBackCover = book.backCover === true;
+const backCoverPages = wantBackCover ? 1 : 0;
+let pg = 2 + contentsPages + insideCoverPages + howToReadPages;           // cover + inside cover + copyright + contents + how to read
 const pageOf = {}, partPageOf = new Map();
 parts.forEach((p, i) => {
   pg += 1; partPageOf.set(i, pg);                       // the part divider
   for (const t of p.titles) { pg += 1; pageOf[t] = pg; }
 });
-const totalPages = pg + indexPages;
+const totalPages = pg + indexPages + backCoverPages;
 
 /* --------------------------------------------------------- 5. generated pages */
 const genFoot = (right) =>
   `<div class="gp-foot"><span>${esc(B.brand || B.series)}</span><span>${esc(right)}</span></div>`;
 
-const coverSection = `    <section class="sheet gp cover">
+const coverSection = coverCfg.image ? `    <section class="sheet gp cover">
+      <div class="in">
+        <div class="cv-spectrum-bar" style="display:flex; gap:4px; height:6px; border-radius:99px; overflow:hidden; margin-bottom:12px;" aria-label="STEAM-IE 7-Letter Colour Spectrum">
+          <div style="flex:1; background:#e61358;" title="Science"></div>
+          <div style="flex:1; background:#ed7d1f;" title="Technology"></div>
+          <div style="flex:1; background:#a0c82f;" title="Engineering"></div>
+          <div style="flex:1; background:#32b5d3;" title="Arts"></div>
+          <div style="flex:1; background:#b44b97;" title="Mathematics"></div>
+          <div style="flex:1; background:#306a50;" title="Innovation"></div>
+          <div style="flex:1; background:#5441ff;" title="Entrepreneurship"></div>
+        </div>
+        <div class="cv-kicker" style="color:#32b5d3; letter-spacing:0.22em; font-weight:600; text-transform:uppercase; font-size:12px;">${esc(coverCfg.kicker || 'STEAM-IE curriculum')}</div>
+        <div class="cv-mid" style="justify-content:flex-start; margin-top:6px;">
+          <figure class="cv-hero-img" style="margin:4px 0 14px 0; border-radius:14px; box-shadow:0 10px 30px rgba(26,26,46,0.08); overflow:hidden; border:1px solid #E7E9EF;">
+            <img src="${esc(coverCfg.image)}" alt="${esc(B.title)} Cover Illustration" style="display:block; width:100%; max-height:350px; object-fit:cover;" />
+          </figure>
+          <h1 class="cv-title" style="margin:0; line-height:1.02;"><span style="color:#5441ff; font-weight:700;">STEAM-IE</span> <span style="color:#11291F; font-weight:700;">${esc(B.title.replace(/^STEAM-IE\s*/i, ''))}</span></h1>
+          ${B.subtitle ? `<p class="cv-sub" style="color:#5B6472; font-size:19px; line-height:1.4; margin-top:10px;">${esc(B.subtitle)}</p>` : ''}
+        </div>
+        <div class="cv-bottom">
+          <hr class="gp-rule" style="margin:12px 0;">
+          <div class="cv-meta" style="display:flex; justify-content:space-between; align-items:flex-end;">
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; color:#1A1A2E;">${esc(B.author)}</div>
+              <div style="font-size:12.5px; color:#ed7d1f; font-weight:600; margin-top:2px;">Fad.Lab · ${esc(B.edition)}</div>
+            </div>
+            <span class="cv-count" style="color:#e61358; background:#FDF2F5; border:1px solid #FBCFE8; border-radius:99px; padding:6px 14px; font-size:13px; font-weight:600;">${esc(countWord(allTitles.length))}</span>
+          </div>
+          ${coverCfg.note ? `<p class="cv-note" style="color:#5B6472; font-size:12.5px; margin-top:8px;">${esc(coverCfg.note)}</p>` : ''}
+        </div>
+      </div>
+    </section>` : `    <section class="sheet gp cover">
       <div class="in">
         <div class="gp-tab"></div>
         ${coverCfg.kicker ? `<div class="cv-kicker">${esc(coverCfg.kicker)}</div>` : ''}
@@ -226,19 +263,24 @@ const copyrightSection = `    <section class="sheet gp colophon">
       </div>
     </section>`;
 
+const sectionColors = ['#e61358', '#ed7d1f', '#a0c82f', '#32b5d3', '#b44b97', '#306a50', '#5441ff'];
+const sectionBgColors = ['#FDF2F5', '#FFF7ED', '#F7FCE8', '#F0FBFD', '#FDF4FF', '#F0FDF4', '#F4F5FE'];
+
 const dividerSection = (p, i) => {
+  const col = sectionColors[i % sectionColors.length];
+  const bgCol = sectionBgColors[i % sectionBgColors.length];
   const items = p.titles.map((t, n) =>
     `<li>${B.numbered ? `<span class="n">${pad2(n + 1)}</span>` : ''}<span class="nm">${esc(t)}</span></li>`).join('\n            ');
   return `    <section class="sheet gp divider">
       <div class="in">
         <div class="gp-top">
-          <div class="gp-tab"></div>
-          <span class="gp-pill">Part ${i + 1} of ${parts.length}</span>
+          <div class="gp-tab" style="background:${col};"></div>
+          <span class="gp-pill" style="border:1.5px solid ${col}; color:${col}; background:${bgCol}; font-weight:700; padding:4px 14px; border-radius:99px;">Part ${i + 1} of ${parts.length}</span>
         </div>
         <div class="dv-mid">
-          ${p.eyebrow ? `<div class="dv-eyebrow">${esc(p.eyebrow)}</div>` : ''}
-          <div class="dv-num">${i + 1}</div>
-          <h2 class="dv-name">${esc(p.name)}</h2>
+          ${p.eyebrow ? `<div class="dv-eyebrow" style="color:${col}; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; font-size:13px;">${esc(p.name)}</div>` : ''}
+          <div class="dv-num" style="font-size:76px; font-weight:800; color:${col}; margin:6px 0; line-height:1; font-family:'Space Grotesk',sans-serif;">${esc(p.eyebrow || (i + 1))}</div>
+          <h2 class="dv-name" style="color:${col}; font-family:'Space Grotesk',sans-serif; font-size:36px; font-weight:700; margin:0 0 10px 0;">${esc(p.name)}</h2>
           ${p.why ? `<p class="dv-why">${esc(p.why)}</p>` : ''}
           <hr class="gp-rule">
           <div class="dv-list-label">${esc(p.listLabel || 'In this part')}</div>
@@ -294,11 +336,14 @@ for (let i = 0; i < indexPages; i++) {
    The interior stays neutral, so a page can move between parts (or books)
    without being rewritten. The eyebrow number and the running foot are stamped
    here, at assembly, from book.json. */
-const stampPage = (section, partName, nth) => {
+const stampPage = (section, partName, partEyebrow, nth) => {
   let s = section;
   const eyebrow = B.numbered
     ? `<b>${esc(B.series)}</b> · No. ${pad2(nth)}`
     : `<b>${esc(B.series)}</b>`;
+  if (partEyebrow) {
+    s = s.replace(/<section class="sheet bb([^"]*)"/, `<section class="sheet bb$1" data-section="${esc(partEyebrow)}"`);
+  }
   s = s.replace(/(<div class="eyebrow">)[\s\S]*?(<\/div>)/, `$1${eyebrow}$2`);
   s = s.replace(/(<span class="brand">)[^<]*(<\/span>)/, `$1${esc(B.brand)}$2`);
   s = s.replace(/(<span class="series">)[^<]*(<\/span>)/, `$1${esc(partName)}$2`);
@@ -414,14 +459,250 @@ const genCss = `    /* =========================================================
     .sheet.gp, .sheet.bb{ counter-increment:pageno; }
     .bb .foot .pg::before{ content:counter(pageno); }`;
 
+const backCoverSection = `    <section class="sheet gp back-cover">
+      <div class="in" style="display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div class="cv-spectrum-bar" style="display:flex; gap:4px; height:6px; border-radius:99px; overflow:hidden; margin-bottom:14px;" aria-label="STEAM-IE 7-Letter Colour Spectrum">
+            <div style="flex:1; background:#e61358;" title="Science"></div>
+            <div style="flex:1; background:#ed7d1f;" title="Technology"></div>
+            <div style="flex:1; background:#a0c82f;" title="Engineering"></div>
+            <div style="flex:1; background:#32b5d3;" title="Arts"></div>
+            <div style="flex:1; background:#b44b97;" title="Mathematics"></div>
+            <div style="flex:1; background:#306a50;" title="Innovation"></div>
+            <div style="flex:1; background:#5441ff;" title="Entrepreneurship"></div>
+          </div>
+          
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; color:#5B6472; letter-spacing:0.18em; text-transform:uppercase;">AG-TECH · URBAN AGRICULTURE · STEAM-IE</span>
+            <span style="background:#F4F5FE; border:1px solid #DDE0FB; color:#5441ff; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; padding:3px 10px; border-radius:99px;">FIELD MANUAL</span>
+          </div>
+
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:700; line-height:1.25; color:#1A1A2E; margin:0 0 10px 0;">
+            <span style="color:#5441ff;">Build a High-Yield</span> Greenhouse in Addis Ababa — Without Guesswork or Wasted Capital.
+          </h2>
+
+          <p style="font-size:13.5px; line-height:1.55; color:#4A5568; margin:0 0 16px 0;">
+            Grounded in the 7 letters of STEAM-IE, this field manual strips away theoretical fluff to give you ${allTitles.length} single-concept visual guides. From water chemistry to local Merkato sourcing, every page equips you with exact blueprints, calculations, and daily actions to grow fresh greens year-round.
+          </p>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
+            <div style="background:#FDF2F5; border:1px solid #FBCFE8; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#e61358; margin-bottom:2px;">🧪 Science of Growth</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Master dissolved oxygen, pH buffers, and root nutrient uptake.</div>
+            </div>
+            <div style="background:#FFF7ED; border:1px solid #FFEDD5; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#ed7d1f; margin-bottom:2px;">⚙️ Merkato Sourcing</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Source local pumps, PVC channels, and sensors in Addis Ababa.</div>
+            </div>
+            <div style="background:#FDF4FF; border:1px solid #F5D0FE; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#b44b97; margin-bottom:2px;">📊 Business Economics</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Calculate exact cost per plant, yield density, and break-even.</div>
+            </div>
+            <div style="background:#F4F5FE; border:1px solid #DDE0FB; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#5441ff; margin-bottom:2px;">🚀 Market Execution</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Package, price, and sell hydroponic produce to Addis buyers.</div>
+            </div>
+          </div>
+
+          <!-- Two Side-by-Side Image Placeholders (Left & Right) -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; margin-bottom:14px;">
+            <figure style="margin:0; border-radius:10px; border:2px dashed #CBD5E1; background:#F8FAFC; height:270px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:10px; overflow:hidden;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:6px;">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#475569;">Left Photo / Diagram</div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#64748B; margin-top:4px;">270 × 270 px</div>
+            </figure>
+
+            <figure style="margin:0; border-radius:10px; border:2px dashed #CBD5E1; background:#F8FAFC; height:270px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:10px; overflow:hidden;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:6px;">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#475569;">Right Photo / Harvest</div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#64748B; margin-top:4px;">270 × 270 px</div>
+            </figure>
+          </div>
+        </div>
+
+        <div>
+          <hr class="gp-rule" style="margin:0 0 14px 0;">
+          
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:10px; padding:10px 14px;">
+            <div style="width:38px; height:38px; border-radius:50%; background:#5441ff; color:#FFF; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; flex-shrink:0;">
+              FD
+            </div>
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:700; color:#1A1A2E;">${esc(B.author)}</div>
+              <div style="font-size:11.5px; color:#5B6472; line-height:1.35;">Founder of Fad.Lab · Pioneering practical STEAM-IE education & urban ag-tech in Ethiopia.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#1A1A2E; letter-spacing:-0.01em;">FAD.LAB PUBLISHING</div>
+              <div style="font-size:11.5px; color:#5B6472; margin-top:2px;">${esc(B.edition)} · Addis Ababa, Ethiopia</div>
+              <div style="font-size:11px; color:#5441ff; font-weight:600; margin-top:3px;">github.com/hassancs91/paper-engine</div>
+            </div>
+
+            <div style="background:#FFF; border:1px solid #CBD5E1; border-radius:6px; padding:6px 10px; text-align:center;">
+              <svg width="108" height="32" viewBox="0 0 108 32" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="3" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="6" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="10" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="15" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="18" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="22" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="25" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="30" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="34" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="37" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="41" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="44" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="49" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="53" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="56" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="60" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="65" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="68" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="72" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="75" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="80" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="84" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="87" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="91" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="94" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="99" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="103" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="106" y="0" width="2" height="26" fill="#1A1A2E"/>
+              </svg>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:8.5px; font-weight:600; color:#1A1A2E; margin-top:2px;">ISBN 978-99944-0-001-7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>`;
+
+const insideCoverSection = backCoverSection.replace('sheet gp back-cover', 'sheet gp inside-cover');
+
+const howToReadSection = `    <section class="sheet gp how-to-read">
+      <div class="in" style="display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div class="cv-spectrum-bar" style="display:flex; gap:4px; height:6px; border-radius:99px; overflow:hidden; margin-bottom:12px;" aria-label="STEAM-IE 7-Letter Colour Spectrum">
+            <div style="flex:1; background:#e61358;" title="Science"></div>
+            <div style="flex:1; background:#ed7d1f;" title="Technology"></div>
+            <div style="flex:1; background:#a0c82f;" title="Engineering"></div>
+            <div style="flex:1; background:#32b5d3;" title="Arts"></div>
+            <div style="flex:1; background:#b44b97;" title="Mathematics"></div>
+            <div style="flex:1; background:#306a50;" title="Innovation"></div>
+            <div style="flex:1; background:#5441ff;" title="Entrepreneurship"></div>
+          </div>
+          
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; color:#5B6472; letter-spacing:0.18em; text-transform:uppercase;">ORIENTATION GUIDE · STEAM-IE METHODOLOGY</span>
+            <span style="background:#F4F5FE; border:1px solid #DDE0FB; color:#5441ff; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; padding:3px 10px; border-radius:99px;">READING GUIDE</span>
+          </div>
+
+          <h1 style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:700; line-height:1.15; color:#1A1A2E; margin:0 0 4px 0;">
+            How to Read This Book
+          </h1>
+          <p style="font-size:13px; color:#5B6472; margin:0 0 10px 0;">
+            Every page in this field manual is a single, actionable visual block.
+          </p>
+
+          <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; padding:8px 12px; margin-bottom:10px;">
+            <div style="font-size:12px; line-height:1.45; color:#475569;">
+              <strong style="color:#1A1A2E;">1. Single-Concept Blocks:</strong> One idea per page with an inline diagram and a concrete daily action step.<br/>
+              <strong style="color:#1A1A2E;">2. Sequential Build:</strong> Read in letter order. Science feeds the tech, which drives the engineering, math, and sales.
+            </div>
+          </div>
+
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:12.5px; font-weight:700; color:#1A1A2E; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+            <span>🔄 The 7-Letter Learning Pathway</span>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-bottom:10px;">
+            <div style="background:#FDF2F5; border:1px solid #FBCFE8; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#e61358; margin-bottom:2px;">🧪 S · Science ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Natural principles: plant biology, nutrient chemistry & root oxygenation.</div>
+            </div>
+            <div style="background:#FFF7ED; border:1px solid #FFEDD5; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#ed7d1f; margin-bottom:2px;">⚙️ T · Tech ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Control tools: meters, pumps & sensors for monitoring growth environment.</div>
+            </div>
+            <div style="background:#F7FCE8; border:1px solid #E4F5B2; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#a0c82f; margin-bottom:2px;">📐 E · Engineering ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Structural design: frames, channel slopes & plumbing systems.</div>
+            </div>
+            <div style="background:#F0FBFD; border:1px solid #BAE6F7; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#32b5d3; margin-bottom:2px;">🎨 A · Arts ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Spatial & visual design: greenhouse flow, ergonomics & product branding.</div>
+            </div>
+            <div style="background:#FDF4FF; border:1px solid #F5D0FE; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#b44b97; margin-bottom:2px;">📊 M · Math ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Quantitative metrics: flow rates, PPM ratios, spacing & unit economics.</div>
+            </div>
+            <div style="background:#F0FDF4; border:1px solid #BBF7D0; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#306a50; margin-bottom:2px;">💡 I · Innovation ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Creative problem solving: local material swaps & sustainable hacks.</div>
+            </div>
+          </div>
+          
+          <div style="background:#F4F5FE; border:1px solid #DDE0FB; border-radius:8px; padding:7px 10px; margin-bottom:10px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#5441ff;">🚀 IE · Entrepreneurship: Enterprise & Market Viability</div>
+            <div style="font-size:10px; line-height:1.25; color:#4A5568; margin-top:2px;">Turning harvests into sustainable value: market pricing, buyer contracts & cash flow.</div>
+          </div>
+        </div>
+
+        <div>
+          <hr class="gp-rule" style="margin:0 0 10px 0;">
+          
+          <div style="background:#FFF; border:1px solid #CBD5E1; border-radius:8px; padding:8px 12px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#1A1A2E; margin-bottom:4px; display:flex; justify-content:space-between;">
+              <span>📖 Key Abbreviations & Acronyms</span>
+              <span style="font-size:10px; font-weight:600; color:#5B6472;">QUICK REFERENCE</span>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 12px; font-size:10.5px; line-height:1.35; color:#475569;">
+              <div><strong style="color:#1A1A2E;">pH:</strong> Potential of Hydrogen (Target: 5.5 – 6.5)</div>
+              <div><strong style="color:#1A1A2E;">NFT:</strong> Nutrient Film Technique (Shallow channel)</div>
+              <div><strong style="color:#1A1A2E;">EC:</strong> Electrical Conductivity (Ion strength mS/cm)</div>
+              <div><strong style="color:#1A1A2E;">LED:</strong> Light Emitting Diode (Grow light fixtures)</div>
+              <div><strong style="color:#1A1A2E;">DO:</strong> Dissolved Oxygen (Root oxygen in PPM)</div>
+              <div><strong style="color:#1A1A2E;">PVC:</strong> Polyvinyl Chloride (Rigid Merkato piping)</div>
+              <div><strong style="color:#1A1A2E;">IBC:</strong> Intermediate Bulk Container (1,000 L tank)</div>
+              <div><strong style="color:#1A1A2E;">PPM:</strong> Parts Per Million (Mineral ion density)</div>
+            </div>
+          </div>
+          
+          <div style="margin-top:8px;">
+            ${genFoot(B.edition)}
+          </div>
+        </div>
+      </div>
+    </section>`;
+
 /* ------------------------------------------------------------- 8. assemble */
-const out = [coverSection, copyrightSection, ...contentsSections];
+const out = [coverSection];
+if (wantInsideCover) {
+  out.push(insideCoverSection);
+}
+out.push(copyrightSection, ...contentsSections);
+if (wantHowToRead) {
+  out.push(howToReadSection);
+}
 let nth = 0;   // the printed No. runs through the whole book, not per part
 parts.forEach((p, i) => {
   out.push(dividerSection(p, i));
-  p.titles.forEach((t) => out.push(stampPage(pool.get(t), p.name, ++nth)));
+  p.titles.forEach((t) => out.push(stampPage(pool.get(t), p.name, p.eyebrow, ++nth)));
 });
 out.push(...indexSections);
+if (wantBackCover) {
+  out.push(backCoverSection);
+}
 
 if (out.length !== totalPages)
   die(`Internal error: assembled ${out.length} pages but computed ${totalPages}.\n` +

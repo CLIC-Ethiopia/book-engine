@@ -1,10 +1,11 @@
 # Node deps for the Playwright tools.
 node_modules/
 
-# Local secrets (only needed for `gen-image.mjs --provider gemini`). Never commit.
+# Secrets and local configs
 .env
+.claude/Esettings.json
 
-# Editor settings
+# Editor & agent settings
 .vscode/
 .idea/
 

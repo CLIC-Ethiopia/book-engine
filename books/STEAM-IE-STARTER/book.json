@@ -1,0 +1,78 @@
+{
+  "title": "STEAM-IE Starter",
+  "subtitle": "One idea per page, ordered across the seven letters of the curriculum.",
+  "author": "Your Name",
+
+  "series": "STEAM-IE",
+  "brand": "yoursite.com",
+  "editionLabel": "Edition 1.0",
+  "unit": "blocks",
+
+  "numbered": true,
+  "contents": true,
+  "index": true,
+
+  "cover": {
+    "kicker": "STEAM-IE curriculum",
+    "note": "One idea per page, ordered across the seven letters."
+  },
+  "copyright": {
+    "year": 2026,
+    "rights": "© 2026 Your Name. All rights reserved.",
+    "lines": [
+      "Set in Space Grotesk, Inter and JetBrains Mono.",
+      "Built with the paper engine: github.com/hassancs91/paper-engine"
+    ]
+  },
+
+  "parts": [
+    {
+      "name": "Science",
+      "eyebrow": "S",
+      "why": "Before you build anything, understand how the underlying system works.",
+      "blocks": [
+        "SSRF"
+      ]
+    },
+    {
+      "name": "Technology",
+      "eyebrow": "T",
+      "why": "The tools that take the science and make it usable in the field.",
+      "blocks": []
+    },
+    {
+      "name": "Engineering",
+      "eyebrow": "E",
+      "why": "The construction that holds the system together.",
+      "blocks": []
+    },
+    {
+      "name": "Arts",
+      "eyebrow": "A",
+      "why": "The design choices that make the system worth using.",
+      "blocks": []
+    },
+    {
+      "name": "Mathematics",
+      "eyebrow": "M",
+      "why": "The numbers that tell you whether the system is working.",
+      "blocks": []
+    },
+    {
+      "name": "Innovation",
+      "eyebrow": "I",
+      "why": "The adaptations that make the system fit your own context.",
+      "blocks": []
+    },
+    {
+      "name": "Entrepreneurship",
+      "eyebrow": "IE",
+      "why": "The business that turns the system into a livelihood.",
+      "blocks": []
+    }
+  ],
+
+  "editions": {
+    "free": []
+  }
+}

@@ -1,0 +1,1066 @@
+<!doctype html>
+<!--
+  THE INTERIOR — STEAM-IE FOR HYDROPONICS. You (and the /block skill) edit THIS.
+
+  One <section class="sheet bb"> per concept, in reading order. Pages should appear in
+  the seven-section STEAM-IE order: S, T, E, A, M, I, IE. Everything else (cover,
+  colophon, contents, 7 part dividers, index) is generated into book.html by:
+
+    node engine/tools/build-book.mjs books/STEAM-IE-FOR-HYDROPONICS
+
+  Never hand-edit book.html. It is overwritten on every build.
+-->
+<html lang="en" data-size="b5">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STEAM-IE FOR HYDROPONICS</title>
+  <link rel="stylesheet" href="../../engine/sheet.css">
+  <link rel="stylesheet" href="../../engine/sizes/b5.css">
+  <link rel="stylesheet" href="../../engine/themes/studio.css">
+  <!-- STEAM-IE TAB COLOUR RULE
+       The <div class="tab"> for each page must use that page's section colour.
+       S pages:  <div class="tab" style="background:#e61358"></div>
+       T pages:  <div class="tab" style="background:#ed7d1f"></div>
+       E pages:  <div class="tab" style="background:#a0c82f"></div>
+       A pages:  <div class="tab" style="background:#32b5d3"></div>
+       M pages:  <div class="tab" style="background:#b44b97"></div>
+       I pages:  <div class="tab" style="background:#306a50"></div>
+       IE pages: <div class="tab" style="background:#5441ff"></div>
+  -->
+</head>
+<body>
+  <main class="deck">
+
+    <!-- ============================================================
+         S — SCIENCE
+         ============================================================ -->
+
+    <section class="sheet bb">
+      <h2 class="sr">No Need for Soil: why dirt is just an anchor, and nutrients in water do the real work.</h2>
+      <div class="tab" style="background:#e61358"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 01</div>
+        <span class="pill">Science</span>
+      </div>
+      <h1 class="title">No Need for Soil</h1>
+      <div class="sub">Why dirt is just an anchor, and nutrients in water do the real work</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 135" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comparison of soil anchor vs dissolved water nutrients">
+          <rect x="1" y="1" width="590" height="133" rx="8" fill="#FAFAFC" stroke="#E7E9EF" stroke-width="1"/>
+          
+          <!-- Left side: Soil -->
+          <rect x="15" y="12" width="270" height="110" rx="6" fill="#F4F5F7" stroke="#DDE0E5" stroke-width="1"/>
+          <text x="150" y="30" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="600" fill="#DC2626">SOIL = PHYSICAL ANCHOR</text>
+          
+          <circle cx="80" cy="65" r="12" fill="#D2B48C" opacity="0.6"/>
+          <circle cx="120" cy="95" r="16" fill="#C19A6B" opacity="0.6"/>
+          <circle cx="190" cy="70" r="14" fill="#D2B48C" opacity="0.6"/>
+          
+          <path d="M 150 38 Q 145 65 120 85 T 100 110" stroke="#5B6472" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M 140 70 Q 170 80 185 95" stroke="#5B6472" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <text x="150" y="114" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#DC2626">Root struggles in hard dirt</text>
+
+          <!-- Divider -->
+          <line x1="296" y1="12" x2="296" y2="122" stroke="#E7E9EF" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+          <!-- Right side: Hydroponic Water -->
+          <rect x="307" y="12" width="270" height="110" rx="6" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+          <text x="442" y="30" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="600" fill="#0D9488">WATER = DIRECT NUTRIENTS</text>
+          
+          <circle cx="350" cy="60" r="8" fill="#6366F1"/><text x="350" y="63" text-anchor="middle" font-size="8.5" font-weight="700" fill="#FFF">N</text>
+          <circle cx="530" cy="65" r="8" fill="#6366F1"/><text x="530" y="68" text-anchor="middle" font-size="8.5" font-weight="700" fill="#FFF">P</text>
+          <circle cx="360" cy="98" r="8" fill="#6366F1"/><text x="360" y="101" text-anchor="middle" font-size="8.5" font-weight="700" fill="#FFF">K</text>
+          <circle cx="520" cy="100" r="8" fill="#6366F1"/><text x="520" y="103" text-anchor="middle" font-size="8.5" font-weight="700" fill="#FFF">Ca</text>
+
+          <path d="M 442 38 Q 442 70 442 95 T 442 110" stroke="#0D9488" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M 442 70 Q 415 80 395 90" stroke="#0D9488" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M 442 85 Q 470 95 490 102" stroke="#0D9488" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <text x="442" y="114" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#0D9488">Direct uptake of dissolved ions</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Plant two kale seedlings: one in dry dirt, and one in clean water mixed with plant food.</p>
+        <p>Soil is not food. Dirt is <span class="bad">mostly rocks and clay</span> holding the plant upright. A root in dirt spends energy pushing through hard ground to find food.</p>
+        <p>Plants cannot eat solid dirt. They only drink <span class="hl">nutrients dissolved in water</span>.</p>
+        <p class="close">Dirt is only an anchor. <span class="good">Water soluble nutrients are the meal.</span></p>
+      </div>
+      <div class="ask">
+        <span class="lbl">DO THIS TODAY</span>
+        <p>Take a handful of garden soil, drop it into a glass of water, and stir it. Watch how dirt settles to the bottom while clear water holds dissolved minerals.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">How Plants Drink: capillary action and how plant roots pull water from a solution, without soil.</h2>
+      <div class="tab" style="background:#e61358"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 01</div>
+        <span class="pill">Science</span>
+      </div>
+      <h1 class="title">How Plants Drink</h1>
+      <div class="sub">Capillary action, and why roots pull water without soil</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Put a white flower in a glass of water with food colouring. Come back in two hours. The petals are not white any more.</p>
+        <p>That <span class="bad">climb against gravity</span> has a name: <span class="hl">capillary action</span>. Water sticks to thin tubes, and the thinner the tube, the higher it climbs. Roots are made of those thin tubes, so in a hydroponic system the plant pulls the same way it always has.</p>
+        <p class="close">The plant was always going to drink. You just gave it a <span class="good">faster way to reach the cup</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">TRY THIS WEEKEND</span>
+        <p>Set a white flower in a cup of water with food colouring. Look again in two hours.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">What Light Feeds: photosynthesis in plain words — light hits the leaf, the plant uses that energy to make sugar from water and carbon dioxide.</h2>
+      <div class="tab" style="background:#e61358"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 02</div>
+        <span class="pill">Science</span>
+      </div>
+      <h1 class="title">What Light Feeds</h1>
+      <div class="sub">Photosynthesis, in the words you already use</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Hold a green leaf up against a wall in the sun. The shadow you see is the leaf at work.</p>
+        <p>The leaf takes light, water, and carbon dioxide and <span class="hl">turns them into sugar</span>. The plant eats what it makes, right where it stands. No mouth, no kitchen.</p>
+        <p>In a greenhouse you control the water and the light. Change either and the leaf works faster or slower.</p>
+        <p class="close">Light is not decoration. <span class="good">Light is the meal.</span></p>
+      </div>
+      <div class="ask">
+        <span class="lbl">DO THIS TODAY</span>
+        <p>Hold a leaf over a piece of paper in the sun. The shadow you see is the leaf doing this work right now.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Water Chemistry: pH and dissolved oxygen in the nutrient solution, and why both matter for root health.</h2>
+      <div class="tab" style="background:#e61358"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 03</div>
+        <span class="pill">Science</span>
+      </div>
+      <h1 class="title">Water Chemistry</h1>
+      <div class="sub">pH and dissolved oxygen, and why both matter to a root</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Pour a glass of plain water. Squeeze half a lemon into a second glass. Taste both. The second is sour. That is <span class="hl">pH</span>. Most plants want a pH between 5.5 and 6.5. Too far either way and the <span class="bad">roots stop taking in nutrients</span>.</p>
+        <p>The other number is <span class="hl">dissolved oxygen</span>. Roots breathe. A small air stone or a splashing pump puts air back into the solution.</p>
+        <p class="close">Two numbers decide if the plant eats well: <span class="good">how sour the water is, and how much air is in it</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">DO THIS TODAY</span>
+        <p>Take one glass of plain tap water, one glass with a spoon of lemon juice. Taste both. That difference is pH.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">The Nutrient Solution: macronutrients (N, P, K) and micronutrients (Ca, Mg, Fe, etc.) plants draw from the water, and what each one does.</h2>
+      <div class="tab" style="background:#e61358"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 04</div>
+        <span class="pill">Science</span>
+      </div>
+      <h1 class="title">The Nutrient Solution</h1>
+      <div class="sub">What N, P, K and the smaller letters actually do</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Find any fertiliser bag. Three numbers on the front. First is <span class="hl">N for nitrogen</span>, which grows leaves. Second is <span class="hl">P for phosphorus</span>, which builds roots. Third is <span class="hl">K for potassium</span>, which moves water and sugar around inside the plant.</p>
+        <p>In hydroponics those same nutrients <span class="good">dissolve in water</span> and the plant eats them through the roots.</p>
+        <p class="close">Three letters, on every bag and every bottle, in the same order. That order is the recipe.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">READ IT TODAY</span>
+        <p>Read the label on any bag of fertiliser at home. Write down the three numbers. They are the N, the P, and the K.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Temperature and Growth: how the air temperature around the plant changes the speed of its metabolism and the speed of its growth.</h2>
+      <div class="tab" style="background:#e61358"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 05</div>
+        <span class="pill">Science</span>
+      </div>
+      <h1 class="title">Temperature and Growth</h1>
+      <div class="sub">How warm air changes how fast a plant eats</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Plant the same seed in two pots. Put one on the counter, one on the shaded balcony. In two weeks, one is twice the size of the other.</p>
+        <p>Plants run on a clock wound by <span class="hl">temperature</span>: <span class="good">warm air winds it up</span>, <span class="bad">cool air winds it down</span>.</p>
+        <p class="close">The plant does not know the date. It knows the temperature.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">MEASURE IT</span>
+        <p>At the same hour for three days in a row, record the air temperature next to one of your plants and how tall it has grown.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <!-- ============================================================
+         T — TECHNOLOGY
+         ============================================================ -->
+
+    <section class="sheet bb">
+      <h2 class="sr">LED Grow Lights: what a grow light does, why the spectrum matters, blue for leaves, red for flowers and fruit.</h2>
+      <div class="tab" style="background:#ed7d1f"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 06</div>
+        <span class="pill">Technology</span>
+      </div>
+      <h1 class="title">LED Grow Lights</h1>
+      <div class="sub">What a grow light does, and why the colour matters</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say your seedling sits in a corner that gets a half hour of morning sun, and nothing else. The leaf is waiting for more of the light it eats.</p>
+        <p>A <span class="hl">grow light</span> is a small sun you can put on a timer. <span class="good">Blue chips drive leaves, red chips drive flowers</span> and fruit. The number to read is the <span class="hl">PAR map</span> at the height your plants sit at.</p>
+        <p class="close">A leaf does not care what lamp you bought. It cares <span class="good">how many photons land on it</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">DO THIS TODAY</span>
+        <p>Read the watt number off the back of a lamp at home. Write it next to the room it would light.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">The Water Pump: flow in litres per minute, head in metres, the curve between them, and how to size a pump for the rack.</h2>
+      <div class="tab" style="background:#ed7d1f"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 07</div>
+        <span class="pill">Technology</span>
+      </div>
+      <h1 class="title">The Water Pump</h1>
+      <div class="sub">Flow, head, and why a pump that's too small quietly kills the system</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you fill a 200 L tank, set a pump at the bottom, and run a pipe up to a rack 1.5 m above it. That slowness is the <span class="bad">head, eating the flow</span>.</p>
+        <p>Pump makers list flow at zero head and head at zero flow. Pick the one that delivers your <span class="hl">target flow at your head</span>, with a little to spare.</p>
+        <p class="close">A pump too small <span class="bad">starves the plants at the far end</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">MEASURE IT</span>
+        <p>Measure the vertical distance from tank water surface to the top of the highest channel. Write it in metres.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">pH and EC Meters: the two numbers that decide if the plant eats, the pen vs the bench meter, and why calibration is not optional.</h2>
+      <div class="tab" style="background:#ed7d1f"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 08</div>
+        <span class="pill">Technology</span>
+      </div>
+      <h1 class="title">pH and EC Meters</h1>
+      <div class="sub">Two numbers that decide if the plant eats or starves in the same water</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say your nutrient solution reads pH 7 and EC 1.8. The <span class="hl">EC says there is food</span> in the water. The <span class="bad">pH says the roots cannot reach any of it</span>. Two numbers, one decision.</p>
+        <p>A <span class="hl">pH pen and an EC pen</span> are the cheapest tools that still work. Soak the glass tip in calibration solution, rinse, dip, read, rinse again.</p>
+        <p class="close">The pen is the <span class="good">only honest witness in the room</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">DO THIS TODAY</span>
+        <p>Find a pH pen on the shop shelf. Add up pen, sachets, and storage solution. That is the real cost of one honest number.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Timers and Controllers: the cheap box that decides when the pump runs and when the lights go off, mechanical vs digital vs smart.</h2>
+      <div class="tab" style="background:#ed7d1f"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 09</div>
+        <span class="pill">Technology</span>
+      </div>
+      <h1 class="title">Timers and Controllers</h1>
+      <div class="sub">The cheap box that decides when the pump runs and when the lights go off</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you wire the pump to a mechanical timer set for 15 minutes on, 15 minutes off. The plants get <span class="good">water in pulses</span> and the system runs while you are at class.</p>
+        <p>A <span class="hl">mechanical timer</span> handles the pump and lights. A <span class="hl">digital timer</span> adds second-level precision. A <span class="good">smart controller</span> adds a sensor and adjusts the cycle. Buy the cheapest box that does the jobs you can name.</p>
+        <p class="close">Buy the timer you can set without reading the manual twice.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">ASK YOUR INSTRUCTOR</span>
+        <p>Ask which timer your school uses. Ask what fails first. Buy the same one.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Climate Sensors: temperature, humidity, and CO2 in the plant canopy, not on the wall, and the one mistake that makes every reading wrong.</h2>
+      <div class="tab" style="background:#ed7d1f"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 10</div>
+        <span class="pill">Technology</span>
+      </div>
+      <h1 class="title">Climate Sensors</h1>
+      <div class="sub">Temperature, humidity, and the one mistake that makes every reading wrong</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you hang a temperature sensor on the wall near the door. It reads 28 degrees. The plants sit at 24. That four degrees is the <span class="bad">gap between fast growth and slow growth</span>.</p>
+        <p>Mount the <span class="hl">sensor in the plant canopy</span>. A sensor in the wrong place is worse than no sensor, because it gives you a <span class="bad">confident wrong number</span>.</p>
+        <p class="close">The plant is the sensor.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">DO THIS TODAY</span>
+        <p>Stand at desk height in your classroom. Then stand by the window. Feel the gap.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">The Greenhouse Frame: the skeleton that holds wind, sun, and water at bay, and the three jobs it has to do at once.</h2>
+      <div class="tab" style="background:#a0c82f"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 11</div>
+        <span class="pill">Engineering</span>
+      </div>
+      <h1 class="title">The Greenhouse Frame</h1>
+      <div class="sub">The skeleton that holds wind, sun, and water at bay</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you set four steel poles in a 3 m by 4 m rectangle, bend PVC pipes between them to form hoops, and a polyethylene sheet goes over the top. That frame is the only thing between your seedlings and a <span class="bad">40 km/h wind</span>.</p>
+        <p>The frame has three jobs. <span class="hl">Hold the cover, hold the weight of the plants and water, and stay still</span> when the wind pushes. The right pick does all three on a budget you can repeat.</p>
+        <p class="close">A <span class="bad">frame that bends in the rain</span> is one you replace.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">BUILD THIS ONCE</span>
+        <p>Drive four sticks where the corners will sit. Tie a string between them. Walk around it. That rectangle is the size of your year.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Vertical Rack Design: stack the plants so your floor feeds your back, between the lowest bend and the highest reach.</h2>
+      <div class="tab" style="background:#a0c82f"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 12</div>
+        <span class="pill">Engineering</span>
+      </div>
+      <h1 class="title">Vertical Rack Design</h1>
+      <div class="sub">Stack the plants so your floor feeds your back</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you set a single 6 m long channel on the ground. It feeds about 30 plants. You raise it on a <span class="good">3-tier rack</span>, you feed 90 in the same footprint. The cost of the rack is the cost of the floor you didn't have to rent.</p>
+        <p>A vertical rack has two limits. The <span class="hl">lowest tier you can water without bending</span> every day. The <span class="hl">highest tier you can reach without a stool</span>. Between those two heights is your farm.</p>
+        <p class="close">The rack gives you floor. Your back pays for it.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">MEASURE IT</span>
+        <p>Stand at your kitchen counter. Bend down to the lowest shelf. Bend up to the highest. That span is your rack height.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Channel Routing: the path the water walks, end to end, and the slope that is the engine.</h2>
+      <div class="tab" style="background:#a0c82f"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 13</div>
+        <span class="pill">Engineering</span>
+      </div>
+      <h1 class="title">Channel Routing</h1>
+      <div class="sub">The path the water walks, end to end</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you put the pump at the low end, run a pipe up to a header tank, then run 6 channels back down to a common drain. The water goes up once, across six times, down once. The pump pays for one climb.</p>
+        <p>A channel that goes up and down wastes pump work. A channel that slopes down at 1 cm per meter wastes nothing. The <span class="hl">slope is the engine</span>.</p>
+        <p class="close">A <span class="bad">flat channel is a pond</span>. A <span class="good">sloping channel is a road</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">MEASURE IT</span>
+        <p>Lay a 2 m board on your channel. Put a phone on the board. The downhill end is the end.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Drainage and Overflow: where the water goes when the pump forgets to stop, and the cheapest insurance on the farm.</h2>
+      <div class="tab" style="background:#a0c82f"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 14</div>
+        <span class="pill">Engineering</span>
+      </div>
+      <h1 class="title">Drainage and Overflow</h1>
+      <div class="sub">Where the water goes when the pump forgets to stop</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say the pump sticks on, or a valve jams open, and water keeps flowing. The plants drink what they can. The rest has to leave the greenhouse, or it <span class="bad">pools, breeds mosquitoes, and drowns</span> the lowest roots.</p>
+        <p>A <span class="hl">standpipe at the drain</span> sets the water level. A pipe from the standpipe to the outside takes the overflow. The plants never sit in standing water, even when the pump runs wild.</p>
+        <p class="close">The <span class="good">overflow pipe is the cheapest insurance</span> on the farm.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">DO THIS TODAY</span>
+        <p>Find a bucket. Drill a hole 3 cm below the rim. Fill the bucket past the hole. The water stops at the hole. That is a standpipe.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Ventilation Basics: air in, hot air out, plants that can breathe, the cross-flow between two walls.</h2>
+      <div class="tab" style="background:#a0c82f"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 15</div>
+        <span class="pill">Engineering</span>
+      </div>
+      <h1 class="title">Ventilation Basics</h1>
+      <div class="sub">Air in, hot air out, plants that can breathe</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say the sun heats the inside of the greenhouse to 38 degrees while the outside is 24. The plants sit in <span class="bad">still, hot air</span>. Their leaves sweat and the roots can't keep up.</p>
+        <p>A <span class="hl">low vent on one wall and a high vent</span> on the other wall let the hot air rise out the top while the cool air pulls in from the bottom. No fan needed.</p>
+        <p class="close">A greenhouse with no vents is a <span class="bad">sauna</span>. A greenhouse with two is a <span class="good">lung</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">BUILD THIS ONCE</span>
+        <p>Cut a 30 cm square at the bottom of one wall and the same at the top of the opposite wall. Cover both with mosquito net. That is your ventilation.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Arts explainer page: a greenhouse with plants in every corner takes 40 minutes to water; the same plants with a wide centre path and clear work zones on each side take 15. The plants are the same. The paths are not.</h2>
+      <div class="tab" style="background:#32b5d3"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 16</div>
+        <span class="pill">Arts</span>
+      </div>
+      <h1 class="title">Layout and Flow</h1>
+      <div class="sub">How you walk through the greenhouse changes how much work gets done.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: a floor plan of a 3 m by 4 m greenhouse with a wide centre path down the middle, work zones on each side holding plant channels, and a drain line at the low end.">
+          <defs>
+            <filter id="cs16" x="-20%" y="-25%" width="140%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1A1A2E" flood-opacity="0.07"/></filter>
+          </defs>
+          <rect x="40" y="20" width="512" height="160" rx="6" fill="none" stroke="#CBD2DC" stroke-width="1"/>
+          <text x="50" y="36" style="font-family:'Inter',sans-serif;font-size:10px;fill:#5B6472">3 m</text>
+          <text x="540" y="36" text-anchor="end" style="font-family:'Inter',sans-serif;font-size:10px;fill:#5B6472">4 m</text>
+          <rect x="60" y="50" width="472" height="20" fill="#E5F6FA" stroke="#32b5d3" stroke-width="1"/>
+          <text x="296" y="64" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;fill:#1A1A2E">WALKING PATH</text>
+          <rect x="60" y="80" width="220" height="40" fill="#F0F9F2" stroke="#A0C82F" stroke-width="1"/>
+          <text x="170" y="100" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;fill:#1A1A2E">WORK ZONE</text>
+          <text x="170" y="113" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:9px;fill:#5B6472">channel rows</text>
+          <rect x="312" y="80" width="220" height="40" fill="#F0F9F2" stroke="#A0C82F" stroke-width="1"/>
+          <text x="422" y="100" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:600;fill:#1A1A2E">WORK ZONE</text>
+          <text x="422" y="113" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:9px;fill:#5B6472">channel rows</text>
+          <rect x="60" y="130" width="472" height="14" fill="#FEF1F1" stroke="#DC2626" stroke-width="1"/>
+          <text x="296" y="141" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;fill:#DC2626">DRAIN LINE — LOW END</text>
+          <line x1="60" y1="100" x2="532" y2="100" stroke="#32b5d3" stroke-width="0.5" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Plants in every corner of a 3 m by 4 m room, every row a different height. <span class="bad">Watering takes 40 minutes</span>. A colleague with a centre path <span class="good">finishes in 15</span>. <span class="hl">Same plants. Different paths.</span></p>
+        <p>A greenhouse has three zones: a wide centre path, work zones on each side, and a clear drain line at the low end. One person can <span class="good">do the work of three</span>.</p>
+        <p class="close">A greenhouse that is easy to work in is one that gets worked.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">TRACE YOUR PATH</span>
+        <p>Draw your kitchen at home. Trace the path you walk from the door to the sink to the fridge. That is layout and flow.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Arts explainer page: a bare fluorescent tube and an afternoon sunlit room both show the same light level on a meter, but one feels easier to work in. The feeling is design.</h2>
+      <div class="tab" style="background:#32b5d3"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 17</div>
+        <span class="pill">Arts</span>
+      </div>
+      <h1 class="title">Light as Design</h1>
+      <div class="sub">Light is not just what the plants eat. It is what you see.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: a top-down view of a greenhouse with an overhead LED panel casting straight-down light on the plants, and an angled side light from a window casting long shadows across the work path.">
+          <defs>
+            <filter id="cs17" x="-20%" y="-25%" width="140%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1A1A2E" flood-opacity="0.07"/></filter>
+          </defs>
+          <rect x="20" y="40" width="200" height="120" rx="6" fill="#F8FAFC" stroke="#CBD2DC" stroke-width="1"/>
+          <text x="120" y="35" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;fill:#1A1A2E">OVERHEAD PANEL</text>
+          <rect x="60" y="90" width="120" height="40" fill="#A0C82F" opacity="0.4"/>
+          <line x1="120" y1="50" x2="120" y2="85" stroke="#6366F1" stroke-width="1.5" marker-end="url(#ar17)"/>
+          <line x1="100" y1="50" x2="80" y2="85" stroke="#6366F1" stroke-width="1.5" marker-end="url(#ar17)"/>
+          <line x1="140" y1="50" x2="160" y2="85" stroke="#6366F1" stroke-width="1.5" marker-end="url(#ar17)"/>
+          <marker id="ar17" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+          <text x="120" y="150" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:9px;fill:#5B6472">even growth, no shadows</text>
+          <rect x="370" y="40" width="200" height="120" rx="6" fill="#FEF6E8" stroke="#ED7D1F" stroke-width="1"/>
+          <text x="470" y="35" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;fill:#1A1A2E">ANGLED SIDE LIGHT</text>
+          <rect x="410" y="90" width="120" height="40" fill="#A0C82F" opacity="0.4"/>
+          <line x1="500" y1="60" x2="430" y2="90" stroke="#ED7D1F" stroke-width="1.5" marker-end="url(#ar17b)"/>
+          <line x1="500" y1="80" x2="420" y2="100" stroke="#ED7D1F" stroke-width="1.5" marker-end="url(#ar17b)"/>
+          <line x1="500" y1="100" x2="410" y2="110" stroke="#ED7D1F" stroke-width="1.5" marker-end="url(#ar17b)"/>
+          <marker id="ar17b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#ED7D1F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+          <text x="470" y="150" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:9px;fill:#5B6472">soft shadows, easier to read labels</text>
+          <text x="296" y="185" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#5B6472">same light level on a meter. Different feeling to work in.</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Working under a bare fluorescent tube vs sitting in a room with afternoon sun through a window. Both have the same light level on a meter. <span class="hl">One feels easier to be in.</span> That feeling is design.</p>
+        <p><span class="hl">Light quality, angle, and colour</span> are tools. Vertical downlight gives even growth. Angled side light cuts glare. Warm colour shortens an afternoon. You choose for the worker.</p>
+        <p class="close">Plants need light to eat. Workers need <span class="good">light to think</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">FEEL THE LIGHT</span>
+        <p>Stand in any room at home at three hours today. Note how the feeling changes each time.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Arts explainer page: in a field, one yellow leaf is invisible. In a greenhouse where 90 plants are visible and grouped, that yellow leaf is the only thing you see. Colour is signal, not noise.</h2>
+      <div class="tab" style="background:#32b5d3"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 18</div>
+        <span class="pill">Arts</span>
+      </div>
+      <h1 class="title">Colour in the Greenhouse</h1>
+      <div class="sub">When everything is green, one yellow leaf is a signal, not noise.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: four plant leaves in a row. Most are dark green. One is pale yellow at the base. One has purple-tinged edges. One has a pale green newest leaf. Each colour signals a different stress.">
+          <defs>
+            <filter id="cs18" x="-20%" y="-25%" width="140%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1A1A2E" flood-opacity="0.07"/></filter>
+          </defs>
+          <g transform="translate(60 30)">
+            <ellipse cx="40" cy="50" rx="36" ry="22" fill="#2D6A3E" stroke="#1A1A2E" stroke-width="0.5"/>
+            <text x="40" y="90" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:9px;fill:#5B6472">healthy</text>
+            <text x="40" y="102" text-anchor="middle" style="font-family:'JetBrains Mono',monospace;font-size:8px;fill:#5B6472">dark green</text>
+          </g>
+          <g transform="translate(190 30)">
+            <ellipse cx="40" cy="50" rx="36" ry="22" fill="#A8B844" stroke="#B45309" stroke-width="1.2"/>
+            <ellipse cx="40" cy="64" rx="20" ry="6" fill="#E8C547"/>
+            <text x="40" y="90" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:9px;fill:#B45309">low nitrogen</text>
+            <text x="40" y="102" text-anchor="middle" style="font-family:'JetBrains Mono',monospace;font-size:8px;fill:#5B6472">pale yellow base</text>
+          </g>
+          <g transform="translate(320 30)">
+            <ellipse cx="40" cy="50" rx="36" ry="22" fill="#3D6A4E" stroke="#7E3FB5" stroke-width="1.2"/>
+            <ellipse cx="40" cy="32" rx="28" ry="4" fill="#7E3FB5"/>
+            <text x="40" y="90" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:9px;fill:#7E3FB5">low phosphorus</text>
+            <text x="40" y="102" text-anchor="middle" style="font-family:'JetBrains Mono',monospace;font-size:8px;fill:#5B6472">purple edges</text>
+          </g>
+          <g transform="translate(450 30)">
+            <ellipse cx="40" cy="50" rx="36" ry="22" fill="#6FA85C" stroke="#1A1A2E" stroke-width="0.5"/>
+            <ellipse cx="40" cy="40" rx="14" ry="6" fill="#C8E0A0"/>
+            <text x="40" y="90" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:9px;fill:#1A1A2E">pH locking iron</text>
+            <text x="40" y="102" text-anchor="middle" style="font-family:'JetBrains Mono',monospace;font-size:8px;fill:#5B6472">pale green tip</text>
+          </g>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>90 plants in 6 channels, all green. Except one, yellowing at the base. In a field you would not notice. In a greenhouse, <span class="hl">that yellow is the only thing you see.</span> <span class="bad">Pale yellow = low nitrogen</span>. <span class="bad">Purple edges = low phosphorus</span>. <span class="hl">Pale green tip = pH locking iron</span>.</p>
+        <p class="close">A palette of greens tells you where to look before you have to look.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">READ THE LEAVES</span>
+        <p>Look at three plants in your home. Write each newest leaf colour. Repeat next week. Any change is the plant talking.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Arts explainer page: the same tomato in a plain bag and a clean labelled bag sell for different prices at the same stall. The label changed what the buyer thought the tomato was worth.</h2>
+      <div class="tab" style="background:#32b5d3"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 19</div>
+        <span class="pill">Arts</span>
+      </div>
+      <h1 class="title">Branding the Harvest</h1>
+      <div class="sub">The same tomato in a plain bag and a labelled bag sell for different prices.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: two bags of tomatoes side by side. The plain bag has no label. The labelled bag has a small sticker with a farm name and a date.">
+          <defs>
+            <filter id="cs19" x="-20%" y="-25%" width="140%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1A1A2E" flood-opacity="0.07"/></filter>
+          </defs>
+          <rect x="80" y="20" width="160" height="100" rx="8" fill="#F5F5F0" stroke="#94A3B8" stroke-width="1.2" filter="url(#cs19)"/>
+          <circle cx="120" cy="60" r="12" fill="#DC2626"/>
+          <circle cx="155" cy="55" r="11" fill="#DC2626"/>
+          <circle cx="185" cy="65" r="12" fill="#DC2626"/>
+          <circle cx="135" cy="85" r="10" fill="#DC2626"/>
+          <circle cx="170" cy="88" r="11" fill="#DC2626"/>
+          <text x="160" y="140" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#5B6472">plain bag — no name, no date</text>
+          <rect x="352" y="20" width="160" height="100" rx="8" fill="#FFFFFF" stroke="#1A1A2E" stroke-width="1.2" filter="url(#cs19)"/>
+          <circle cx="392" cy="60" r="12" fill="#DC2626"/>
+          <circle cx="427" cy="55" r="11" fill="#DC2626"/>
+          <circle cx="457" cy="65" r="12" fill="#DC2626"/>
+          <circle cx="407" cy="85" r="10" fill="#DC2626"/>
+          <circle cx="442" cy="88" r="11" fill="#DC2626"/>
+          <rect x="362" y="28" width="140" height="18" rx="3" fill="#32b5d3"/>
+          <text x="432" y="41" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;fill:#FFFFFF">Gulele Farm · 2026</text>
+          <text x="432" y="140" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#1A1A2E">labelled bag — name + date</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>2 kg of cherry tomatoes. Half in a plain bag, half in a clean bag with a small handwritten label that says "Gulele Farm" and a date. A buyer at Merkato picks one. Which one do they reach for first? <span class="hl">The label did not change the tomato.</span> It <span class="good">changed what the buyer thought it was worth</span>.</p>
+        <p>A brand is a short promise. A name, a date, a clean bag. The <span class="good">labelled tomato sells for more</span>.</p>
+        <p class="close">The plant grows in water. The value grows in the story.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">VISIT MERKATO</span>
+        <p>Go to Merkato. Compare the cheapest and the most expensive bag of tomatoes on one stall. Note every difference in the label.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Mathematics explainer: in a 3 m by 4 m room, 4 m of channel times 0.2 m wide is less than one square meter of growing space. The number of plants that fit in that one square meter sets how many heads are sold each week, how much water is bought, and whether the system pays back.</h2>
+      <div class="tab" style="background:#b44b97"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 20</div>
+        <span class="pill">Mathematics</span>
+      </div>
+      <h1 class="title">Plants per Square Meter</h1>
+      <div class="sub">The number that sets every other number in the business.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="98" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="50" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>4 m of channel in a 3 m by 4 m room is <span class="hl">less than one square meter</span> of growing space. That number decides how many heads you sell each week, how much water you buy, and whether the system pays back. One head needs 20 cm by 20 cm. Five rows, five across, <span class="good">25 heads per square meter</span>. Strawberries need more, basil less. The <span class="hl">number changes. The method does not.</span></p>
+        <p class="close">A square meter counted once is the same number every week.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">COUNT THE DOTS</span>
+        <p>Draw a 1 m by 1 m square. Mark dots 20 cm apart in rows. Count them. That is your ceiling for that crop.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Mathematics explainer: one head of lettuce sells for 30 cents. Before it was a head, it was a seed, a spoonful of nutrient mix, half a litre of water, hours of light, and a share of the pipes. Add those up. If the total is more than 30 cents, the grower is paying the buyer.</h2>
+      <div class="tab" style="background:#b44b97"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 21</div>
+        <span class="pill">Mathematics</span>
+      </div>
+      <h1 class="title">Cost per Plant</h1>
+      <div class="sub">Seed, nutrient, water, electricity, and a share of the structure.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>One head sells for 30 cents. Before it was a head, it was a seed, a spoonful of nutrient, half a litre of water, hours of light, and a share of the pipes. Add those up. <span class="bad">If the total is more than 30 cents, you are paying a buyer to take your lettuce.</span></p>
+        <p class="close">Write <span class="hl">five lines: seed, nutrient, water, electricity, structure share</span>. Total them. Divide by your system size. That is the <span class="good">cost per plant</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">DO THE DIVISION</span>
+        <p>Find a packet of seed at home. Divide the price by the number of seeds. That is the seed cost per plant.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Mathematics explainer: a system that costs 200 USD to build and sells one head of lettuce for 30 cents must sell about 670 heads before the first dollar is profit. Break-even is not a feeling. It is a count.</h2>
+      <div class="tab" style="background:#b44b97"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 22</div>
+        <span class="pill">Mathematics</span>
+      </div>
+      <h1 class="title">Break-Even Analysis</h1>
+      <div class="sub">How many heads you must sell to pay back what you spent to build it.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="198" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>The system cost 200 USD. One head sells for 30 cents. The system must <span class="bad">sell about 670 heads before the first dollar is profit</span>. <span class="hl">Break-even is not a feeling. It is a count.</span></p>
+        <p class="close">Three numbers: build cost, price per head, days to grow. Cost divided by price, times days. That is the <span class="good">day your money comes back</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">DO THE MATH</span>
+        <p>Write three numbers: build cost, price per plant, days to grow. Divide. Multiply. The answer is the day your money comes back.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <section class="sheet bb">
+      <h2 class="sr">Mathematics explainer: with 4 channels, planting all of them on the same day and waiting 45 days means 6 weeks with no food. The year is the math problem. Twelve months, four channels, three crops at different speeds. The calendar is what stops the year from being a guess.</h2>
+      <div class="tab" style="background:#b44b97"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE</b> · No. 23</div>
+        <span class="pill">Mathematics</span>
+      </div>
+      <h1 class="title">Harvest Calendar</h1>
+      <div class="sub">A map of the year: when each crop is sown, ready, and earning.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="158" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="80" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>4 channels, every week of the year. Plant all four on the same day and you <span class="bad">eat nothing for 6 weeks</span>. <span class="hl">The year is the math problem.</span> Lettuce turns in 45 days. Basil in 30. Strawberries fruit for months. <span class="good">Staggered sowing keeps the channel full</span>.</p>
+        <p class="close">A harvest calendar is twelve boxes, one for each month, written before the year starts.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">DRAW THE YEAR</span>
+        <p>Draw twelve boxes, one for each month. Write what your family is harvesting this month. That is your first harvest calendar.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <!-- I1: Local Materials -->
+    <section class="sheet bb">
+      <div class="tab" style="background:#306a50"></div>
+      <div class="top"><span class="eyebrow">STEAM-IE &middot; No. 24</span><span class="pill">Innovation</span></div>
+      <h1 class="title">Local Materials</h1>
+      <div class="sub">The parts you can swap for what Merkato and Kality already sell.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="98" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="50" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you walk through Merkato and see a cracked IBC tank someone is throwing away. The same tank costs 80 USD online. Your pain is that <span class="bad">imported parts are expensive and slow</span> to arrive. But Merkato has already solved this problem—you just have to know what to look for.</p>
+        <p class="close">One <span class="hl">cracked IBC tank</span> is not waste. It is a <span class="good">greenhouse frame, a reservoir, or a teaching tool</span> on your workbench.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">WALK MERKATO THIS WEEK</span>
+        <p>Walk through Merkato this weekend. Write down five items you see that could be used in a hydroponic system. The list is the beginning of a local material catalogue.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <!-- I2: Aquaponics Hybrid -->
+    <section class="sheet bb">
+      <div class="tab" style="background:#306a50"></div>
+      <div class="top"><span class="eyebrow">STEAM-IE &middot; No. 25</span><span class="pill">Innovation</span></div>
+      <h1 class="title">Aquaponics Hybrid</h1>
+      <div class="sub">Adding fish to the nutrient loop so the fish pay for your fertiliser.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="98" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="50" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you are at a tilapia stall at Merkato. The fishmonger is throwing away contaminated water. The smell is ammonia, which is also plant food. Your pain is <span class="bad">paying for nutrients every cycle</span>. In aquaponics, you pay for fish feed once and the fish do the rest.</p>
+        <p class="close">Tilapia and lettuce together. The <span class="hl">fish pay for your nutrients</span>. You pay for the fish feed. <span class="good">One system, two incomes</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">VISIT A TILAPIA FARM</span>
+        <p>Visit a tilapia farm or a pet shop that sells tilapia. Ask what the fish eat, how much water they need, and what the farmer does with the waste water. Write the answers down.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <!-- I3: Solar Power -->
+    <section class="sheet bb">
+      <div class="tab" style="background:#306a50"></div>
+      <div class="top"><span class="eyebrow">STEAM-IE &middot; No. 26</span><span class="pill">Innovation</span></div>
+      <h1 class="title">Solar Power</h1>
+      <div class="sub">Running the pump and lights off a small panel where the grid does not reach.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="98" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="50" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say there is a power cut on a hot afternoon. Your pump is off. By the time power returns, the water temperature has risen and dissolved oxygen is gone. Your pain is <span class="bad">unreliable grid power</span>. A <span class="hl">solar panel</span> means the system runs when the sun shines, charges a battery, and <span class="good">keeps the pump going through power cuts</span>.</p>
+        <p class="close">The sun does not have power cuts. It is the most reliable power source in Addis.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">MEASURE SOLAR INPUT</span>
+        <p>On a sunny day, hold a small solar garden light in the shade, then in direct sun. Note how long it takes to charge in each place. The difference is real solar input. It is your starting number.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <!-- I4: Floating Rafts -->
+    <section class="sheet bb">
+      <div class="tab" style="background:#306a50"></div>
+      <div class="top"><span class="eyebrow">STEAM-IE &middot; No. 27</span><span class="pill">Innovation</span></div>
+      <h1 class="title">Floating Rafts</h1>
+      <div class="sub">A foam board that floats on the solution, holding the plants at the surface.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="98" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="50" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you have a wide, <span class="bad">shallow concrete tank that cannot drain easily</span>. Your pain is needing gravity for deep channels. A <span class="hl">floating raft system needs nothing</span>: plants float on the surface, roots hang down into the water, no slope needed.</p>
+        <p class="close">The deep channel needs a slope. The floating raft just needs a <span class="good">flat surface and water</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">BUILD A FLOATING RAFT</span>
+        <p>Take a piece of styrofoam, the kind vegetables come packed in. Cut a 5 cm hole in it. Drop a lettuce seedling in a small cup through the hole. Float it in a basin of water. Watch the roots grow down into the water over the next week.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <!-- IE1: Finding Buyers -->
+    <section class="sheet bb">
+      <div class="tab" style="background:#5441ff"></div>
+      <div class="top"><span class="eyebrow">STEAM-IE &middot; No. 28</span><span class="pill">Entrepreneurship</span></div>
+      <h1 class="title">Finding Buyers</h1>
+      <div class="sub">The places a small hydroponic grower can sell to in Addis.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="98" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="50" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you have a full tray of lettuce, freshly harvested, still wet. Your pain is the <span class="bad">harvest that has nowhere to go</span>—lettuce stays good only two days. There are <span class="hl">four places to sell</span>: restaurants (small amounts, premium price, twice a week), hotels (reliable weekly supply, invoice), shops (packaged, priced, margin), markets (loose, cheap). <span class="good">Each buyer shapes what you grow.</span></p>
+        <p class="close">The first buyer is the hardest. The fifth buyer knows what they want and you can plan the harvest around it.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">ASK ONE RESTAURANT</span>
+        <p>Walk into one restaurant in Bole. Ask the chef what greens they buy, in what quantity, and at what price. Write down the answers. That is your first market research.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <!-- IE2: Pricing Your Greens -->
+    <section class="sheet bb">
+      <div class="tab" style="background:#5441ff"></div>
+      <div class="top"><span class="eyebrow">STEAM-IE &middot; No. 29</span><span class="pill">Entrepreneurship</span></div>
+      <h1 class="title">Pricing Your Greens</h1>
+      <div class="sub">Setting a price that covers your costs and leaves a real margin.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="98" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="50" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you are at Merkato seeing two bunches of kale at 15 birr and 30 birr. Your pain is pricing too low or too high. A head of lettuce <span class="hl">costs 30 to 35 cents to grow—that is your floor</span>. <span class="good">One real number: a restaurant pays 15-25 birr, a market stall pays 5-10 birr. The gap is your margin.</span></p>
+        <p class="close">A good price is one your buyer can <span class="good">sell at a profit</span>. They won't buy what they cannot resell.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">COMPARE PRICES AT MERKATO</span>
+        <p>At Merkato, write down the price of one bunch of kale and the price of one head of lettuce. Compare. Note the differences you can see between them: size, freshness, how they are bundled.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <!-- IE3: Cash Flow Management -->
+    <section class="sheet bb">
+      <div class="tab" style="background:#5441ff"></div>
+      <div class="top"><span class="eyebrow">STEAM-IE &middot; No. 30</span><span class="pill">Entrepreneurship</span></div>
+      <h1 class="title">Cash Flow Management</h1>
+      <div class="sub">What money is coming in, what is going out, and when the gap opens.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="98" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="50" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say your family sells roasted maize at Merkato. Some weeks you make money. Some weeks you count coins for stall rent. Your pain is the gap: lettuce needs nutrients next week but slow sales mean cash has not arrived. <span class="bad">You are profitable on paper and short on cash in the same week.</span></p>
+        <p class="close">Income comes in when you sell. Expenses come out for nutrients, bills, top-ups. <span class="good">Plan for the four-week cycle</span>: <span class="hl">expenses, harvest, sales, profit</span>.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">TRACK CASH FOR ONE WEEK</span>
+        <p>For one week, write down every birr that comes into your family and every birr that goes out. At the end of the week, add the two columns. The difference is cash flow.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <!-- IE4: Raising Startup Funds -->
+    <section class="sheet bb">
+      <div class="tab" style="background:#5441ff"></div>
+      <div class="top"><span class="eyebrow">STEAM-IE &middot; No. 31</span><span class="pill">Entrepreneurship</span></div>
+      <h1 class="title">Raising Startup Funds</h1>
+      <div class="sub">Realistic ways to find the first 200 to 500 USD to build a small system.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="98" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="50" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say you have 60 USD saved but need 200 USD to build. Your pain is the gap and the silence that follows. <span class="hl">Four realistic sources</span>: family, school funds, micro-loans, pre-selling to a buyer in advance. <span class="good">No single source has to do it alone.</span></p>
+        <p class="close"><span class="good">Asking for money is a skill</span>. The first ask is the hardest. The second is easier.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">LIST YOUR NETWORK</span>
+        <p>On one piece of paper, write the name of every person you know who has ever lent money to a small project, or given money to a student for a project. That list is the start of a fundraising plan.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+    <!-- IE5: Record Keeping -->
+    <section class="sheet bb">
+      <div class="tab" style="background:#5441ff"></div>
+      <div class="top"><span class="eyebrow">STEAM-IE &middot; No. 32</span><span class="pill">Entrepreneurship</span></div>
+      <h1 class="title">Record Keeping</h1>
+      <div class="sub">What to write every week and why those notes are the most valuable thing you own.</div>
+      <hr class="rule">
+      <div class="diagram">
+        <svg width="100%" viewBox="0 0 592 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder 800x1200 — no image yet">
+          <rect x="1" y="1" width="590" height="98" rx="6" fill="#F1F2F6" stroke="#CBD2DC" stroke-width="1" stroke-dasharray="6 6"/>
+          <text x="296" y="50" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:14px;fill:#5B6472">Placeholder 800x1200 — no image yet</text>
+        </svg>
+      </div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Let's say your second crop is dying with same water and lights as the first. Your pain is guessing why you think it failed. <span class="hl">The four things to write every Sunday</span>: what grew well, what failed and why, what sold and what did not, and what the week cost in nutrients, water, electricity. <span class="good">After twelve weeks you have the picture that no one else has.</span></p>
+        <p class="close">The student who keeps records <span class="good">doubles their skill in one year</span>. The student who does not keep starting from zero every season.</p>
+      </div>
+      <div class="ask">
+        <span class="lbl">BUY A NOTEBOOK TODAY</span>
+        <p>Buy a small notebook. Label it. Every Sunday for the next four weeks, write one paragraph about the system: what grew, what failed, what sold, what it cost. That is the start of a record book.</p>
+      </div>
+      <div class="foot"><span class="brand">yoursite.com</span><span class="pg"></span><span class="series">STEAM-IE</span></div>
+    </section>
+
+  </main>
+  <script src="../../engine/sheet-tools.js"></script>
+</body>
+</html>
