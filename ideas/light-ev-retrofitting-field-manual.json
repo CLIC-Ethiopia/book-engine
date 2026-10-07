@@ -1,0 +1,765 @@
+{
+  "title": "Light EV Retrofitting Field Manual",
+  "slug": "light-ev-retrofitting-field-manual",
+  "subtitle": "Building and retrofitting e-bikes and conversion kits in developing urban markets",
+  "editionLabel": "First Edition",
+  "author": "STEAM-IE Field Manual Team",
+  "series": "STEAM-IE Small Business Field Manuals",
+  "audience": "Micro-entrepreneurs, technicians, and mechanics",
+  "primaryLocation": "Developing urban markets",
+  "coverImage": "light-ev-retrofitting-cover.png",
+  "pages": [
+    {
+      "no": 1,
+      "section": "Science",
+      "title": "Motor Torque",
+      "subtitle": "How magnetic force creates wheel rotation",
+      "content": "<p>Imagine hitting a steep hill with a heavy load. Your hub motor draws max current, but <span class=\"bad\">excessive heat builds up rapidly</span> inside the copper windings.</p><p>Current flowing through copper coils generates a magnetic field that pushes against permanent magnets. <span class=\"hl\">Higher current produces stronger rotational force</span>, helping you <span class=\"good\">climb steep inclines without stalling</span>.</p><p class=\"close\">Current drives torque. Heat limits duration.</p>",
+      "imagePrompt": "Cross-section diagram of a brushless hub motor showing copper windings, permanent magnets, magnetic field lines, and rotational torque vectors. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TEST MOTOR TEMP",
+        "content": "Touch the motor casing after a hill climb. If too hot to hold, reduce throttle."
+      },
+      "citations": [1, 2]
+    },
+    {
+      "no": 2,
+      "section": "Science",
+      "title": "Battery Chemistry",
+      "subtitle": "Understanding lithium ion energy storage",
+      "content": "<p>Picture an unbranded battery pack bought from a local trader. Without internal balance, <span class=\"bad\">weak cells collapse under heavy load</span> and ruin the entire pack.</p><p>Lithium ions shuttle between cathode and anode during charge cycles. <span class=\"hl\">Maintaining individual cell voltages between limits</span> guarantees safety and <span class=\"good\">extends battery lifespan significantly</span>.</p><p class=\"close\">Balanced chemical reactions protect cell health.</p>",
+      "imagePrompt": "Diagram showing lithium-ion cell internals with anode, cathode, electrolyte, and ion flow during charge and discharge. Technical vector diagram with clear labels, clean white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "CHECK CELL VOLTAGE",
+        "content": "Measure individual cell series strings with a digital multimeter before spot welding."
+      },
+      "citations": [2, 3]
+    },
+    {
+      "no": 3,
+      "section": "Science",
+      "title": "Thermal Management",
+      "subtitle": "Dissipating heat from sealed battery enclosures",
+      "content": "<p>Consider riding through hot tropical dust with a sealed battery box. <span class=\"bad\">Trapped heat accelerates chemical degradation</span> and risks thermal runaway.</p><p>Heat transfers out via conduction through aluminum casings. <span class=\"hl\">Adding thermal pads between cells and casing</span> speeds transfer, keeping <span class=\"good\">core temperatures safe under peak load</span>.</p><p class=\"close\">Cooler operating cells last twice as long.</p>",
+      "imagePrompt": "Thermal dissipation schematic of a battery pack enclosed in an aluminum box with thermal pads and heat dissipation arrows. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "ADD THERMAL PADS",
+        "content": "Place silicone thermal pads between cell groups and the outer aluminum case."
+      },
+      "citations": [1, 3]
+    },
+    {
+      "no": 4,
+      "section": "Science",
+      "title": "Energy Density",
+      "subtitle": "Balancing pack weight against usable capacity",
+      "content": "<p>Let's say a customer demands a 100-kilometer range on a budget bicycle frame. <span class=\"bad\">Overloading the frame with heavy lead batteries</span> causes structural failure.</p><p>Lithium chemistry provides high energy per kilogram. <span class=\"hl\">Selecting 18650 or 21700 cells</span> delivers maximum range while <span class=\"good\">keeping total vehicle weight manageable</span>.</p><p class=\"close\">Higher density means more range per kilogram.</p>",
+      "imagePrompt": "Gravimetric and volumetric energy density comparison chart between Lead-Acid, NiMH, and Lithium-Ion cells. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "WEIGH YOUR PACK",
+        "content": "Weigh cell modules before assembly to verify frame weight limits."
+      },
+      "citations": [2, 4]
+    },
+    {
+      "no": 5,
+      "section": "Science",
+      "title": "Mechanical Friction",
+      "subtitle": "Reducing resistance in drivetrain components",
+      "content": "<p>Suppose an e-bike conversion loses 20 percent of its range instantly. <span class=\"bad\">Unlubricated chains and rubbing brakes</span> waste precious battery power as heat.</p><p>Friction converts kinetic energy into useless heat energy. <span class=\"hl\">Aligning brake calipers and lubricating chains</span> lowers drag, ensuring <span class=\"good\">maximum motor output reaches the tire</span>.</p><p class=\"close\">Free-spinning wheels save battery power.</p>",
+      "imagePrompt": "Force diagram showing mechanical friction vectors on a bicycle chain, wheel bearings, and disc brake calipers. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "SPIN TEST WHEELS",
+        "content": "Lift the bike and spin wheels by hand to confirm zero brake drag."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 6,
+      "section": "Science",
+      "title": "Aerodynamic Drag",
+      "subtitle": "Air resistance forces at higher commuter speeds",
+      "content": "<p>Imagine cruising at 30 km/h into a strong headwind. <span class=\"bad\">Aerodynamic drag consumes power exponentially</span> as speed increases.</p><p>Air drag quadruples every time vehicle speed doubles. <span class=\"hl\">Tucking wiring neatly and optimizing rider posture</span> lowers air resistance, delivering <span class=\"good\">better range at higher cruising speeds</span>.</p><p class=\"close\">Lower wind profile extends high-speed range.</p>",
+      "imagePrompt": "Airflow simulation diagram over an e-bike rider showing high pressure zones and turbulent wake behind rider. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TUCK CABLING LEAN",
+        "content": "Zip-tie loose cables flat against frame tubes to minimize wind drag."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 7,
+      "section": "Science",
+      "title": "Regenerative Physics",
+      "subtitle": "Kinetic energy recovery during braking stops",
+      "content": "<p>Picture riding down a steep urban hill with constant braking. <span class=\"bad\">Friction brakes overheat and wear down quickly</span> during heavy stop-and-go use.</p><p>Reversing motor magnetic poles turns kinetic motion into current. <span class=\"hl\">Directing generated current back to batteries</span> slows the vehicle while <span class=\"good\">recharging battery cells on downhill runs</span>.</p><p class=\"close\">Braking energy feeds back into battery capacity.</p>",
+      "imagePrompt": "Diagram showing power flow reversal from wheel motor through controller to battery during regenerative braking. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "ENABLE REGEN BRAKING",
+        "content": "Configure controller e-brake inputs to trigger magnetic braking."
+      },
+      "citations": [1, 6]
+    },
+    {
+      "no": 8,
+      "section": "Technology",
+      "title": "Controller Setup",
+      "subtitle": "Matching phase wires and hall sensor signals",
+      "content": "<p>Let's say you connect a generic brushless motor controller. <span class=\"bad\">Incorrect phase wiring causes harsh vibration</span> and draws high current without spinning.</p><p>The controller switches DC power to three-phase AC pulses. <span class=\"hl\">Matching phase color sequences and hall sensors</span> enables smooth commutation and <span class=\"good\">delivers quiet motor operation under load</span>.</p><p class=\"close\">Correct signal timing eliminates motor stutter.</p>",
+      "imagePrompt": "Wiring schematic connecting controller phase lines (Blue, Green, Yellow) and Hall sensor harness to brushless motor. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MAP PHASE WIRES",
+        "content": "Test phase combinations at low throttle until motor spins smoothly."
+      },
+      "citations": [1, 6]
+    },
+    {
+      "no": 9,
+      "section": "Technology",
+      "title": "BMS Configuration",
+      "subtitle": "Setting voltage thresholds for pack protection",
+      "content": "<p>Suppose a battery pack operates without cell monitoring. <span class=\"bad\">Over-discharging a single cell ruins the entire pack</span> permanently.</p><p>The Battery Management System monitors every series group voltage. <span class=\"hl\">Disconnecting loads at cut-off thresholds</span> prevents cell damage, ensuring <span class=\"good\">safe charging and long overall service life</span>.</p><p class=\"close\">Voltage cut-offs protect investment capital.</p>",
+      "imagePrompt": "Wiring diagram of a 13S BMS connected to individual lithium cell balance leads and main power terminals. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "VERIFY BALANCE WIRES",
+        "content": "Measure voltage on BMS balance plug harness sequentially before plugging in."
+      },
+      "citations": [3]
+    },
+    {
+      "no": 10,
+      "section": "Technology",
+      "title": "Telemetry Sensors",
+      "subtitle": "Monitoring voltage and temperature in real time",
+      "content": "<p>Consider a fleet customer operating delivery e-bikes daily. <span class=\"bad\">Unmonitored heat buildup causes unexpected roadside failures</span> without warning.</p><p>Digital sensors measure voltage drop, current draw, and temperature. <span class=\"hl\">Displaying live telemetry on handlebars</span> warns riders early, allowing <span class=\"good\">proactive maintenance before expensive component breakdown</span>.</p><p class=\"close\">Live data prevents costly field breakdowns.</p>",
+      "imagePrompt": "System architecture diagram showing temperature and current sensors feeding data to handlebar display unit. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MOUNT TEMP PROBE",
+        "content": "Attach a thermal sensor wire directly inside the motor casing."
+      },
+      "citations": [6]
+    },
+    {
+      "no": 11,
+      "section": "Technology",
+      "title": "CAN Bus",
+      "subtitle": "Connecting controller BMS and digital displays",
+      "content": "<p>Imagine a tangle of fifteen individual control wires across the bike frame. <span class=\"bad\">Damaged individual wires cause frustrating intermittent short circuits</span>.</p><p>Controller Area Network uses two twisted wires for all communication. <span class=\"hl\">Transmitting multiplexed data frames digitally</span> cleans up wiring setups and <span class=\"good\">improves system reliability in wet conditions</span>.</p><p class=\"close\">Two communication wires replace complex harnesses.</p>",
+      "imagePrompt": "CAN bus network wiring topology linking controller, smart BMS, display screen, and throttle unit along two wires. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TWIST CAN WIRES",
+        "content": "Twist CAN-High and CAN-Low signal lines together to prevent electrical noise."
+      },
+      "citations": [6]
+    },
+    {
+      "no": 12,
+      "section": "Technology",
+      "title": "Throttle Calibration",
+      "subtitle": "Setting voltage thresholds for smooth startup",
+      "content": "<p>Suppose a rider twists the throttle and the e-bike jumps forward dangerously. <span class=\"bad\">Uncalibrated throttle response causes accidents</span> in dense traffic.</p><p>Hall-effect throttles output 0.8V to 4.2V signals. <span class=\"hl\">Programming controller start thresholds above rest voltage</span> smooths acceleration, providing <span class=\"good\">predictable power control from zero speed</span>.</p><p class=\"close\">Smooth voltage curves ensure safe launches.</p>",
+      "imagePrompt": "Graph plotting throttle physical rotation angle against signal output voltage with controller deadband zones marked. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "SET THROTTLE DEADBAND",
+        "content": "Adjust start voltage setting in controller software to 1.1 Volts."
+      },
+      "citations": [1]
+    },
+    {
+      "no": 13,
+      "section": "Technology",
+      "title": "Firmware Flashing",
+      "subtitle": "Updating controller parameters via serial link",
+      "content": "<p>Let's say a factory controller limits motor speed artificially low. <span class=\"bad\">Stock settings waste potential performance</span> under heavy cargo loads.</p><p>Connecting a USB programming cable opens internal controller registers. <span class=\"hl\">Flashing custom firmware parameters</span> unlocks peak current limits, delivering <span class=\"good\">custom performance matched to local terrain</span>.</p><p class=\"close\">Tailored firmware optimizes motor performance.</p>",
+      "imagePrompt": "Schematic showing USB-to-UART programming cable connecting computer interface to e-bike motor controller. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BACKUP STOCK FLASH",
+        "content": "Save original factory controller settings to computer before flashing firmware."
+      },
+      "citations": [6]
+    },
+    {
+      "no": 14,
+      "section": "Technology",
+      "title": "Diagnostic Software",
+      "subtitle": "Isolating electrical fault codes rapidly",
+      "content": "<p>Picture an e-bike brought to your shop that won't turn on. <span class=\"bad\">Guessing faulty parts wastes valuable shop time</span> and customer money.</p><p>Diagnostic software reads live status codes from controller inputs. <span class=\"hl\">Identifying broken hall sensors or blown FETs instantly</span> pinpoint faults, ensuring <span class=\"good\">fast repairs and satisfied fleet owners</span>.</p><p class=\"close\">Software diagnostics shorten troubleshooting time.</p>",
+      "imagePrompt": "Flowchart showing diagnostic signal path testing throttle, brake switches, BMS, and motor hall sensors. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "READ FAULT CODES",
+        "content": "Plug diagnostic reader into main harness to scan error logs."
+      },
+      "citations": [6]
+    },
+    {
+      "no": 15,
+      "section": "Technology",
+      "title": "Sensorless Commutating",
+      "subtitle": "Running motors when hall sensors fail in wet roads",
+      "content": "<p>Consider driving through heavy rain when motor hall sensors short out. <span class=\"bad\">Sensor failure usually strands riders stranded</span> far from help.</p><p>Sensorless controllers measure back-electromotive force on unfed phases. <span class=\"hl\">Switching to back-EMF timing algorithms</span> keeps motors running, providing <span class=\"good\">reliable limpmode drive back to workshop</span>.</p><p class=\"close\">Back-EMF sensing offers reliable backup operation.</p>",
+      "imagePrompt": "Waveform diagram contrasting sensor-based hall signals with back-EMF voltage detection in motor controller. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TEST SENSORLESS MODE",
+        "content": "Unplug hall sensor harness to test controller sensorless failover drive."
+      },
+      "citations": [1, 6]
+    },
+    {
+      "no": 16,
+      "section": "Engineering",
+      "title": "Frame Stress",
+      "subtitle": "Reinforcing bicycle dropouts against motor forces",
+      "content": "<p>Imagine retrofitting a powerful hub motor into standard frame dropouts. <span class=\"bad\">Motor axle rotation snaps thin aluminum dropouts</span> under heavy acceleration.</p><p>Torque forces push in reverse against axle slots. <span class=\"hl\">Installing thick steel torque arms</span> transfers forces safely onto frame tubes, keeping <span class=\"good\">wheels securely mounted under max torque</span>.</p><p class=\"close\">Torque arms prevent frame dropout failure.</p>",
+      "imagePrompt": "Stress distribution diagram on bicycle rear dropout under motor torque load with torque arm installed. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "FIT TORQUE ARMS",
+        "content": "Bolt a 4mm stainless steel torque arm to axle flat and frame."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 17,
+      "section": "Engineering",
+      "title": "Axle Alignment",
+      "subtitle": "Ensuring straight tracking under heavy loading",
+      "content": "<p>Suppose a retrofitted cargo bike pulls heavily to the left. <span class=\"bad\">Misassembled wheel axles cause rapid tire wear</span> and dangerous handling.</p><p>Precision axle seating centers wheels inside frame chainstays. <span class=\"hl\">Using alignment washers and torque wrenches</span> fixes axle positions, ensuring <span class=\"good\">straight tracking and balanced brake pad contact</span>.</p><p class=\"close\">Aligned axles improve handling and tire life.</p>",
+      "imagePrompt": "Top-down engineering view of bicycle frame chainstays showing axle alignment washers and wheel centerline. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE AXLE GAP",
+        "content": "Measure distance from rim to frame chainstays on both sides equally."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 18,
+      "section": "Engineering",
+      "title": "Brake Sizing",
+      "subtitle": "Upgrading mechanical stoppers for heavy e-bikes",
+      "content": "<p>Let's say a fast e-bike relies on cheap rim brakes. <span class=\"bad\">Standard rubber pads overheat and fade instantly</span> at higher electric speeds.</p><p>Higher speed and weight demand greater heat dissipation. <span class=\"hl\">Fitting 180mm hydraulic disc rotors</span> increases leverage and cooling surface, delivering <span class=\"good\">short stopping distances under heavy load</span>.</p><p class=\"close\">Larger rotors stop heavy electric bikes safely.</p>",
+      "imagePrompt": "Mechanical comparison diagram showing brake leverage and heat dissipation area between 160mm and 180mm disc rotors. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "INSTALL DISC ROTORS",
+        "content": "Upgrade front brake setup to 180mm rotor with metallic brake pads."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 19,
+      "section": "Engineering",
+      "title": "Wiring Harness",
+      "subtitle": "Building waterproof custom main electrical harnesses",
+      "content": "<p>Picture electrical connections wrapped in cheap electrical tape. <span class=\"bad\">Water penetrates tape joints causing corrosion</span> and intermittent electrical shorts.</p><p>Waterproof connectors seal wiring against rain and road spray. <span class=\"hl\">Crimping Julet or Higigo sealed plugs</span> isolates internal pins, building <span class=\"good\">weatherproof wiring harnesses built for long outdoor life</span>.</p><p class=\"close\">Sealed connectors prevent rain-induced wiring failures.</p>",
+      "imagePrompt": "Cutaway illustration of a waterproof Julet electrical connector showing rubber O-ring seal and crimped pins. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "SEAL WIRE JOINTS",
+        "content": "Use adhesive-lined heat shrink tubing over every soldered wire connection."
+      },
+      "citations": [6]
+    },
+    {
+      "no": 20,
+      "section": "Engineering",
+      "title": "Drivetrain Gearing",
+      "subtitle": "Matching motor RPM to human cadence limits",
+      "content": "<p>Suppose a mid-drive kit spins pedals too fast for comfort. <span class=\"bad\">Inappropriate gear ratios cause rider legs to spin out</span> quickly.</p><p>Mid-drives multiply torque through rear cassette gears. <span class=\"hl\">Selecting appropriate front chainring teeth counts</span> balances motor power and human cadence, providing <span class=\"good\">efficient climbing and comfortable cruising speeds</span>.</p><p class=\"close\">Optimal gearing maximizes mid-drive motor efficiency.</p>",
+      "imagePrompt": "Drivetrain schematic illustrating front chainring, chain path, rear cassette cogs, and cadence torque interaction. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "SWAP CHAINRING SIZE",
+        "content": "Install a 42-tooth narrow-wide front chainring for mid-drive setups."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 21,
+      "section": "Engineering",
+      "title": "Suspension Geometry",
+      "subtitle": "Absorbing road impact to protect mounted electronics",
+      "content": "<p>Consider driving an un-suspended retrofitted bike over unpaved rough roads. <span class=\"bad\">Severe vibration cracks solder joints and cell tabs</span> over time.</p><p>Suspension forks absorb high-frequency road shocks. <span class=\"hl\">Adjusting fork preload and rebound damping</span> dampens vibrations, protecting <span class=\"good\">sensitive batteries and electronics from physical vibration damage</span>.</p><p class=\"close\">Suspension shields battery assemblies from road shock.</p>",
+      "imagePrompt": "Engineering schematic of bicycle front suspension fork showing coil spring, oil damper, and travel vector. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "SET FORK PRELOAD",
+        "content": "Adjust suspension fork sag to 20 percent total travel under weight."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 22,
+      "section": "Engineering",
+      "title": "Enclosure Sealing",
+      "subtitle": "Protecting battery cases against dust and water",
+      "content": "<p>Imagine fine road dust penetrating a custom battery box. <span class=\"bad\">Dust accumulation creates conductive bridges across cells</span> causing short circuits.</p><p>Gaskets seal enclosure seams against particulate entry. <span class=\"hl\">Applying neoprene foam gaskets and IP65 glands</span> blocks dust and water ingress, maintaining <span class=\"good\">clean dry environment inside battery boxes</span>.</p><p class=\"close\">Gasket seals defend electronics from weather.</p>",
+      "imagePrompt": "Cross-section drawing of aluminum enclosure lid with neoprene gasket seal and IP65 cable gland assembly. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "FIT GLAND NUTS",
+        "content": "Install IP65 cable glands for all wires exiting battery enclosures."
+      },
+      "citations": [3]
+    },
+    {
+      "no": 23,
+      "section": "Engineering",
+      "title": "Structural Welding",
+      "subtitle": "Fabricating custom steel mounting brackets safely",
+      "content": "<p>Suppose a weak welded battery mount snaps while riding fast over bumps. <span class=\"bad\">Falling battery packs cause dangerous crashes</span> and instant destruction.</p><p>Proper welding penetrates deep into base metal joint surfaces. <span class=\"hl\">Using TIG or MIG welding on mild steel</span> builds rigid brackets, providing <span class=\"good\">rock-solid mount points for heavy custom batteries</span>.</p><p class=\"close\">Deep weld penetration prevents structural bracket failures.</p>",
+      "imagePrompt": "Diagram showing correct TIG weld bead profile and penetration depth on steel frame tubing joint. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "INSPECT WELD JOINTS",
+        "content": "Stress test custom battery brackets with heavy rubber mallet before mounting."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 24,
+      "section": "Engineering",
+      "title": "Torque Arms",
+      "subtitle": "Preventing dropout shear in conversion kits",
+      "content": "<p>Let's say a conversion kit motor spins loose inside frame dropouts. <span class=\"bad\">Sheared motor wires destroy expensive controllers instantly</span> when axle spins.</p><p>Torque arms anchor flat axle ends directly to sturdy frame tubes. <span class=\"hl\">Clamping stainless steel torque arms firmly</span> handles rotational force, keeping <span class=\"good\">axles stationary and wiring completely safe</span>.</p><p class=\"close\">Sturdy torque arms prevent catastrophic axle rotation.</p>",
+      "imagePrompt": "Detailed assembly view of two-piece adjustable stainless steel torque arm clamped to frame stays. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TORQUE AXLE NUTS",
+        "content": "Tighten motor axle nuts to 45 Newton-meters using calibrated torque wrench."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 25,
+      "section": "Arts",
+      "title": "Ergonomic Design",
+      "subtitle": "Arranging handlebar controls for comfortable operation",
+      "content": "<p>Picture a rider straining thumbs to reach throttle and brake levers. <span class=\"bad\">Poor control placement causes rider fatigue</span> and slow reaction times.</p><p>Ergonomic control layouts place levers within easy thumb reach. <span class=\"hl\">Angling throttle buttons and brake levers naturally</span> improves rider comfort, enabling <span class=\"good\">fast emergency braking response in city traffic</span>.</p><p class=\"close\">Intuitive control placement increases rider safety.</p>",
+      "imagePrompt": "Handlebar control layout diagram showing optimal reach zones and angles for throttle, display, and brakes. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "ANGLE LEVERS NATURAL",
+        "content": "Set brake lever angle to 45 degrees downward inline with arms."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 26,
+      "section": "Arts",
+      "title": "Cable Routing",
+      "subtitle": "Running clean wiring channels along frame tubes",
+      "content": "<p>Consider an e-bike conversion with dangling loose wire loops. <span class=\"bad\">Loose wires snag on branches and look unprofessional</span> to paying customers.</p><p>Clean cable routing follows primary frame structural lines. <span class=\"hl\">Securing wires using spiral wrap and cable guides</span> tidies visual presentation, creating <span class=\"good\">clean factory-looking builds that command premium prices</span>.</p><p class=\"close\">Clean cable management creates professional aesthetics.</p>",
+      "imagePrompt": "Bicycle frame diagram highlighting neatly routed wire paths using frame guides and spiral wrap hose. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "WRAP CABLE HOSE",
+        "content": "Encase loose handlebar control wires into spiral protective hose wrap."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 27,
+      "section": "Arts",
+      "title": "Frame Painting",
+      "subtitle": "Applying durable finishes to retrofitted frames",
+      "content": "<p>Imagine bare steel welds rusting after first monsoon rainstorm. <span class=\"bad\">Unprotected metal degrades quickly and looks unattractive</span> to buyers.</p><p>Surface preparation and primer coat protect raw metal underneath. <span class=\"hl\">Spraying tough polyurethane enamel topcoats</span> blocks humidity, delivering <span class=\"good\">glossy durable finishes that resist scratching daily</span>.</p><p class=\"close\">Quality paint seals metal against corrosion rust.</p>",
+      "imagePrompt": "Layered cutaway diagram showing steel tube, etch primer, base coat, and clear polyurethane coat. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "SAND RAW METAL",
+        "content": "Sand welded frame joints with 320 grit paper before applying primer."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 28,
+      "section": "Arts",
+      "title": "Custom Badging",
+      "subtitle": "Building brand recognition on converted e-bikes",
+      "content": "<p>Suppose your workshop conversions look like unbranded generic machines. <span class=\"bad\">Unbranded products fail to build workshop reputation</span> locally.</p><p>Custom badges communicate local craft quality and pride. <span class=\"hl\">Applying vinyl headtube logos and branding graphics</span> establishes visual identity, helping <span class=\"good\">generate word-of-mouth referral sales in your city</span>.</p><p class=\"close\">Branded frames establish professional business identity.</p>",
+      "imagePrompt": "Graphic design placement guide showing logo badge positioning on headtube and frame downtube. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "APPLY LOGO BADGE",
+        "content": "Place waterproof branded vinyl decal on bicycle headtube centered straight."
+      },
+      "citations": [7]
+    },
+    {
+      "no": 29,
+      "section": "Arts",
+      "title": "Lighting Placement",
+      "subtitle": "Positioning headlamps for night urban visibility",
+      "content": "<p>Consider riding home after dark on poorly lit streets. <span class=\"bad\">Low-mounted headlights project harsh shadows</span> hiding deep road potholes.</p><p>Proper headlight height casts wide illumination across road paths. <span class=\"hl\">Mounting high-lumen LED lights on fork crowns</span> illuminates obstacles clearly, ensuring <span class=\"good\">safe night navigation for delivery riders</span>.</p><p class=\"close\">Strategic light placement improves night road visibility.</p>",
+      "imagePrompt": "Optical light beam projection diagram showing headlight beam pattern cut-off angle and ground coverage. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "AIM HEADLIGHT BEAM",
+        "content": "Aim headlight beam slightly downward to avoid blinding oncoming traffic."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 30,
+      "section": "Arts",
+      "title": "Cargo Bay Design",
+      "subtitle": "Designing practical visual layouts for cargo storage",
+      "content": "<p>Let's say a local bakery needs custom cargo boxes on trikes. <span class=\"bad\">Bulky ugly boxes ruin vehicle balance and visual appeal</span>.</p><p>Balanced proportions harmonize cargo box geometry with frame lines. <span class=\"hl\">Using lightweight composite panels and clean vinyl graphics</span> blends function and style, creating <span class=\"good\">eye-catching mobile advertising for commercial fleet clients</span>.</p><p class=\"close\">Attractive cargo boxes serve as rolling billboards.</p>",
+      "imagePrompt": "Side elevation drawing of e-cargo bike with integrated box dimensions, branding area, and center of gravity marked. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MOCKUP CARGO BOX",
+        "content": "Build cardboard box mockup on frame to check leg clearance before fabrication."
+      },
+      "citations": [7]
+    },
+    {
+      "no": 31,
+      "section": "Mathematics",
+      "title": "Range Calculation",
+      "subtitle": "Estimating travel distance per battery charge",
+      "content": "<p>Imagine promising a customer 50 kilometers range on a tiny battery pack. <span class=\"bad\">Underestimating energy consumption leaves customers stranded</span> mid-trip.</p><p>Energy consumed equals watt-hours divided by average speed and terrain drag. <span class=\"hl\">Calculating battery capacity in Watt-Hours</span> predicts real-world range, delivering <span class=\"good\">accurate distance figures customers can rely on</span>.</p><p class=\"close\">Watt-hours divided by efficiency equals true range.</p>",
+      "imagePrompt": "Mathematical formula diagram calculating total Watt-Hours from Voltage and Amp-Hour ratings. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "CALCULATE PACK WATT-HOURS",
+        "content": "Multiply battery voltage by amp-hours to find total energy capacity."
+      },
+      "citations": [2, 4]
+    },
+    {
+      "no": 32,
+      "section": "Mathematics",
+      "title": "Gear Ratios",
+      "subtitle": "Calculating torque multiplication for steep hills",
+      "content": "<p>Suppose a mid-drive motor overheats trying to climb steep gradients. <span class=\"bad\">Wrong gear ratios strain motors past thermal limits</span> continuously.</p><p>Gear ratio equals chainring teeth divided by rear cog teeth count. <span class=\"hl\">Selecting a high mechanical reduction ratio</span> multiplies wheel climbing torque, allowing <span class=\"good\">cool motor operation up steep city hills</span>.</p><p class=\"close\">Higher numerical gear ratios increase torque output.</p>",
+      "imagePrompt": "Gear ratio chart plotting front chainring and rear cog teeth combinations against mechanical leverage. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "COMPUTE GEAR RATIO",
+        "content": "Divide front chainring teeth count by largest rear cassette cog teeth."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 33,
+      "section": "Mathematics",
+      "title": "Battery Sizing",
+      "subtitle": "Calculating series and parallel cell configurations",
+      "content": "<p>Picture building a custom 48V battery from loose 18650 cells. <span class=\"bad\">Incorrect series cell counts cause wrong pack voltage</span> output.</p><p>Series cells multiply voltage while parallel cells multiply current capacity. <span class=\"hl\">Configuring 13 series and 4 parallel cells</span> builds a 48V 12Ah pack, delivering <span class=\"good\">exact voltage and capacity for target motors</span>.</p><p class=\"close\">Series sets voltage. Parallel sets current capacity.</p>",
+      "imagePrompt": "Cell matrix schematic showing 13S4P lithium pack wiring with series parallel connections labeled clearly. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "COUNT CELL MATRIX",
+        "content": "Multiply series cell count by nominal cell voltage to check target."
+      },
+      "citations": [2, 3]
+    },
+    {
+      "no": 34,
+      "section": "Mathematics",
+      "title": "Payload Capacity",
+      "subtitle": "Calculating total weight limits for safe transport",
+      "content": "<p>Consider loading 150 kilograms onto a standard commuter conversion frame. <span class=\"bad\">Exceeding structural payload ratings causes frame failure</span> suddenly.</p><p>Total payload includes rider weight plus freight cargo combined. <span class=\"hl\">Calculating frame stress limits and spoke tension</span> establishes safe limits, keeping <span class=\"good\">cargo transport operations stable and break-free</span>.</p><p class=\"close\">Respect weight limits to protect structural frame.</p>",
+      "imagePrompt": "Payload breakdown diagram illustrating rider mass, cargo mass, frame load points, and maximum vector limits. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "SUM TOTAL PAYLOAD",
+        "content": "Add weight of rider, cargo box, and battery to verify frame rating."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 35,
+      "section": "Mathematics",
+      "title": "Voltage Drop",
+      "subtitle": "Calculating power loss across thin wiring runs",
+      "content": "<p>Suppose you use thin 18-gauge wire for main battery power lines. <span class=\"bad\">Thin wires cause severe voltage drop and heat</span> under current.</p><p>Wire resistance wastes power as heat proportional to length and current. <span class=\"hl\">Selecting thick 12-gauge copper wire conductors</span> minimizes voltage drop, ensuring <span class=\"good\">full battery power reaches motor controllers directly</span>.</p><p class=\"close\">Thicker power cables eliminate energy voltage losses.</p>",
+      "imagePrompt": "Graph plotting wire gauge thickness against voltage drop over two meters length at 30 Amps current. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "CHECK WIRE RESISTANCE",
+        "content": "Measure voltage drop across power leads under full motor throttle load."
+      },
+      "citations": [1, 6]
+    },
+    {
+      "no": 36,
+      "section": "Mathematics",
+      "title": "C-Rate Dynamics",
+      "subtitle": "Calculating peak discharge currents during startup",
+      "content": "<p>Let's say a motor draws 30 Amps from a small 10Ah battery pack. <span class=\"bad\">Exceeding maximum cell C-rate overheats cells</span> quickly.</p><p>Discharge C-rate measures current draw relative to pack capacity. <span class=\"hl\">Selecting 3C continuous rated lithium cells</span> handles 30 Amp bursts safely, delivering <span class=\"good\">strong launch power without damaging cell internal structure</span>.</p><p class=\"close\">High C-rate cells handle heavy acceleration currents.</p>",
+      "imagePrompt": "Formula diagram showing calculation of max discharge Amps from cell C-rate and Amp-Hour capacity. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MULTIPLY CELL C-RATE",
+        "content": "Multiply cell Ah capacity by continuous C-rate to find max continuous current."
+      },
+      "citations": [2, 3]
+    },
+    {
+      "no": 37,
+      "section": "Mathematics",
+      "title": "Spokes Tensioning",
+      "subtitle": "Calculating spoke tension vectors on heavy hub motors",
+      "content": "<p>Picture heavy hub motor wheels wobbling after two weeks of riding. <span class=\"bad\">Uneven spoke tension snaps spokes under motor torque</span> loads.</p><p>Spokes transmit rotational motor torque from hub shell to rim. <span class=\"hl\">Balancing tension to 1100 Newtons evenly</span> distributes mechanical loads, building <span class=\"good\">durable hub motor wheels that stay true indefinitely</span>.</p><p class=\"close\">Equal spoke tension builds durable motor wheels.</p>",
+      "imagePrompt": "Wheel dish vector diagram showing spoke angle, tension force vectors, and hub motor shell alignment. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE SPOKE TENSION",
+        "content": "Use a spoke tension meter to verify uniform tension across all spokes."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 38,
+      "section": "Innovation",
+      "title": "Second-Life Cells",
+      "subtitle": "Testing and re-sorting laptop batteries economically",
+      "content": "<p>Imagine new lithium cells costing more than your customer's budget. <span class=\"bad\">Buying untested recycled cells risks pack short circuits</span> easily.</p><p>Testing measures true internal resistance and capacity of used cells. <span class=\"hl\">Sorting recycled cells with identical capacity</span> builds cheap reliable second-life packs, opening <span class=\"good\">affordable e-bike mobility for low-income city commuters</span>.</p><p class=\"close\">Capacity matched recycled cells cut battery costs.</p>",
+      "imagePrompt": "Process flowchart showing testing, capacity grading, and sorting recycled 18650 cells for reassembly. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TEST CELL CAPACITY",
+        "content": "Discharge test second-life cells on a digital capacity tester before building."
+      },
+      "citations": [3, 8]
+    },
+    {
+      "no": 39,
+      "section": "Innovation",
+      "title": "Solar Canopy",
+      "subtitle": "Mounting light solar roofs on cargo trikes",
+      "content": "<p>Consider grid power outages stopping delivery fleet charging overnight. <span class=\"bad\">Dead batteries stall business delivery operations completely</span> next morning.</p><p>Solar panels charge batteries continuously while parked outdoors in daylight. <span class=\"hl\">Mounting a 100W flexible solar canopy</span> adds 15 kilometers free range daily, providing <span class=\"good\">off-grid charging capability during frequent urban power blackouts</span>.</p><p class=\"close\">Solar canopies supply free daytime trickle charge.</p>",
+      "imagePrompt": "System diagram showing flexible solar panel on cargo roof connected through MPPT solar controller to battery. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "CONNECT MPPT CHARGER",
+        "content": "Install a step-up solar MPPT charger between roof panel and battery."
+      },
+      "citations": [8]
+    },
+    {
+      "no": 40,
+      "section": "Innovation",
+      "title": "Regenerative Braking",
+      "subtitle": "Adapting simple e-brakes to capture downhill power",
+      "content": "<p>Suppose hilly terrain drains e-bike batteries before daily work finishes. <span class=\"bad\">Standard mechanical braking wastes all downhill kinetic energy</span> as friction.</p><p>Electronic braking switches trigger controller regenerative routines automatically. <span class=\"hl\">Capturing kinetic energy during long downhill runs</span> recovers up to 10 percent range, extending <span class=\"good\">daily operating hours without extra battery weight</span>.</p><p class=\"close\">Downhill kinetic recovery stretches daily range.</p>",
+      "imagePrompt": "Circuit diagram connecting brake lever microswitch to controller e-brake signal input wire. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "WIRE E-BRAKE SWITCH",
+        "content": "Wire brake lever magnetic cutoff switch directly into controller e-brake pins."
+      },
+      "citations": [1, 6]
+    },
+    {
+      "no": 41,
+      "section": "Innovation",
+      "title": "Local Material",
+      "subtitle": "Using local scrap steel for custom mounting plates",
+      "content": "<p>Imagine waiting six weeks for imported aluminum motor mounting brackets. <span class=\"bad\">Import shipping delays halt workshop production lines</span> and sales.</p><p>Local steel scrap provides cheap malleable raw material instantly. <span class=\"hl\">Cutting and drilling local 3mm steel plate</span> builds custom motor mounts locally, keeping <span class=\"good\">conversion work moving without dependence on foreign suppliers</span>.</p><p class=\"close\">Local steel fabrication eliminates import waiting times.</p>",
+      "imagePrompt": "Engineering template drawing for cutting e-bike battery mounting plate from sheet steel. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DRILL STEEL BRACKET",
+        "content": "Cut battery mounting plate from 3mm local steel scrap using angle grinder."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 42,
+      "section": "Innovation",
+      "title": "Modular Frame",
+      "subtitle": "Building bolt-on conversion subframes for bikes",
+      "content": "<p>Picture cutting or welding customer bicycle frames permanently. <span class=\"bad\">Permanent frame modifications weaken steel tubing structural integrity</span>.</p><p>Modular bolt-on subframes clamp securely onto standard bicycle frames. <span class=\"hl\">Designing clamping brackets that wrap frame tubes</span> supports heavy motors, enabling <span class=\"good\">clean reversible e-bike conversions without damaging base bikes</span>.</p><p class=\"close\">Bolt-on subframes preserve original bicycle frames.</p>",
+      "imagePrompt": "Exploded assembly view of bolt-on steel subframe clamping onto standard bicycle bottom bracket. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "CLAMP SUBFRAME MOUNT",
+        "content": "Tighten rubber-lined hose clamps around subframe frame contact points."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 43,
+      "section": "Innovation",
+      "title": "Mid-Drive Adapters",
+      "subtitle": "Fitting conversion kits onto non-standard bottom brackets",
+      "content": "<p>Let's say a customer bicycle has a wider bottom bracket shell. <span class=\"bad\">Standard mid-drive kits fail to fit wider shells</span> properly.</p><p>Custom spacer adapters bridge wider bottom bracket dimensions cleanly. <span class=\"hl\">Machining custom threaded aluminum adapter rings</span> centers mid-drive shafts, allowing <span class=\"good\">mid-drive conversions on unusual mountain or cargo frames</span>.</p><p class=\"close\">Custom adapters adapt mid-drives to any frame.</p>",
+      "imagePrompt": "Cross-section schematic of threaded bottom bracket shell adapter ring fitting mid-drive motor shaft. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE SHELL WIDTH",
+        "content": "Measure bottom bracket shell width using calipers before ordering adapter rings."
+      },
+      "citations": [5]
+    },
+    {
+      "no": 44,
+      "section": "Entrepreneurship",
+      "title": "Target Market",
+      "subtitle": "Identifying high-mileage urban delivery workers",
+      "content": "<p>Suppose you spend marketing effort targeting casual weekend riders. <span class=\"bad\">Low-usage customers rarely buy conversions or ongoing repairs</span>.</p><p>Commercial delivery riders need cheap fast transportation daily. <span class=\"hl\">Targeting high-mileage couriers and local traders</span> solves their high fuel expenses, creating <span class=\"good\">eager buyers who value fast return on investment</span>.</p><p class=\"close\">High-mileage riders profit most from electric conversions.</p>",
+      "imagePrompt": "Customer segmentation chart comparing daily mileage and fuel savings between commuters and delivery riders. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "INTERVIEW LOCAL COURIERS",
+        "content": "Ask three local delivery riders their daily fuel spend to demonstrate savings."
+      },
+      "citations": [9, 10]
+    },
+    {
+      "no": 45,
+      "section": "Entrepreneurship",
+      "title": "Pricing Strategy",
+      "subtitle": "Structuring competitive conversion kit pricing packages",
+      "content": "<p>Imagine pricing conversions too close to new imported factory e-bikes. <span class=\"bad\">High prices discourage budget-conscious local commuters</span> instantly.</p><p>Cost-plus pricing adds fair labor margins over raw part costs. <span class=\"hl\">Offering tiered kit packages from basic to heavy-duty</span> fits varied budgets, capturing <span class=\"good\">broad market share across different income levels</span>.</p><p class=\"close\">Tiered kit options attract diverse customer budgets.</p>",
+      "imagePrompt": "Tiered pricing comparison table detailing basic hub kit, mid-range kit, and heavy-duty cargo kit options. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "CALCULATE KIT MARGIN",
+        "content": "Add 30 percent labor margin over raw kit component costs."
+      },
+      "citations": [9]
+    },
+    {
+      "no": 46,
+      "section": "Entrepreneurship",
+      "title": "Unit Economics",
+      "subtitle": "Tracking direct part and labor costs per build",
+      "content": "<p>Consider selling conversions without calculating exact individual part costs. <span class=\"bad\">Hidden shipping and small parts consume all profit</span> margins.</p><p>Unit economics breaks down motor, battery, wiring, and labor costs. <span class=\"hl\">Subtracting direct costs from conversion selling prices</span> reveals gross margin, ensuring <span class=\"good\">every build generates predictable profit for your workshop</span>.</p><p class=\"close\">Track component costs to guarantee profit margins.</p>",
+      "imagePrompt": "Unit economics cost breakdown stack showing parts, labor, overhead, and profit margin per build. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "ITEMIZE BUILD COSTS",
+        "content": "List cost of motor, battery, controller, connectors, and labor on paper."
+      },
+      "citations": [9]
+    },
+    {
+      "no": 47,
+      "section": "Entrepreneurship",
+      "title": "Break-Even Point",
+      "subtitle": "Calculating monthly builds needed to cover rent",
+      "content": "<p>Suppose shop rent and electricity bills accumulate every month. <span class=\"bad\">Unplanned fixed overhead expenses drain personal savings fast</span>.</p><p>Break-even divides monthly fixed costs by profit margin per build. <span class=\"hl\">Calculating exact monthly conversion targets</span> sets clear operational goals, ensuring <span class=\"good\">shop revenue consistently covers overhead costs safely</span>.</p><p class=\"close\">Fixed overhead divided by margin equals break-even units.</p>",
+      "imagePrompt": "Break-even chart plotting fixed monthly costs against cumulative conversion profit lines. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "FIND BREAK-EVEN UNITS",
+        "content": "Divide total monthly shop rent by profit earned per e-bike conversion."
+      },
+      "citations": [9, 10]
+    },
+    {
+      "no": 48,
+      "section": "Entrepreneurship",
+      "title": "Working Capital",
+      "subtitle": "Managing inventory cash for motors and battery cells",
+      "content": "<p>Imagine tying up all workshop cash buying ten unused motors. <span class=\"bad\">Lack of cash prevents buying urgent replacement parts</span> needed now.</p><p>Working capital manages cash flow between buying inventory and sales. <span class=\"hl\">Ordering parts only upon customer deposit receipt</span> protects cash reserves, keeping <span class=\"good\">your micro-workshop solvent and agile during quiet months</span>.</p><p class=\"close\">Require customer deposits to fund part purchases.</p>",
+      "imagePrompt": "Cash flow cycle diagram illustrating cash conversion timeline from parts purchase to final customer payment. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "COLLECT PART DEPOSITS",
+        "content": "Require 50 percent advance deposit before ordering conversion kit parts."
+      },
+      "citations": [9, 10]
+    },
+    {
+      "no": 49,
+      "section": "Entrepreneurship",
+      "title": "Cash Flow",
+      "subtitle": "Maintaining positive daily workshop cash balances",
+      "content": "<p>Picture delivering finished e-bikes on credit to friends. <span class=\"bad\">Delayed customer payments prevent paying shop rent on time</span>.</p><p>Strict payment terms demand full balance payment upon final pickup. <span class=\"hl\">Maintaining positive daily cash flow</span> funds shop operations continuously, building <span class=\"good\">stable financial foundation for future business expansion</span>.</p><p class=\"close\">Cash upon delivery keeps shop operations solvent.</p>",
+      "imagePrompt": "Monthly cash flow forecast chart showing incoming customer payments versus outgoing operational expenses. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "ENFORCE CASH ON DELIVERY",
+        "content": "Hand over keys only after full final payment balance clears."
+      },
+      "citations": [9, 10]
+    },
+    {
+      "no": 50,
+      "section": "Entrepreneurship",
+      "title": "Fleet Service",
+      "subtitle": "Selling recurring monthly maintenance to delivery fleets",
+      "content": "<p>Consider relying solely on one-off conversion sales for income. <span class=\"bad\">Inconsistent monthly sales create unpredictable workshop revenue</span> streams.</p><p>Fleet maintenance contracts offer monthly inspection and repair services. <span class=\"hl\">Charging flat monthly subscription fees per vehicle</span> secures steady income, ensuring <span class=\"good\">predictable monthly revenue and long-term customer partnerships</span>.</p><p class=\"close\">Recurring service contracts stabilize workshop monthly income.</p>",
+      "imagePrompt": "Contract service workflow diagram outlining monthly safety check, battery test, and brake adjustment routine. Technical vector diagram, clean lines, white background.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "OFFER SERVICE CONTRACTS",
+        "content": "Propose flat monthly service plans to local delivery fleet operators."
+      },
+      "citations": [9, 10]
+    }
+  ],
+  "references": [
+    {
+      "id": 1,
+      "citation": "Hughes, A., & Drury, B. (2019). Electric Motors and Drives: Fundamentals, Types and Applications (5th ed.). Newnes. https://doi.org/10.1016/C2017-0-02088-7",
+      "url": "https://doi.org/10.1016/C2017-0-02088-7"
+    },
+    {
+      "id": 2,
+      "citation": "Pistoia, G. (2014). Lithium-Ion Batteries: Advances and Applications. Elsevier. https://doi.org/10.1016/C2012-0-02409-1",
+      "url": "https://doi.org/10.1016/C2012-0-02409-1"
+    },
+    {
+      "id": 3,
+      "citation": "Warner, J. (2015). The Handbook of Lithium-Ion Battery Pack Design: Chemistry, Components, Types and Terminology. Elsevier. https://doi.org/10.1016/C2013-0-16168-5",
+      "url": "https://doi.org/10.1016/C2013-0-16168-5"
+    },
+    {
+      "id": 4,
+      "citation": "Husain, I. (2021). Electric and Hybrid Vehicles: Design Fundamentals (3rd ed.). CRC Press. https://doi.org/10.1201/9780429324703",
+      "url": "https://doi.org/10.1201/9780429324703"
+    },
+    {
+      "id": 5,
+      "citation": "Wilson, D. G. (2004). Bicycling Science (3rd ed.). MIT Press. https://mitpress.mit.edu/9780262731584/bicycling-science/",
+      "url": "https://mitpress.mit.edu/9780262731584/bicycling-science/"
+    },
+    {
+      "id": 6,
+      "citation": "Denton, T. (2020). Electric and Hybrid Vehicles (2nd ed.). Routledge. https://doi.org/10.4324/9780429292850",
+      "url": "https://doi.org/10.4324/9780429292850"
+    },
+    {
+      "id": 7,
+      "citation": "Ulrich, K. T., & Eppinger, S. D. (2016). Product Design and Development (6th ed.). McGraw-Hill Education. https://www.mheducation.com",
+      "url": "https://www.mheducation.com"
+    },
+    {
+      "id": 8,
+      "citation": "Rajakaruna, S., Shahnia, F., & Ghosh, A. (2015). Sustainable Energy Solutions for Remote Areas and Off-Grid Communities. Springer. https://doi.org/10.1007/978-3-319-12764-4",
+      "url": "https://doi.org/10.1007/978-3-319-12764-4"
+    },
+    {
+      "id": 9,
+      "citation": "Osterwalder, A., & Pigneur, Y. (2010). Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers. John Wiley & Sons. https://www.wiley.com",
+      "url": "https://www.wiley.com"
+    },
+    {
+      "id": 10,
+      "citation": "Bangs, D. H. (2002). The Business Planning Guide: Creating a Plan for Success in Your Own Business (9th ed.). Kaplan Publishing. https://www.kaplanpbl.com",
+      "url": "https://www.kaplanpbl.com"
+    }
+  ]
+}

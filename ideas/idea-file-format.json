@@ -1,0 +1,60 @@
+{
+  "title": "Solar Dryer Fruit Processing",
+  "slug": "solar-dryer-fruit-processing",
+  "subtitle": "Preserving harvests with passive solar technology",
+  "editionLabel": "First Edition",
+  "author": "Prof. Frehun A. Demissie",
+  "series": "STEAM-IE for Sustainable Agriculture",
+  "audience": "Farmers and food processors",
+  "primaryLocation": "Rural agricultural communities",
+  "coverImage": "solar-dryer-cover.png",
+  "pages": [
+    {
+      "no": 1,
+      "section": "Science",
+      "title": "Solar Energy Basics",
+      "subtitle": "How sunlight becomes heat",
+      "content": "Solar dryers capture sunlight and convert it to heat through the greenhouse effect. Transparent covers allow short-wave solar radiation to enter, where it's absorbed by dark surfaces and re-radiated as long-wave infrared that cannot easily escape. This trapped heat raises the internal temperature, creating the drying environment necessary for food preservation without spoilage or nutrient loss.",
+      "imagePrompt": "Cross-section diagram of a solar dryer showing sunlight entering through transparent cover, being absorbed by dark interior surfaces, and heat being trapped inside. Include labels for transparent cover, absorber plate, drying chamber, and vents. Style: technical vector diagram with clean lines and professional engineering aesthetic.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS WEEKEND",
+        "content": "Construct a simple solar dryer using a cardboard box, black paint, clear plastic wrap, and wire mesh. Paint the box interior black, cover the top with clear plastic, and place mesh trays inside for drying fruit slices."
+      },
+      "citations": [1, 2, 3]
+    },
+    {
+      "no": 2,
+      "section": "Science",
+      "title": "Moisture Migration",
+      "subtitle": "How water leaves the fruit",
+      "content": "Drying removes water by evaporation from the fruit surface and diffusion from the interior. As the dryer heats air, its capacity to hold moisture increases. Air flowing over the fruit picks up water vapor and carries it away. The rate depends on air temperature, humidity, velocity, and the fruit's own moisture gradient. Thinner slices dry faster because the diffusion path is shorter, but too-thin slices lose structural integrity and become brittle.",
+      "imagePrompt": "Diagram showing moisture diffusion from fruit center to surface, then evaporation into air stream. Arrow 1: liquid water diffusion through fruit tissue. Arrow 2: phase change at surface. Arrow 3: vapor carried away by airflow. Labels for moisture gradient, boundary layer, air velocity vector.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS TODAY",
+        "content": "Slice three identical fruits at 5 mm, 10 mm, and 15 mm thickness. Dry them side by side and record weight loss every hour. Plot drying curves to see how thickness changes the rate."
+      },
+      "citations": [4, 5]
+    },
+    {
+      "no": 3,
+      "section": "Technology",
+      "title": "Dryer Geometry",
+      "subtitle": "Shape determines airflow",
+      "content": "The dryer's shape controls how air moves through it. A flat-plate design with bottom inlet and top outlet creates natural convection: hot air rises, drawing fresh air in without fans. The collector area should be larger than the drying chamber to gather enough heat. Vents must be sized to balance airflow against heat loss — too large and heat escapes; too small and moisture stalls. Chimney height increases draft exponentially.",
+      "imagePrompt": "Side-view technical diagram of a flat-plate solar dryer. Show collector plate, drying chamber, bottom inlet vent, top outlet vent, and chimney. Include airflow arrows with velocity labels. Indicate temperature gradient from inlet to outlet. Clean engineering drawing style.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE THIS WEEK",
+        "content": "Build two dryers: one with 30 cm chimney, one with 60 cm. Measure internal temperature and airflow speed in each at noon. Record the difference."
+      },
+      "citations": [6, 7, 8]
+    }
+    // Add as many pages as needed following the same structure.
+    // The "pages" array can contain any number of page objects.
+    // Each page MUST have: no, section, title, subtitle, content, imagePrompt, imageType, actionCallout (with label and content), citations (array).
+    // Valid sections: "Science", "Technology", "Engineering", "Arts", "Mathematics", "Innovation", "Entrepreneurship"
+    // Valid imageType: "diagram" or "photo", recommend one of the two based on page content
+  ]
+}
