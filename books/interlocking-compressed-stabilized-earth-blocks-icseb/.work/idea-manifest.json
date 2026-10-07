@@ -1,0 +1,1830 @@
+{
+  "sourceFile": "ideas/interlocking-compressed-stabilized-earth-blocks-icseb.json",
+  "slug": "interlocking-compressed-stabilized-earth-blocks-icseb",
+  "title": "Interlocking Compressed Stabilized Earth Blocks (ICSEB)",
+  "subtitle": "Micro-factory production, structural design, and field assembly for low-cost eco-construction",
+  "author": "STEAM-IE Field Manual Series",
+  "series": "STEAM-IE for Eco-Construction",
+  "editionLabel": "First Edition",
+  "audience": "Small business operators, mason contractors, and eco-builders",
+  "primaryLocation": "Urban and peri-urban developing markets",
+  "coverImage": "icseb-field-manual-cover.png",
+  "pages": [
+    {
+      "no": 1,
+      "section": "Science",
+      "title": "Soil Composition Basics",
+      "subtitle": "Balancing sand, silt, and clay for mechanical stabilization",
+      "content": "Interlocking blocks rely on optimal soil particle distribution rather than high cement content. Clay acts as a natural binder, while sand provides the structural skeleton. Ideal ICSEB soil contains 50–70% sand, 15–30% silt, and 10–20% clay. Too much clay causes swelling and severe shrinkage cracking upon drying; too little clay results in a crumbly block that lacks green strength before curing. Identifying the soil profile at the quarry site prevents costly mix failures.",
+      "imagePrompt": "Technical vector diagram illustrating soil grain size distribution for ICSEB production. Shows a settling jar test with distinct layers of sand at the bottom, silt in the middle, clay on top, and clear water above. Clean line art style with labels for percentages.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS TODAY",
+        "content": "Perform a simple Jar Test: fill a straight-sided glass jar 1/3 full with dry field soil, add water and 1 tsp salt, shake vigorously for 2 minutes, and measure settling layers at 1 minute (sand), 2 hours (silt), and 48 hours (clay)."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your mix fails and you reach for more cement. <span class=\"bad\">Cement is not what holds soil together</span>.</p>\n<p>Interlocking blocks rely on particle distribution, with <span class=\"hl\">clay acting as a natural binder and sand as the structural skeleton</span>. Ideal soil is 50 to 70% sand, 15 to 30% silt, and 10 to 20% clay. <span class=\"good\">Test the profile at the quarry before mixing</span>, because too much clay swells and cracks while too little crumbles.</p>\n<p class=\"close\">Read the soil before you read the cement bag.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:09:03.953Z",
+          "wordCount": 81,
+          "wordsBefore": 73
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.925Z",
+          "wordCount": 81,
+          "wordsBefore": 73
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.200Z",
+          "wordCount": 64,
+          "wordsBefore": 81
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.834Z",
+          "wordCount": 81,
+          "wordsBefore": 73
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "section": "Science",
+      "title": "Hydration Mechanics",
+      "subtitle": "How OPC cement bonds soil particles under compaction",
+      "content": "Ordinary Portland Cement (OPC) stabilizes soil through chemical hydration, creating calcium silicate hydrate (C-S-H) gels that lock soil grains together. Soil moisture during compaction must equal the Optimum Moisture Content (OMC)—typically 8–12% by weight. If the soil is too dry, cement hydration fails and air pockets remain. If too wet, water absorbs compaction energy, preventing high density. Proper hydration converts cheap earth into weather-resistant masonry.",
+      "imagePrompt": "Microscopic structural schematic comparing soil-cement matrix at low, optimal, and high moisture levels during compaction. Arrow indicators highlight C-S-H gel bridges forming between sand grains and clay plates. Clean engineering visual style.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Perform the Drop Test: squeeze a handful of moist soil-cement mix into a ball, drop it from 1 meter height onto hard ground; if it shatters into 4-5 small lumps, moisture is optimal."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your soil-cement block is weak and crumbly. <span class=\"bad\">Water content is usually the culprit</span>.</p>\n<p>Ordinary Portland Cement stabilizes soil through hydration, and <span class=\"hl\">calcium silicate hydrate gels lock the grains together</span>. Compaction moisture must sit at the optimum, <span class=\"good\">typically 8 to 12% by weight</span>. Too dry and hydration fails, leaving air pockets. Too wet and water absorbs the compaction energy.</p>\n<p class=\"close\">Get the moisture right and cheap earth becomes weather-resistant masonry.</p>",
+      "preparedActionContent": "Squeeze moist soil-cement into a ball and drop it from 1 m. Four or five lumps means moisture is optimal.",
+      "prepHistory": [
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:37.315Z",
+          "wordCount": 70,
+          "actionWords": 20
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:59.685Z",
+          "wordCount": 70,
+          "actionWords": 20
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:27:24.082Z",
+          "wordCount": 70,
+          "actionWords": 20
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:28:54.712Z",
+          "wordCount": 70,
+          "actionWords": 20
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:32:08.012Z",
+          "wordCount": 70,
+          "actionWords": 20
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "section": "Science",
+      "title": "Curing Chemistry",
+      "subtitle": "Managing moisture retention for full strength gain",
+      "content": "ICSEB blocks do not harden by drying out; they harden through moisture-dependent chemical reaction. Premature drying stops cement hydration, causing up to 60% loss in ultimate compressive strength. Blocks must maintain near 100% relative humidity for at least 7 days to reach initial structural integrity, and 28 days for full design strength. Plastic sheeting and wet burlap trap internal moisture, preventing surface chalking and edge spalling.",
+      "imagePrompt": "Line graph showing compressive strength development (MPa) over 28 days for moist-cured vs. air-dried earth blocks. Accompanying schematic shows cross-section of a tarp-covered block stack on a pallet with moisture circulation vectors. Clean technical style.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Set up a dedicated curing pad using thick 200-micron black polythene sheeting on a flat shaded surface, elevated on wooden pallets to prevent ground water suction."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your blocks look strong at a week, then fail at a month. <span class=\"bad\">They never hardened, they only dried</span>.</p>\n<p>ICSEB blocks gain strength through a <span class=\"hl\">moisture-dependent chemical reaction</span>. Premature drying stops cement hydration and costs up to 60% of compressive strength. Hold <span class=\"good\">near 100% humidity for 7 days for initial strength and 28 days for full design strength</span>.</p>\n<p class=\"close\">Water and sheeting do the curing. Heat alone does not.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:09:03.956Z",
+          "wordCount": 69,
+          "wordsBefore": 66
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.930Z",
+          "wordCount": 69,
+          "wordsBefore": 66
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.838Z",
+          "wordCount": 69,
+          "wordsBefore": 66
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "section": "Science",
+      "title": "Compaction Physics",
+      "subtitle": "Denser soil matrices resist moisture and shear stress",
+      "content": "Compaction forces residual air out of the soil mix, increasing bulk density to 1,800-2,000 kg/m³. High mechanical pressure brings soil particles closer together, enabling short-range electrostatic and chemical bonds to hold firm under compressive loads. Uncompressed earth crumbles when soaked; high-density compressed earth creates a water-impermeable matrix that withstands severe weather cycles.",
+      "imagePrompt": "Diagram showing particle density comparison before and after mechanical compression. Vector illustration showing void space reduction, air evacuation vectors, and tightly packed soil-cement grain matrix.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT",
+        "content": "Weigh a newly pressed block immediately after compaction and divide by its volume to calculate green wet density; target at least 1.95 g/cm³."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your blocks crumble the moment they get wet. <span class=\"bad\">Uncompressed earth has no strength to resist soaking</span>.</p>\n<p>Compaction forces residual air out and lifts bulk density to <span class=\"hl\">1,800 to 2,000 kg/m³, letting particles bond electrostatically and chemically</span>. That dense matrix <span class=\"good\">sheds water and survives severe weather cycles</span>.</p>\n<p class=\"close\">Pressure is what turns loose soil into a wall.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:09:03.956Z",
+          "wordCount": 57,
+          "wordsBefore": 52
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.931Z",
+          "wordCount": 57,
+          "wordsBefore": 52
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.838Z",
+          "wordCount": 57,
+          "wordsBefore": 52
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "section": "Science",
+      "title": "Clay Plasticity Index",
+      "subtitle": "Measuring swelling potential with Atterberg Limits",
+      "content": "The Plasticity Index (PI) defines how much soil changes volume when absorbing water. Highly plastic clays (PI > 25) swell dramatically when wet and shrink when dry, cracking structural walls. Low plasticity soils (PI 8-15) are ideal for ICSEB production. High-clay soils require blending with sharp pit sand or crushed quarry dust to dilute clay activity before adding chemical stabilizers.",
+      "imagePrompt": "Technical chart illustrating Atterberg Limits scale showing Liquid Limit, Plastic Limit, and Plasticity Index zones with ideal ICSEB field target zone highlighted. Clean vector graphic.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS TODAY",
+        "content": "Perform the Ribbon Test: roll moist soil into a 3mm thread between your palms; if it forms a ribbon over 5cm before breaking, blend in 30% sand to lower plasticity."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your finished wall cracks as it dries. <span class=\"bad\">The clay in your soil moved too much</span>.</p>\n<p>The Plasticity Index measures how much soil changes volume with water. <span class=\"hl\">Clays above PI 25 swell when wet and shrink when dry</span>, cracking structure. Soils at PI 8 to 15 suit ICSEB. <span class=\"good\">Blend high-clay soils with sharp pit sand before adding stabilizers</span>.</p>\n<p class=\"close\">Know your PI before you buy the clay.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:09:03.956Z",
+          "wordCount": 67,
+          "wordsBefore": 60
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.931Z",
+          "wordCount": 67,
+          "wordsBefore": 60
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.838Z",
+          "wordCount": 67,
+          "wordsBefore": 60
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "section": "Science",
+      "title": "Erosion & Water Action",
+      "subtitle": "Capillary action, splash degradation, and waterproofing",
+      "content": "Water degrades earth blocks through surface erosion from raindrops and capillary suction from ground moisture. Stabilizers like cement coat clay minerals, reducing water absorption below 15%. Adding hydrophobic admixtures or applying siloxane sealers breaks surface tension, preventing rain penetration without trapping internal vapor. Damp-proof courses at the foundation level stop groundwater from creeping up into lower wall courses.",
+      "imagePrompt": "Schematic cross-section showing raindrop impact on sealed vs unsealed block surface alongside capillary rise vectors from foundation ground level. Vector technical drawing style.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS WEEKEND",
+        "content": "Place a cured block in a shallow pan with 1cm of water for 4 hours; observe how far moisture creeps up the sides to verify capillary resistance."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say rain is washing your wall face away. <span class=\"bad\">Bare earth blocks drink water and give it back as pressure</span>.</p>\n<p>Water attacks two ways: raindrop erosion and capillary rise from the ground. Cement coating of clay minerals <span class=\"hl\">cuts water absorption below 15%</span>. Silicone admixtures and sealers break surface tension, so rain <span class=\"good\">beads and rolls off without trapping vapour inside</span>.</p>\n<p class=\"close\">Keep water outside the wall, not inside it.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:09:03.957Z",
+          "wordCount": 67,
+          "wordsBefore": 58
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.931Z",
+          "wordCount": 67,
+          "wordsBefore": 58
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.839Z",
+          "wordCount": 67,
+          "wordsBefore": 58
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "section": "Science",
+      "title": "Thermal Mass Physics",
+      "subtitle": "Passive cooling and heat storage capacity in earth walls",
+      "content": "Compressed earth walls possess high thermal mass (specific heat capacity ~0.85 kJ/kg·K). They absorb outdoor solar heat during hot daylight hours and radiate it inward during cool nights, damping indoor temperature swings by up to 8°C. This passive thermal lag reduces air conditioning and heating energy demand, providing superior indoor thermal comfort in warm climates.",
+      "imagePrompt": "Thermal wave attenuation graph showing outdoor temperature fluctuations versus stable indoor room temperature through a 220mm thick ICSEB wall over a 24-hour cycle.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT",
+        "content": "Measure wall surface temperatures inside and outside an earth building at 2:00 PM and 2:00 AM using an infrared thermometer to verify thermal lag."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your rooms swing hot and cold all day. <span class=\"bad\">Thin walls pass that swing straight through</span>.</p>\n<p>Compressed earth carries high thermal mass, about <span class=\"hl\">0.85 kJ/kg·K</span>. It soaks up outdoor heat by day and radiates it inward at night, <span class=\"good\">damping indoor swings by up to 8°C</span>.</p>\n<p class=\"close\">A heavy wall is free air conditioning.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:09:03.957Z",
+          "wordCount": 53,
+          "wordsBefore": 55
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.931Z",
+          "wordCount": 53,
+          "wordsBefore": 55
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.839Z",
+          "wordCount": 53,
+          "wordsBefore": 55
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "section": "Technology",
+      "title": "Manual Press Mechanics",
+      "subtitle": "Maximizing mechanical leverage in manual block presses",
+      "content": "Manual lever presses rely on mechanical advantage through compound linkage systems to transform human arm force into intense compaction pressure (typically 2 to 5 MPa). A long operator handle acts through a toggle joint mechanism, delivering peak force at the top and bottom compaction stroke. Maintaining clean wear-plates, proper lubrication, and tight tolerances in the press mold prevents density variations and block wedge distortions.",
+      "imagePrompt": "Detailed technical vector drawing of a manual lever ICSEB press machine. Exploded line detail highlighting the handle lever, toggle linkage, top lid plate, mold box, and bottom ejector piston. Arrow indicators mark force vectors.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT",
+        "content": "Measure the height of 5 consecutive pressed blocks from the same batch with a caliper; variance should not exceed +/- 1 mm."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say hand-pressed blocks vary in height. <span class=\"bad\">Weak linkages make the stroke inconsistent</span>.</p>\n<p>A lever press turns arm force into <span class=\"hl\">2 to 5 MPa through a toggle joint</span>. Clean wear-plates and tight mold tolerances <span class=\"good\">keep density even and stop blocks wedging</span>.</p>\n<p class=\"close\">A press is only as good as its tolerances.</p>",
+      "preparedActionContent": "Measure 5 blocks from one batch with a caliper. Variance must stay under 1 mm.",
+      "prepHistory": [
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:37.324Z",
+          "wordCount": 65,
+          "actionWords": 15
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:59.689Z",
+          "wordCount": 65,
+          "actionWords": 15
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:27:24.091Z",
+          "wordCount": 65,
+          "actionWords": 15
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:28:54.720Z",
+          "wordCount": 65,
+          "actionWords": 15
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:32:08.019Z",
+          "wordCount": 50,
+          "actionWords": 15
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "section": "Technology",
+      "title": "Motorized Hydraulic Systems",
+      "subtitle": "Scaling output with hydraulic power units",
+      "content": "Motorized hydraulic presses boost compaction pressure to 8-10 MPa, dramatically increasing block strength and weather resistance while lowering cement requirements to 5%. High-pressure hydraulic cylinders ensure consistent block density regardless of minor operator variations in hopper filling. Hydraulic systems require regular oil filter checks, heat dissipation management, and pressure relief valve calibrations to avoid seal blowouts during continuous shifts.",
+      "imagePrompt": "Hydraulic circuit diagram for a semi-automated ICSEB machine showing motor, pump, directional control valves, relief valve, main cylinder, and ejector cylinder. Clean engineering schematic illustration.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRACK CASH FOR ONE WEEK",
+        "content": "Compare production output and fuel/electricity consumption per 100 blocks on a motorized press versus labor cost on a manual press to establish your mechanical break-even point."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say output climbs but quality wobbles. <span class=\"bad\">Hand filling varies with the operator</span>.</p>\n<p>Hydraulic presses push compaction to <span class=\"hl\">8 to 10 MPa</span>, lifting strength and weather resistance while cement drops to 5%. Cylinders <span class=\"good\">hold density steady however the hopper is filled</span>.</p>\n<p class=\"close\">Keep filters clean and relief valves calibrated.</p>",
+      "preparedActionContent": "Compare output and power draw per 100 blocks on a hydraulic press against manual press labour cost.",
+      "prepHistory": [
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:37.325Z",
+          "wordCount": 57,
+          "actionWords": 17
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:59.689Z",
+          "wordCount": 57,
+          "actionWords": 17
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:27:24.092Z",
+          "wordCount": 57,
+          "actionWords": 17
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:28:54.721Z",
+          "wordCount": 57,
+          "actionWords": 17
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:32:08.019Z",
+          "wordCount": 48,
+          "actionWords": 17
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "section": "Technology",
+      "title": "Interlocking Geometry",
+      "subtitle": "Keyway profiles and mortarless alignment features",
+      "content": "The tongue-and-groove male/female interlocking profile provides shear resistance and self-alignment during wall assembly. Standard dimensions include full blocks, half blocks, and channel/U-blocks for bond beams. Smooth keyway chamfers prevent edge breakage during handling. Channel blocks accommodate horizontal reinforcement steel and concrete grout, turning dry-stacked walls into monolithic earthquake-resistant structures.",
+      "imagePrompt": "3D isometric technical rendering of an interlocking block set: full block, half block, and U-channel lintel block. Highlight tongue, groove, vertical conduit holes, and edge chamfers. Precise dimension lines and keyway tolerances labeled.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS WEEKEND",
+        "content": "Dry-stack a 4-layer mock wall segment without mortar; verify vertical and horizontal alignment using a spirit level and rubber mallet."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say a dry-stacked wall slips sideways under load. <span class=\"bad\">Plain blocks have nothing to resist shear</span>.</p>\n<p>The tongue-and-groove profile <span class=\"hl\">provides shear resistance and self-alignment during assembly</span>. Full blocks, half blocks, and channel blocks cover every span, and smooth keyway chamfers <span class=\"good\">prevent edge breakage while turning dry-stacked walls into monolithic, earthquake-resistant structures</span>.</p>\n<p class=\"close\">The shape does the bonding. No mortar needed.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:09:03.957Z",
+          "wordCount": 59,
+          "wordsBefore": 49
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.931Z",
+          "wordCount": 59,
+          "wordsBefore": 49
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.839Z",
+          "wordCount": 59,
+          "wordsBefore": 49
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "section": "Technology",
+      "title": "Sieve & Mesh Hardware",
+      "subtitle": "Selecting screen sizes for consistent soil gradation",
+      "content": "Consistent block size requires uniform aggregate sizing. Stainless or high-carbon steel woven wire screens with 6mm to 8mm square apertures filter out stones, roots, and un-crushed clay clods. Slanted incline frames harness gravity during shoveling, while motorized vibrating screens increase output fourfold with minimal physical effort.",
+      "imagePrompt": "Technical drawing comparing woven wire mesh apertures (4mm, 6mm, 10mm) and screen frame inclination angles (35° vs 45°) for optimal soil throughput. Vector diagram.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Construct a dual-layer sifting screen with 12mm top mesh (trash separator) and 6mm bottom mesh (fine soil collector) mounted on a swinging A-frame."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say block size varies from course to course. <span class=\"bad\">Undersized stones passed straight through your sand</span>.</p>\n<p>Consistent blocks need uniform aggregate. Woven screens with <span class=\"hl\">6 to 8mm apertures filter out stones, roots, and clay clods</span>. Slanted frames use gravity during shoveling, and <span class=\"good\">motorized vibrating screens raise output fourfold with little effort</span>.</p>\n<p class=\"close\">Sift it or inherit it in your walls.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:09:03.957Z",
+          "wordCount": 59,
+          "wordsBefore": 46
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.931Z",
+          "wordCount": 59,
+          "wordsBefore": 46
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.839Z",
+          "wordCount": 59,
+          "wordsBefore": 46
+        }
+      ]
+    },
+    {
+      "no": 12,
+      "section": "Technology",
+      "title": "Soil Moisture Sensors",
+      "subtitle": "Preventing mix failures with digital moisture testing",
+      "content": "Guessing soil moisture leads to inconsistent block density and cracking. Digital soil moisture probes or handheld carbide moisture testers measure exact water percentages in seconds. Maintaining soil mix within ±1% of Optimum Moisture Content ensures uniform pressing force, reduces mold stickiness, and maximizes dry density.",
+      "imagePrompt": "Illustration of a pin-type digital soil moisture meter inserted into a batch box of damp soil-cement mix alongside a digital readout display showing 9.5% OMC.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Calibrate your handheld moisture meter by testing 3 samples, weighing them wet, baking them dry in an oven, and comparing calculated moisture against the meter reading."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say density varies from block to block. <span class=\"bad\">You guessed the moisture and the mold got the difference</span>.</p>\n<p>Guessing water leads to <span class=\"hl\">inconsistent density and cracking</span>. Digital probes or handheld carbide testers read exact percentages in seconds. Holding the mix within <span class=\"good\">±1% of optimum moisture content gives uniform press force and maximum dry density</span>.</p>\n<p class=\"close\">Measure the water. Do not guess it.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:09:03.957Z",
+          "wordCount": 61,
+          "wordsBefore": 45
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.931Z",
+          "wordCount": 61,
+          "wordsBefore": 45
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.839Z",
+          "wordCount": 61,
+          "wordsBefore": 45
+        }
+      ]
+    },
+    {
+      "no": 13,
+      "section": "Technology",
+      "title": "Mold Liner Maintenance",
+      "subtitle": "Hardened steel plates and anti-stick coatings",
+      "content": "Press molds endure severe abrasion from silica sand particles. Hard-faced tool steel liners (HARDOX 400 or chrome-plated steel) extend mold life beyond 100,000 presses. Spraying mold interior walls with a 10:1 mixture of diesel and recycled motor oil between presses prevents soil sticking and preserves crisp block edges.",
+      "imagePrompt": "Exploded diagram of an ICSEB mold box assembly showing removable side wear plates, corner fasteners, top lid dies, and lubricant spray application pattern. Clean vector detail.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT",
+        "content": "Inspect internal mold box dimensions with a digital micrometer every 5,000 blocks; replace wear plates when abrasion exceeds 0.8mm variance."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your mold walls wear out fast. <span class=\"bad\">Silica sand is eating your steel</span>.</p>\n<p>Press molds take severe abrasion from silica. Hard-faced tool steel liners such as HARDOX 400 or chrome-plated steel <span class=\"hl\">extend mold life beyond 100,000 presses</span>. Spraying interiors with a <span class=\"good\">10:1 diesel and recycled motor oil mix keeps soil from sticking and block edges crisp</span>.</p>\n<p class=\"close\">The liner decides how many blocks you get per mold.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:09:03.957Z",
+          "wordCount": 67,
+          "wordsBefore": 48
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 67,
+          "wordsBefore": 48
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.206Z",
+          "wordCount": 52,
+          "wordsBefore": 67
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.839Z",
+          "wordCount": 67,
+          "wordsBefore": 48
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "section": "Technology",
+      "title": "Automation & Sensors",
+      "subtitle": "Using limit switches and pressure transducers for quality",
+      "content": "Automated hydraulic presses use stroke limit switches and pressure transducers to guarantee identical block height and density. A sensor detects when cylinder pressure reaches 10 MPa before initiating automatic ejection. This eliminates human operator error and guarantees every block meets architectural load-bearing standards.",
+      "imagePrompt": "Schematic view of an automated block press control panel, pressure transducer sensor port, electrical limit switch triggers, and PLC indicator lights. Clean technical graphic.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Install a simple mechanical mechanical depth stop rod on your press to give operators visual feedback when full compaction stroke is achieved."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your best blocks come from your best operator's shift. <span class=\"bad\">Human hands set the standard, and they slip</span>.</p>\n<p>Automated presses use <span class=\"hl\">stroke limit switches and pressure transducers to guarantee identical height and density</span>. A sensor detects 10 MPa and triggers ejection automatically. <span class=\"good\">Operator error drops out, so every block meets load-bearing standards</span>.</p>\n<p class=\"close\">Let the machine hold the tolerance, not the worker.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:09:03.957Z",
+          "wordCount": 63,
+          "wordsBefore": 43
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 62,
+          "wordsBefore": 43
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.839Z",
+          "wordCount": 62,
+          "wordsBefore": 43
+        }
+      ]
+    },
+    {
+      "no": 15,
+      "section": "Engineering",
+      "title": "Soil Screening & Pre-treatment",
+      "subtitle": "Setting up efficient material sieving lines",
+      "content": "Raw quarry soil contains rocks, organic matter, and oversized lumps that ruin block compaction and create structural weak points. Soil must be dried and passed through a 5mm-8mm wire mesh screen before mixing. Inclined rotary drum screens (trommels) or inclined manual rocker screens speed up throughput. Pre-crushing heavy clay clods with roller mills ensures uniform stabilizer distribution throughout the mix.",
+      "imagePrompt": "Technical illustration of a manual inclined soil sieving station and an optional motorized rotary trommel screen. Show coarse oversized gravel separating from fine screened soil. Vector art style.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Build an inclined screening frame using 50mm x 50mm timber and 6mm galvanized welded wire mesh, angled at 45 degrees over a screened soil collection bay."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your blocks vary wildly and some crack. <span class=\"bad\">Rocks and clay lumps went straight into the mix</span>.</p>\n<p>Raw quarry soil carries stones, organic matter, and oversized lumps. Dry it and pass it through <span class=\"hl\">5 to 8mm mesh before mixing</span>. Trommels or inclined rockers speed throughput, and <span class=\"good\">roller-milling heavy clods spreads stabilizer evenly through the mix</span>.</p>\n<p class=\"close\">Screen the soil and the blocks come out alike.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 65,
+          "wordsBefore": 60
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.206Z",
+          "wordCount": 48,
+          "wordsBefore": 65
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 65,
+          "wordsBefore": 60
+        }
+      ]
+    },
+    {
+      "no": 16,
+      "section": "Engineering",
+      "title": "Mixer Design & Batching",
+      "subtitle": "Homogeneous blending with pan and ribbon mixers",
+      "content": "Standard gravity-drum concrete mixers perform poorly with earth-cement mixes because damp soil clumps to the drum walls. Pan mixers with forced-action vertical paddles or horizontal ribbon mixers are required to shear damp soil and distribute cement evenly. Dry materials must be mixed for 2 minutes before water is introduced. Over-wetting causes soil to ball up into rubbery lumps that cannot compact properly in the mold.",
+      "imagePrompt": "Cutaway diagram of a forced-action vertical pan mixer showing central drive, rotating scrapper blades, and paddle arms. Indicate material flow path during dry mixing and water injection stages.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Calibrate volumetric batch boxes (1 cubic foot size) from scrap wood to ensure workers measure soil, sand, and cement by volume consistently rather than using inconsistent shovel counts."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your mix comes out lumpy. <span class=\"bad\">A standard drum clumps damp soil to its walls</span>.</p>\n<p>Pan or ribbon mixers <span class=\"hl\">shear damp soil and spread cement evenly</span>. Mix dry materials two minutes before water. <span class=\"good\">Too much water balls the soil into lumps</span> that will not compact.</p>\n<p class=\"close\">Shear first, then water.</p>",
+      "preparedActionContent": "Build 1 cubic foot batch boxes from scrap wood so every batch of soil, sand, and cement matches.",
+      "prepHistory": [
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:37.325Z",
+          "wordCount": 63,
+          "actionWords": 18
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:59.689Z",
+          "wordCount": 63,
+          "actionWords": 18
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:27:24.092Z",
+          "wordCount": 63,
+          "actionWords": 18
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:28:54.721Z",
+          "wordCount": 63,
+          "actionWords": 18
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:32:08.019Z",
+          "wordCount": 50,
+          "actionWords": 18
+        }
+      ]
+    },
+    {
+      "no": 17,
+      "section": "Engineering",
+      "title": "Foundation & Wall Detailing",
+      "subtitle": "Load paths, ring beams, and vertical rebar integration",
+      "content": "ICSEB walls operate as reinforced masonry systems. Foundation footings must be reinforced concrete strip footings with starter rebar protruding into the block conduit holes at corners and wall junctions. Vertical rebar passes through block holes, while U-channel blocks form horizontal ring beams filled with concrete grout. Damp-proof courses (DPC) below the first course prevent soil moisture capillary action from degrading lower blocks.",
+      "imagePrompt": "Structural wall section detail drawing showing concrete footing, starter rebar, DPC membrane layer, dry-stacked ICSEB courses with vertical rebar in grouted holes, and a top U-block ring beam with horizontal steel. Vector engineering detail style.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THE MATH",
+        "content": "Calculate total vertical reinforcement requirements: schedule 10mm rebar every 800mm along straight wall runs and at every corner, door, and window opening."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your wall cracks at the base. <span class=\"bad\">Ground moisture is rising through the blocks</span>.</p>\n<p>ICSEB walls are <span class=\"hl\">reinforced masonry: strip footings with starter rebar, vertical rebar through block holes, and grouted U-channel ring beams</span>. A damp-proof course below the first course <span class=\"good\">stops capillary action</span>.</p>\n<p class=\"close\">Reinforce the path, then block the water.</p>",
+      "preparedActionContent": "Schedule 10 mm rebar every 800 mm on straight runs, plus corners, doors, and windows.",
+      "prepHistory": [
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:37.325Z",
+          "wordCount": 61,
+          "actionWords": 15
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:59.689Z",
+          "wordCount": 61,
+          "actionWords": 15
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:27:24.092Z",
+          "wordCount": 61,
+          "actionWords": 15
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:28:54.721Z",
+          "wordCount": 61,
+          "actionWords": 15
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:32:08.019Z",
+          "wordCount": 52,
+          "actionWords": 15
+        }
+      ]
+    },
+    {
+      "no": 18,
+      "section": "Engineering",
+      "title": "Lintel & Opening Design",
+      "subtitle": "Spanning doors and windows with ICSEB U-channel blocks",
+      "content": "Door and window spans require reinforced lintel beams to carry overhead masonry loads. U-channel blocks are dry-stacked over temporary timber shoring supports, loaded with two 12mm rebar rods, and filled with micro-concrete grout. Once cured for 7 days, temporary supports are removed, creating a seamless aesthetic without exposed concrete lintel beams.",
+      "imagePrompt": "Structural detail illustration of a window lintel span showing timber prop support, U-channel block alignment, horizontal rebar placement, and poured grout core. Vector line drawing.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Construct reusable wooden window and door frame props with adjustable screw jacks to support lintel blocks during grouting."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say a door or window needs to span a gap. <span class=\"bad\">You have nothing to carry the masonry above it</span>.</p>\n<p>Spans need a reinforced lintel. U-channel blocks go up over <span class=\"hl\">temporary timber shoring, loaded with two 12mm rebar rods, then filled with micro-concrete grout</span>. After 7 days the supports come out, <span class=\"good\">leaving a clean span with no exposed concrete beam</span>.</p>\n<p class=\"close\">Shore it, grout it, then remove the timber.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 68,
+          "wordsBefore": 51
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 68,
+          "wordsBefore": 51
+        }
+      ]
+    },
+    {
+      "no": 19,
+      "section": "Engineering",
+      "title": "Corner & T-Junction Interlock",
+      "subtitle": "Bonding structural intersections without cut blocks",
+      "content": "Structural stability in dry-stacked masonry relies on alternating corner bond patterns. Using alternating left-hand and right-hand keyways at corners ensures full overlapping bonds without weak vertical continuous joints. T-junctions require half-blocks or modified keyway pins to lock intersecting interior partition walls directly into exterior load-bearing walls.",
+      "imagePrompt": "Isometric line art sequence showing Course 1 and Course 2 corner assembly patterns for ICSEB blocks, demonstrating alternating overlapping interlocks.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS WEEKEND",
+        "content": "Dry-assemble a 6-course 90-degree corner module in your yard to verify alternating overlap alignment before starting wall construction."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your dry-stacked wall cracks down a vertical joint. <span class=\"bad\">The bond stacked straight, so one weak line ran the whole height</span>.</p>\n<p>Stability comes from <span class=\"hl\">alternating corner bonds using left-hand and right-hand keyways</span>, which overlap every course. T-junctions need half blocks or modified keyway pins to <span class=\"good\">lock partitions straight into the load-bearing wall</span>.</p>\n<p class=\"close\">Alternate the keys and the crack has no line to follow.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 64,
+          "wordsBefore": 46
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.206Z",
+          "wordCount": 53,
+          "wordsBefore": 64
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 64,
+          "wordsBefore": 46
+        }
+      ]
+    },
+    {
+      "no": 20,
+      "section": "Engineering",
+      "title": "Grouting & Rebar Anchoring",
+      "subtitle": "Pouring fluid micro-concrete into vertical block cavities",
+      "content": "Vertical hollow conduits in ICSEB walls carry rebar tied to foundation anchors. Once 4 to 6 courses are stacked, a high-slump micro-concrete grout (1 cement : 2 sand : 2 fine pea gravel) is poured into rebar cavities and consolidated with a slender tamping rod. This creates continuous reinforced concrete columns hidden inside the earth block wall.",
+      "imagePrompt": "Cutaway wall vector diagram showing fluid micro-concrete grout filling a vertical conduit hole containing a 12mm rebar rod, with tamping rod consolidation action indicated.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT",
+        "content": "Test grout fluidity with a slump cone; aim for 200mm-230mm high slump to ensure complete flow around rebar without air pockets."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your wall needs hidden vertical strength. <span class=\"bad\">Mortar joints alone will not carry a rebar column</span>.</p>\n<p>The hollow conduits in ICSEB walls <span class=\"hl\">carry rebar tied into the foundation anchors</span>. After 4 to 6 courses, pour a high-slump micro-concrete grout of 1 cement to 2 sand to 2 pea gravel and rod it. <span class=\"good\">That forms continuous reinforced columns hidden inside the earth wall</span>.</p>\n<p class=\"close\">Grout the core and the wall carries more than it shows.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 74,
+          "wordsBefore": 57
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.206Z",
+          "wordCount": 66,
+          "wordsBefore": 74
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 74,
+          "wordsBefore": 57
+        }
+      ]
+    },
+    {
+      "no": 21,
+      "section": "Engineering",
+      "title": "Roof Tie-Down Connections",
+      "subtitle": "Anchoring timber roof trusses against high wind uplift",
+      "content": "Roof structures can create massive uplift forces during storms. Galvanized steel hurricane straps or 8mm J-bolts must be embedded directly into the top U-block concrete ring beam at 1-meter intervals. Wall-to-roof tie-downs transfer roof wind forces straight through the grouted vertical block cavities into the concrete foundation footing.",
+      "imagePrompt": "Engineering cross-section detail of a wall-to-roof junction: top grouted ring beam, embedded galvanized J-bolt, timber wall plate, truss rafter, and steel tie-down strap. Vector visual guide.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Cast 8mm threaded J-bolts into test ring beam sections with 150mm hook embedment to verify pull-out resistance."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say a storm lifts your roof off the walls. <span class=\"bad\">A roof pressing down is not the same as a roof being held down</span>.</p>\n<p>Galvanized hurricane straps or 8mm J-bolts must sit <span class=\"hl\">inside the top U-block ring beam at 1-meter intervals</span>. Wall-to-roof tie-downs then carry wind force <span class=\"good\">down through the grouted cavities into the foundation footing</span>.</p>\n<p class=\"close\">Anchor the strap into the beam, not into the block face.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 67,
+          "wordsBefore": 48
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 67,
+          "wordsBefore": 48
+        }
+      ]
+    },
+    {
+      "no": 22,
+      "section": "Arts",
+      "title": "Facade Aesthetics & Texture",
+      "subtitle": "Exposed natural earth tones and surface finishing",
+      "content": "The visual appeal of ICSEB lies in its natural, warm earth tones and crisp geometric lines. Iron oxide mineral pigments can be added to the mix (1-3% by weight) to alter color shades uniform across batches. Precise corner chamfering creates defined shadow lines along wall joints. Clear siloxane-based water repellent sealers preserve natural block texture while preventing rain staining and surface dusting without changing block color.",
+      "imagePrompt": "Visual graphic showcasing various color options achieved through iron oxide additives (ochre red, terracotta, warm yellow, deep charcoal) alongside a close-up section of dry-stacked block joint shadow line aesthetics.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "TRY THIS WEEKEND",
+        "content": "Test three batch samples with 1%, 2%, and 3% red iron oxide pigment by weight; dry and cure them completely to establish your architectural color guide."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your finished wall looks flat and blotchy. <span class=\"bad\">Uneven pigment reads as cheap</span>.</p>\n<p>Warm earth tones and chamfered corners <span class=\"hl\">create shadow lines along every joint</span>. Iron oxide at 1 to 3% by weight shifts colour evenly. Siloxane sealers <span class=\"good\">hold texture and stop staining</span> without shifting colour.</p>\n<p class=\"close\">Colour from the mix, texture from the sealer.</p>",
+      "preparedActionContent": "Test 1%, 2%, and 3% red iron oxide batches, cure them fully, and pick your colour guide.",
+      "prepHistory": [
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:37.326Z",
+          "wordCount": 67,
+          "actionWords": 17
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:59.689Z",
+          "wordCount": 67,
+          "actionWords": 17
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:27:24.092Z",
+          "wordCount": 67,
+          "actionWords": 17
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:28:54.721Z",
+          "wordCount": 67,
+          "actionWords": 17
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:32:08.020Z",
+          "wordCount": 55,
+          "actionWords": 17
+        }
+      ]
+    },
+    {
+      "no": 23,
+      "section": "Arts",
+      "title": "Ergonomics & Layout",
+      "subtitle": "Factory floor workflow and worker motion optimization",
+      "content": "Manufacturing heavy earth blocks requires optimized physical ergonomics to reduce fatigue and worker injuries. Raw material piles (soil, sand, cement) should sit immediately adjacent to the mixer. The mixer output must discharge directly at waist height into batch carts leading to the press hopper. Freshly pressed blocks should be lifted using dual-person grip tongs and placed onto pallets at knee-to-waist height to eliminate excessive stooping.",
+      "imagePrompt": "Top-down architectural floor plan vector layout of an ICSEB micro-factory. Arrows map linear material flow: Soil Stockpile -> Screen -> Pan Mixer -> Press Machine -> Stacking/Curing Zone -> Cured Yard.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Fabricate 2 pairs of ergonomic metal lifting tongs sized to grab block ends, allowing operators to pick up green blocks upright without straining fingertips."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your crew finishes a shift exhausted. <span class=\"bad\">The floor plan made them lift and stoop all day</span>.</p>\n<p>Heavy block work rewards <span class=\"hl\">piles placed beside the mixer and discharge at waist height into batch carts</span>. Fresh blocks move with dual-person grip tongs onto pallets at knee-to-waist height. <span class=\"good\">That layout removes the stooping and the wasted reach</span>.</p>\n<p class=\"close\">Design the floor so nobody bends for a load.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 65,
+          "wordsBefore": 65
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 65,
+          "wordsBefore": 65
+        }
+      ]
+    },
+    {
+      "no": 24,
+      "section": "Arts",
+      "title": "Surface Sealers & Stains",
+      "subtitle": "Enhancing durability while keeping natural visual warmth",
+      "content": "Exposed interior earth walls create healthy, biophilic indoor environments. Applying breathable potassium silicate or acrylic sealers prevents dusting while letting walls regulate indoor humidity. Exterior walls exposed to driving rain benefit from hydrophobic silane siloxane sprays that cause rainwater to bead up and roll off without altering the natural rustic clay aesthetic.",
+      "imagePrompt": "Close-up photograph-style render showing water droplets beading on a sealed ICSEB wall surface compared to dark wet absorption patches on an unsealed block.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "TRY THIS TODAY",
+        "content": "Spray a 1m² sample wall with clear siloxane sealer and perform a hose spray test after 24 hours to demonstrate water resistance to clients."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your finished wall looks chalky after the first rain. <span class=\"bad\">Bare earth dusts and stains as it weathers</span>.</p>\n<p>Breathable potassium silicate or acrylic sealers <span class=\"hl\">stop dusting while still letting walls regulate indoor humidity</span>. Outside, hydrophobic silane siloxane sprays make rain bead and roll off. <span class=\"good\">The rustic clay look survives the weather</span>.</p>\n<p class=\"close\">Seal the surface without sealing out the breath.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 60,
+          "wordsBefore": 52
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.206Z",
+          "wordCount": 57,
+          "wordsBefore": 60
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 60,
+          "wordsBefore": 52
+        }
+      ]
+    },
+    {
+      "no": 25,
+      "section": "Arts",
+      "title": "Joint Rendering & Pointing",
+      "subtitle": "Highlighting block grid patterns with recessed joints",
+      "content": "Although ICSEBs dry-stack tightly, fine exterior joints can be highlighted using recessed mortar pointing or flush lime slurry pointing. Recessed pointing creates deep shadow lines that emphasize the modularity of the masonry, while color-matched earth-lime pointing hides seams for a monolithic look.",
+      "imagePrompt": "Vector graphic showing three joint pointing styles on an ICSEB wall section: flush joint, 3mm recessed V-groove joint, and color-matched earth slurry joint.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS WEEKEND",
+        "content": "Apply 3 different pointing styles to a sample wall section using a wooden jointer tool to let clients choose their visual preference."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say a dry-stacked wall reads as loose blocks. <span class=\"bad\">Nothing defines the joint, so the modularity disappears</span>.</p>\n<p>Recessed mortar pointing or flush lime slurry <span class=\"hl\">gives the joint a deliberate line</span>. Recessed work casts deep shadows that <span class=\"good\">emphasize the block grid, while colour-matched earth-lime hides seams for a monolithic look</span>.</p>\n<p class=\"close\">Recess the joint to show the grid, or match it to hide it.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 62,
+          "wordsBefore": 42
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 62,
+          "wordsBefore": 42
+        }
+      ]
+    },
+    {
+      "no": 26,
+      "section": "Arts",
+      "title": "Acoustic & Interior Comfort",
+      "subtitle": "Damping sound transmission in residential spaces",
+      "content": "Dense compressed earth walls provide exceptional acoustic insulation (Sound Transmission Class STC 45-50). The heavy mass stops low-frequency street noise, while microscopic surface porousness absorbs high-frequency room echoes. This creates quiet, peaceful indoor acoustic environments highly prized in urban residential buildings.",
+      "imagePrompt": "Acoustic diagram showing decibel reduction (dB) as outdoor noise waves hit a 220mm thick ICSEB wall, displaying wave reflection, mass dampening, and reduced indoor sound.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT",
+        "content": "Measure ambient noise inside a finished ICSEB building versus a standard iron-sheet or thin timber building using a smartphone decibel app."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say traffic noise follows you indoors. <span class=\"bad\">Thin partitions pass low-frequency sound straight through</span>.</p>\n<p>Dense compressed earth reaches <span class=\"hl\">Sound Transmission Class 45 to 50</span>. The mass stops low-frequency street noise, while <span class=\"good\">microscopic surface pores absorb high-frequency room echoes</span>.</p>\n<p class=\"close\">A heavy wall is a quiet wall.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 45,
+          "wordsBefore": 41
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.206Z",
+          "wordCount": 42,
+          "wordsBefore": 45
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 45,
+          "wordsBefore": 41
+        }
+      ]
+    },
+    {
+      "no": 27,
+      "section": "Arts",
+      "title": "Architectural Mouldings",
+      "subtitle": "Custom decorative blocks for cornices and arches",
+      "content": "Exchanging standard press mold plates allows production of specialized decorative blocks. Beveled edge blocks create ornate window sills, while tapered wedge blocks enable self-supporting true brick arches over door openings without structural steel lintels.",
+      "imagePrompt": "Technical diagram showing press mold inserts for produce beveled window sill blocks and tapered arch blocks, with a finished masonry arch assembly view.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Fabricate a simple timber or steel wedge mold insert to press 50 custom tapered blocks for building a 1-meter radius sample arch."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your openings look like plain holes. <span class=\"bad\">A square block edge gives the opening no character</span>.</p>\n<p>Swapping standard press mold plates <span class=\"hl\">lets you produce purpose-shaped blocks</span>. Beveled edges make ornate window sills, and tapered wedges <span class=\"good\">build self-supporting brick arches over doors with no steel lintel</span>.</p>\n<p class=\"close\">Change the mold plate and the wall gains a profile.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 56,
+          "wordsBefore": 34
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 56,
+          "wordsBefore": 34
+        }
+      ]
+    },
+    {
+      "no": 28,
+      "section": "Arts",
+      "title": "Showroom Display Units",
+      "subtitle": "Building visual demonstration models for marketing",
+      "content": "Clients buy what they can touch and feel. A portable mini-wall display unit built on a wheeled pallet showcases exposed block aesthetics, conduit rebar features, cutaway U-channel ring beams, and electrical box cutouts. Placing this display at trade fairs or hardware stores turns abstract technical descriptions into tangible quality sales.",
+      "imagePrompt": "3D render of a mobile marketing display unit on a timber pallet featuring cutaway ICSEB walling, integrated electrical switches, and printed informational plaque.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Assemble a 1m high x 0.8m wide portable display wall section on a heavy-duty wooden pallet for client meetings."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say buyers hesitate over your blocks. <span class=\"bad\">A price list will not show them what they are buying</span>.</p>\n<p>A portable mini-wall on a wheeled pallet <span class=\"hl\">shows exposed block texture, conduit rebar, cutaway U-channel ring beams, and electrical box cutouts</span>. Set it up at trade fairs or hardware stores and <span class=\"good\">abstract technical claims become something clients can touch</span>.</p>\n<p class=\"close\">Let them touch one before they order four hundred.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 66,
+          "wordsBefore": 50
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.206Z",
+          "wordCount": 59,
+          "wordsBefore": 66
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 66,
+          "wordsBefore": 50
+        }
+      ]
+    },
+    {
+      "no": 29,
+      "section": "Mathematics",
+      "title": "Unit Economics & Mix Ratios",
+      "subtitle": "Calculating material cost per block",
+      "content": "Profitability depends on optimizing the stabilizer-to-soil ratio. A typical mix uses 1 bag (50kg) of cement per 120-140 standard blocks (approx. 6-8% cement ratio). Calculating soil extraction, quarry delivery, cement, labor, and water costs per unit establishes your direct production cost. High-pressure pressing lowers cement requirements without sacrificing compressive strength, directly protecting profit margins.",
+      "imagePrompt": "Infographic table breaking down material inputs (soil, sand, cement, water, labor, fuel) required for producing 1,000 ICSEBs. Includes pie chart showing percentage cost distribution.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THE MATH",
+        "content": "Calculate your exact raw material cost per block: [Cost of Cement Bag / 130 blocks] + [Cost of Soil Truckload / Total yield] + [Daily Labor / Daily block output]."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say blocks sell but the margin vanishes. <span class=\"bad\">You are pricing materials, not production cost</span>.</p>\n<p>A typical mix runs <span class=\"hl\">one 50 kg cement bag per 120 to 140 blocks</span>. Add soil, delivery, cement, labour, and water per unit for true cost. High-pressure pressing <span class=\"good\">cuts cement without losing strength</span>.</p>\n<p class=\"close\">Measure cost per block, not per bag.</p>",
+      "preparedActionContent": "Cost one block: cement bag over 130 blocks, plus soil truck over yield, plus daily labour over output.",
+      "prepHistory": [
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:37.326Z",
+          "wordCount": 71,
+          "actionWords": 22
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:59.689Z",
+          "wordCount": 71,
+          "actionWords": 18
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:27:24.092Z",
+          "wordCount": 71,
+          "actionWords": 18
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:28:54.721Z",
+          "wordCount": 71,
+          "actionWords": 18
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:32:08.020Z",
+          "wordCount": 55,
+          "actionWords": 18
+        }
+      ],
+      "displayTitle": "Unit Economics"
+    },
+    {
+      "no": 30,
+      "section": "Mathematics",
+      "title": "Structural Yield & Costing",
+      "subtitle": "Comparing wall cost per square meter against fired brick",
+      "content": "A standard ICSEB wall requires approximately 36 to 40 blocks per square meter. Because interlocking blocks dry-stack without mortar joints (except thin grout slurry in select keyways), mortar sand and cement costs are reduced by up to 80% compared to conventional concrete hollow blocks or clay bricks. Construction speed is faster, saving total structural labor costs on site.",
+      "imagePrompt": "Side-by-side cost comparative vector chart for 1m² of finished walling: ICSEB vs Conventional Fired Brick with Mortar. Highlighting savings in mortar material and labor hours.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRACK CASH FOR ONE WEEK",
+        "content": "Create a comparative sales quote showing clients cost savings per square meter of walling when choosing ICSEB over standard concrete blocks."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say a client compares your wall to a fired brick wall. <span class=\"bad\">Mortar labour and sand quietly eat your margin</span>.</p>\n<p>A square metre of ICSEB needs roughly <span class=\"hl\">36 to 40 blocks, dry-stacked without mortar joints</span> except thin grout in select keyways. That cuts mortar sand and cement by <span class=\"good\">up to 80% against conventional hollow blocks, and the faster build cuts labour too</span>.</p>\n<p class=\"close\">No mortar means no mortar cost.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 68,
+          "wordsBefore": 58
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.206Z",
+          "wordCount": 57,
+          "wordsBefore": 68
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.840Z",
+          "wordCount": 68,
+          "wordsBefore": 58
+        }
+      ]
+    },
+    {
+      "no": 31,
+      "section": "Mathematics",
+      "title": "Factory Yield & Throughput",
+      "subtitle": "Measuring daily output capacity per press cycle",
+      "content": "A manual 2-person lever press completes 1 compression cycle every 45 seconds, yielding ~500 blocks per 8-hour shift. A semi-automated hydraulic press produces 1 cycle every 12 seconds, reaching 2,000-2,500 blocks per shift. Tracking cycle time bottlenecks (e.g., slow mixing or hopper refill delays) optimizes daily production throughput.",
+      "imagePrompt": "Process timing flow diagram mapping seconds spent per task in a block cycle: Soil Loading (10s), Compaction (10s), Ejection (8s), Pallet Stacking (12s). Clean vector visual.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT",
+        "content": "Time 10 consecutive press cycles with a stopwatch; calculate average cycle time and identify worker movement delays."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say two presses produce very different daily output. <span class=\"bad\">You are comparing cycle times, not press capacity</span>.</p>\n<p>A manual two-person lever press cycles every 45 seconds for <span class=\"hl\">about 500 blocks per shift</span>. A semi-automated hydraulic press cycles every 12 seconds for 2,000 to 2,500. <span class=\"good\">Track the bottleneck in each loop, usually mixing or hopper refill, and throughput follows</span>.</p>\n<p class=\"close\">Count the seconds per block, not the hours per day.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 68,
+          "wordsBefore": 48
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.206Z",
+          "wordCount": 59,
+          "wordsBefore": 68
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.841Z",
+          "wordCount": 68,
+          "wordsBefore": 48
+        }
+      ]
+    },
+    {
+      "no": 32,
+      "section": "Mathematics",
+      "title": "Volumetric Batching Math",
+      "subtitle": "Converting mass ratios to practical volume batch boxes",
+      "content": "Laboratory mix designs specify cement and soil ratios by dry weight (e.g., 8% cement by mass). On site, workers measure by volume using gauge boxes. Because dry cement weighs ~1,440 kg/m³ and damp soil weighs ~1,200 kg/m³, volume ratios must adjust for density differences to avoid under-stabilizing batches.",
+      "imagePrompt": "Mathematical conversion diagram showing dry weight formulas converting to volumetric batch box dimensions (e.g., 30cm x 30cm x 30cm gauge boxes). Vector illustration.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THE MATH",
+        "content": "Convert an 8% weight mix into volume gauge boxes: calculate exact box heights needed for 1 bag of cement to X boxes of screened soil."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your on-site batches come out under-stabilized. <span class=\"bad\">The lab mix was by weight, the yard mix is by volume</span>.</p>\n<p>Lab designs specify cement and soil <span class=\"hl\">by dry weight, for example 8% cement by mass</span>. On site you scoop with gauge boxes, so <span class=\"good\">adjust for the density gap between cement at about 1,440 kg/m³ and damp soil near 1,200 kg/m³</span>.</p>\n<p class=\"close\">Weight on the page, volume in the yard. Convert first.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 70,
+          "wordsBefore": 48
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.842Z",
+          "wordCount": 70,
+          "wordsBefore": 48
+        }
+      ]
+    },
+    {
+      "no": 33,
+      "section": "Mathematics",
+      "title": "Break-Even Capital Analysis",
+      "subtitle": "Determining payback period for machinery investments",
+      "content": "Calculating machine payback determines investment risk. A $3,000 hydraulic press that lowers cement needs by 2% saves $0.05 per block. Producing 1,000 blocks/day saves $50/day in cement costs, paying back the machine investment in 60 working days. Capital decisions must balance machine speed against maintenance overhead.",
+      "imagePrompt": "Financial graph displaying cumulative profit curves for Manual Press ($500 cost) vs Hydraulic Press ($3,000 cost) crossing break-even sales volume milestones.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THE MATH",
+        "content": "Calculate machine payback days: [Total Machine Purchase Price] / ([Daily Output] x [Net Margin per Block])."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say you are tempted by a bigger press. <span class=\"bad\">Speed feels like value until you price the payback</span>.</p>\n<p>A $3,000 hydraulic press that cuts cement by 2% <span class=\"hl\">saves $0.05 per block, so 1,000 blocks a day returns $50 daily</span>. That <span class=\"good\">pays the machine back in 60 working days</span>, provided maintenance stays inside the model.</p>\n<p class=\"close\">Count the days until it pays for itself.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.932Z",
+          "wordCount": 62,
+          "wordsBefore": 46
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.843Z",
+          "wordCount": 62,
+          "wordsBefore": 46
+        }
+      ]
+    },
+    {
+      "no": 34,
+      "section": "Mathematics",
+      "title": "Transportation Logistics Math",
+      "subtitle": "Payload weights, pallet density, and delivery costs",
+      "content": "Standard ICSEBs weigh ~8 kg each. A standard 10-ton flatbed truck carries a maximum payload of ~1,200 blocks per trip. Exceeding truck axle weight limits causes costly fines and damages blocks. Packing 250 blocks per pallet wrapped in plastic film enables fast forklift loading while preventing breakage during transport.",
+      "imagePrompt": "Truck loading schematic diagram showing weight distribution, axle load limits, and stacked pallet arrangement for 1,200 blocks on a 10-ton flatbed chassis.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRACK CASH FOR ONE WEEK",
+        "content": "Calculate delivery cost per block across 5km, 15km, and 30km transport radiuses to establish tiered delivery pricing."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say a truck arrives with damaged blocks and a fine. <span class=\"bad\">You loaded past the axle limit and packed loose</span>.</p>\n<p>A standard block weighs about 8 kg, so <span class=\"hl\">a 10-ton flatbed carries at most 1,200 blocks per trip</span>. Exceeding axle limits means fines and breakage. <span class=\"good\">Palletizing 250 blocks in plastic film makes loading fast and protects the edges</span>.</p>\n<p class=\"close\">Weigh the load, then wrap it.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 64,
+          "wordsBefore": 49
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.843Z",
+          "wordCount": 64,
+          "wordsBefore": 49
+        }
+      ]
+    },
+    {
+      "no": 35,
+      "section": "Mathematics",
+      "title": "Wastage & Rejection Rates",
+      "subtitle": "Tracking green block breakage and scrap recovery",
+      "content": "Poor handling of green (uncured) blocks causes edge chipping and breakage. A well-managed yard targets a rejection rate below 3%. Uncured broken green blocks can be recycled immediately back into the pan mixer before cement sets, recovering 100% of material cost. Cured broken blocks can be crushed as coarse aggregate for concrete footings.",
+      "imagePrompt": "Bar chart tracking weekly block scrap percentage before and after worker handling training, showing target 2% threshold line.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT",
+        "content": "Count and log broken blocks at the end of each shift for 7 days; calculate scrap percentage: [Broken Blocks / Total Pressed] x 100."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your yard is full of broken green blocks. <span class=\"bad\">Poor handling of uncured blocks is chipping the edges</span>.</p>\n<p>A well-run yard targets <span class=\"hl\">a rejection rate below 3%</span>. Uncured breakage goes straight back into the pan mixer before the cement sets, <span class=\"good\">recovering the whole material cost, while cured breakage crushes into coarse aggregate for footings</span>.</p>\n<p class=\"close\">Green breaks are not waste. They are mixer feed.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 64,
+          "wordsBefore": 53
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.843Z",
+          "wordCount": 64,
+          "wordsBefore": 53
+        }
+      ]
+    },
+    {
+      "no": 36,
+      "section": "Innovation",
+      "title": "Alternative Stabilizers",
+      "subtitle": "Replacing OPC with lime, pozzolans, and biomass ash",
+      "content": "To reduce carbon footprint and material expense, partial cement replacement strategies utilize local industrial and agricultural byproducts. Hydrated lime works exceptionally well in high-clay soils. Rice husk ash (RHA), volcanic ash, and sugarcane bagasse ash contain reactive silica that acts as a natural pozzolan, replacing up to 20-30% of Portland cement while maintaining structural block performance.",
+      "imagePrompt": "Bar chart comparing 28-day compressive strength of 100% OPC stabilized blocks against 70% OPC + 30% Rice Husk Ash blended blocks. Diagrams showing pozzolanic reaction chemistry.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS WEEKEND",
+        "content": "Sieve local agricultural or wood ash through a 150-micron mesh and substitute 20% of cement in a test batch of 10 blocks; test durability after 14 days."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your cement bill is the biggest cost line. <span class=\"bad\">Full Portland cement carries a carbon and cost penalty</span>.</p>\n<p>Partial replacement uses local byproducts. <span class=\"hl\">Hydrated lime works especially well in high-clay soils, and rice husk ash, volcanic ash, and bagasse ash carry reactive silica</span>. As a natural pozzolan they <span class=\"good\">replace up to 20 to 30% of Portland cement without losing block performance</span>.</p>\n<p class=\"close\">Local ash can carry a fifth of the cement load.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 72,
+          "wordsBefore": 56
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.843Z",
+          "wordCount": 72,
+          "wordsBefore": 56
+        }
+      ]
+    },
+    {
+      "no": 37,
+      "section": "Innovation",
+      "title": "Mobile Production Units",
+      "subtitle": "On-site manufacturing inside a trailer or shipping container",
+      "content": "Shipping heavy raw earth blocks over long distances destroys unit economics due to transport costs. Mounting a diesel hydraulic press, pan mixer, and generator inside a modified 20ft shipping container or trailer creates a mobile micro-factory. Transporting the machine to the site allows processing soil excavated directly from the building foundation, cutting transport costs to near zero.",
+      "imagePrompt": "3D spatial cutaway model of a 20ft shipping container converted into a mobile ICSEB factory unit. Shows fold-out awnings, generator room, mixer mounting, and hydraulic press output ramp.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Design a towable trailer chassis mounting scheme for a manual or diesel block machine to enable rental site services."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your site is far from the block yard. <span class=\"bad\">Hauling raw blocks long distances kills the economics</span>.</p>\n<p>Put a press, mixer, and generator inside <span class=\"hl\">a modified 20 ft container and you have a mobile micro-factory</span>. Processing soil from the foundation <span class=\"good\">cuts transport to near zero</span>.</p>\n<p class=\"close\">Make the blocks where you build.</p>",
+      "preparedActionContent": "Design a towable chassis mounting for a manual or diesel block machine to serve rental sites.",
+      "prepHistory": [
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:37.327Z",
+          "wordCount": 62,
+          "actionWords": 16
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:59.689Z",
+          "wordCount": 62,
+          "actionWords": 16
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:27:24.092Z",
+          "wordCount": 62,
+          "actionWords": 16
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:28:54.721Z",
+          "wordCount": 62,
+          "actionWords": 16
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:32:08.020Z",
+          "wordCount": 52,
+          "actionWords": 16
+        }
+      ]
+    },
+    {
+      "no": 38,
+      "section": "Innovation",
+      "title": "Plastic Waste Reinforcement",
+      "subtitle": "Adding shredded PET fibers to increase tensile toughness",
+      "content": "Adding 0.2% to 0.5% shredded post-consumer PET plastic bottle fibers (15mm length) into the dry soil mix acts as micro-fiber reinforcement. Plastic fibers bridge micro-cracks during shrinkage, increasing flexural toughness and seismic impact resistance while keeping plastic out of landfills.",
+      "imagePrompt": "Micro-structural vector schematic showing plastic fiber threads bridging a micro-crack inside an earth block matrix under tension.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS WEEKEND",
+        "content": "Shred clean PET plastic bottles into 15mm thin strips; add 100 grams per batch to 5 test blocks and perform a drop break test against standard blocks."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your blocks crack across the face as they dry. <span class=\"bad\">Shrinkage cracks have nothing bridging them</span>.</p>\n<p>Adding <span class=\"hl\">0.2 to 0.5% shredded post-consumer PET fibers, 15mm long, into the dry mix acts as micro-fiber reinforcement</span>. The fibers bridge micro-cracks and <span class=\"good\">raise flexural toughness and seismic impact resistance while keeping plastic out of landfill</span>.</p>\n<p class=\"close\">Bottle fibers hold the face together.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 59,
+          "wordsBefore": 40
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.207Z",
+          "wordCount": 52,
+          "wordsBefore": 59
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.843Z",
+          "wordCount": 59,
+          "wordsBefore": 40
+        }
+      ]
+    },
+    {
+      "no": 39,
+      "section": "Innovation",
+      "title": "Solar-Thermal Curing Kilns",
+      "subtitle": "Accelerating curing strength with passive solar heat",
+      "content": "Building a simple solar curing tunnel using plastic greenhouse film over block pallets traps humidity and solar heat. Internal temperatures reach 50°C-60°C, accelerating cement hydration chemistry. Blocks achieve 7-day strength in just 48 hours, freeing up pallet inventory and speeding up delivery cycles.",
+      "imagePrompt": "Cross-section schematic of a solar tunnel curing chamber showing black poly floor sheeting, clear UV-stabilized plastic canopy, moist burlap block stacks, and humidity circulation.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Construct a 3m x 2m low-cost wooden hoop frame covered with clear 200-micron greenhouse film to serve as an accelerated solar curing tent."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your cured stock is stuck in the yard for a month. <span class=\"bad\">Inventory is capital you cannot spend</span>.</p>\n<p>A plastic film tunnel over block pallets <span class=\"hl\">traps humidity and solar heat, reaching 50 to 60°C inside</span>. That accelerates hydration chemistry, so <span class=\"good\">blocks reach 7-day strength in 48 hours</span> and pallets turn over faster.</p>\n<p class=\"close\">Heat and damp turn 28 days into two.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 61,
+          "wordsBefore": 43
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.843Z",
+          "wordCount": 61,
+          "wordsBefore": 43
+        }
+      ]
+    },
+    {
+      "no": 40,
+      "section": "Innovation",
+      "title": "Geothermal & Earth Cooling",
+      "subtitle": "Integrating earth tubes directly into interlocking block cavities",
+      "content": "The hollow vertical conduits in ICSEB walls can double as passive ventilation pathways. Connecting subterranean earth tubes to hollow wall conduits pulls cool air from 2 meters underground up into interior rooms, creating natural zero-energy air conditioning.",
+      "imagePrompt": "Architectural cooling schematic showing subterranean intake pipe delivering cool soil-chilled air into hollow ICSEB wall channels discharging into room living space.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS WEEKEND",
+        "content": "Bury a 10m PVC pipe 1.5m deep in your yard and measure air temperature at the outlet versus ambient air with a digital probe."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say cooling costs dominate your summer bill. <span class=\"bad\">Compressor cooling moves heat rather than removing it</span>.</p>\n<p>The hollow vertical conduits already in ICSEB walls <span class=\"hl\">can double as passive ventilation paths</span>. Connect them to subterranean earth tubes and <span class=\"good\">cool air from two metres underground enters the room with no energy input at all</span>.</p>\n<p class=\"close\">The wall you built is also the duct you need.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 62,
+          "wordsBefore": 37
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.207Z",
+          "wordCount": 55,
+          "wordsBefore": 62
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.843Z",
+          "wordCount": 62,
+          "wordsBefore": 37
+        }
+      ]
+    },
+    {
+      "no": 41,
+      "section": "Innovation",
+      "title": "Biomass Ash Cement Blends",
+      "subtitle": "Utilizing kilns ash and biochar for lightweight insulation",
+      "content": "Blending fine biochar or rice husk ash into earth block mixes lowers unit weight by up to 15% while improving thermal insulation value (R-value). Biochar absorbs carbon, turning compressed earth blocks into carbon-negative building materials suitable for green building certification.",
+      "imagePrompt": "Diagram showing biochar porous micro-structure embedded in soil matrix, with thermal conductivity comparison chart between standard and biochar-infused ICSEBs.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Blend 10% sieved biochar into a trial mix and measure block weight reduction and dry compressive strength after 14 days."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say your blocks are heavier than the design allows. <span class=\"bad\">Dense earth walls load the structure for no gain</span>.</p>\n<p>Blending fine biochar or rice husk ash <span class=\"hl\">lowers unit weight by up to 15% while improving R-value</span>. Biochar also <span class=\"good\">locks carbon into the block, turning compressed earth into a carbon-negative material for green certification</span>.</p>\n<p class=\"close\">Lighter blocks, better insulation, stored carbon.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 59,
+          "wordsBefore": 40
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.843Z",
+          "wordCount": 59,
+          "wordsBefore": 40
+        }
+      ]
+    },
+    {
+      "no": 42,
+      "section": "Innovation",
+      "title": "Compressed Earth Arch Tooling",
+      "subtitle": "Modular centering frames for mortarless dome vaults",
+      "content": "Using custom interlocking vault blocks allows building roof arches and domes without timber or concrete roof slabs. Light wooden or steel centering arches support blocks during placement; once the keystone block is dropped in, the arch becomes self-supporting under gravity.",
+      "imagePrompt": "Vector drawing of a reusable wooden arch centering frame supporting interlocking vault blocks during installation of a catenary roof arch.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Construct a reusable plywood arched centering guide frame for building 1.2m span arched doorway openings."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say a roof needs to span without timber or a slab. <span class=\"bad\">Flat masonry cannot carry itself across an opening</span>.</p>\n<p>Custom interlocking vault blocks <span class=\"hl\">build arches and domes that carry their own weight</span>. Light wooden or steel centering holds them during placement, and <span class=\"good\">dropping in the keystone lets gravity take over from there</span>.</p>\n<p class=\"close\">Build it on a false arch, then let gravity keep it.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 64,
+          "wordsBefore": 40
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.843Z",
+          "wordCount": 64,
+          "wordsBefore": 40
+        }
+      ]
+    },
+    {
+      "no": 43,
+      "section": "Entrepreneurship",
+      "title": "Quality Assurance & Standards",
+      "subtitle": "Field testing and regulatory compliance",
+      "content": "Gaining market trust and building code permits requires formal quality assurance. Standard field tests measure wet compressive strength (minimum 2.0 to 4.0 MPa required for load-bearing walls) and water absorption (maximum 15% weight gain after 24-hour immersion). Maintaining a daily quality log tracking soil batching, cement brand, curing dates, and test results protects your business against liability.",
+      "imagePrompt": "Diagram showing a low-cost hydraulic manual crush test rig for field testing block compressive strength, alongside a water absorption immersion tank setup with scale and dry/wet block diagrams.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Perform a 24-hour water absorption test: weigh a dry 28-day cured block, submerge in water for 24 hours, re-weigh, and calculate percentage weight gain: [(Wet - Dry)/Dry] x 100."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say a client wants proof your blocks meet code. <span class=\"bad\">A price list is not a structural certificate</span>.</p>\n<p>Field tests measure <span class=\"hl\">wet compressive strength, minimum 2.0 to 4.0 MPa for load-bearing walls, and water absorption capped at 15% gain after 24 hours</span>. <span class=\"good\">A daily log of batching, cement brand, curing dates, and results protects you against liability</span>.</p>\n<p class=\"close\">Log it daily and the log defends you.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 65,
+          "wordsBefore": 57
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.207Z",
+          "wordCount": 58,
+          "wordsBefore": 65
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.844Z",
+          "wordCount": 65,
+          "wordsBefore": 57
+        }
+      ]
+    },
+    {
+      "no": 44,
+      "section": "Entrepreneurship",
+      "title": "Business Model & Go-To-Market",
+      "subtitle": "Targeting Eco-resorts, low-cost housing, and institutional clients",
+      "content": "Positioning your ICSEB venture requires distinct marketing strategies for two main customer segments: cost-conscious residential builders and premium eco-resort/commercial developers seeking sustainable aesthetics. Offering turnkey wall construction services rather than selling loose blocks captures higher margins and ensures proper structural assembly, preventing client errors that could harm your market reputation.",
+      "imagePrompt": "Value proposition canvas diagram breaking down customer pain points, gain creators, and service bundles for ICSEB walling contractors.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRACK CASH FOR ONE WEEK",
+        "content": "Build a sample wall display unit (1m x 1m) showcasing exposed block textures, grouted conduit cutaways, and finished plaster options at your production yard entrance."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say buyers compare you on block price alone. <span class=\"bad\">Loose blocks invite comparison and client error</span>.</p>\n<p>Two segments need different plays: <span class=\"hl\">cost-conscious builders and premium eco-resort developers</span>. Turnkey wall construction <span class=\"good\">captures higher margins and guarantees correct assembly</span>.</p>\n<p class=\"close\">Sell the wall, not the block.</p>",
+      "preparedActionContent": "Build a 1 m x 1 m sample wall at your yard entrance showing texture and conduit cutaways.",
+      "prepHistory": [
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:37.327Z",
+          "wordCount": 55,
+          "actionWords": 18
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:25:59.689Z",
+          "wordCount": 55,
+          "actionWords": 18
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:27:24.092Z",
+          "wordCount": 55,
+          "actionWords": 18
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:28:54.721Z",
+          "wordCount": 55,
+          "actionWords": 18
+        },
+        {
+          "step": "e2e-overflow-fix",
+          "timestamp": "2026-10-06T10:32:08.020Z",
+          "wordCount": 43,
+          "actionWords": 18
+        }
+      ],
+      "displayTitle": "Go-To-Market"
+    },
+    {
+      "no": 45,
+      "section": "Entrepreneurship",
+      "title": "Contractor Training Programs",
+      "subtitle": "Building a certified mason network to drive block demand",
+      "content": "Masons familiar with traditional mortar masonry often resist dry-stacked interlocking blocks due to habit. Hosting 1-day hands-on certification workshops for local mason contractors teaches keyway alignment, corner interlocks, and ring beam grouting. Certified masons become active salespeople recommending your blocks to home builders.",
+      "imagePrompt": "Infographic illustration showing a 1-day training workshop agenda for masons with icon stages: Classroom Basics -> Site Layout -> Dry Stacking -> Grouting & Lintel Casting.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Draft a 1-page Mason Certification Guide covering 5 golden rules of ICSEB wall stacking to distribute at contractor training sessions."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say masons look at your blocks and hand them back. <span class=\"bad\">They are trained to read mortar joints, not keyways</span>.</p>\n<p>Habit resists dry-stacked systems. <span class=\"hl\">A one-day hands-on workshop teaches keyway alignment, corner interlocks, and ring beam grouting</span>. Certified masons <span class=\"good\">become active salespeople recommending your blocks to home builders</span>.</p>\n<p class=\"close\">Train the installer and you train the referral.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 56,
+          "wordsBefore": 43
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.844Z",
+          "wordCount": 56,
+          "wordsBefore": 43
+        }
+      ]
+    },
+    {
+      "no": 46,
+      "section": "Entrepreneurship",
+      "title": "Turnkey Wall Contracting",
+      "subtitle": "Capturing higher margins by selling installed walls",
+      "content": "Selling raw blocks yields a 15-20% margin, but offering complete installed walling services (supply + labor + grouting) increases profit margins to 35-45%. Clients prefer single-point accountability for wall construction rather than managing separate material and labor trades.",
+      "imagePrompt": "Financial margin waterfall chart comparing Profit Margin on Block Sales Only (18%) vs Installed Wall Contracting Services (42%). Vector diagram.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRACK CASH FOR ONE WEEK",
+        "content": "Quote your next 3 prospective clients both ways: raw block delivery price vs complete installed per-square-meter walling price."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say clients compare you against a block supplier down the road. <span class=\"bad\">Selling loose blocks invites a price war you always lose</span>.</p>\n<p>Raw blocks return a <span class=\"hl\">15 to 20% margin, while installed walling with supply, labour, and grouting returns 35 to 45%</span>. Clients also <span class=\"good\">prefer one accountable contractor over managing separate trades</span>.</p>\n<p class=\"close\">Sell the finished wall and the margin doubles.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 60,
+          "wordsBefore": 38
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.207Z",
+          "wordCount": 58,
+          "wordsBefore": 60
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.844Z",
+          "wordCount": 60,
+          "wordsBefore": 38
+        }
+      ]
+    },
+    {
+      "no": 47,
+      "section": "Entrepreneurship",
+      "title": "Permitting & Code Approvals",
+      "subtitle": "Navigating municipal building codes and engineering approvals",
+      "content": "Obtaining building permits requires presenting standardized lab strength test reports to municipal engineers. Partnering with a local university structural laboratory to perform certified compressive, shear, and water absorption tests provides formal documentation that satisfies local planning authorities.",
+      "imagePrompt": "Standard laboratory test compliance certificate document mockup showing compressive strength stamp, engineering seal, and load capacity graphs.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Send 5 cured blocks from your production yard to a university materials lab for certified compressive strength testing."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say a municipal engineer asks for structural proof. <span class=\"bad\">Field test results from your own yard will not satisfy them</span>.</p>\n<p>Permits need <span class=\"hl\">standardized laboratory strength test reports</span>. Partnering with a university structural laboratory for <span class=\"good\">certified compressive, shear, and water absorption testing gives you documentation planning authorities accept</span>.</p>\n<p class=\"close\">A lab report opens the permit office door.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 55,
+          "wordsBefore": 37
+        },
+        {
+          "step": "house-style-trim",
+          "timestamp": "2026-10-06T11:13:47.207Z",
+          "wordCount": 49,
+          "wordsBefore": 55
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.844Z",
+          "wordCount": 55,
+          "wordsBefore": 37
+        }
+      ]
+    },
+    {
+      "no": 48,
+      "section": "Entrepreneurship",
+      "title": "Working Capital & Cash Flow",
+      "subtitle": "Managing 28-day curing inventory financial bottlenecks",
+      "content": "The 28-day curing cycle ties up cash in un-sold block inventory. Managing working capital requires enforcing a 50% advance deposit from clients upon order placement to cover raw soil, cement, and labor costs. Final 50% balance payment is collected upon yard dispatch or site delivery.",
+      "imagePrompt": "Cash flow timing diagram tracking cash inputs and outputs over a 35-day production and curing cycle: Order Deposit -> Raw Material Purchase -> Pressing -> Curing -> Dispatch Payment.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRACK CASH FOR ONE WEEK",
+        "content": "Establish a strict cash flow policy requiring 50% down payment before scheduling block production runs."
+      },
+      "citations": [],
+      "preparedContent": "<p>Let's say profit sits in a yard full of blocks. <span class=\"bad\">A 28-day curing cycle locks your cash in unsold inventory</span>.</p>\n<p>Working capital discipline means <span class=\"hl\">taking a 50% advance deposit at order to cover raw soil, cement, and labour</span>, then <span class=\"good\">collecting the remaining 50% at yard dispatch or site delivery</span>.</p>\n<p class=\"close\">Take money before you take delivery.</p>",
+      "prepHistory": [
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:10:57.934Z",
+          "wordCount": 55,
+          "wordsBefore": 45
+        },
+        {
+          "step": "house-style-restyle",
+          "timestamp": "2026-10-06T11:37:30.844Z",
+          "wordCount": 55,
+          "wordsBefore": 45
+        }
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "name": "Science",
+      "eyebrow": "S",
+      "blocks": [
+        "Soil Composition Basics",
+        "Hydration Mechanics",
+        "Curing Chemistry",
+        "Compaction Physics",
+        "Clay Plasticity Index",
+        "Erosion & Water Action",
+        "Thermal Mass Physics"
+      ]
+    },
+    {
+      "name": "Technology",
+      "eyebrow": "T",
+      "blocks": [
+        "Manual Press Mechanics",
+        "Motorized Hydraulic Systems",
+        "Interlocking Geometry",
+        "Sieve & Mesh Hardware",
+        "Soil Moisture Sensors",
+        "Mold Liner Maintenance",
+        "Automation & Sensors"
+      ]
+    },
+    {
+      "name": "Engineering",
+      "eyebrow": "E",
+      "blocks": [
+        "Soil Screening & Pre-treatment",
+        "Mixer Design & Batching",
+        "Foundation & Wall Detailing",
+        "Lintel & Opening Design",
+        "Corner & T-Junction Interlock",
+        "Grouting & Rebar Anchoring",
+        "Roof Tie-Down Connections"
+      ]
+    },
+    {
+      "name": "Arts",
+      "eyebrow": "A",
+      "blocks": [
+        "Facade Aesthetics & Texture",
+        "Ergonomics & Layout",
+        "Surface Sealers & Stains",
+        "Joint Rendering & Pointing",
+        "Acoustic & Interior Comfort",
+        "Architectural Mouldings",
+        "Showroom Display Units"
+      ]
+    },
+    {
+      "name": "Mathematics",
+      "eyebrow": "M",
+      "blocks": [
+        "Unit Economics & Mix Ratios",
+        "Structural Yield & Costing",
+        "Factory Yield & Throughput",
+        "Volumetric Batching Math",
+        "Break-Even Capital Analysis",
+        "Transportation Logistics Math",
+        "Wastage & Rejection Rates"
+      ]
+    },
+    {
+      "name": "Innovation",
+      "eyebrow": "I",
+      "blocks": [
+        "Alternative Stabilizers",
+        "Mobile Production Units",
+        "Plastic Waste Reinforcement",
+        "Solar-Thermal Curing Kilns",
+        "Geothermal & Earth Cooling",
+        "Biomass Ash Cement Blends",
+        "Compressed Earth Arch Tooling"
+      ]
+    },
+    {
+      "name": "Entrepreneurship",
+      "eyebrow": "IE",
+      "blocks": [
+        "Quality Assurance & Standards",
+        "Business Model & Go-To-Market",
+        "Contractor Training Programs",
+        "Turnkey Wall Contracting",
+        "Permitting & Code Approvals",
+        "Working Capital & Cash Flow"
+      ]
+    }
+  ],
+  "totalPages": 48,
+  "totalCitations": 0,
+  "template": "books/STEAM-IE-FOR-HYDROPONICS"
+}

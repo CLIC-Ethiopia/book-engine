@@ -1,0 +1,7 @@
+Clean technical schematic showing a solar thermal collector cross-section. Rays of sunlight (UV/Visible spectrum) pass through a top clear glass/polycarbonate sheet, hitting a matte-black corrugated metal absorber plate. The dark plate converts photons into infrared radiation (heat), which is trapped under the glazing (Greenhouse Effect). Cool air enters from the bottom, absorbs thermal energy from the hot plate, and exits as high-temperature dry air at the top. Labeled vector schematic, blueprint aesthetic.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

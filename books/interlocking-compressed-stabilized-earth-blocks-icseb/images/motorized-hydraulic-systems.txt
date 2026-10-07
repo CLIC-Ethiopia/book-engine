@@ -1,0 +1,7 @@
+Hydraulic circuit diagram for a semi-automated ICSEB machine showing motor, pump, directional control valves, relief valve, main cylinder, and ejector cylinder. Clean engineering schematic illustration.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

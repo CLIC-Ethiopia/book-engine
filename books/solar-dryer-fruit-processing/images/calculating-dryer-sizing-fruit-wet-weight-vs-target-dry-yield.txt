@@ -1,0 +1,7 @@
+Mathematical sizing flowchart for a solar dryer. Step 1: Target Finished Dry Yield (10kg). Step 2: Calculate Required Raw Wet Fruit Input using Moisture Ratio ($10\text{kg} / 0.18 = 55.5\text{kg}$ wet mangoes). Step 3: Calculate Required Tray Surface Area based on loading density ($2.5\text{kg wet}/m^2 = 22.2 m^2$ total tray area). Clean math blueprint graphic.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

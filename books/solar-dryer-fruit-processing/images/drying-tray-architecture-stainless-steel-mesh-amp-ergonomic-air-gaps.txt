@@ -1,0 +1,7 @@
+Blueprint drawing of a modular food-grade drying tray. Frame constructed from light aluminum angle bracket ($50\text{cm} \times 80\text{cm}$) with a food-grade 304 stainless steel woven wire mesh bottom ($2\text{mm} \times 2\text{mm}$ opening). Inset diagram shows tray side stackers maintaining a strict 50mm vertical air gap between stacked trays inside the cabinet slide rails.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

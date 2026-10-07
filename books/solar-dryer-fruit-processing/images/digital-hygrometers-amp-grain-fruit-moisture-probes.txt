@@ -1,0 +1,7 @@
+Technical illustration of hand-held testing tools for fruit drying quality control. Left: A pin-type resistance moisture probe inserted into a dried mango slice displaying moisture percentage on a digital screen. Right: A sealed glass jar containing dried fruit slices with an embedded digital mini-hygrometer testing equilibrium relative humidity ($ERH$). Precise vector style with measurement readout overlays.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

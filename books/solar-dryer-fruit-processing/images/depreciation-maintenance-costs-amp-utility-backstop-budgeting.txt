@@ -1,0 +1,7 @@
+Financial spreadsheet diagram showing annual operating reserve budget. Line item 1: Hardware Depreciation (10% per year). Line item 2: Polycarbonate Glazing Replacement Fund (5-year cycle). Line item 3: Fan/Battery Maintenance Reserve ($100/yr). Line item 4: Auxiliary Biomass/LPG Fuel Backstop Budget. Total operating reserve calculated per processed bag.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

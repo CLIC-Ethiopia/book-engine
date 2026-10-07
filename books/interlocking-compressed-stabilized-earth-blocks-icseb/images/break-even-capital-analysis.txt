@@ -1,0 +1,7 @@
+Financial graph displaying cumulative profit curves for Manual Press ($500 cost) vs Hydraulic Press ($3,000 cost) crossing break-even sales volume milestones.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

@@ -1,0 +1,7 @@
+Vector map and climate graph of East Africa showing distinct drying operational zones: Addis Ababa Highland (High Altitude, Low Ambient Air Pressure, Cool/Dry) vs Hawassa Rift Valley (Moderate Altitude, Humid) vs Coastal Mombasa (Sea Level, High Moisture). Annotated callout boxes show required airflow adjustments and solar thermal collector sizing modifications for each geographic elevation. Clean technical layout.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

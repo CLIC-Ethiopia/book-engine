@@ -1,0 +1,7 @@
+Vector cross-sectional schematic of a solar thermal collector featuring an integrated Rock Bed / PCM thermal storage floor beneath the absorber plate. Diagram shows daytime solar charging (sunlight heating dark river rocks under the collector) and night-time heat release (stored thermal energy radiating warm air up through drying trays after dark). Heat flow arrows in red and blue, vector technical manual style.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

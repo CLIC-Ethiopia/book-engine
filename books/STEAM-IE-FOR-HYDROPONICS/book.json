@@ -4,8 +4,12 @@
   "author": "Prof. Frehun A. Demissie",
 
   "series": "STEAM-IE",
-  "brand": "yoursite.com",
-  "editionLabel": "Edition 1.0",
+  "brand": "clicethiopia.netlify.app",
+  "footer": {
+    "brand": "businessideabank.netlify.app",
+    "right": "Fad.Lab"
+  },
+  "editionLabel": "Smart Agriculture",
   "unit": "blocks",
 
   "numbered": true,

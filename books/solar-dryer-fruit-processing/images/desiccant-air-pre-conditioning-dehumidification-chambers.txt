@@ -1,0 +1,7 @@
+Diagram of a Desiccant Air Dehumidification Duct attached to a dryer fresh air intake. incoming humid ambient air (80% RH, blue) passes through a removable tray filled with coarse Silica Gel / Calcium Chloride salt granules. Water vapor is chemically bound, discharging dry air (30% RH, orange) into the dryer collector. Secondary solar heat regenerates moist desiccant trays.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

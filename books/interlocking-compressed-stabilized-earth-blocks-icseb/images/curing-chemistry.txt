@@ -1,0 +1,7 @@
+Line graph showing compressive strength development (MPa) over 28 days for moist-cured vs. air-dried earth blocks. Accompanying schematic shows cross-section of a tarp-covered block stack on a pallet with moisture circulation vectors. Clean technical style.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

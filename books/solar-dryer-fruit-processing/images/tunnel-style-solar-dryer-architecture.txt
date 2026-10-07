@@ -1,0 +1,7 @@
+Structural architectural schematic of a Commercial Walk-In Tunnel Solar Dryer (Polyhouse design). Shows a semi-cylindrical hoop frame structure ($4\text{m} \times 10\text{m}$) made of galvanized steel arches covered in UV-stabilized clear polyethylene film. Inside, long double-tier drying table racks hold hundreds of fruit trays. High-volume 12V DC extractor fans mounted in the rear end-wall gable.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

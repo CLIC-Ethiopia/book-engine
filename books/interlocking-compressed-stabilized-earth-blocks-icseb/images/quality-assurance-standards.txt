@@ -1,0 +1,7 @@
+Diagram showing a low-cost hydraulic manual crush test rig for field testing block compressive strength, alongside a water absorption immersion tank setup with scale and dry/wet block diagrams.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

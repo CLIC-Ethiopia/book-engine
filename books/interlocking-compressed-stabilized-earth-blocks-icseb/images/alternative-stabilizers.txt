@@ -1,0 +1,7 @@
+Bar chart comparing 28-day compressive strength of 100% OPC stabilized blocks against 70% OPC + 30% Rice Husk Ash blended blocks. Diagrams showing pozzolanic reaction chemistry.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

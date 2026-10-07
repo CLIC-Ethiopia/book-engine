@@ -1,0 +1,7 @@
+Diagram showing biochar porous micro-structure embedded in soil matrix, with thermal conductivity comparison chart between standard and biochar-infused ICSEBs.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

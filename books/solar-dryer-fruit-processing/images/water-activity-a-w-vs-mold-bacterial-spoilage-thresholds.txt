@@ -1,0 +1,7 @@
+Detailed microbiological threshold chart displaying Water Activity ($a_w$) levels from 1.0 down to 0.2. Annotations show critical growth limits: Bacteria ($a_w < 0.91$), Yeasts ($a_w < 0.88$), Mold ($a_w < 0.80$), Osmophilic Yeasts ($a_w < 0.60$). Target dried fruit shelf-stable zone highlighted between $0.55$ and $0.62 a_w$. Vector chart with clean typography and biological icons.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

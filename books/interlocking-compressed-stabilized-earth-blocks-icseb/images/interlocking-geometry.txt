@@ -1,0 +1,7 @@
+3D isometric technical rendering of an interlocking block set: full block, half block, and U-channel lintel block. Highlight tongue, groove, vertical conduit holes, and edge chamfers. Precise dimension lines and keyway tolerances labeled.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

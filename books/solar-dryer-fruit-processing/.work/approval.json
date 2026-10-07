@@ -1,0 +1,214 @@
+{
+  "slug": "solar-dryer-fruit-processing",
+  "stages": {
+    "parsed": true,
+    "scaffolded": true,
+    "planned": true,
+    "pagesPrepared": true,
+    "assetsClassified": true,
+    "pagesRendered": true
+  },
+  "approvals": [
+    {
+      "stage": "parsed",
+      "approvedBy": "human",
+      "at": "2026-10-06T09:56:00.543Z"
+    },
+    {
+      "stage": "scaffolded",
+      "approvedBy": "human",
+      "at": "2026-10-06T09:56:00.607Z"
+    },
+    {
+      "stage": "planned",
+      "approvedBy": "human",
+      "at": "2026-10-06T09:56:00.616Z"
+    },
+    {
+      "stage": "pagesPrepared",
+      "approvedBy": "human",
+      "at": "2026-10-06T09:56:00.618Z"
+    },
+    {
+      "stage": "assetsClassified",
+      "approvedBy": "human",
+      "at": "2026-10-06T09:56:00.630Z"
+    },
+    {
+      "stage": "pagesRendered",
+      "approvedBy": "human",
+      "at": "2026-10-06T09:56:00.723Z"
+    }
+  ],
+  "citationStyle": "preserve",
+  "classifications": [
+    {
+      "title": "Moisture Equilibrium &amp; Psychrometric Drying Curves",
+      "type": "diagram"
+    },
+    {
+      "title": "Solar Irradiance, Collector Absorption &amp; Thermal Energy Transfer",
+      "type": "diagram"
+    },
+    {
+      "title": "Natural Convection vs. Forced Air Chimney Dynamics",
+      "type": "diagram"
+    },
+    {
+      "title": "UV Spectrum Degradation &amp; Color/Nutrient Preservation",
+      "type": "diagram"
+    },
+    {
+      "title": "Water Activity ($a_w$) vs. Mold/Bacterial Spoilage Thresholds",
+      "type": "diagram"
+    },
+    {
+      "title": "Sugar Concentration (Brix) Dynamics &amp; Case Hardening Prevention",
+      "type": "diagram"
+    },
+    {
+      "title": "East African Microclimates: Ambient RH vs. Highland Thermal Lift",
+      "type": "diagram"
+    },
+    {
+      "title": "Low-Power 12V DC Axial Fans &amp; Airflow Rate Calibration",
+      "type": "diagram"
+    },
+    {
+      "title": "Microcontroller Temperature &amp; Relative Humidity Monitoring",
+      "type": "diagram"
+    },
+    {
+      "title": "Thermal Energy Storage: Phase Change Materials &amp; Rock Beds",
+      "type": "diagram"
+    },
+    {
+      "title": "Off-Grid Solar PV, Charge Controller &amp; Battery Sizing",
+      "type": "diagram"
+    },
+    {
+      "title": "Digital Hygrometers &amp; Grain/Fruit Moisture Probes",
+      "type": "diagram"
+    },
+    {
+      "title": "IoT Airflow Sensors &amp; Differential Pressure Gauge Setup",
+      "type": "diagram"
+    },
+    {
+      "title": "Solar Thermal Collector Design: Latitude-Matched Glazing Angle",
+      "type": "diagram"
+    },
+    {
+      "title": "Direct Solar Cabinet Dryer Architecture",
+      "type": "diagram"
+    },
+    {
+      "title": "Indirect Solar Dryer Architecture",
+      "type": "diagram"
+    },
+    {
+      "title": "Tunnel-Style Solar Dryer Architecture",
+      "type": "diagram"
+    },
+    {
+      "title": "Cabinet Construction: Food-Grade Insulation, Seals &amp; Framing",
+      "type": "diagram"
+    },
+    {
+      "title": "Drying Tray Architecture: Stainless Steel Mesh &amp; Ergonomic Air Gaps",
+      "type": "diagram"
+    },
+    {
+      "title": "Chimney Sizing &amp; Exhaust Damper Airflow Control",
+      "type": "diagram"
+    },
+    {
+      "title": "Modular Solar Dryer Assembly &amp; Scalable Footprints",
+      "type": "diagram"
+    },
+    {
+      "title": "Ergonomic Working Height, Loading Access &amp; Visual Workflow",
+      "type": "diagram"
+    },
+    {
+      "title": "Fruit Slicing Aesthetics: Thickness Uniformity, Color Pop &amp; Display Trays",
+      "type": "diagram"
+    },
+    {
+      "title": "Eco-Branding &amp; Sustainable Craft Packaging Design",
+      "type": "diagram"
+    },
+    {
+      "title": "Clear Labeling: Nutrition, Shelf-Life &amp; Traceability Storytelling",
+      "type": "diagram"
+    },
+    {
+      "title": "Visual Inspection Standards: Sorting Graded Dried Mango &amp; Pineapple",
+      "type": "diagram"
+    },
+    {
+      "title": "Calculating Dryer Sizing: Fruit Wet Weight vs. Target Dry Yield",
+      "type": "diagram"
+    },
+    {
+      "title": "Thermal Collector Efficiency &amp; Energy Balance Equations",
+      "type": "diagram"
+    },
+    {
+      "title": "Unit Economics: Raw Fruit Input vs. Dried Fruit Retail Value",
+      "type": "diagram"
+    },
+    {
+      "title": "Break-Even Point &amp; Capital Payback Schedule ($1,000–$2,500 Tier)",
+      "type": "diagram"
+    },
+    {
+      "title": "Batch Processing Timelines &amp; Seasonal Drying Calendars",
+      "type": "diagram"
+    },
+    {
+      "title": "Depreciation, Maintenance Costs &amp; Utility Backstop Budgeting",
+      "type": "diagram"
+    },
+    {
+      "title": "Local Material Swaps: Sourcing Sheet Metal, Polycarbonate &amp; Fans in Merkato",
+      "type": "diagram"
+    },
+    {
+      "title": "Biomass / Charcoal Auxiliary Thermal Backup for Night Drying",
+      "type": "diagram"
+    },
+    {
+      "title": "Upcycled Barrel Collector Hacks for Ultra-Low Cost Auxiliary Heating",
+      "type": "diagram"
+    },
+    {
+      "title": "Desiccant Air Pre-Conditioning Dehumidification Chambers",
+      "type": "diagram"
+    },
+    {
+      "title": "Hybrid LPG/Biomass Burner Integration for Continuous Industrial Output",
+      "type": "diagram"
+    },
+    {
+      "title": "Identifying B2B &amp; Retail Buyers: Supermarkets, Exporters &amp; Health Shops",
+      "type": "diagram"
+    },
+    {
+      "title": "Quality Assurance: Food Safety Standards, Hygiene &amp; Bureau Compliance",
+      "type": "diagram"
+    },
+    {
+      "title": "Cost Control, Cash Flow Management &amp; Seasonal Purchasing Cycles",
+      "type": "diagram"
+    },
+    {
+      "title": "Equipment Sales vs. Fruit Processing Dual-Revenue Strategy",
+      "type": "diagram"
+    },
+    {
+      "title": "Cooperative Outgrower Model &amp; Contract Drying Services",
+      "type": "diagram"
+    }
+  ]
+}

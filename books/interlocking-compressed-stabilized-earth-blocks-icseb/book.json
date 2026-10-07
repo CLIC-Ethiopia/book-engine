@@ -1,0 +1,141 @@
+{
+  "title": "Interlocking Compressed Stabilized Earth Blocks (ICSEB)",
+  "subtitle": "Micro-factory production for eco-construction",
+  "author": "STEAM-IE Field Manual Series",
+  "series": "STEAM-IE for Eco-Construction",
+  "brand": "clicethiopia.netlify.app",
+  "footer": {
+    "brand": "businessideabank.netlify.app",
+    "right": "Fad.Lab"
+  },
+  "editionLabel": "First Edition",
+  "unit": "blocks",
+  "numbered": true,
+  "contents": true,
+  "index": true,
+  "insideCover": true,
+  "howToRead": true,
+  "backCover": true,
+  "cover": {
+    "kicker": "STEAM-IE curriculum",
+    "image": "images/Cover-page-Gemini_Generated.png",
+    "note": "One concept per page, ordered across the seven letters of STEAM-IE."
+  },
+  "copyright": {
+    "year": 2026,
+    "rights": "© 2026 Your Name. All rights reserved.",
+    "lines": [
+      "Set in Space Grotesk, Inter and JetBrains Mono.",
+      "Built with the paper engine: github.com/hassancs91/paper-engine"
+    ]
+  },
+  "parts": [
+    {
+      "name": "Science",
+      "eyebrow": "S",
+      "blocks": [
+        "Soil Composition Basics",
+        "Hydration Mechanics",
+        "Curing Chemistry",
+        "Compaction Physics",
+        "Clay Plasticity Index",
+        "Erosion & Water Action",
+        "Thermal Mass Physics"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Technology",
+      "eyebrow": "T",
+      "blocks": [
+        "Manual Press Mechanics",
+        "Motorized Hydraulic Systems",
+        "Interlocking Geometry",
+        "Sieve & Mesh Hardware",
+        "Soil Moisture Sensors",
+        "Mold Liner Maintenance",
+        "Automation & Sensors"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Engineering",
+      "eyebrow": "E",
+      "blocks": [
+        "Soil Screening & Pre-treatment",
+        "Mixer Design & Batching",
+        "Foundation & Wall Detailing",
+        "Lintel & Opening Design",
+        "Corner & T-Junction Interlock",
+        "Grouting & Rebar Anchoring",
+        "Roof Tie-Down Connections"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Arts",
+      "eyebrow": "A",
+      "blocks": [
+        "Facade Aesthetics & Texture",
+        "Ergonomics & Layout",
+        "Surface Sealers & Stains",
+        "Joint Rendering & Pointing",
+        "Acoustic & Interior Comfort",
+        "Architectural Mouldings",
+        "Showroom Display Units"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Mathematics",
+      "eyebrow": "M",
+      "blocks": [
+        "Unit Economics",
+        "Structural Yield & Costing",
+        "Factory Yield & Throughput",
+        "Volumetric Batching Math",
+        "Break-Even Capital Analysis",
+        "Transportation Logistics Math",
+        "Wastage & Rejection Rates"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Innovation",
+      "eyebrow": "I",
+      "blocks": [
+        "Alternative Stabilizers",
+        "Mobile Production Units",
+        "Plastic Waste Reinforcement",
+        "Solar-Thermal Curing Kilns",
+        "Geothermal & Earth Cooling",
+        "Biomass Ash Cement Blends",
+        "Compressed Earth Arch Tooling"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Entrepreneurship",
+      "eyebrow": "IE",
+      "blocks": [
+        "Quality Assurance & Standards",
+        "Go-To-Market",
+        "Contractor Training Programs",
+        "Turnkey Wall Contracting",
+        "Permitting & Code Approvals",
+        "Working Capital & Cash Flow"
+      ],
+      "why": "",
+      "listLabel": ""
+    }
+  ],
+  "editions": {
+    "free": []
+  }
+}

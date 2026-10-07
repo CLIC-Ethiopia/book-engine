@@ -1,0 +1,7 @@
+Vector diagram of an adjustable solar dryer exhaust chimney. Features a tall vertical sheet-metal pipe mounted on top of the cabinet. Inside the pipe, an adjustable circular butterfly damper valve is shown with an external control handle indicating position angles ($0^\circ$ fully closed, $45^\circ$ half open, $90^\circ$ fully open). Airflow velocity vectors slow down when damper is partially restricted.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

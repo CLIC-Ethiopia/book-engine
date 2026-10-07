@@ -1,0 +1,7 @@
+Modular engineering assembly diagram showing a scalable dryer expansion system. Unit A (Base Starter Module: 1 Collector + 1 Cabinet). Unit B (Expanded Module: 3 Parallel Collectors feeding a dual-door Master Cabinet). Interlocking quick-connect duct flanges and bolt-together steel frames illustrated with exploded assembly lines.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

@@ -1,0 +1,7 @@
+Technical vector visual layout showing a dual-axis psychrometric drying curve chart. Left vertical axis shows Fruit Moisture Content (%), right vertical axis shows Drying Rate (g/hr), and horizontal axis shows Drying Time (Hours). Clear labeled phases: Constant Rate Period (surface evaporation) and Falling Rate Period (internal moisture diffusion). Below the graph, a micro-cross-section diagram shows a fruit slice with internal moisture moving toward the surface via capillary action under heat. Clean technical vector blueprint style with sharp lines and labels in Space Grotesk font.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

@@ -1,0 +1,7 @@
+Technical line-art schematic of a 12V DC brushless axial fan setup in a solar dryer air intake duct. Labeled elements: Anemometer measuring air velocity ($m/s$), PWM Speed Controller dial, Inline Fuse (3A), and 12V DC Solar/Battery leads. A side equation block shows the conversion of air velocity ($m/s$) multiplied by duct cross-sectional area ($m^2$) to calculate volumetric flow rate ($m^3/h$ or CFM).
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

@@ -1,0 +1,7 @@
+Detailed technical vector drawing of a manual lever ICSEB press machine. Exploded line detail highlighting the handle lever, toggle linkage, top lid plate, mold box, and bottom ejector piston. Arrow indicators mark force vectors.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

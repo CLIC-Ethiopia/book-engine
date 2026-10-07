@@ -1,0 +1,7 @@
+Detailed vector blueprint of a regulatory-compliant back-of-package food label layout. Labeled sections: (1) Bold Product Title &amp; Net Weight, (2) Standardized Nutritional Facts Table, (3) Ingredients List (100% Mango), (4) Manufactured Date / Expiry Date stamp area, (5) Batch Traceability QR Code, (6) Local Standards Authority Approval Badge.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

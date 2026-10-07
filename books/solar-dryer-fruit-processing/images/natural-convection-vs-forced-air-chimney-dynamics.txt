@@ -1,0 +1,7 @@
+Vector diagram illustrating thermal buoyancy draft in a solar dryer. A tall vertical exhaust chimney is shown attached to a drying cabinet. Hot air (red arrows) becomes less dense, creating a pressure vacuum ($\Delta P$) that pulls fresh cool ambient air (blue arrows) through the bottom intake vents. Side-by-side comparison shows: (A) Low chimney height causing sluggish airflow, vs. (B) High chimney height creating a strong continuous buoyancy draft. Blueprint technical style.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

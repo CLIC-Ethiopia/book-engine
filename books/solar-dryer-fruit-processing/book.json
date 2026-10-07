@@ -1,0 +1,135 @@
+{
+  "title": "Solar Dryer for Fruit Processing",
+  "subtitle": "A practical guide to designing, building, and operating a small solar fruit dryer business.",
+  "author": "Prof. Frehun A. Demissie",
+  "series": "STEAM-IE",
+  "brand": "clicethiopia.netlify.app",
+  "footer": {
+    "brand": "businessideabank.netlify.app",
+    "right": "Fad.Lab"
+  },
+  "editionLabel": "Smart Agriculture",
+  "unit": "blocks",
+  "numbered": true,
+  "contents": true,
+  "index": true,
+  "insideCover": true,
+  "howToRead": true,
+  "backCover": true,
+  "cover": {
+    "kicker": "STEAM-IE curriculum",
+    "image": "images/cover.png",
+    "note": "One concept per page, ordered across the seven letters of STEAM-IE."
+  },
+  "copyright": {
+    "year": 2026,
+    "rights": "© 2026 Your Name. All rights reserved.",
+    "lines": [
+      "Set in Space Grotesk, Inter and JetBrains Mono.",
+      "Built with the paper engine: github.com/hassancs91/paper-engine"
+    ]
+  },
+  "parts": [
+    {
+      "name": "Science",
+      "eyebrow": "S",
+      "blocks": [
+        "Moisture Equilibrium &amp; Psychrometric Drying Curves",
+        "Solar Irradiance, Collector Absorption &amp; Thermal Energy Transfer",
+        "Natural Convection vs. Forced Air Chimney Dynamics",
+        "UV Spectrum Degradation &amp; Color/Nutrient Preservation",
+        "Water Activity ($a_w$) vs. Mold/Bacterial Spoilage Thresholds",
+        "Sugar Concentration (Brix) Dynamics &amp; Case Hardening Prevention",
+        "East African Microclimates: Ambient RH vs. Highland Thermal Lift"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Technology",
+      "eyebrow": "T",
+      "blocks": [
+        "Low-Power 12V DC Axial Fans &amp; Airflow Rate Calibration",
+        "Microcontroller Temperature &amp; Relative Humidity Monitoring",
+        "Thermal Energy Storage: Phase Change Materials &amp; Rock Beds",
+        "Off-Grid Solar PV, Charge Controller &amp; Battery Sizing",
+        "Digital Hygrometers &amp; Grain/Fruit Moisture Probes",
+        "IoT Airflow Sensors &amp; Differential Pressure Gauge Setup"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Engineering",
+      "eyebrow": "E",
+      "blocks": [
+        "Solar Thermal Collector Design: Latitude-Matched Glazing Angle",
+        "Direct Solar Cabinet Dryer Architecture",
+        "Indirect Solar Dryer Architecture",
+        "Tunnel-Style Solar Dryer Architecture",
+        "Cabinet Construction: Food-Grade Insulation, Seals &amp; Framing",
+        "Drying Tray Architecture: Stainless Steel Mesh &amp; Ergonomic Air Gaps",
+        "Chimney Sizing &amp; Exhaust Damper Airflow Control",
+        "Modular Solar Dryer Assembly &amp; Scalable Footprints"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Arts",
+      "eyebrow": "A",
+      "blocks": [
+        "Ergonomic Working Height, Loading Access &amp; Visual Workflow",
+        "Fruit Slicing Aesthetics: Thickness Uniformity, Color Pop &amp; Display Trays",
+        "Eco-Branding &amp; Sustainable Craft Packaging Design",
+        "Clear Labeling: Nutrition, Shelf-Life &amp; Traceability Storytelling",
+        "Visual Inspection Standards: Sorting Graded Dried Mango &amp; Pineapple"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Mathematics",
+      "eyebrow": "M",
+      "blocks": [
+        "Calculating Dryer Sizing: Fruit Wet Weight vs. Target Dry Yield",
+        "Thermal Collector Efficiency &amp; Energy Balance Equations",
+        "Unit Economics: Raw Fruit Input vs. Dried Fruit Retail Value",
+        "Break-Even Point &amp; Capital Payback Schedule ($1,000–$2,500 Tier)",
+        "Batch Processing Timelines &amp; Seasonal Drying Calendars",
+        "Depreciation, Maintenance Costs &amp; Utility Backstop Budgeting"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Innovation",
+      "eyebrow": "I",
+      "blocks": [
+        "Local Material Swaps: Sourcing Sheet Metal, Polycarbonate &amp; Fans in Merkato",
+        "Biomass / Charcoal Auxiliary Thermal Backup for Night Drying",
+        "Upcycled Barrel Collector Hacks for Ultra-Low Cost Auxiliary Heating",
+        "Desiccant Air Pre-Conditioning Dehumidification Chambers",
+        "Hybrid LPG/Biomass Burner Integration for Continuous Industrial Output"
+      ],
+      "why": "",
+      "listLabel": ""
+    },
+    {
+      "name": "Entrepreneurship",
+      "eyebrow": "IE",
+      "blocks": [
+        "Identifying B2B &amp; Retail Buyers: Supermarkets, Exporters &amp; Health Shops",
+        "Quality Assurance: Food Safety Standards, Hygiene &amp; Bureau Compliance",
+        "Cost Control, Cash Flow Management &amp; Seasonal Purchasing Cycles",
+        "Equipment Sales vs. Fruit Processing Dual-Revenue Strategy",
+        "Cooperative Outgrower Model &amp; Contract Drying Services"
+      ],
+      "why": "",
+      "listLabel": ""
+    }
+  ],
+  "editions": {
+    "free": []
+  }
+}

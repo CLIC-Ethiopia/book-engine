@@ -1,0 +1,7 @@
+Engineering schematic of a Commercial Hybrid LPG (Propane) Auto-Booster System for a solar tunnel dryer. Labeled elements: Thermostatic Digital Controller -&gt; 12V Solenoid Gas Valve -&gt; Commercial LPG Burner Ring mounted inside intake duct. When solar cabinet temperature drops below 50°C, solenoid opens and ignites LPG flame automatically to maintain steady continuous drying heat.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

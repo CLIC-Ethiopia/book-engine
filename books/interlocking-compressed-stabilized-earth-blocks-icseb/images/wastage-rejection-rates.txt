@@ -1,0 +1,7 @@
+Bar chart tracking weekly block scrap percentage before and after worker handling training, showing target 2% threshold line.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

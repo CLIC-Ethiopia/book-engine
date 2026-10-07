@@ -1,0 +1,7 @@
+Engineering drawing showing a solar thermal collector box tilt angle relative to incoming sun rays. Technical details: Ground horizontal baseline, collector elevation angle set to Latitude + 10 degrees (e.g., 19 degrees for Addis Ababa at ~9°N). Sun ray angles shown for Summer and Winter solstices hitting the collector surface perpendicularly for maximum energy capture. Clean vector blueprint.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

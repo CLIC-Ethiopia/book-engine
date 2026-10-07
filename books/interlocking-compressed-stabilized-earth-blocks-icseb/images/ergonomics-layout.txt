@@ -1,0 +1,7 @@
+Top-down architectural floor plan vector layout of an ICSEB micro-factory. Arrows map linear material flow: Soil Stockpile -> Screen -> Pan Mixer -> Press Machine -> Stacking/Curing Zone -> Cured Yard.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

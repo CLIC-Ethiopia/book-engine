@@ -1,0 +1,7 @@
+Wiring schematic for an off-grid solar power system powering dryer accessories. Components shown: 50W Monocrystalline PV Panel -&gt; 10A PWM Solar Charge Controller -&gt; 12V 20Ah Deep-Cycle AGM Battery -&gt; 12V DC Axial Fans &amp; Microcontroller Logger. Detailed text callouts show system wattages, daily amp-hour calculations, and safety fuse locations.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

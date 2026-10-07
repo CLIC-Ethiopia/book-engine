@@ -1,0 +1,7 @@
+Structural blueprint of a Direct Solar Cabinet Dryer. A single wooden/sheet-metal insulated box featuring an angled top clear glass/polycarbonate roof. Inside, multiple wooden mesh trays sit staggered directly under the glass. Cool air vents in at the bottom base; hot moist air exhausts through a top rear vent. Detailed isometric exploded view with labeled structural components.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

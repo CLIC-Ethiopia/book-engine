@@ -1,0 +1,7 @@
+Seasonal cash flow liquidity graph spanning 12 months. Red bars show peak cash outlay during harvest season (buying raw fruit in bulk at low prices). Green line shows continuous weekly cash inflow from selling packaged dried fruit over the next 6 months. A highlighted cash reserve safety zone prevents working capital shortages during non-harvest months.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

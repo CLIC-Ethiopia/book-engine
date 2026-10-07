@@ -1,0 +1,7 @@
+Technical drawing of a Hybrid Biomass Thermal Auxiliary Attachment linked to a solar dryer cabinet. Features a small external insulated masonry rocket stove / charcoal burner. Exhaust flue gases pass through a sealed stainless steel heat exchanger pipe running inside the dryer base before venting outside, heating cabinet air without contaminating fruit with smoke.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

@@ -1,0 +1,7 @@
+Visual ergonomics blueprint of a solar fruit processing layout. Shows human silhouette scale vector operating around a dryer: Tray loading table set at 90cm ergonomic elbow height, top tray reach limit capped at 165cm height, bottom tray limit at 50cm above floor. Color-coded floor workflow zones: Raw Intake Zone (Red) -&gt; Slicing/Prep Station (Yellow) -&gt; Dryer Cabinet (Blue) -&gt; Packaging/QC Bench (Green).
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

@@ -1,0 +1,7 @@
+Truck loading schematic diagram showing weight distribution, axle load limits, and stacked pallet arrangement for 1,200 blocks on a 10-ton flatbed chassis.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

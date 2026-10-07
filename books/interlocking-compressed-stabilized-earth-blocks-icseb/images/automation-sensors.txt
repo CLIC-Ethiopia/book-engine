@@ -1,0 +1,7 @@
+Schematic view of an automated block press control panel, pressure transducer sensor port, electrical limit switch triggers, and PLC indicator lights. Clean technical graphic.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

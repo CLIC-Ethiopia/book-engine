@@ -1,0 +1,359 @@
+{
+  "slug": "interlocking-compressed-stabilized-earth-blocks-icseb",
+  "stages": {
+    "parsed": true,
+    "scaffolded": true,
+    "planned": true,
+    "pagesPrepared": true,
+    "assetsClassified": true,
+    "pagesRendered": true,
+    "diagramsGenerated": true
+  },
+  "approvals": [
+    {
+      "stage": "parsed",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:22:23.250Z"
+    },
+    {
+      "stage": "scaffolded",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:22:23.298Z"
+    },
+    {
+      "stage": "planned",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:22:23.307Z"
+    },
+    {
+      "stage": "pagesPrepared",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:22:23.309Z"
+    },
+    {
+      "stage": "assetsClassified",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:22:23.316Z"
+    },
+    {
+      "stage": "pagesRendered",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:22:23.394Z"
+    },
+    {
+      "stage": "diagramsGenerated",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:22:23.644Z"
+    },
+    {
+      "stage": "pagesRendered",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:26:11.177Z"
+    },
+    {
+      "stage": "diagramsGenerated",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:26:11.378Z"
+    },
+    {
+      "stage": "pagesPrepared",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:26:40.738Z"
+    },
+    {
+      "stage": "pagesRendered",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:26:40.857Z"
+    },
+    {
+      "stage": "diagramsGenerated",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:26:41.054Z"
+    },
+    {
+      "stage": "pagesPrepared",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:27:26.228Z"
+    },
+    {
+      "stage": "pagesRendered",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:27:26.355Z"
+    },
+    {
+      "stage": "diagramsGenerated",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:27:26.504Z"
+    },
+    {
+      "stage": "pagesPrepared",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:28:56.865Z"
+    },
+    {
+      "stage": "pagesRendered",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:28:57.010Z"
+    },
+    {
+      "stage": "diagramsGenerated",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:28:57.185Z"
+    },
+    {
+      "stage": "pagesPrepared",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:32:23.503Z"
+    },
+    {
+      "stage": "pagesRendered",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:32:23.655Z"
+    },
+    {
+      "stage": "diagramsGenerated",
+      "approvedBy": "human",
+      "at": "2026-10-06T10:32:23.891Z"
+    },
+    {
+      "stage": "pagesPrepared",
+      "approvedBy": "human",
+      "at": "2026-10-06T11:11:11.440Z"
+    },
+    {
+      "stage": "pagesRendered",
+      "approvedBy": "human",
+      "at": "2026-10-06T11:11:11.608Z"
+    },
+    {
+      "stage": "diagramsGenerated",
+      "approvedBy": "human",
+      "at": "2026-10-06T11:11:11.816Z"
+    },
+    {
+      "stage": "pagesPrepared",
+      "approvedBy": "human",
+      "at": "2026-10-06T11:14:00.760Z"
+    },
+    {
+      "stage": "pagesRendered",
+      "approvedBy": "human",
+      "at": "2026-10-06T11:14:00.977Z"
+    },
+    {
+      "stage": "diagramsGenerated",
+      "approvedBy": "human",
+      "at": "2026-10-06T11:14:01.179Z"
+    },
+    {
+      "stage": "pagesPrepared",
+      "approvedBy": "human",
+      "at": "2026-10-06T11:37:41.522Z"
+    },
+    {
+      "stage": "pagesRendered",
+      "approvedBy": "human",
+      "at": "2026-10-06T11:37:41.722Z"
+    },
+    {
+      "stage": "diagramsGenerated",
+      "approvedBy": "human",
+      "at": "2026-10-06T11:37:41.929Z"
+    }
+  ],
+  "citationStyle": "preserve",
+  "classifications": [
+    {
+      "title": "Soil Composition Basics",
+      "type": "diagram"
+    },
+    {
+      "title": "Hydration Mechanics",
+      "type": "diagram"
+    },
+    {
+      "title": "Curing Chemistry",
+      "type": "diagram"
+    },
+    {
+      "title": "Compaction Physics",
+      "type": "diagram"
+    },
+    {
+      "title": "Clay Plasticity Index",
+      "type": "diagram"
+    },
+    {
+      "title": "Erosion & Water Action",
+      "type": "diagram"
+    },
+    {
+      "title": "Thermal Mass Physics",
+      "type": "diagram"
+    },
+    {
+      "title": "Manual Press Mechanics",
+      "type": "diagram"
+    },
+    {
+      "title": "Motorized Hydraulic Systems",
+      "type": "diagram"
+    },
+    {
+      "title": "Interlocking Geometry",
+      "type": "diagram"
+    },
+    {
+      "title": "Sieve & Mesh Hardware",
+      "type": "diagram"
+    },
+    {
+      "title": "Soil Moisture Sensors",
+      "type": "diagram"
+    },
+    {
+      "title": "Mold Liner Maintenance",
+      "type": "diagram"
+    },
+    {
+      "title": "Automation & Sensors",
+      "type": "diagram"
+    },
+    {
+      "title": "Soil Screening & Pre-treatment",
+      "type": "diagram"
+    },
+    {
+      "title": "Mixer Design & Batching",
+      "type": "diagram"
+    },
+    {
+      "title": "Foundation & Wall Detailing",
+      "type": "diagram"
+    },
+    {
+      "title": "Lintel & Opening Design",
+      "type": "diagram"
+    },
+    {
+      "title": "Corner & T-Junction Interlock",
+      "type": "diagram"
+    },
+    {
+      "title": "Grouting & Rebar Anchoring",
+      "type": "diagram"
+    },
+    {
+      "title": "Roof Tie-Down Connections",
+      "type": "diagram"
+    },
+    {
+      "title": "Facade Aesthetics & Texture",
+      "type": "diagram"
+    },
+    {
+      "title": "Ergonomics & Layout",
+      "type": "diagram"
+    },
+    {
+      "title": "Surface Sealers & Stains",
+      "type": "photo"
+    },
+    {
+      "title": "Joint Rendering & Pointing",
+      "type": "diagram"
+    },
+    {
+      "title": "Acoustic & Interior Comfort",
+      "type": "diagram"
+    },
+    {
+      "title": "Architectural Mouldings",
+      "type": "diagram"
+    },
+    {
+      "title": "Showroom Display Units",
+      "type": "diagram"
+    },
+    {
+      "title": "Unit Economics & Mix Ratios",
+      "type": "diagram"
+    },
+    {
+      "title": "Structural Yield & Costing",
+      "type": "diagram"
+    },
+    {
+      "title": "Factory Yield & Throughput",
+      "type": "diagram"
+    },
+    {
+      "title": "Volumetric Batching Math",
+      "type": "diagram"
+    },
+    {
+      "title": "Break-Even Capital Analysis",
+      "type": "diagram"
+    },
+    {
+      "title": "Transportation Logistics Math",
+      "type": "diagram"
+    },
+    {
+      "title": "Wastage & Rejection Rates",
+      "type": "diagram"
+    },
+    {
+      "title": "Alternative Stabilizers",
+      "type": "diagram"
+    },
+    {
+      "title": "Mobile Production Units",
+      "type": "diagram"
+    },
+    {
+      "title": "Plastic Waste Reinforcement",
+      "type": "diagram"
+    },
+    {
+      "title": "Solar-Thermal Curing Kilns",
+      "type": "diagram"
+    },
+    {
+      "title": "Geothermal & Earth Cooling",
+      "type": "diagram"
+    },
+    {
+      "title": "Biomass Ash Cement Blends",
+      "type": "diagram"
+    },
+    {
+      "title": "Compressed Earth Arch Tooling",
+      "type": "diagram"
+    },
+    {
+      "title": "Quality Assurance & Standards",
+      "type": "diagram"
+    },
+    {
+      "title": "Business Model & Go-To-Market",
+      "type": "diagram"
+    },
+    {
+      "title": "Contractor Training Programs",
+      "type": "diagram"
+    },
+    {
+      "title": "Turnkey Wall Contracting",
+      "type": "diagram"
+    },
+    {
+      "title": "Permitting & Code Approvals",
+      "type": "diagram"
+    },
+    {
+      "title": "Working Capital & Cash Flow",
+      "type": "diagram"
+    }
+  ]
+}

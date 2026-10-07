@@ -1,0 +1,7 @@
+Financial break-even chart displaying Cumulative Revenue vs Total Costs over time (Months 0 to 12). Fixed Capital Cost line starts at -$1,500 (Tier B Hybrid Dryer). Total Cost line slopes up gradually with raw fruit/labor variable costs. Revenue line starts at zero and climbs steeply. Break-Even Intersection Point highlighted at Month 3.5 (1,200 pouches sold).
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

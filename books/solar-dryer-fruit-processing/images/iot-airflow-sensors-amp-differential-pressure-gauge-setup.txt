@@ -1,0 +1,7 @@
+Vector diagram showing differential pressure measurement across drying cabinet trays. A U-tube manometer or digital differential pressure sensor ($Pa$) is connected with two clear flexible tubes: one inserted below the bottom fruit tray (high-pressure zone) and one above the top fruit tray (low-pressure zone). High pressure differential highlights restricted airflow caused by over-packed fruit trays.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

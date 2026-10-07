@@ -1,0 +1,7 @@
+Outgrower contract business model network diagram. Central Node: Anchor Processing &amp; Packaging Hub (Quality Control, Final Pouch Packaging, B2B Marketing). Outer Nodes: Local Farmer Cooperatives operating distributed Tier-A Solar Dryers on their farms. Flow arrows: Central Hub supplies training and dryers -&gt; Farmers dry fresh harvests locally -&gt; Central Hub buys back Grade-A dried fruit slices.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

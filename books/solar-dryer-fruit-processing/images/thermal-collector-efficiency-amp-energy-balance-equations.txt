@@ -1,0 +1,7 @@
+Mathematical balance sheet schematic of a solar thermal collector. Input vector arrow: Incoming Solar Radiation ($I = 900 \text{ W/m}^2 \times \text{Area}$). Output vectors: Useful Heat Absorbed by Air Stream ($Q_u$, green arrow) vs Thermal Losses ($Q_l$, top radiation, bottom conduction, side convection in red arrows). Collector Efficiency equation ($\eta_c$) highlighted in center box.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

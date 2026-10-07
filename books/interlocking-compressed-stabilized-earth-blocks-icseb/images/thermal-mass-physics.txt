@@ -1,0 +1,7 @@
+Thermal wave attenuation graph showing outdoor temperature fluctuations versus stable indoor room temperature through a 220mm thick ICSEB wall over a 24-hour cycle.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

@@ -1,0 +1,7 @@
+Infographic table breaking down material inputs (soil, sand, cement, water, labor, fuel) required for producing 1,000 ICSEBs. Includes pie chart showing percentage cost distribution.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

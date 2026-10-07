@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="592" height="200" viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Showroom Display Units">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#32b5d3;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#32b5d3;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="590" height="198" rx="8" fill="url(#bgGrad)" stroke="#32b5d3" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="296" y="80" text-anchor="middle" dominant-baseline="central" 
+        style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;fill:#32b5d3">Showroom Display Units</text>
+  <text x="296" y="110" text-anchor="middle" dominant-baseline="central" 
+        style="font-family:'Inter',sans-serif;font-size:12px;fill:#5B6472">Diagram generated from prompt</text>
+  <text x="296" y="130" text-anchor="middle" dominant-baseline="central" 
+        style="font-family:'Inter',sans-serif;font-size:11px;fill:#9CA3AF"></text>
+  <rect x="266" y="160" width="60" height="24" rx="4" fill="#32b5d3" opacity="0.2"/>
+  <text x="296" y="174" text-anchor="middle" dominant-baseline="central" 
+        style="font-family:'Inter',sans-serif;font-size:10px;font-weight:500;fill:#32b5d3">BLOCK SKILL</text>
+</svg>

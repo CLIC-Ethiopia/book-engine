@@ -1,0 +1,7 @@
+Isometric engineering blueprint of an Indirect Solar Dryer setup. Section A (Solar Thermal Collector): Long sloped box with black absorber plate and clear cover. Section B (Drying Chamber): Vertical insulated opaque cabinet containing a rack of removable stainless steel mesh trays. Connecting Duct links Collector exit to Cabinet base. Airflow arrows show cool air entering collector, heating up, entering cabinet base, passing up through trays, and exiting top chimney.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.
