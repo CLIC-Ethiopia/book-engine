@@ -144,6 +144,8 @@ const B = {
   author: book.author || '',
   series: book.series || book.title || slug,
   brand: book.brand || '',
+  footerBrand: book.footer?.brand || book.brand || '',
+  footerRight: book.footer?.right || '',
   edition: book.editionLabel || 'Edition 1.0',
   numbered: book.numbered !== false,
   accent: book.accent || '#6366F1',
@@ -193,7 +195,7 @@ const totalPages = pg + indexPages + backCoverPages;
 
 /* --------------------------------------------------------- 5. generated pages */
 const genFoot = (right) =>
-  `<div class="gp-foot"><span>${esc(B.brand || B.series)}</span><span>${esc(right)}</span></div>`;
+  `<div class="gp-foot"><span>${esc(B.footerBrand || B.brand || B.series)}</span><span>${esc(B.footerRight || right)}</span></div>`;
 
 const coverSection = coverCfg.image ? `    <section class="sheet gp cover">
       <div class="in">
@@ -345,8 +347,8 @@ const stampPage = (section, partName, partEyebrow, nth) => {
     s = s.replace(/<section class="sheet bb([^"]*)"/, `<section class="sheet bb$1" data-section="${esc(partEyebrow)}"`);
   }
   s = s.replace(/(<div class="eyebrow">)[\s\S]*?(<\/div>)/, `$1${eyebrow}$2`);
-  s = s.replace(/(<span class="brand">)[^<]*(<\/span>)/, `$1${esc(B.brand)}$2`);
-  s = s.replace(/(<span class="series">)[^<]*(<\/span>)/, `$1${esc(partName)}$2`);
+  s = s.replace(/(<span class="brand">)[^<]*(<\/span>)/, `$1${esc(B.footerBrand)}$2`);
+  s = s.replace(/(<span class="series">)[^<]*(<\/span>)/, `$1${esc(B.footerRight || partName)}$2`);
   return s;
 };
 
@@ -506,24 +508,12 @@ const backCoverSection = `    <section class="sheet gp back-cover">
 
           <!-- Two Side-by-Side Image Placeholders (Left & Right) -->
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; margin-bottom:14px;">
-            <figure style="margin:0; border-radius:10px; border:2px dashed #CBD5E1; background:#F8FAFC; height:270px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:10px; overflow:hidden;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:6px;">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-              <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#475569;">Left Photo / Diagram</div>
-              <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#64748B; margin-top:4px;">270 × 270 px</div>
+            <figure style="margin:0; border-radius:10px; border:2px dashed #CBD5E1; background:#F8FAFC; height:270px; display:flex; align-items:center; justify-content:center; padding:10px; overflow:hidden;">
+              <img src="images/steam-graphics.png" alt="STEAM graphics" style="width:100%; height:100%; object-fit:contain; display:block; border-radius:6px;">
             </figure>
 
-            <figure style="margin:0; border-radius:10px; border:2px dashed #CBD5E1; background:#F8FAFC; height:270px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:10px; overflow:hidden;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:6px;">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-              <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; color:#475569;">Right Photo / Harvest</div>
-              <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#64748B; margin-top:4px;">270 × 270 px</div>
+            <figure style="margin:0; border-radius:10px; border:2px dashed #CBD5E1; background:#F8FAFC; height:270px; display:flex; align-items:center; justify-content:center; padding:10px; overflow:hidden;">
+              <img src="images/ie-graphics.png" alt="IE graphics" style="width:100%; height:100%; object-fit:contain; display:block; border-radius:6px;">
             </figure>
           </div>
         </div>

@@ -25,6 +25,12 @@ node engine/tools/shot.mjs       books/<slug>/book.html   # then LOOK at the PNG
    mistake, amber the thing protected, neutral the reader.
 7. Never invent a fact, a number, or a story for a page.
 8. Give every SVG `<text>` an explicit `fill`, or it can inherit its way to invisible.
+9. No scratch files. Do not leave throwaway scripts in the repo — no `_x.mjs`,
+   `tmp.mjs`, `debug.mjs`, `scratch/`, or one-off scripts parked in `engine/tools/`.
+   Investigation code lives in the system temp directory, not in the repo. Throwaway
+   code used only to test something belongs under `test/`, created and removed inside
+   the test that needs it. If a tool becomes a real tool, it earns a permanent name and
+   a test; otherwise delete it when you are done.
 
 **A new page** is one `<section class="sheet bb">` in the interior file, plus its title
 added to a part in `book.json`. Copy

@@ -1,9 +1,8 @@
 # Node deps for the Playwright tools.
 node_modules/
 
-# Secrets and local configs
+# Secrets
 .env
-.claude/Esettings.json
 
 # Editor & agent settings
 .vscode/
