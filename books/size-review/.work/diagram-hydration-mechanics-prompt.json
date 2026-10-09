@@ -1,0 +1,56 @@
+{
+  "title": "Hydration Mechanics",
+  "prompt": "Resilience diagram showing chemical hydration of cement bonding soil particles under compaction, with fallback drop for dry mix.",
+  "section": "Science",
+  "accentColor": "#e61358",
+  "shape": {
+    "type": "resilience",
+    "name": "Resilience / Fallback Drop",
+    "description": "Horizontal happy path plus vertical drop from mechanism to a fallback/rejected state",
+    "height": 200
+  },
+  "viewBox": "0 0 592 200",
+  "colorRoles": {
+    "neutral": {
+      "fill": "#FFFFFF",
+      "stroke": "#E7E9EF",
+      "titleFill": "#1A1A2E",
+      "subFill": "#5B6472"
+    },
+    "mechanism": {
+      "fill": "#EEF0FE",
+      "stroke": "#D5D8FA",
+      "titleFill": "#4F46E5",
+      "subFill": "#6366F1"
+    },
+    "good": {
+      "fill": "#ECFBF7",
+      "stroke": "#CDEFE8",
+      "titleFill": "#0D9488",
+      "subFill": "#5B6472"
+    },
+    "threat": {
+      "fill": "#FEF1F1",
+      "stroke": "#F8D6D6",
+      "titleFill": "#DC2626",
+      "subFill": "#5B6472"
+    },
+    "sensitive": {
+      "fill": "#FDF6E8",
+      "stroke": "#E7E9EF",
+      "titleFill": "#1A1A2E",
+      "subFill": "#B45309"
+    },
+    "arrowSlate": "#94A3B8",
+    "arrowRed": "#DC2626"
+  },
+  "designRules": [
+    "viewBox width MUST be exactly 592",
+    "Height between 150 and 250px",
+    "Every <text> tag MUST have explicit fill attribute or style=\"...fill:...\"",
+    "Use Space Grotesk for card titles, Inter for body/subtitles, JetBrains Mono for code/addresses",
+    "Include defs with arrow marker #ar and filter shadow #cs",
+    "Center key line at x=296 near bottom",
+    "No text font size under 11px"
+  ]
+}

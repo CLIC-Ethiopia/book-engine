@@ -1,0 +1,40 @@
+{
+  "slug": "size-review",
+  "generatedAt": "2026-10-09T03:01:07.744Z",
+  "pages": 3,
+  "classifications": [
+    {
+      "title": "Soil Composition Basics",
+      "type": "diagram"
+    },
+    {
+      "title": "Hydration Mechanics",
+      "type": "diagram"
+    },
+    {
+      "title": "Curing Chemistry",
+      "type": "diagram"
+    }
+  ],
+  "generated": [
+    {
+      "title": "Soil Composition Basics",
+      "path": "C:\\Users\\Frehun\\Documents\\Fad.Lab\\ai\\Fad-wiki-os\\paper-engine\\books\\size-review\\images\\soil-composition-basics.svg",
+      "type": "diagram"
+    },
+    {
+      "title": "Hydration Mechanics",
+      "path": "C:\\Users\\Frehun\\Documents\\Fad.Lab\\ai\\Fad-wiki-os\\paper-engine\\books\\size-review\\images\\hydration-mechanics.svg",
+      "type": "diagram"
+    },
+    {
+      "title": "Curing Chemistry",
+      "path": "C:\\Users\\Frehun\\Documents\\Fad.Lab\\ai\\Fad-wiki-os\\paper-engine\\books\\size-review\\images\\curing-chemistry.svg",
+      "type": "diagram"
+    }
+  ],
+  "failed": [],
+  "totalImages": 0,
+  "totalDiagrams": 3,
+  "placeholderDiagrams": 0
+}

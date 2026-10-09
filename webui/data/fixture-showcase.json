@@ -1,0 +1,92 @@
+{
+  "book": {
+    "slug": "showcase",
+    "title": "The Showcase",
+    "series": "The showcase",
+    "brand": "yoursite.com",
+    "status": "ready",
+    "pages": [
+      {"title": "Resting meat", "category": "Cooking", "type": "photo"},
+      {"title": "The bloom", "category": "Coffee", "type": "photo"},
+      {"title": "Companion planting", "category": "Gardening", "type": "photo"},
+      {"title": "Packing cubes", "category": "Travel", "type": "photo"},
+      {"title": "Golden hour", "category": "Photography", "type": "photo"},
+      {"title": "Progressive overload", "category": "Fitness", "type": "diagram"},
+      {"title": "The emergency fund", "category": "Money", "type": "diagram"},
+      {"title": "Spaced repetition", "category": "Language", "type": "diagram"},
+      {"title": "The fork", "category": "Chess", "type": "diagram"},
+      {"title": "Circuit breaker", "category": "Code", "type": "diagram"}
+    ]
+  },
+  "pagesDetails": {
+    "Resting meat": {
+      "title": "Resting meat",
+      "sub": "Why you wait before you cut",
+      "explain": "Let's say you pull a steak off the pan and cut it right away. The juice runs out over the board, and <span class=\"bad\">what's left on your plate is dry</span>. Heat pushes the juice toward the middle of the meat. Give it a few minutes off the heat and <span class=\"hl\">it settles back through the whole piece</span>. Same steak, <span class=\"good\">nothing lost to the board</span>. The waiting is part of the cooking.",
+      "action": "Take it off the heat, put it on a warm plate, cover it loosely. Five minutes for a steak, fifteen for a roast. Then cut."
+    },
+    "The bloom": {
+      "title": "The bloom",
+      "sub": "The first pour, and why it is small",
+      "explain": "Let's say your coffee keeps coming out thin and sour, and you've already tried grinding finer. Fresh grounds are <span class=\"hl\">full of gas</span>, and gas pushes water away, so most of your pour runs past the coffee.\nWet them with a splash first, twice the weight of the coffee, and wait. The bed puffs into a dome and the bubbles stop. Now <span class=\"good\">the water can get in</span>.\nThirty seconds, and the rest of the pour finally works.",
+      "action": "Pour twice the coffee's weight in water, just enough to wet everything. Wait thirty seconds. Then pour the rest."
+    },
+    "Companion planting": {
+      "title": "Companion planting",
+      "sub": "Who you put next to what",
+      "explain": "Let's say something keeps eating your tomatoes and you'd rather not spray. <span class=\"bad\">A bed with one crop in it is an easy meal</span>.\nPut basil around the base and marigolds at the end of the row. <span class=\"hl\">The smell confuses what's hunting</span>, and the marigolds pull pests toward the flowers. <span class=\"good\">You keep the tomatoes.</span>\nSome plants are just easier to grow next to each other.",
+      "action": "Plant basil at the base of each tomato and marigolds at both ends of the bed. Keep the basil close, about a hand's width out."
+    },
+    "Packing cubes": {
+      "title": "Packing cubes",
+      "sub": "Sort once, at home",
+      "explain": "Let's say you're moving hotels every second night. By day three the case is a pile, and finding one clean shirt means <span class=\"bad\">taking everything out and putting it back</span>.\nCubes fix the sorting, not the space. One for shirts, one for layers, one for socks, one for the dirty stuff. <span class=\"hl\">You decide where things live once, at home</span>.\nYou stop unpacking. You just lift out a cube.",
+      "action": "One cube per kind of thing, not per outfit. Keep one empty at the start and let it become the laundry cube."
+    },
+    "Golden hour": {
+      "title": "Golden hour",
+      "sub": "The hour that does the work for you",
+      "explain": "Let's say your photos look flat and you've blamed the camera. <span class=\"bad\">Midday sun comes straight down</span>, so it fills every shadow, and shadows are what make things look solid.\nLate light comes in low and sideways. It <span class=\"hl\">rakes across whatever you point at</span>, so you get long shadows and texture. <span class=\"good\">Depth you didn't have to add.</span>\nSame phone, same spot. Different hour.",
+      "action": "Shoot the hour after sunrise or the hour before sunset, and put the sun to one side of your subject rather than behind you."
+    },
+    "Progressive overload": {
+      "title": "Progressive overload",
+      "sub": "A little more than last week",
+      "explain": "Let's say you've been going to the gym for months, you never miss a session, and you look exactly the same. <span class=\"bad\">You've been lifting the same weight the whole time.</span>\nYour body only builds what it keeps being asked for. Ask for the same thing every week and it has no reason to change. <span class=\"hl\">Ask for slightly more</span>, one extra rep or the smallest plate on the bar, and <span class=\"good\">it has to adapt</span>.\nSmall, boring, every week. That is the whole method.",
+      "action": "Write down what you lifted. Next session add one rep, or the smallest weight you own. If you can't, keep it and try again next week."
+    },
+    "The emergency fund": {
+      "title": "The emergency fund",
+      "sub": "The money you hope to waste",
+      "explain": "Let's say the car dies on a Tuesday and it's eight hundred to fix. It goes on a card, and now <span class=\"bad\">you're paying for that Tuesday for the next year</span>.\nThe fix isn't earning more. It's <span class=\"hl\">a boring pile of cash you never touch</span>, three months of what it costs you to live, in its own account. When the bad Tuesday comes, <span class=\"good\">it's just an errand</span>.\nIt isn't an investment. It's what stops one bad week becoming a bad year.",
+      "action": "Add up one month of what you actually spend. Open a separate account, set a small automatic transfer, and don't link it to a card."
+    },
+    "Spaced repetition": {
+      "title": "Spaced repetition",
+      "sub": "Reviewing right before you forget",
+      "explain": "Let's say you sit down and learn twenty new words. You feel great about it. <span class=\"bad\">A week later you can remember four</span>, and the other sixteen cost you an evening.\nA word gets stronger when you pull it back <span class=\"hl\">just as it's about to slip</span>. Too soon and you learn nothing, because it was still there. Too late and it's gone. So the gaps start small and get wider: tomorrow, a few days, a week, three weeks.\nYou don't need more hours. You need better timing.",
+      "action": "Take five new words. See them tomorrow, in three days, in a week, in three weeks. Anything you miss goes back to the start of the ladder."
+    },
+    "The fork": {
+      "title": "The fork",
+      "sub": "One move, two targets",
+      "explain": "Let's say you lose a piece most games and you never see it coming. It usually isn't a deep trap. It's <span class=\"hl\">one piece attacking two of yours at once</span>.\nThe knight is the worst for this, because it jumps and nothing blocks it. Once it hits your king and something valuable on the same move, <span class=\"bad\">the check has to be answered first</span>, and whatever else it was hitting is <span class=\"good\">gone next move</span>.\nYou don't have to be clever. You just have to see it first.",
+      "action": "Before every move, look for one square where a knight would hit two things. Do it for your knights, then theirs."
+    },
+    "Circuit breaker": {
+      "title": "Circuit breaker",
+      "sub": "Stop calling the thing that's down",
+      "explain": "Let's say your app asks another service for something, maybe a payment check. One morning it's down, and <span class=\"bad\">your whole app goes slow</span>, including the parts that don't use it.\nEvery request sits there waiting to time out. A breaker counts the failures, and after a few in a row it <span class=\"hl\">stops calling and answers straight away</span> with whatever you chose to say instead. Now and then it tries one real call.\nOne thing broke. Not everything.",
+      "action": "Put a circuit breaker around my calls to this service. Open it after a few failures, return a fallback right away, and retry one call now and then."
+    }
+  },
+  "mockCheckResult": {"overflow": 0, "details": []},
+  "mockScreenshot": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/8+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==",
+  "mockChatReplies": {
+    "overflow": "The current page fits within the 176 x 250 mm B5 canvas (0 mm overflow). If you add more content, watch the action box — that's the first element to overflow.",
+    "diagram": "For a 'book' topic, try a 'Protection' diagram: a hit, the buffer, then the outcome. Keep colors explicit: red for the threat, teal for the good outcome.",
+    "rewrite": "I'd rephrase that in plainer words, starting with a 'Let's say…' opening and ending with a one-line closer.",
+    "image": "Prompt: A flat-lay photograph of an open book on a wooden desk, soft morning light from the left, neutral linen background. Forbidden: no text in the image, no logos. Same book style as before.",
+    "default": "I'm a mock responder. Replace me with the file-bridge agent connection when you implement Phase 4. Try one of the quick-action buttons!"
+  }
+}

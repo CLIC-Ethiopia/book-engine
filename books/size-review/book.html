@@ -1,0 +1,735 @@
+<!doctype html>
+<!--
+  THE INTERIOR — ICSEB Size Review. Auto-generated from idea manifest.
+  One <section class="sheet bb"> per concept, in reading order. The look comes from
+  ../../engine/themes/studio.css, never an inline <style>.
+-->
+<html lang="en" data-size="b5">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; object-src 'none'; base-uri 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <title>ICSEB Size Review</title>
+  <link rel="stylesheet" href="../../engine/sheet.css">
+  <link rel="stylesheet" href="../../engine/sizes/b5.css">
+  <link rel="stylesheet" href="../../engine/themes/studio.css">
+  <!-- STEAM-IE TAB COLOUR RULE
+       The <div class="tab"> for each page uses that page's section colour.
+       S: #e61358  T: #ed7d1f  E: #a0c82f  A: #32b5d3  M: #b44b97  I: #306a50  IE: #5441ff -->
+  <style>
+    /* ====================================================================
+       GENERATED PAGES — cover, copyright, contents, part dividers, index.
+       Written by engine/tools/build-book.mjs. Scoped .sheet.gp so it can never
+       touch a book page (.sheet.bb).
+       ==================================================================== */
+    .sheet.gp{
+      --ink:#1A1A2E; --muted:#5B6472; --line:#E7E9EF;
+      --accent:#6366F1; --accent-strong:#4F46E5;
+      padding:0; background:#FAFAFC; color:var(--ink);
+      font-family:"Inter",system-ui,sans-serif;
+    }
+    .gp .in{ position:absolute; inset:0; display:flex; flex-direction:column; padding:13mm 15mm; }
+    .gp .in > *{ flex-shrink:0; }
+    /* flex:none, not a basis: .in is a column and .gp-top is a row, and a basis
+       would be read as height in one and width in the other. */
+    .gp-tab{ width:56px; height:7px; flex:none; border-radius:99px; background:var(--accent); }
+    .gp-top{ display:flex; justify-content:space-between; align-items:center; gap:14px; }
+    .gp-pill{
+      font-size:12px; font-weight:500; color:#4B5563; background:#F1F2F6;
+      border:1px solid var(--line); padding:5px 13px; border-radius:99px; white-space:nowrap;
+    }
+    .gp-rule{ height:1px; flex:0 0 1px; background:var(--line); border:0; margin:15px 0; }
+    .gp-foot{
+      display:flex; justify-content:space-between; align-items:center;
+      font-size:12.5px; color:var(--muted); margin-top:auto; padding-top:13px;
+      border-top:1px solid var(--line);
+    }
+
+    /* ---- cover ---- */
+    .gp.cover .cv-kicker{
+      font-size:13px; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
+      color:var(--accent-strong); margin-top:20px;
+    }
+    .gp.cover .cv-mid{ flex:1; display:flex; flex-direction:column; justify-content:center; }
+    .gp.cover .cv-title{
+      font-family:"Space Grotesk",sans-serif; font-size:64px; font-weight:700;
+      line-height:1.02; letter-spacing:-.03em; margin:0; color:var(--ink);
+    }
+    .gp.cover .cv-sub{ font-size:22px; line-height:1.4; color:var(--muted); margin:18px 0 0; max-width:22em; }
+    .gp.cover .cv-meta{ display:flex; justify-content:space-between; align-items:baseline; }
+    .gp.cover .cv-author{ font-family:"Space Grotesk",sans-serif; font-size:19px; font-weight:600; color:var(--ink); }
+    .gp.cover .cv-count{ font-size:14px; color:var(--muted); font-variant-numeric:tabular-nums; }
+    .gp.cover .cv-note{ font-size:13.5px; color:var(--muted); margin:12px 0 0; }
+
+    /* ---- copyright ---- */
+    .gp.colophon .cl-mid{ flex:1; display:flex; flex-direction:column; justify-content:flex-end; }
+    .gp.colophon .cl-title{ font-family:"Space Grotesk",sans-serif; font-size:27px; font-weight:600; letter-spacing:-.02em; margin:0; }
+    .gp.colophon .cl-sub{ font-size:16px; color:var(--muted); margin:5px 0 0; }
+    .gp.colophon .cl-body p{ font-size:13.5px; line-height:1.6; color:var(--muted); margin:0 0 8px; }
+
+    /* ---- part divider ---- */
+    .gp.divider .dv-mid{ flex:1; display:flex; flex-direction:column; justify-content:center; }
+    .gp.divider .dv-eyebrow{
+      font-size:12.5px; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
+      color:var(--accent-strong); margin:0;
+    }
+    .gp.divider .dv-num{
+      font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:78px;
+      line-height:.92; letter-spacing:-.03em; color:var(--ink); margin:4px 0 0;
+    }
+    .gp.divider .dv-name{
+      font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:40px;
+      line-height:1.05; letter-spacing:-.02em; color:var(--ink); margin:12px 0 0;
+    }
+    .gp.divider .dv-why{ font-size:17px; line-height:1.5; color:var(--muted); margin:12px 0 0; max-width:30em; }
+    .gp.divider .dv-list-label{
+      font-size:11.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+      color:var(--muted); margin:0 0 12px;
+    }
+    .gp.divider .dv-list{
+      list-style:none; margin:0; padding:0;
+      display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px 30px;
+    }
+    .gp.divider .dv-list li{ display:flex; align-items:baseline; gap:10px; }
+    .gp.divider .dv-list .n{
+      font-family:"Space Grotesk",sans-serif; font-weight:600; font-size:13px;
+      color:var(--accent); font-variant-numeric:tabular-nums; min-width:1.6em;
+    }
+    .gp.divider .dv-list .nm{ font-size:15px; color:var(--ink); }
+
+    /* ---- contents + index ---- */
+    .gp .lp-title{ font-family:"Space Grotesk",sans-serif; font-size:30px; font-weight:600; letter-spacing:-.02em; margin:11px 0 0; }
+    .gp.toc .toc-part{ margin-top:14px; }
+    .gp.toc .toc-part:first-child{ margin-top:2px; }
+    .gp.toc .toc-ph{ display:flex; align-items:baseline; gap:10px; line-height:1.4; }
+    .gp.toc .toc-ph .pn{ flex:1; font-family:"Space Grotesk",sans-serif; font-size:14.5px; font-weight:600; color:var(--ink); }
+    .gp.toc .toc-row{ display:flex; align-items:baseline; gap:12px; margin-top:6px; padding-left:3px; line-height:1.4; }
+    .gp.toc .toc-row .nm{ flex:1; font-size:13.5px; color:var(--ink); }
+    .gp .pg{ font-variant-numeric:tabular-nums; font-size:13px; color:var(--muted); }
+    .gp.index .idx{ margin-top:4px; column-count:3; column-gap:22px; }
+    .gp.index .idx-row{
+      display:flex; align-items:baseline; gap:10px; break-inside:avoid;
+      padding:2px 1px; border-bottom:1px solid #EFF1F5;
+    }
+    .gp.index .idx-row .nm{ flex:1; font-size:12px; color:var(--ink); }
+    .gp.index .idx-row .pg{ font-size:12px; }
+
+    /* ====================================================================
+       ONE PAGE COUNTER for the whole book. Every sheet advances it; only the
+       book pages print it, so a printed number is the real page in the PDF.
+       Overrides the theme's page-only counter (inline wins over linked).
+       ==================================================================== */
+    .deck{ counter-reset:pageno; }
+    .sheet.gp, .sheet.bb{ counter-increment:pageno; }
+    .bb .foot .pg::before{ content:counter(pageno); }
+  </style>
+</head>
+<body>
+  <main class="deck">
+
+    <!-- ============================================================
+         SCIENCE — Science
+         ============================================================ -->
+        <section class="sheet gp cover">
+      <div class="in">
+        <div class="cv-spectrum-bar" style="display:flex; gap:4px; height:6px; border-radius:99px; overflow:hidden; margin-bottom:12px;" aria-label="STEAM-IE 7-Letter Colour Spectrum">
+          <div style="flex:1; background:#e61358;" title="Science"></div>
+          <div style="flex:1; background:#ed7d1f;" title="Technology"></div>
+          <div style="flex:1; background:#a0c82f;" title="Engineering"></div>
+          <div style="flex:1; background:#32b5d3;" title="Arts"></div>
+          <div style="flex:1; background:#b44b97;" title="Mathematics"></div>
+          <div style="flex:1; background:#306a50;" title="Innovation"></div>
+          <div style="flex:1; background:#5441ff;" title="Entrepreneurship"></div>
+        </div>
+        <div class="cv-kicker" style="color:#32b5d3; letter-spacing:0.22em; font-weight:600; text-transform:uppercase; font-size:12px;">STEAM-IE curriculum</div>
+        <div class="cv-mid" style="justify-content:flex-start; margin-top:6px;">
+          <figure class="cv-hero-img" style="margin:4px 0 14px 0; border-radius:14px; box-shadow:0 10px 30px rgba(26,26,46,0.08); overflow:hidden; border:1px solid #E7E9EF;">
+            <img src="images/Cover-page-Gemini_Generated.png" alt="ICSEB Size Review Cover Illustration" style="display:block; width:100%; max-height:350px; object-fit:cover;" />
+          </figure>
+          <h1 class="cv-title" style="margin:0; line-height:1.02;"><span style="color:#5441ff; font-weight:700;">STEAM-IE</span> <span style="color:#11291F; font-weight:700;">ICSEB Size Review</span></h1>
+          <p class="cv-sub" style="color:#5B6472; font-size:19px; line-height:1.4; margin-top:10px;">3-page review of diagram/photo sizing from ICSEB content</p>
+        </div>
+        <div class="cv-bottom">
+          <hr class="gp-rule" style="margin:12px 0;">
+          <div class="cv-meta" style="display:flex; justify-content:space-between; align-items:flex-end;">
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; color:#1A1A2E;">STEAM-IE Field Manual Series</div>
+              <div style="font-size:12.5px; color:#ed7d1f; font-weight:600; margin-top:2px;">Fad.Lab · Review Edition</div>
+            </div>
+            <span class="cv-count" style="color:#e61358; background:#FDF2F5; border:1px solid #FBCFE8; border-radius:99px; padding:6px 14px; font-size:13px; font-weight:600;">3 blocks</span>
+          </div>
+          <p class="cv-note" style="color:#5B6472; font-size:12.5px; margin-top:8px;">One concept per page, ordered across the seven letters of STEAM-IE.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet gp inside-cover">
+      <div class="in" style="display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div class="cv-spectrum-bar" style="display:flex; gap:4px; height:6px; border-radius:99px; overflow:hidden; margin-bottom:14px;" aria-label="STEAM-IE 7-Letter Colour Spectrum">
+            <div style="flex:1; background:#e61358;" title="Science"></div>
+            <div style="flex:1; background:#ed7d1f;" title="Technology"></div>
+            <div style="flex:1; background:#a0c82f;" title="Engineering"></div>
+            <div style="flex:1; background:#32b5d3;" title="Arts"></div>
+            <div style="flex:1; background:#b44b97;" title="Mathematics"></div>
+            <div style="flex:1; background:#306a50;" title="Innovation"></div>
+            <div style="flex:1; background:#5441ff;" title="Entrepreneurship"></div>
+          </div>
+          
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; color:#5B6472; letter-spacing:0.18em; text-transform:uppercase;">AG-TECH · URBAN AGRICULTURE · STEAM-IE</span>
+            <span style="background:#F4F5FE; border:1px solid #DDE0FB; color:#5441ff; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; padding:3px 10px; border-radius:99px;">FIELD MANUAL</span>
+          </div>
+
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:700; line-height:1.25; color:#1A1A2E; margin:0 0 10px 0;">
+            <span style="color:#5441ff;">Build a High-Yield</span> Greenhouse in Addis Ababa — Without Guesswork or Wasted Capital.
+          </h2>
+
+          <p style="font-size:13.5px; line-height:1.55; color:#4A5568; margin:0 0 16px 0;">
+            Grounded in the 7 letters of STEAM-IE, this field manual strips away theoretical fluff to give you 3 single-concept visual guides. From water chemistry to local Merkato sourcing, every page equips you with exact blueprints, calculations, and daily actions to grow fresh greens year-round.
+          </p>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
+            <div style="background:#FDF2F5; border:1px solid #FBCFE8; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#e61358; margin-bottom:2px;">🧪 Science of Growth</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Master dissolved oxygen, pH buffers, and root nutrient uptake.</div>
+            </div>
+            <div style="background:#FFF7ED; border:1px solid #FFEDD5; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#ed7d1f; margin-bottom:2px;">⚙️ Merkato Sourcing</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Source local pumps, PVC channels, and sensors in Addis Ababa.</div>
+            </div>
+            <div style="background:#FDF4FF; border:1px solid #F5D0FE; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#b44b97; margin-bottom:2px;">📊 Business Economics</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Calculate exact cost per plant, yield density, and break-even.</div>
+            </div>
+            <div style="background:#F4F5FE; border:1px solid #DDE0FB; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#5441ff; margin-bottom:2px;">🚀 Market Execution</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Package, price, and sell hydroponic produce to Addis buyers.</div>
+            </div>
+          </div>
+
+          <!-- Two Side-by-Side Image Placeholders (Left & Right) -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; margin-bottom:14px;">
+            <figure style="margin:0; border-radius:10px; border:2px dashed #CBD5E1; background:#F8FAFC; height:270px; display:flex; align-items:center; justify-content:center; padding:10px; overflow:hidden;">
+              <img src="images/steam-graphics.png" alt="STEAM graphics" style="width:100%; height:100%; object-fit:contain; display:block; border-radius:6px;">
+            </figure>
+
+            <figure style="margin:0; border-radius:10px; border:2px dashed #CBD5E1; background:#F8FAFC; height:270px; display:flex; align-items:center; justify-content:center; padding:10px; overflow:hidden;">
+              <img src="images/ie-graphics.png" alt="IE graphics" style="width:100%; height:100%; object-fit:contain; display:block; border-radius:6px;">
+            </figure>
+          </div>
+        </div>
+
+        <div>
+          <hr class="gp-rule" style="margin:0 0 14px 0;">
+          
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:10px; padding:10px 14px;">
+            <div style="width:38px; height:38px; border-radius:50%; background:#5441ff; color:#FFF; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; flex-shrink:0;">
+              FD
+            </div>
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:700; color:#1A1A2E;">STEAM-IE Field Manual Series</div>
+              <div style="font-size:11.5px; color:#5B6472; line-height:1.35;">Founder of Fad.Lab · Pioneering practical STEAM-IE education & urban ag-tech in Ethiopia.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#1A1A2E; letter-spacing:-0.01em;">FAD.LAB PUBLISHING</div>
+              <div style="font-size:11.5px; color:#5B6472; margin-top:2px;">Review Edition · Addis Ababa, Ethiopia</div>
+              <div style="font-size:11px; color:#5441ff; font-weight:600; margin-top:3px;">github.com/hassancs91/paper-engine</div>
+            </div>
+
+            <div style="background:#FFF; border:1px solid #CBD5E1; border-radius:6px; padding:6px 10px; text-align:center;">
+              <svg width="108" height="32" viewBox="0 0 108 32" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="3" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="6" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="10" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="15" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="18" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="22" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="25" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="30" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="34" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="37" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="41" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="44" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="49" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="53" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="56" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="60" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="65" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="68" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="72" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="75" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="80" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="84" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="87" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="91" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="94" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="99" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="103" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="106" y="0" width="2" height="26" fill="#1A1A2E"/>
+              </svg>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:8.5px; font-weight:600; color:#1A1A2E; margin-top:2px;">ISBN 978-99944-0-001-7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet gp colophon">
+      <div class="in">
+        <div class="gp-tab"></div>
+        <div class="cl-mid">
+          <h2 class="cl-title">ICSEB Size Review</h2>
+          <p class="cl-sub">3-page review of diagram/photo sizing from ICSEB content</p>
+          <hr class="gp-rule">
+          <div class="cl-body">
+            <p>Set in Space Grotesk, Inter and JetBrains Mono.</p>
+          <p>Built with the paper engine: github.com/hassancs91/paper-engine</p>
+            <p>© 2026 Your Name. All rights reserved.</p>
+            <p>Review Edition · clicethiopia.netlify.app</p>
+          </div>
+        </div>
+        <div class="gp-foot"><span>businessideabank.netlify.app</span><span>Fad.Lab</span></div>
+      </div>
+    </section>
+
+    <section class="sheet gp toc">
+      <div class="in">
+        <div class="gp-top">
+          <div class="gp-tab"></div>
+          <span class="gp-pill">Contents</span>
+        </div>
+        <h1 class="lp-title">Contents</h1>
+        <hr class="gp-rule">
+        <div class="toc-list">
+          <div class="toc-part">
+            <div class="toc-ph"><span class="pn">Part 1 · Science</span><span class="pg">6</span></div>
+            <div class="toc-row"><span class="nm">Soil Composition Basics</span><span class="pg">7</span></div>
+            <div class="toc-row"><span class="nm">Hydration Mechanics</span><span class="pg">8</span></div>
+            <div class="toc-row"><span class="nm">Curing Chemistry</span><span class="pg">9</span></div>
+          </div>
+        </div>
+        <div class="gp-foot"><span>businessideabank.netlify.app</span><span>Fad.Lab</span></div>
+      </div>
+    </section>
+
+    <section class="sheet gp how-to-read">
+      <div class="in" style="display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div class="cv-spectrum-bar" style="display:flex; gap:4px; height:6px; border-radius:99px; overflow:hidden; margin-bottom:12px;" aria-label="STEAM-IE 7-Letter Colour Spectrum">
+            <div style="flex:1; background:#e61358;" title="Science"></div>
+            <div style="flex:1; background:#ed7d1f;" title="Technology"></div>
+            <div style="flex:1; background:#a0c82f;" title="Engineering"></div>
+            <div style="flex:1; background:#32b5d3;" title="Arts"></div>
+            <div style="flex:1; background:#b44b97;" title="Mathematics"></div>
+            <div style="flex:1; background:#306a50;" title="Innovation"></div>
+            <div style="flex:1; background:#5441ff;" title="Entrepreneurship"></div>
+          </div>
+          
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; color:#5B6472; letter-spacing:0.18em; text-transform:uppercase;">ORIENTATION GUIDE · STEAM-IE METHODOLOGY</span>
+            <span style="background:#F4F5FE; border:1px solid #DDE0FB; color:#5441ff; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; padding:3px 10px; border-radius:99px;">READING GUIDE</span>
+          </div>
+
+          <h1 style="font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:700; line-height:1.15; color:#1A1A2E; margin:0 0 4px 0;">
+            How to Read This Book
+          </h1>
+          <p style="font-size:13px; color:#5B6472; margin:0 0 10px 0;">
+            Every page in this field manual is a single, actionable visual block.
+          </p>
+
+          <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:8px; padding:8px 12px; margin-bottom:10px;">
+            <div style="font-size:12px; line-height:1.45; color:#475569;">
+              <strong style="color:#1A1A2E;">1. Single-Concept Blocks:</strong> One idea per page with an inline diagram and a concrete daily action step.<br/>
+              <strong style="color:#1A1A2E;">2. Sequential Build:</strong> Read in letter order. Science feeds the tech, which drives the engineering, math, and sales.
+            </div>
+          </div>
+
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:12.5px; font-weight:700; color:#1A1A2E; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+            <span>🔄 The 7-Letter Learning Pathway</span>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-bottom:10px;">
+            <div style="background:#FDF2F5; border:1px solid #FBCFE8; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#e61358; margin-bottom:2px;">🧪 S · Science ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Natural principles: plant biology, nutrient chemistry & root oxygenation.</div>
+            </div>
+            <div style="background:#FFF7ED; border:1px solid #FFEDD5; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#ed7d1f; margin-bottom:2px;">⚙️ T · Tech ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Control tools: meters, pumps & sensors for monitoring growth environment.</div>
+            </div>
+            <div style="background:#F7FCE8; border:1px solid #E4F5B2; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#a0c82f; margin-bottom:2px;">📐 E · Engineering ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Structural design: frames, channel slopes & plumbing systems.</div>
+            </div>
+            <div style="background:#F0FBFD; border:1px solid #BAE6F7; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#32b5d3; margin-bottom:2px;">🎨 A · Arts ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Spatial & visual design: greenhouse flow, ergonomics & product branding.</div>
+            </div>
+            <div style="background:#FDF4FF; border:1px solid #F5D0FE; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#b44b97; margin-bottom:2px;">📊 M · Math ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Quantitative metrics: flow rates, PPM ratios, spacing & unit economics.</div>
+            </div>
+            <div style="background:#F0FDF4; border:1px solid #BBF7D0; border-radius:8px; padding:7px 9px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#306a50; margin-bottom:2px;">💡 I · Innovation ➔</div>
+              <div style="font-size:10px; line-height:1.25; color:#4A5568;">Creative problem solving: local material swaps & sustainable hacks.</div>
+            </div>
+          </div>
+          
+          <div style="background:#F4F5FE; border:1px solid #DDE0FB; border-radius:8px; padding:7px 10px; margin-bottom:10px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#5441ff;">🚀 IE · Entrepreneurship: Enterprise & Market Viability</div>
+            <div style="font-size:10px; line-height:1.25; color:#4A5568; margin-top:2px;">Turning harvests into sustainable value: market pricing, buyer contracts & cash flow.</div>
+          </div>
+        </div>
+
+        <div>
+          <hr class="gp-rule" style="margin:0 0 10px 0;">
+          
+          <div style="background:#FFF; border:1px solid #CBD5E1; border-radius:8px; padding:8px 12px;">
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#1A1A2E; margin-bottom:4px; display:flex; justify-content:space-between;">
+              <span>📖 Key Abbreviations & Acronyms</span>
+              <span style="font-size:10px; font-weight:600; color:#5B6472;">QUICK REFERENCE</span>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 12px; font-size:10.5px; line-height:1.35; color:#475569;">
+              <div><strong style="color:#1A1A2E;">pH:</strong> Potential of Hydrogen (Target: 5.5 – 6.5)</div>
+              <div><strong style="color:#1A1A2E;">NFT:</strong> Nutrient Film Technique (Shallow channel)</div>
+              <div><strong style="color:#1A1A2E;">EC:</strong> Electrical Conductivity (Ion strength mS/cm)</div>
+              <div><strong style="color:#1A1A2E;">LED:</strong> Light Emitting Diode (Grow light fixtures)</div>
+              <div><strong style="color:#1A1A2E;">DO:</strong> Dissolved Oxygen (Root oxygen in PPM)</div>
+              <div><strong style="color:#1A1A2E;">PVC:</strong> Polyvinyl Chloride (Rigid Merkato piping)</div>
+              <div><strong style="color:#1A1A2E;">IBC:</strong> Intermediate Bulk Container (1,000 L tank)</div>
+              <div><strong style="color:#1A1A2E;">PPM:</strong> Parts Per Million (Mineral ion density)</div>
+            </div>
+          </div>
+          
+          <div style="margin-top:8px;">
+            <div class="gp-foot"><span>businessideabank.netlify.app</span><span>Fad.Lab</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sheet gp divider">
+      <div class="in">
+        <div class="gp-top">
+          <div class="gp-tab" style="background:#e61358;"></div>
+          <span class="gp-pill" style="border:1.5px solid #e61358; color:#e61358; background:#FDF2F5; font-weight:700; padding:4px 14px; border-radius:99px;">Part 1 of 1</span>
+        </div>
+        <div class="dv-mid">
+          <div class="dv-eyebrow" style="color:#e61358; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; font-size:13px;">Science</div>
+          <div class="dv-num" style="font-size:76px; font-weight:800; color:#e61358; margin:6px 0; line-height:1; font-family:'Space Grotesk',sans-serif;">S</div>
+          <h2 class="dv-name" style="color:#e61358; font-family:'Space Grotesk',sans-serif; font-size:36px; font-weight:700; margin:0 0 10px 0;">Science</h2>
+          
+          <hr class="gp-rule">
+          <div class="dv-list-label">In this part</div>
+          <ol class="dv-list">
+            <li><span class="n">01</span><span class="nm">Soil Composition Basics</span></li>
+            <li><span class="n">02</span><span class="nm">Hydration Mechanics</span></li>
+            <li><span class="n">03</span><span class="nm">Curing Chemistry</span></li>
+          </ol>
+        </div>
+        <div class="gp-foot"><span>businessideabank.netlify.app</span><span>Fad.Lab</span></div>
+      </div>
+    </section>
+
+<section class="sheet bb" data-section="S">
+      <h2 class="sr">Soil Composition Basics: Balancing sand, silt, and clay for mechanical stabilization</h2>
+      <div class="tab" style="background:#e61358"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE for Eco-Construction</b> · No. 01</div>
+        <span class="pill">Science</span>
+      </div>
+      <h1 class="title">Soil Composition Basics</h1>
+      <div class="sub">Balancing sand, silt, and clay for mechanical stabilization</div>
+      <hr class="rule">
+      <div class="diagram">
+        <img src="images/soil-composition-basics-photo.png" alt="Three glass jars on a wooden table showing distinct soil layers: coarse sand at the bottom, fine silt in the middle, and dark clay on top.">
+</div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Interlocking blocks rely on <span class="good">optimal soil</span> <span class="hl">particle distribution</span> rather than high cement content. Clay acts as a <span class="hl">natural binder</span>, while sand provides the <span class="good">structural skeleton</span>.</p>
+        <p>Ideal ICSEB soil contains 50–70% sand, 15–30% silt, and 10–20% clay.</p>
+        <p class="close">Too much clay causes <span class="bad">swelling and severe shrinkage cracking</span> upon drying; too little clay results in a <span class="bad">crumbly block</span> that lacks green strength before curing.</p>
+      </div>
+      <div class="ask">
+  <span class="lbl">TRY THIS TODAY</span>
+  <p>Perform a simple Jar Test: fill a straight-sided glass jar 1/3 full with dry field soil, add water and 1 tsp salt, shake vigorously for 2 minutes.</p>
+</div>
+      <div class="foot"><span class="brand">businessideabank.netlify.app</span><span class="pg"></span><span class="series">Fad.Lab</span></div>
+    </section>
+
+<section class="sheet bb" data-section="S">
+      <h2 class="sr">Hydration Mechanics: How OPC cement bonds soil particles under compaction</h2>
+      <div class="tab" style="background:#e61358"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE for Eco-Construction</b> · No. 02</div>
+        <span class="pill">Science</span>
+      </div>
+      <h1 class="title">Hydration Mechanics</h1>
+      <div class="sub">How OPC cement bonds soil particles under compaction</div>
+      <hr class="rule">
+      <div class="diagram">
+  <svg viewBox="0 0 592 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hydration Mechanics" width="100%">
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <filter id="cs" x="-20%" y="-25%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1A1A2E" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+  <!-- Source Card -->
+  <rect x="25" y="45" width="130" height="55" rx="12" fill="#FFFFFF" stroke="#E7E9EF" stroke-width="1" filter="url(#cs)"/>
+  <text x="90" y="70" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#1A1A2E">Incoming Load</text>
+  <text x="90" y="87" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#5B6472">Requests</text>
+
+  <!-- Mechanism Card -->
+  <rect x="220" y="45" width="150" height="55" rx="12" fill="#EEF0FE" stroke="#D5D8FA" stroke-width="1" filter="url(#cs)"/>
+  <text x="295" y="70" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#4F46E5">Hydration Mechanic</text>
+  <text x="295" y="87" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#6366F1">Resilience Check</text>
+
+  <!-- Good Card -->
+  <rect x="435" y="45" width="130" height="55" rx="12" fill="#ECFBF7" stroke="#CDEFE8" stroke-width="1" filter="url(#cs)"/>
+  <text x="500" y="70" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#0D9488">Healthy Path</text>
+  <text x="500" y="87" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#5B6472">200 OK</text>
+
+  <!-- Fallback / Rejected Card -->
+  <rect x="230" y="130" width="130" height="40" rx="10" fill="#FEF1F1" stroke="#F8D6D6" stroke-width="1" filter="url(#cs)"/>
+  <text x="295" y="154" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;fill:#DC2626">Fallback / Shed</text>
+
+  <!-- Arrows -->
+  <line x1="155" y1="72" x2="218" y2="72" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="370" y1="72" x2="433" y2="72" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="295" y1="100" x2="295" y2="128" stroke="#DC2626" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- Badges -->
+  <circle cx="186" cy="62" r="10" fill="#6366F1"/>
+  <text x="186" y="62" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;fill:#FFFFFF">1</text>
+  <circle cx="401" cy="62" r="10" fill="#6366F1"/>
+  <text x="401" y="62" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;fill:#FFFFFF">2</text>
+  <circle cx="310" cy="114" r="10" fill="#DC2626"/>
+  <text x="310" y="114" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;fill:#FFFFFF">3</text>
+
+  <!-- Key line -->
+  <text x="296" y="184" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:12px;fill:#5B6472">1 request evaluated · 2 pass to healthy service · 3 excess dropped to fallback</text>
+</svg>
+</div>
+      <hr class="rule">
+      <div class="explain">
+        <p>Ordinary Portland Cement (OPC) stabilizes soil through <span class="hl">chemical hydration</span>, creating <span class="hl">calcium silicate hydrate</span> (C-S-H) gels that lock soil grains together.</p>
+        <p>Soil moisture during <span class="hl">compaction</span> must equal the <span class="hl">Optimum Moisture Content</span> (OMC)—typically 8–12% by weight.</p>
+        <p class="close">If the soil is too dry, cement <span class="hl">hydration</span> fails and <span class="bad">air pockets</span> remain.</p>
+      </div>
+      <div class="ask">
+  <span class="lbl">DO THIS TODAY</span>
+  <p>Perform the Drop Test: squeeze a handful of moist soil-cement mix into a ball, drop it from 1 meter height onto hard ground.</p>
+</div>
+      <div class="foot"><span class="brand">businessideabank.netlify.app</span><span class="pg"></span><span class="series">Fad.Lab</span></div>
+    </section>
+
+<section class="sheet bb" data-section="S">
+      <h2 class="sr">Curing Chemistry: Managing moisture retention for full strength gain</h2>
+      <div class="tab" style="background:#e61358"></div>
+      <div class="top">
+        <div class="eyebrow"><b>STEAM-IE for Eco-Construction</b> · No. 03</div>
+        <span class="pill">Science</span>
+      </div>
+      <h1 class="title">Curing Chemistry</h1>
+      <div class="sub">Managing moisture retention for full strength gain</div>
+      <hr class="rule">
+      <div class="diagram">
+  <svg viewBox="0 0 592 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Curing Chemistry" width="100%">
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <filter id="cs" x="-20%" y="-25%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1A1A2E" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+  <!-- Step 1: Input -->
+  <rect x="25" y="55" width="140" height="60" rx="12" fill="#FFFFFF" stroke="#E7E9EF" stroke-width="1" filter="url(#cs)"/>
+  <text x="95" y="82" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#1A1A2E">Input State</text>
+  <text x="95" y="100" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#5B6472">Raw Data / Event</text>
+
+  <!-- Step 2: Mechanism -->
+  <rect x="225" y="55" width="150" height="60" rx="12" fill="#EEF0FE" stroke="#D5D8FA" stroke-width="1" filter="url(#cs)"/>
+  <text x="300" y="82" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#4F46E5">Curing Chemistry</text>
+  <text x="300" y="100" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#6366F1">Core Engine</text>
+
+  <!-- Step 3: Outcome -->
+  <rect x="435" y="55" width="135" height="60" rx="12" fill="#ECFBF7" stroke="#CDEFE8" stroke-width="1" filter="url(#cs)"/>
+  <text x="502" y="82" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#0D9488">Verified Goal</text>
+  <text x="502" y="100" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#5B6472">Desired Result</text>
+
+  <!-- Connectors -->
+  <line x1="165" y1="85" x2="223" y2="85" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="375" y1="85" x2="433" y2="85" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- Step Badges -->
+  <circle cx="194" cy="73" r="10" fill="#6366F1"/>
+  <text x="194" y="73" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;fill:#FFFFFF">1</text>
+  <circle cx="404" cy="73" r="10" fill="#6366F1"/>
+  <text x="404" y="73" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;fill:#FFFFFF">2</text>
+
+  <!-- Key Line -->
+  <text x="296" y="174" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:12px;fill:#5B6472">1 trigger input · 2 process through Curing Chemist · 3 achieve outcome</text>
+</svg>
+</div>
+      <hr class="rule">
+      <div class="explain">
+        <p>ICSEB blocks do not harden by drying out; they harden through moisture-dependent chemical reaction.</p>
+        <p><span class="bad">Premature drying</span> stops cement <span class="hl">hydration</span>, causing up to 60% loss in ultimate compressive strength.</p>
+        <p class="close">Blocks must maintain near 100% <span class="hl">relative humidity</span> for at least 7 days to reach <span class="good">initial structural integrity</span>, and 28 days for full strength.</p>
+      </div>
+      <div class="ask">
+  <span class="lbl">BUILD THIS ONCE</span>
+  <p>Set up a dedicated curing pad using thick 200-micron black polythene sheeting on a flat shaded surface, elevated on wooden pallets.</p>
+</div>
+      <div class="foot"><span class="brand">businessideabank.netlify.app</span><span class="pg"></span><span class="series">Fad.Lab</span></div>
+    </section>
+
+    <section class="sheet gp index">
+      <div class="in">
+        <div class="gp-top">
+          <div class="gp-tab"></div>
+          <span class="gp-pill">Index</span>
+        </div>
+        <h1 class="lp-title">Index</h1>
+        <hr class="gp-rule">
+        <div class="idx">
+            <div class="idx-row"><span class="nm">Curing Chemistry</span><span class="pg">9</span></div>
+            <div class="idx-row"><span class="nm">Hydration Mechanics</span><span class="pg">8</span></div>
+            <div class="idx-row"><span class="nm">Soil Composition Basics</span><span class="pg">7</span></div>
+          </div>
+        <div class="gp-foot"><span>businessideabank.netlify.app</span><span>Fad.Lab</span></div>
+      </div>
+    </section>
+
+    <section class="sheet gp back-cover">
+      <div class="in" style="display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div class="cv-spectrum-bar" style="display:flex; gap:4px; height:6px; border-radius:99px; overflow:hidden; margin-bottom:14px;" aria-label="STEAM-IE 7-Letter Colour Spectrum">
+            <div style="flex:1; background:#e61358;" title="Science"></div>
+            <div style="flex:1; background:#ed7d1f;" title="Technology"></div>
+            <div style="flex:1; background:#a0c82f;" title="Engineering"></div>
+            <div style="flex:1; background:#32b5d3;" title="Arts"></div>
+            <div style="flex:1; background:#b44b97;" title="Mathematics"></div>
+            <div style="flex:1; background:#306a50;" title="Innovation"></div>
+            <div style="flex:1; background:#5441ff;" title="Entrepreneurship"></div>
+          </div>
+          
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; color:#5B6472; letter-spacing:0.18em; text-transform:uppercase;">AG-TECH · URBAN AGRICULTURE · STEAM-IE</span>
+            <span style="background:#F4F5FE; border:1px solid #DDE0FB; color:#5441ff; font-family:'Space Grotesk',sans-serif; font-size:11px; font-weight:700; padding:3px 10px; border-radius:99px;">FIELD MANUAL</span>
+          </div>
+
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:700; line-height:1.25; color:#1A1A2E; margin:0 0 10px 0;">
+            <span style="color:#5441ff;">Build a High-Yield</span> Greenhouse in Addis Ababa — Without Guesswork or Wasted Capital.
+          </h2>
+
+          <p style="font-size:13.5px; line-height:1.55; color:#4A5568; margin:0 0 16px 0;">
+            Grounded in the 7 letters of STEAM-IE, this field manual strips away theoretical fluff to give you 3 single-concept visual guides. From water chemistry to local Merkato sourcing, every page equips you with exact blueprints, calculations, and daily actions to grow fresh greens year-round.
+          </p>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
+            <div style="background:#FDF2F5; border:1px solid #FBCFE8; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#e61358; margin-bottom:2px;">🧪 Science of Growth</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Master dissolved oxygen, pH buffers, and root nutrient uptake.</div>
+            </div>
+            <div style="background:#FFF7ED; border:1px solid #FFEDD5; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#ed7d1f; margin-bottom:2px;">⚙️ Merkato Sourcing</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Source local pumps, PVC channels, and sensors in Addis Ababa.</div>
+            </div>
+            <div style="background:#FDF4FF; border:1px solid #F5D0FE; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#b44b97; margin-bottom:2px;">📊 Business Economics</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Calculate exact cost per plant, yield density, and break-even.</div>
+            </div>
+            <div style="background:#F4F5FE; border:1px solid #DDE0FB; border-radius:8px; padding:8px 10px;">
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:11.5px; font-weight:700; color:#5441ff; margin-bottom:2px;">🚀 Market Execution</div>
+              <div style="font-size:11px; line-height:1.35; color:#4A5568;">Package, price, and sell hydroponic produce to Addis buyers.</div>
+            </div>
+          </div>
+
+          <!-- Two Side-by-Side Image Placeholders (Left & Right) -->
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; margin-bottom:14px;">
+            <figure style="margin:0; border-radius:10px; border:2px dashed #CBD5E1; background:#F8FAFC; height:270px; display:flex; align-items:center; justify-content:center; padding:10px; overflow:hidden;">
+              <img src="images/steam-graphics.png" alt="STEAM graphics" style="width:100%; height:100%; object-fit:contain; display:block; border-radius:6px;">
+            </figure>
+
+            <figure style="margin:0; border-radius:10px; border:2px dashed #CBD5E1; background:#F8FAFC; height:270px; display:flex; align-items:center; justify-content:center; padding:10px; overflow:hidden;">
+              <img src="images/ie-graphics.png" alt="IE graphics" style="width:100%; height:100%; object-fit:contain; display:block; border-radius:6px;">
+            </figure>
+          </div>
+        </div>
+
+        <div>
+          <hr class="gp-rule" style="margin:0 0 14px 0;">
+          
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px; background:#F8FAFC; border:1px solid #E2E8F0; border-radius:10px; padding:10px 14px;">
+            <div style="width:38px; height:38px; border-radius:50%; background:#5441ff; color:#FFF; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; flex-shrink:0;">
+              FD
+            </div>
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:13.5px; font-weight:700; color:#1A1A2E;">STEAM-IE Field Manual Series</div>
+              <div style="font-size:11.5px; color:#5B6472; line-height:1.35;">Founder of Fad.Lab · Pioneering practical STEAM-IE education & urban ag-tech in Ethiopia.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; color:#1A1A2E; letter-spacing:-0.01em;">FAD.LAB PUBLISHING</div>
+              <div style="font-size:11.5px; color:#5B6472; margin-top:2px;">Review Edition · Addis Ababa, Ethiopia</div>
+              <div style="font-size:11px; color:#5441ff; font-weight:600; margin-top:3px;">github.com/hassancs91/paper-engine</div>
+            </div>
+
+            <div style="background:#FFF; border:1px solid #CBD5E1; border-radius:6px; padding:6px 10px; text-align:center;">
+              <svg width="108" height="32" viewBox="0 0 108 32" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="3" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="6" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="10" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="15" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="18" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="22" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="25" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="30" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="34" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="37" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="41" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="44" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="49" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="53" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="56" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="60" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="65" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="68" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="72" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="75" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="80" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="84" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="87" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="91" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="94" y="0" width="3" height="26" fill="#1A1A2E"/>
+                <rect x="99" y="0" width="2" height="26" fill="#1A1A2E"/>
+                <rect x="103" y="0" width="1" height="26" fill="#1A1A2E"/>
+                <rect x="106" y="0" width="2" height="26" fill="#1A1A2E"/>
+              </svg>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:8.5px; font-weight:600; color:#1A1A2E; margin-top:2px;">ISBN 978-99944-0-001-7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <script src="../../engine/sheet-tools.js"></script>
+</body>
+</html>

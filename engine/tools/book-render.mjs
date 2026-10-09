@@ -168,7 +168,7 @@ ${citations.map(c => `          <li id="ref-${c.number}" value="${c.number}">[${
 /**
  * Render a single page section from manifest data.
  */
-function renderPage(page, index, totalPages, series, footerBrand, footerRight, imageFolder, citationStyle, bookDir) {
+function renderPage(page, index, totalPages, series, footerBrand, footerRight, imageFolder, citationStyle, bookDir, classification) {
   const sectionColor = SECTION_COLORS[page.section] || '#6366F1';
   const eyebrow = page.section === 'Entrepreneurship' ? 'IE' : page.section.charAt(0).toUpperCase();
   const pageNo = pad2(index + 1);
@@ -188,9 +188,7 @@ function renderPage(page, index, totalPages, series, footerBrand, footerRight, i
   // Use prepared content if available (already HTML with color roles), otherwise parse markdown
   let explain;
   if (page.preparedContent) {
-    // Prepared content is already HTML with <p> tags and color roles
-    // Sanitize to prevent XSS from coding agent output
-    explain = sanitizeHTML(page.preparedContent);
+    explain = formatExplainerParagraphs(sanitizeHTML(page.preparedContent));
   } else {
     // Strip markdown title/subtitle headers that are already rendered in page chrome
     let contentForMarked = rawContent
@@ -198,15 +196,13 @@ function renderPage(page, index, totalPages, series, footerBrand, footerRight, i
       .replace(/^####\s+.+$/m, '')
       .trim();
     
-    // Render content using marked
-    explain = marked.parse(contentForMarked);
-    
-    // Add <p class="close"> to the last paragraph if there are multiple paragraphs
-    explain = explain.replace(/<p>(.*?)<\/p>\s*$/i, '<p class="close">$1</p>');
+    // Render content using marked and format into 3 paragraphs with color roles
+    const parsedHtml = marked.parse(contentForMarked);
+    explain = formatExplainerParagraphs(parsedHtml);
   }
 
-  // Determine image type from imageMeta (set by prep stage) or classify
-  const imageType = page.imageMeta?.type || classifyImage(page.imagePrompt);
+  // Determine image type from imageMeta (set by prep stage) or classification or classify
+  const imageType = page.imageMeta?.type || classification || classifyImage(page.imagePrompt);
   const diagramHeight = page.imageMeta?.height || 200;
   const imageSrc = `${imageFolder}/${sanitizeFilename(page.title)}.png`;
 
@@ -242,8 +238,8 @@ function renderPage(page, index, totalPages, series, footerBrand, footerRight, i
   const foot = `<div class="foot"><span class="brand">${escHTML(footerBrand)}</span><span class="pg"></span><span class="series">${escHTML(series)}</span></div>`;
 
   // Build screen-reader heading
-  const srTitle = page.title + (page.subtitle ? ': ' + page.subtitle : '');
-  const displayTitle = page.displayTitle || page.title;
+  const displayTitle = page.displayTitle || page.preparedTitle || page.title;
+  const srTitle = displayTitle + (page.subtitle ? ': ' + page.subtitle : '');
 
   return `    <section class="sheet bb">
       <h2 class="sr">${escHTML(srTitle)}</h2>
@@ -268,7 +264,6 @@ function renderPage(page, index, totalPages, series, footerBrand, footerRight, i
 function buildPartComment(part) {
   const upperOrder = ['Science', 'Technology', 'Engineering', 'Arts', 'Mathematics', 'Innovation', 'Entrepreneurship'];
   const orderKey = upperOrder.indexOf(part.name) + 1;
-  const header = 'S'.repeat(orderKey % 7 || 7) + 'T'.repeat((orderKey) % 7 || 7) + ' E A M I IE'.repeat(1);
   return `    <!-- ============================================================\n         ${part.name.toUpperCase()} — ${part.name}\n         ============================================================ -->`;
 }
 
@@ -290,6 +285,7 @@ function renderInterior(manifest, bookConfig, pageClassifications, citationStyle
   const classificationMap = new Map();
   pageClassifications.forEach((c) => {
     classificationMap.set(c.title, c.type);
+    if (c.preparedTitle) classificationMap.set(c.preparedTitle, c.type);
   });
 
   // Build sections
@@ -309,8 +305,8 @@ function renderInterior(manifest, bookConfig, pageClassifications, citationStyle
     sections.push(buildPartComment(part));
     const partPages = pagesByPart.get(part.name) || [];
     partPages.forEach((page, localIdx) => {
-      const classification = classificationMap.get(page.title) || classifyImage(page.imagePrompt);
-      sections.push(renderPage(page, globalIndex, manifest.totalPages, series, footerBrand, footerRight, imageFolder, citationStyle, bookDir));
+      const classification = (page.preparedTitle && classificationMap.get(page.preparedTitle)) || classificationMap.get(page.title) || classifyImage(page.imagePrompt);
+      sections.push(renderPage(page, globalIndex, manifest.totalPages, series, footerBrand, footerRight, imageFolder, citationStyle, bookDir, classification));
       globalIndex++;
     });
   });
@@ -452,6 +448,85 @@ async function main() {
 const isCli = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isCli) {
   main().catch((error) => fail(error.message || String(error)));
+}
+
+export function applyColorRoles(html) {
+  if (/<span class="(bad|hl|good)">/.test(html)) {
+    return html; // Already contains explicit color spans
+  }
+
+  let text = html;
+
+  const badPatterns = [
+    /\b(swelling and severe shrinkage cracking|shrinkage cracking|crumbly block|mix failures|air pockets|premature drying|spalling|chalking|failure|cracking|crumbly|damage|leak|leaks|attack|vulnerability|clash|excessive)\b/gi,
+  ];
+
+  const hlPatterns = [
+    /\b(chemical hydration|calcium silicate hydrate|particle distribution|mechanical stabilization|Optimum Moisture Content|relative humidity|hydration|compaction|C-S-H gels|Jar Test|Drop Test|natural binder|celery|queue|webhook|HMAC|OAuth)\b/gi,
+  ];
+
+  const goodPatterns = [
+    /\b(weather-resistant masonry|structural skeleton|initial structural integrity|full design strength|weather-resistant|durable block|structural integrity|optimal soil|healthy path)\b/gi,
+  ];
+
+  for (const pat of badPatterns) {
+    text = text.replace(pat, (m) => `<span class="bad">${m}</span>`);
+  }
+  for (const pat of hlPatterns) {
+    text = text.replace(pat, (m) => `<span class="hl">${m}</span>`);
+  }
+  for (const pat of goodPatterns) {
+    text = text.replace(pat, (m) => `<span class="good">${m}</span>`);
+  }
+
+  return text;
+}
+
+export function formatExplainerParagraphs(content) {
+  if (!content || typeof content !== 'string') return '';
+
+  let html = content.trim();
+
+  // Count existing <p> tags
+  const pCount = (html.match(/<p\b[^>]*>/gi) || []).length;
+
+  if (pCount >= 2) {
+    // Already structured into multiple <p> tags
+    if (!/<p\s+class="close">/i.test(html)) {
+      html = html.replace(/<p>(.*?)<\/p>\s*$/i, '<p class="close">$1</p>');
+    }
+    return applyColorRoles(html);
+  }
+
+  // Strip existing single <p> or <p class="..."> wrapper if present
+  let plain = html.replace(/^<p\b[^>]*>/i, '').replace(/<\/p>$/i, '').trim();
+
+  // Split plain text into sentences
+  const sentenceRegex = /[^.!?]+[.!?]+(\s+|$)/g;
+  const sentences = plain.match(sentenceRegex) || [plain];
+
+  let p1 = '', p2 = '', p3 = '';
+
+  if (sentences.length >= 4) {
+    p1 = sentences.slice(0, 2).join('').trim();
+    p2 = sentences.slice(2, sentences.length - 1).join('').trim();
+    p3 = sentences[sentences.length - 1].trim();
+  } else if (sentences.length === 3) {
+    p1 = sentences[0].trim();
+    p2 = sentences[1].trim();
+    p3 = sentences[2].trim();
+  } else if (sentences.length === 2) {
+    p1 = sentences[0].trim();
+    p2 = sentences[1].trim();
+  } else {
+    p1 = plain;
+  }
+
+  const p1Html = p1 ? `<p>${applyColorRoles(p1)}</p>` : '';
+  const p2Html = p2 ? `<p>${applyColorRoles(p2)}</p>` : '';
+  const p3Html = p3 ? `<p class="close">${applyColorRoles(p3)}</p>` : '';
+
+  return [p1Html, p2Html, p3Html].filter(Boolean).join('\n        ');
 }
 
 export { classifyImage, placeholderSVG, renderPage, renderInterior, collectCitations, renderFootnotes, renderReferencesPage };

@@ -349,7 +349,10 @@ async function prepareOnePage(page, manifest, bookDir, overflowData, options, pr
     addPrepHistoryEntry(page, 'prepared', {
       authoredBy: authoredBy || 'unknown',
       wordCount: prepared.wordCount ?? countWords(prepared.explainerHtml || ''),
-      overflowBefore: overflowData.overflow || 0
+      overflowBefore: overflowData.overflow || 0,
+      finalOverflow: overflowData.overflow || 0,
+      approvedBy: authoredBy || 'unknown',
+      approvedAt: new Date().toISOString()
     });
     console.log(`✅ Page ${page.no} prepared (${prepared.wordCount || 0} words)`);
   }
@@ -374,23 +377,80 @@ function buildPrepPrompt(page, manifest, context, overflowData) {
       pageWidth: 176,
       pageHeight: 250,
       diagramHeight: 150,
-      targetWords: 65,
-      maxWords: 85,
+      targetWords: TARGET_WORDS,
+      maxWords: MAX_WORDS,
       currentOverflow: overflowData.overflow,
       currentWordCount: overflowData.words,
       designRules: context.designRules,
+      voiceRules: context.voiceRules,
       examples: context.examples
     },
     constraints: {
-      targetWords: 65,
-      maxWords: 85,
-      diagramHeight: 150,
+      targetWords: TARGET_WORDS,
+      maxWords: MAX_WORDS,
+      diagramHeight: DIAGRAM_HEIGHT,
       maxTitleWords: 3,
       maxSubtitleWords: 10,
       maxActionWords: 20
     },
-    instructions: `Rewrite this page to fit B5 page with 0mm overflow. Return JSON only with: title, subtitle, explainerHtml, actionLabel, actionContent, imageType, imagePrompt, wordCount, overflowPrediction.`
+    instructions: buildPrepInstructions(page, overflowData, context)
   };
+}
+
+/**
+ * Build the detailed LLM instruction string that aligns with the block skill.
+ *
+ * This is separated from the prompt envelope so tests can inspect it directly.
+ */
+export function buildPrepInstructions(page, overflowData, context) {
+  const lines = [
+    `Rewrite this page to fit a B5 page (176 x 250 mm) with 0 mm overflow.`,
+    ``,
+    `## Explainer structure (3 paragraphs)`,
+    `1. <p> Opener + pain: start with "Let's say..." then show the real cost.`,
+    `   Mark the threat with <span class="bad">...</span> (red).`,
+    `2. <p> Mechanism + outcome: explain the fix.`,
+    `   Mark the mechanism with <span class="hl">...</span> (indigo).`,
+    `   Mark the good outcome with <span class="good">...</span> (teal).`,
+    `3. <p class="close"> Closer: one short sentence that sticks.`,
+    ``,
+    `## Color roles (use exactly these classes)`,
+    `- class="bad"   = red, the threat or mistake`,
+    `- class="hl"    = indigo, the mechanism or core idea`,
+    `- class="good"  = teal, the good outcome`,
+    `- <strong>      = a key phrase that is not one of the above roles`,
+    `Use ~one span per role per page. Do not paint every other word.`,
+    ``,
+    `## Voice rules`,
+    `- No em dashes. Use commas or full stops.`,
+    `- Contractions everywhere (it's, you're, can't).`,
+    `- Simple words only. If a beginner would trip on it, swap it.`,
+    `- Mix short and long sentences for uneven rhythm.`,
+    `- Dry, builder to builder. No hype.`,
+    `- One concrete example per page.`,
+    `- Never invent a fact, number, or story.`,
+    ``,
+    `## Word limits`,
+    `- Explainer: target ~${TARGET_WORDS} words, absolute max ${MAX_WORDS} words.`,
+    `- Title: max 3 words (concept name only).`,
+    `- Subtitle: max 10 words (plain descriptor).`,
+    `- Action content: max 20 words, imperative, one or two short sentences.`,
+    ``,
+    `## Format example`,
+    `<p>Let's say you pull a steak off the pan and cut it right away.`,
+    `The juice runs out, and <span class="bad">what's left on your plate is dry</span>.</p>`,
+    `<p>Give it a few minutes and <span class="hl">it settles back through the whole piece</span>.`,
+    `Same steak, <span class="good">nothing lost to the board</span>.</p>`,
+    `<p class="close">The waiting is part of the cooking.</p>`,
+    ``,
+    `## Current page data`,
+    `- Overflow: ${overflowData.overflow || 0} mm`,
+    `- Current word count: ${overflowData.words || 0}`,
+    ``,
+    `Return JSON only: { "title", "subtitle", "explainerHtml", "actionLabel",`,
+    `"actionContent", "imageType", "imagePrompt", "wordCount", "overflowPrediction" }`,
+  ];
+  return lines.join('\n');
 }
 
 function applyPreparedContent(page, prepared) {
@@ -518,8 +578,17 @@ async function resolveOverflow(manifest, bookDir, provider) {
         // Re-render and check will happen in next validation round
         fixedHtml = page.preparedContent;
       } else if (action === 'split') {
-        console.log('  Split page not yet implemented, skipping...');
-        fixedHtml = page.preparedContent;
+        const splitResult = splitPage(page, manifest);
+        if (splitResult) {
+          console.log(`  ✂️  Split into "${splitResult.part1.title}" and "${splitResult.part2.title}"`);
+          // The manifest.pages array has been mutated by splitPage.
+          // Skip further fixes for this title; next validation round
+          // picks up the two new pages if they still overflow.
+          fixedHtml = null;
+        } else {
+          console.log('  ⚠️  Could not split (not enough paragraphs). Keeping as-is.');
+          fixedHtml = page.preparedContent;
+        }
       } else if (action === 'accept') {
         console.log('  Accepting overflow for this page');
         fixedHtml = page.preparedContent;
@@ -551,7 +620,10 @@ async function resolveOverflow(manifest, bookDir, provider) {
             overflowBefore: overflow,
             overflowAfter: 0,
             action,
-            authoredBy: editedFields ? 'human' : 'agent'
+            authoredBy: editedFields ? 'human' : 'agent',
+            finalOverflow: 0,
+            approvedBy: editedFields ? 'human' : 'agent',
+            approvedAt: new Date().toISOString()
           });
           console.log(`  ✅ Fixed (${countWords(fixedHtml)} words)`);
         } else {
@@ -642,6 +714,72 @@ ${seedHtml}
   });
   
   return parseEditedPage(fs.readFileSync(tempFile, 'utf8'), proposal);
+}
+
+/**
+ * Split an overflowing page into two sequential sub-pages.
+ *
+ * The explainer HTML is divided at the paragraph midpoint. The original page
+ * becomes "Part 1" (keeping the first half of paragraphs), and a new page
+ * is inserted immediately after it with "Part 2" (the remaining paragraphs).
+ *
+ * Requires at least 2 paragraphs to split. Returns { part1, part2 } on
+ * success, or null if the content cannot be meaningfully split.
+ */
+export function splitPage(page, manifest) {
+  const html = page.preparedContent || page.content || '';
+  // Extract <p> blocks (including those with class attributes)
+  const pRegex = /<p[^>]*>[\s\S]*?<\/p>/gi;
+  const paragraphs = html.match(pRegex);
+
+  if (!paragraphs || paragraphs.length < 2) return null;
+
+  const mid = Math.ceil(paragraphs.length / 2);
+  const firstHalf = paragraphs.slice(0, mid).join('\n');
+  const secondHalf = paragraphs.slice(mid).join('\n');
+
+  const baseTitle = page.title.replace(/\s+Part\s+\d+$/i, '');
+
+  // Update the original page in place (Part 1)
+  page.title = `${baseTitle} Part 1`;
+  page.preparedContent = firstHalf;
+  page.preparedTitle = page.title;
+  addPrepHistoryEntry(page, 'split-part1', {
+    originalTitle: baseTitle,
+    paragraphs: mid,
+  });
+
+  // Build Part 2
+  const idx = manifest.pages.indexOf(page);
+  const part2 = {
+    no: page.no + 0.5,           // intermediate; renumbered by the caller
+    title: `${baseTitle} Part 2`,
+    subtitle: page.subtitle,
+    section: page.section,
+    content: secondHalf,
+    preparedContent: secondHalf,
+    preparedTitle: `${baseTitle} Part 2`,
+    preparedSubtitle: page.subtitle,
+    preparedActionLabel: page.preparedActionLabel || page.actionCallout?.label || 'TRY THIS',
+    preparedActionContent: page.preparedActionContent || page.actionCallout?.content || '',
+    actionCallout: page.actionCallout,
+    imagePrompt: page.imagePrompt,
+    imageMeta: { ...(page.imageMeta || { type: 'diagram', height: 150 }) },
+    prepHistory: [{
+      step: 'split-part2',
+      timestamp: new Date().toISOString(),
+      originalTitle: baseTitle,
+      paragraphs: paragraphs.length - mid,
+    }],
+  };
+
+  // Insert Part 2 right after the original page
+  manifest.pages.splice(idx + 1, 0, part2);
+
+  // Renumber all pages sequentially
+  manifest.pages.forEach((p, i) => { p.no = i + 1; });
+
+  return { part1: page, part2 };
 }
 
 export { prepareOnePage, resolveOverflow, editInEditor, getProposal };

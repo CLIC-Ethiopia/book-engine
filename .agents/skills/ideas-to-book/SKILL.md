@@ -1,233 +1,148 @@
 ---
 name: ideas-to-book
-description: Orchestrates the end‑to‑end workflow that turns a markdown idea file into a complete, reviewable, human‑approved paper‑engine book. The skill owns the stage‑gate system (parse, scaffold, plan, assets, build, check, screenshot, export) and delegates the heavy lifting to the dedicated automation scripts.
+description: Orchestrates the end‑to‑end workflow that turns a markdown or JSON idea file into a complete, reviewable, human‑approved paper‑engine B5 book under an Agent-Native model. The skill owns the 14-stage state machine (parse, scaffold, inherit, plan, prep, classify, render, diagrams, generate, build, check, screenshot, approveScreenshots, export) and delegates execution to dedicated paper-engine automation scripts.
 ---
 # ideas‑to‑book skill
 
-This skill glues together the automation scripts:
+This skill orchestrates the paper-engine multi-page book automation system under an **Agent-Native Execution Model** (where the active AI assistant serves as the LLM without requiring external API keys).
 
-- `engine/tools/idea-parser.mjs`   – extracts metadata, pages, citations, and image prompts from an idea markdown file.
-- `engine/tools/book-scaffold.mjs` – copies a template book folder, renames the interior file, updates `book.json`.
-- `engine/tools/book-render.mjs`   – builds the interior `<section class="sheet bb">` pages from the manifest, handling image classification (photo vs diagram).
-- `engine/tools/book-assets.mjs`   – writes prompt files, generates photographs via `gen-image.mjs`, and produces an asset report.
-- `engine/tools/ideas-to-book.mjs` – the CLI orchestrator that drives the workflow with human approval gates at each stage.
+It connects to core engine tools:
+- `engine/tools/idea-parser.mjs`   – parses `.md` or `.json` idea files into `.work/idea-manifest.json`.
+- `engine/tools/book-scaffold.mjs` – scaffolds book folders, customizes `book.json`, and manages cover images via `chooseCoverImage()`.
+- `engine/tools/inherited-pages.mjs` – customizes front/back matter (cover, colophon, TOC, index, back cover).
+- `engine/tools/prep-pages.mjs`    – content prep & word count optimization (~65 words, max 85) using `block` skill rules (`.bad`, `.hl`, `.good`, voice rules, page splitting). Writes `.work/page-XXX-prompt.json`.
+- `engine/tools/image-classifier.mjs` – classifies page visuals as `photo` (physical) vs `diagram` (mechanism).
+- `engine/tools/book-render.mjs`   – generates interior HTML (`<slug>.html`) with DOMPurify sanitization and citation styles.
+- `engine/tools/diagram-generator.mjs` – Agent-Native inline SVG diagram synthesis & validation (`diagram-system.md` shapes: attack, resilience, performance, correctness, auth, async, tooling, integration, process). Writes `.work/diagram-XXX-prompt.json`.
+- `engine/tools/book-assets.mjs`   – generates photo assets via `gen-image.mjs` and creates `.work/asset-report.json`.
+- `engine/tools/build-book.mjs`    – assembles interior pages into `book.html` with running headers, page numbers, part dividers, TOC, and index.
+- `engine/tools/check.mjs`         – Playwright layout checker verifying 0 mm overflow across all pages.
+- `engine/tools/shot.mjs`          – captures high-res Playwright PNG screenshots for visual inspection.
+- `engine/tools/export.mjs`        – exports print-ready B5 PDF.
+- `engine/tools/ideas-to-book.mjs` – CLI macro-orchestrator driving the 14-stage pipeline with `firstUnapprovedStage()` resumption.
+
+---
 
 ## When to invoke
 
 Use this skill whenever the user asks for any of the following:
-
 - "turn my idea file into a book"
 - "create a new book from an idea in /ideas"
 - "run the ideas‑to‑book automation"
 - "parse this idea and scaffold the book"
-- "generate images for my book"
-- "render the interior pages"
+- "prep pages for my book"
+- "generate diagrams for my book"
 - "build, check, screenshot, and export a book"
 - "resume my book from the last approved stage"
 
-## Typical usage
+---
+
+## Typical Usage
 
 ```bash
 # List available idea files
 node engine/tools/ideas-to-book.mjs --list-ideas
 
-# Interactive selection then run the full pipeline
+# Interactive selection and run full pipeline
 node engine/tools/ideas-to-book.mjs --select
 
-# Run a specific stage (e.g., only parsing)
-node engine/tools/ideas-to-book.mjs ideas/Solar-Dryer-Fabrication-Fruit-Processing.md --stage parse
+# Run a specific idea file with defaults
+node engine/tools/ideas-to-book.mjs ideas/Solar-Dryer-Fabrication-Fruit-Processing.md
 
-# Dry run to preview what would happen
-node engine/tools/ideas-to-book.mjs ideas/example.md --dry-run
+# Specify template, slug, and enable content prep
+node engine/tools/ideas-to-book.mjs ideas/my-idea.md --template books/STEAM-IE-FOR-HYDROPONICS --slug my-book --prep-page
 
-# Force image generation even if previously skipped
-node engine/tools/ideas-to-book.mjs ideas/example.md --generate-assets
+# Run a single stage (e.g. diagrams)
+node engine/tools/ideas-to-book.mjs books/my-book --stage diagrams
 
-# Resume from last approved stage
-node engine/tools/ideas-to-book.mjs ideas/example.md --resume
+# Resume interrupted run from last unapproved stage
+node engine/tools/ideas-to-book.mjs ideas/my-idea.md --resume
 
-# Run only specific stages
-node engine/tools/ideas-to-book.mjs books/my-book --stage build check screenshot
-
-# Approve a previous stage explicitly (for CI)
-node engine/tools/ideas-to-book.mjs books/my-book --stage render --approve-stage plan
+# Force re-run from scratch
+node engine/tools/ideas-to-book.mjs ideas/my-idea.md --force
 ```
+
+---
 
 ## CLI Reference
 
 | Flag | Purpose |
 |------|---------|
-| `--list-ideas` | Scan `/ideas/*.md` and list available files |
+| `--list-ideas` | Scan `/ideas/*.md` and `/ideas/*.json` and list available files |
 | `--select` | Interactive dropdown to pick an idea file |
-| `--dry-run` | Preview all actions without writing files |
+| `--dry-run` | Preview actions without modifying state |
 | `--generate-assets` | Force photograph generation (override `--skip-assets`) |
-| `--skip-assets` | Skip image generation entirely |
+| `--skip-assets` | Skip image generation (placeholders used) |
+| `--prep-page` | Enable opt-in LLM content preparation stage |
 | `--force` | Re-run stages even if already approved |
-| `--resume` | Continue from last approved stage in `approval.json` |
-| `--stage <name>` | Run only specific stage(s): `parse`, `scaffold`, `plan`, `assets`, `build`, `check`, `screenshot`, `approveScreenshots`, `export` |
-| `--approve-stage <name>` | Mark a previous stage as approved without prompt |
-| `--template <path>` | Override default template (default: `books/STEAM-IE-FOR-HYDROPONICS`) |
+| `--resume` | Resume automatically from `firstUnapprovedStage()` |
+| `--stage <name>` | Run specific stage: `parse`, `scaffold`, `inherit`, `plan`, `prep`, `classify`, `render`, `diagrams`, `generate`, `build`, `check`, `screenshot`, `approveScreenshots`, `export` |
+| `--approve-stage <name>` | Mark stage as approved |
+| `--template <path>` | Override template (default: `books/STEAM-IE-FOR-HYDROPONICS`) |
 | `--list-templates` | Show available template folders in `books/` |
+| `--no-interactive` | Non-interactive mode for agent or CI environments |
 
-## Stage‑gate system
+---
 
-The orchestrator writes an approval state file at:
+## The 14-Stage Pipeline
 
-```
-books/<slug>/.work/approval.json
-```
+Progress is tracked in `books/<slug>/.work/approval.json`. `firstUnapprovedStage(bookDir)` resolves resumption seamlessly.
 
-Each stage records a timestamp and who approved it. The orchestrator refuses to run a stage unless its predecessor is approved (unless `--force` is used).
+| # | Stage | Script | Output / Artifact |
+|---|---|---|---|
+| 1 | `parse` | `idea-parser.mjs` | `.work/idea-manifest.json` |
+| 2 | `scaffold` | `book-scaffold.mjs` | `books/<slug>/` scaffolded folder |
+| 3 | `inherit` | `inherited-pages.mjs` | Custom front/back matter |
+| 4 | `plan` | `ideas-to-book.mjs` | Citation configuration (`preserve`, `footnotes`, `references`, `remove`) |
+| 5 | `prep` | `prep-pages.mjs` | `page.preparedContent`, `.work/page-XXX-prompt.json`, `prepHistory` |
+| 6 | `classify` | `image-classifier.mjs` | Classification array (`photo` vs `diagram`) |
+| 7 | `render` | `book-render.mjs` | `books/<slug>/<slug>.html` interior HTML |
+| 8 | `diagrams` | `diagram-generator.mjs` | `.work/diagram-XXX-prompt.json`, inline SVG diagrams (`images/*.svg`) |
+| 9 | `generate` | `book-assets.mjs` | Photos via `gen-image.mjs`, `.work/asset-report.json` |
+| 10 | `build` | `build-book.mjs` | `books/<slug>/book.html` complete assembly |
+| 11 | `check` | `check.mjs` | Playwright 0 mm overflow verification report |
+| 12 | `screenshot` | `shot.mjs` | High-res PNG screenshots (`books/<slug>/page*.png`) |
+| 13 | `approveScreenshots` | `ideas-to-book.mjs` | Visual review gate entry in `approval.json` |
+| 14 | `export` | `export.mjs` | `books/<slug>/<slug>.pdf` print PDF |
 
-### Stages (in order)
+---
 
-1. **`parse`** – reads the idea file and writes `idea-manifest.json`.
-2. **`scaffold`** – copies the template folder, renames the interior file, updates `book.json`.
-3. **`plan`** – shows page conversion plan; prompts for citation handling (`preserve|footnotes|references|remove`).
-4. **`assets`** – writes prompt files, classifies each image as photo/diagram (Gate 4), generates photographs if approved, renders interior HTML (Gate 5).
-5. **`build`** – runs `build-book.mjs` to produce `book.html`.
-6. **`check`** – runs `check.mjs` to verify 0 mm overflow and no broken images (Gate 7).
-7. **`screenshot`** – runs `shot.mjs` to capture PNGs of every page.
-8. **`approveScreenshots`** – interactive prompt to confirm visual correctness (Gate 8).
-9. **`export`** – runs `export.mjs` to create the final PDF (Gate 9).
+## Verification Workflow
 
-### Approval State Keys
+After every page or book modification:
 
-```json
-{
-  "stages": {
-    "parsed": true,
-    "scaffolded": true,
-    "planned": true,
-    "assetsClassified": true,
-    "assetsGenerated": true,
-    "buildPassed": true,
-    "checksPassed": true,
-    "screenshotsApproved": true,
-    "pdfExported": true
-  },
-  "citationStyle": "preserve",
-  "approvals": [
-    { "stage": "parsed", "approvedBy": "human", "at": "2026-09-12T10:00:00Z" }
-  ]
-}
-```
+```bash
+# 1. Assemble book chrome
+node engine/tools/build-book.mjs books/<slug>
 
-## Human approval gates (9 gates)
+# 2. Verify 0 mm overflow on all pages
+node engine/tools/check.mjs books/<slug>/book.html
 
-| Gate | Stage | What the human reviews |
-|------|-------|------------------------|
-| 1 | `parse` | Page/part/citation counts, validation summary |
-| 2 | `scaffold` | Book metadata, part mapping, page titles in order |
-| 3 | `plan` | Full page table, citation handling choice |
-| 4 | `assets` (classify) | Photo vs diagram classification table |
-| 5 | `assets` (render) | Generated interior HTML preview/diff |
-| 6 | `assets` (generate) | Asset report: generated/missing/broken images |
-| 7 | `build` + `check` | 0 mm overflow, no broken images |
-| 8 | `screenshot` + `approveScreenshots` | Visual review of every page PNG |
-| 9 | `export` | Final PDF confirmation |
+# 3. Capture screenshots for visual inspection
+node engine/tools/shot.mjs books/<slug>/book.html
 
-If a stage is rejected, the orchestrator stops and invites the user to fix the issue before re‑running that stage.
-
-### Recovery options (on failure or rejection)
-
-```
-1) Retry the current stage
-2) Skip this page/image and continue
-3) Replace with placeholder and continue
-4) Go back to the previous approval gate
-5) Cancel and preserve all progress so far
+# 4. Generate print PDF
+node engine/tools/export.mjs books/<slug>/book.html
 ```
 
-### Rollback behavior
+---
 
-If user cancels after scaffolding/rendering:
-1. Lists all files created/modified
-2. Asks: delete the new book folder entirely, or keep as draft?
-3. Never deletes files outside the new book folder
-4. Never modifies the original idea file or the template book
+## Output Structure
 
-## Citation handling
+For a book with slug `solar-dryer-fruit-processing`:
 
-The idea file may contain `[cite: N]` markers. At **Gate 3 (plan)** the user chooses:
-
-1. **Preserve** — keep as literal `[cite: N]` (default)
-2. **Footnotes** — convert to `<sup class="cite">[N]</sup>`; footnotes section TBD
-3. **References page** — convert to `<sup class="cite">[N]</sup>`; references page TBD
-4. **Remove** — strip all citations
-
-Choice is stored in `approval.json` → `citationStyle` and passed to `book-render.mjs`.
-
-## Image classification rules (hard-coded)
-
-| Type | Keywords | Use For |
-|------|----------|---------|
-| **photo** | photograph, photo of, image of, picture of, shot, real, physical, actual | fruit, plant, tool, equipment, building, cabinet, tray, panel, device, finished product |
-| **diagram** | diagram, schematic, chart, graph, flow, process, system, architecture, vector, blueprint, before, after, comparison, cross-section, business model, network | mechanisms, airflow, heat transfer, equations, system architecture, before/after |
-
-**Never** generate diagrams as raster images. Use inline SVG only.
-
-## Output locations
-
-Given an idea file `ideas/my-idea.md` with front‑matter `slug: my-idea`:
-
-```
-books/
-└── my-idea/
-    ├── my-idea.html          ← interior source (rendered)
-    ├── book.json             ← updated manifest
-    ├── book.html             ← generated by build-book.mjs
-    ├── my-idea.pdf           ← final export
-    ├── page1.png … pageN.png ← screenshots
-    ├── images/
-    │   ├── my-idea-01.png
-    │   ├── my-idea-01.txt
-    │   └── …
-    └── .work/
-        ├── idea-manifest.json
-        ├── approval.json
-        └── asset-report.json
-```
-
-## Reference documents
-
-- `references/idea-file-format.md` — front matter, page section syntax, validation rules
-- `references/approval-gates.md` — 9 gates, recovery menu, rollback behavior
-- `references/page-conversion-rules.md` — markdown→HTML mapping, colour roles, citation styles
-
-## Extending the skill
-
-- To change the default template, edit `DEFAULT_TEMPLATE` in `ideas-to-book.mjs`.
-- To add new image‑classification rules, modify `classifyImage` in `book-render.mjs` and `book-assets.mjs`.
-- To adjust the approval‑state keys, edit `APPROVAL_STATE` in `ideas-to-book.mjs`.
-- To add a new stage, append to `STAGES` array and add a case in `handleStage()`.
-
-## Implementation order (from spec)
-
-1. `idea-parser.mjs` ✅
-2. `approval.json` + stage system ✅
-3. `book-scaffold.mjs` ✅
-4. `book-render.mjs` ✅
-5. Asset classification gate ✅
-6. `book-assets.mjs` + `gen-image.mjs` integration ✅
-7. Build/check/shot/export orchestration ✅
-8. **End-to-end test on Solar Dryer idea** (pending)
-
-## Final expected result (Solar Dryer)
-
-```
+```text
 books/solar-dryer-fruit-processing/
-├── solar-dryer-fruit-processing.html
-├── book.json
-├── book.html
-├── solar-dryer-fruit-processing.pdf
-├── page1.png … page57.png
-└── images/
+├── solar-dryer-fruit-processing.html  ← Interior source
+├── book.json                          ← Book configuration
+├── book.html                          ← Full assembled book
+├── solar-dryer-fruit-processing.pdf   ← Print-ready B5 PDF
+├── page1.png … pageN.png             ← High-res screenshots
+├── images/                            ← SVG diagrams & photo assets
+└── .work/                             ← Stage state, manifests & prompt files
+    ├── idea-manifest.json
+    ├── approval.json
+    ├── page-*.json
+    ├── diagram-*.json
+    └── asset-report.json
 ```
-
-With:
-- 57 pages (15 template + 42 content)
-- 0 mm overflow on every page
-- No broken images
-- Approved screenshots
-- Approved PDF export

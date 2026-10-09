@@ -1,0 +1,64 @@
+{
+  "title": "ICSEB Size Review",
+  "slug": "size-review",
+  "subtitle": "3-page review of diagram/photo sizing from ICSEB content",
+  "editionLabel": "Review Edition",
+  "author": "STEAM-IE Field Manual Series",
+  "series": "STEAM-IE for Eco-Construction",
+  "audience": "Review",
+  "primaryLocation": "Review",
+  "coverImage": "images/cover.png",
+  "pages": [
+    {
+      "no": 1,
+      "section": "Science",
+      "title": "Soil Composition Basics",
+      "subtitle": "Balancing sand, silt, and clay for mechanical stabilization",
+      "content": "Interlocking blocks rely on optimal soil particle distribution rather than high cement content. Clay acts as a natural binder, while sand provides the structural skeleton. Ideal ICSEB soil contains 50–70% sand, 15–30% silt, and 10–20% clay. Too much clay causes swelling and severe shrinkage cracking upon drying; too little clay results in a crumbly block that lacks green strength before curing.",
+      "imagePrompt": "Technical vector diagram illustrating soil grain size distribution for ICSEB production. Shows a settling jar test with distinct layers of sand at the bottom, silt in the middle, clay on top.",
+      "imageType": "diagram",
+      "imageMeta": {
+        "height": 150
+      },
+      "actionCallout": {
+        "label": "TRY THIS TODAY",
+        "content": "Perform a simple Jar Test: fill a straight-sided glass jar 1/3 full with dry field soil, add water and 1 tsp salt, shake vigorously for 2 minutes."
+      },
+      "citations": []
+    },
+    {
+      "no": 2,
+      "section": "Science",
+      "title": "Hydration Mechanics",
+      "subtitle": "How OPC cement bonds soil particles under compaction",
+      "content": "Ordinary Portland Cement (OPC) stabilizes soil through chemical hydration, creating calcium silicate hydrate (C-S-H) gels that lock soil grains together. Soil moisture during compaction must equal the Optimum Moisture Content (OMC)—typically 8–12% by weight. If the soil is too dry, cement hydration fails and air pockets remain.",
+      "imagePrompt": "Resilience diagram showing chemical hydration of cement bonding soil particles under compaction, with fallback drop for dry mix.",
+      "imageType": "diagram",
+      "imageMeta": {
+        "height": 150
+      },
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Perform the Drop Test: squeeze a handful of moist soil-cement mix into a ball, drop it from 1 meter height onto hard ground."
+      },
+      "citations": []
+    },
+    {
+      "no": 3,
+      "section": "Science",
+      "title": "Curing Chemistry",
+      "subtitle": "Managing moisture retention for full strength gain",
+      "content": "ICSEB blocks do not harden by drying out; they harden through moisture-dependent chemical reaction. Premature drying stops cement hydration, causing up to 60% loss in ultimate compressive strength. Blocks must maintain near 100% relative humidity for at least 7 days to reach initial structural integrity, and 28 days for full strength.",
+      "imagePrompt": "Process diagram illustrating hydration reaction and moisture retention over 28-day curing cycle.",
+      "imageType": "diagram",
+      "imageMeta": {
+        "height": 150
+      },
+      "actionCallout": {
+        "label": "BUILD THIS ONCE",
+        "content": "Set up a dedicated curing pad using thick 200-micron black polythene sheeting on a flat shaded surface, elevated on wooden pallets."
+      },
+      "citations": []
+    }
+  ]
+}

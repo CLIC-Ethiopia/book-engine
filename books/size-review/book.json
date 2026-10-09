@@ -1,0 +1,48 @@
+{
+  "title": "ICSEB Size Review",
+  "subtitle": "3-page review of diagram/photo sizing from ICSEB content",
+  "author": "STEAM-IE Field Manual Series",
+  "series": "STEAM-IE for Eco-Construction",
+  "brand": "clicethiopia.netlify.app",
+  "footer": {
+    "brand": "businessideabank.netlify.app",
+    "right": "Fad.Lab"
+  },
+  "editionLabel": "Review Edition",
+  "unit": "blocks",
+  "numbered": true,
+  "contents": true,
+  "index": true,
+  "insideCover": true,
+  "howToRead": true,
+  "backCover": true,
+  "cover": {
+    "kicker": "STEAM-IE curriculum",
+    "image": "images/Cover-page-Gemini_Generated.png",
+    "note": "One concept per page, ordered across the seven letters of STEAM-IE."
+  },
+  "copyright": {
+    "year": 2026,
+    "rights": "© 2026 Your Name. All rights reserved.",
+    "lines": [
+      "Set in Space Grotesk, Inter and JetBrains Mono.",
+      "Built with the paper engine: github.com/hassancs91/paper-engine"
+    ]
+  },
+  "parts": [
+    {
+      "name": "Science",
+      "eyebrow": "S",
+      "blocks": [
+        "Soil Composition Basics",
+        "Hydration Mechanics",
+        "Curing Chemistry"
+      ],
+      "why": "",
+      "listLabel": ""
+    }
+  ],
+  "editions": {
+    "free": []
+  }
+}

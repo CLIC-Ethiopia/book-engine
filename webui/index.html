@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Engine Dashboard</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <!-- Single fixed menu bar: info text + all controls in one row -->
+  <header class="menu-bar">
+    <div class="menu-bar-inner">
+      <div class="menu-info">
+        <span id="book-title" class="book-title">The Showcase</span>
+        <span class="dot">·</span>
+        <span id="series-label" class="series-label">The showcase</span>
+        <span class="dot">·</span>
+        <span id="page-title" class="page-title">Resting meat</span>
+        <span class="dot">·</span>
+        <span class="quick-stats">
+          <span id="books-count">0</span> books, <span id="pages-count">0</span> pages
+        </span>
+      </div>
+      <div class="menu-controls">
+        <div class="page-nav">
+          <button class="nav-button" id="prev-page" aria-label="Previous page">&#9664; Prev</button>
+          <span id="page-number" class="page-number">1 / 10</span>
+          <button class="nav-button" id="next-page" aria-label="Next page">Next &#9654;</button>
+        </div>
+        <span id="check-status" class="check-status">—</span>
+        <div class="action-buttons">
+          <button class="action-button" id="run-check">Run Check</button>
+          <button class="action-button" id="take-screenshot">Take Screenshot</button>
+          <button class="action-button" id="export-pdf">Export PDF</button>
+          <button class="action-button secondary" id="build-book" style="display:none;">Build Book</button>
+          <button class="action-button secondary" id="view-full-book" style="display:none;">View Full Book</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main layout -->
+  <div class="layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <h2>Books</h2>
+      <ul id="book-list"></ul>
+      <button class="new-book-btn" id="new-book-btn">New Book</button>
+    </aside>
+
+    <!-- Central Column -->
+    <main class="central" id="central">
+      <div class="preview-area">
+        <iframe id="page-iframe" srcdoc="<!doctype html><html lang='en'><head><meta charset='utf-8'><link rel='stylesheet' href='../../engine/sheet.css'><link rel='stylesheet' href='../../engine/sizes/b5.css'><link rel='stylesheet' href='../../engine/themes/studio.css'></head><body><main class='deck'><section class='sheet bb'><h1 class='title'>Select a book from the sidebar</h1></section></main></body></html>" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation"></iframe>
+      </div>
+    </main>
+
+    <!-- Right Column -->
+    <aside class="right-column" id="right-column">
+      <div class="editor-container">
+        <div class="editor-area" id="editor-area">
+        <div class="card-header">
+          <h3>Edit Page Content</h3>
+          <button class="collapse-btn" id="collapse-editor" aria-label="Collapse editor" title="Collapse/Expand">Close</button>
+        </div>
+        <label>
+          <span>Title:</span>
+          <input type="text" id="editor-title" placeholder="Book page title">
+        </label>
+        <label>
+          <span>Subtitle:</span>
+          <input type="text" id="editor-subtitle" placeholder="One-line description">
+        </label>
+        <div class="explain-section">
+          <span>Explain:</span>
+          <textarea id="editor-explain" rows="3" placeholder="Explainer text..."></textarea>
+        </div>
+        <label>
+          <span>Action:</span>
+          <input type="text" id="editor-action" placeholder="What to do next">
+        </label>
+        <button class="save-edit" id="save-edit">Save Changes</button>
+      </div>
+      </div>
+      <div class="chat-container">
+        <div class="chat-area" id="chat-area">
+        <div class="card-header">
+          <h3>AI Chat</h3>
+          <button class="collapse-btn" id="collapse-chat" aria-label="Collapse chat" title="Collapse/Expand">Close</button>
+        </div>
+        <div class="chat-history" id="chat-history"></div>
+        <div class="chat-input-wrapper">
+          <input type="text" id="chat-input" placeholder="Message the AI...">
+          <button class="send-chat" id="send-chat">Send</button>
+        </div>
+        <div class="quick-actions" id="quick-actions">
+          <button class="quick-action" data-prompt="Check this page for overflow">Run Check</button>
+          <button class="quick-action" data-prompt="Suggest a diagram for this concept">Suggest Diagram</button>
+          <button class="quick-action" data-prompt="Rewrite the explainer in simpler words">Rewrite Explainer</button>
+          <button class="quick-action" data-prompt="Generate an image prompt for this page's photo band">Image Prompt</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>

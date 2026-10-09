@@ -1,0 +1,38 @@
+<svg width="100%" viewBox="0 0 592 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Soil Composition Basics">
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <filter id="cs" x="-20%" y="-25%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1A1A2E" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+  <!-- Step 1: Input -->
+  <rect x="25" y="55" width="140" height="60" rx="12" fill="#FFFFFF" stroke="#E7E9EF" stroke-width="1" filter="url(#cs)"/>
+  <text x="95" y="82" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#1A1A2E">Input State</text>
+  <text x="95" y="100" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#5B6472">Raw Data / Event</text>
+
+  <!-- Step 2: Mechanism -->
+  <rect x="225" y="55" width="150" height="60" rx="12" fill="#EEF0FE" stroke="#D5D8FA" stroke-width="1" filter="url(#cs)"/>
+  <text x="300" y="82" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#4F46E5">Soil Composition B</text>
+  <text x="300" y="100" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#6366F1">Core Engine</text>
+
+  <!-- Step 3: Outcome -->
+  <rect x="435" y="55" width="135" height="60" rx="12" fill="#ECFBF7" stroke="#CDEFE8" stroke-width="1" filter="url(#cs)"/>
+  <text x="502" y="82" text-anchor="middle" style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;fill:#0D9488">Verified Goal</text>
+  <text x="502" y="100" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:10px;fill:#5B6472">Desired Result</text>
+
+  <!-- Connectors -->
+  <line x1="165" y1="85" x2="223" y2="85" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="375" y1="85" x2="433" y2="85" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- Step Badges -->
+  <circle cx="194" cy="73" r="10" fill="#6366F1"/>
+  <text x="194" y="73" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;fill:#FFFFFF">1</text>
+  <circle cx="404" cy="73" r="10" fill="#6366F1"/>
+  <text x="404" y="73" text-anchor="middle" dominant-baseline="central" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:600;fill:#FFFFFF">2</text>
+
+  <!-- Key Line -->
+  <text x="296" y="174" text-anchor="middle" style="font-family:'Inter',sans-serif;font-size:12px;fill:#5B6472">1 trigger input · 2 process through Soil Compositi · 3 achieve outcome</text>
+</svg>

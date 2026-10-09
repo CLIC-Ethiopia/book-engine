@@ -11,7 +11,8 @@
     "shot": "node engine/tools/shot.mjs",
     "export": "node engine/tools/export.mjs",
     "image": "node engine/tools/gen-image.mjs",
-    "ideas": "node engine/tools/ideas-to-book.mjs"
+    "ideas": "node engine/tools/ideas-to-book.mjs",
+    "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
     "dompurify": "^3.4.16",

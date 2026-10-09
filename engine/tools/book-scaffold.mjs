@@ -138,9 +138,18 @@ function renderBookJson(templateJson, manifest) {
   result.series = manifest.series || result.series;
   result.editionLabel = manifest.editionLabel || result.editionLabel;
   // Update cover image if provided in manifest
+  // Update cover image safely using chooseCoverImage
   if (manifest.coverImage) {
     if (!result.cover) result.cover = {};
-    result.cover.image = manifest.coverImage;
+    const coverChoice = chooseCoverImage({
+      requested: manifest.coverImage,
+      current: result.cover.image,
+      has: (imgPath) => fs.existsSync(imgPath.startsWith('books/') ? imgPath : `books/${manifest.slug || 'temp'}/${imgPath}`),
+    });
+    result.cover.image = coverChoice.image;
+    if (coverChoice.note) {
+      console.log(`   ${coverChoice.note}`);
+    }
   }
   // Replace parts array with manifest-derived parts
   result.parts = manifest.parts.map((part) => ({
@@ -323,3 +332,26 @@ if (isCli) {
 }
 
 export default main;
+
+/**
+ * Choose which cover image to use for a book.
+ *
+ * Returns { image, note? } where image is the path to use and
+ * note (if present) warns the author that their requested cover
+ * was not on disk.
+ */
+export function chooseCoverImage({ requested, current, has }) {
+  if (!requested) {
+    return { image: current };
+  }
+  if (has && has(requested)) {
+    return { image: requested };
+  }
+  if (current !== undefined) {
+    return {
+      image: current,
+      note: `Requested cover "${requested}" not on disk — keeping existing ${current}`,
+    };
+  }
+  return { image: requested };
+}

@@ -78,6 +78,20 @@ const DESIGN_RULES = [
   "Contractions everywhere (it's, you're, can't). Simple words only."
 ];
 
+const VOICE_RULES = [
+  "No em dashes. Ever. Use commas or periods.",
+  "Contractions everywhere: it's, you're, can't, they'll, isn't.",
+  "Simple words only. If a beginner or non-native reader would trip on a word, swap it.",
+  "Uneven rhythm. Mix a very short line with longer ones. Don't stack three even-length sentences.",
+  "Dry, builder to builder. No marketing voice, no hype.",
+  "Concrete beats abstract. One real artifact or example per page.",
+  "Open with 'Let's say...' then a situation the reader is actually in.",
+  "Name the real cost when describing the pain: wasted time, things that break, things that are wrong.",
+  "End on a short closer line that sticks. One sentence, its own beat.",
+  "Keep the author's grammar. Fix only genuine typos, never upgrade their phrasing.",
+  "4-6 short sentences plus the closer. Long enough to land the idea, short enough to read in under a minute."
+];
+
 function extractRelevantBlocks(blocksMd, pageTitle, section) {
   // Find the relevant section in blocks.md and return relevant lines
   const lines = blocksMd.split('\n');
@@ -169,8 +183,9 @@ export async function buildPageContext(page, bookDir, manifest, overflowData = {
     currentWordCount: overflowData?.words || 0,
     
     designRules: DESIGN_RULES,
+    voiceRules: VOICE_RULES,
     examples: SHOWCASE_EXAMPLES
   };
 }
 
-export { SHOWCASE_EXAMPLES, DESIGN_RULES };
+export { SHOWCASE_EXAMPLES, DESIGN_RULES, VOICE_RULES };

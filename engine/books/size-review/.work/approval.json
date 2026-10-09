@@ -1,0 +1,13 @@
+{
+  "slug": "size-review",
+  "stages": {
+    "parsed": true
+  },
+  "approvals": [
+    {
+      "stage": "parsed",
+      "approvedBy": "human",
+      "at": "2026-10-07T22:27:36.620Z"
+    }
+  ]
+}

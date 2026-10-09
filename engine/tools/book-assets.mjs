@@ -46,23 +46,16 @@ function writePromptFile(imagesDir, title, prompt) {
   return promptFile;
 }
 
-function generateImage(imagesDir, title, promptFile, provider = 'agy', aspect = '3:2') {
+import { generatePhoto } from './gen-image.mjs';
+
+async function generateImage(imagesDir, title, promptTextOrFile, height = 180) {
   const outPath = path.join(imagesDir, `${sanitizeFilename(title)}.png`);
-  const args = [
-    path.join(PROJECT_ROOT, 'engine', 'tools', 'gen-image.mjs'),
-    '--prompt-file', promptFile,
-    outPath,
-    '--aspect', aspect,
-    '--provider', provider,
-  ];
-  const child = spawn('node', args, { cwd: PROJECT_ROOT, stdio: 'inherit' });
-  return new Promise((resolve, reject) => {
-    child.on('close', (code) => {
-      if (code === 0) resolve(outPath);
-      else reject(new Error(`gen-image exited with code ${code}`));
-    });
-    child.on('error', reject);
-  });
+  let prompt = promptTextOrFile;
+  if (typeof promptTextOrFile === 'string' && fs.existsSync(promptTextOrFile)) {
+    prompt = fs.readFileSync(promptTextOrFile, 'utf8');
+  }
+  const result = await generatePhoto(prompt || title, outPath, { title, height });
+  return { path: outPath, provider: result.provider, status: result.status };
 }
 
 async function classifyAll(manifest, imagesDir, auto = false) {
@@ -177,10 +170,11 @@ async function main() {
       const classification = classifications.find((c) => c.title === page.title);
       if (classification && classification.type === 'photo') {
         const promptFile = path.join(imagesDir, `${sanitizeFilename(page.title)}.txt`);
+        const height = page.imageMeta?.height || 180;
         try {
-          const outPath = await generateImage(imagesDir, page.title, promptFile);
-          generated.push({ title: page.title, path: outPath, type: 'photo' });
-          console.log(`  ✓ ${page.title}`);
+          const res = await generateImage(imagesDir, page.title, promptFile, height);
+          generated.push({ title: page.title, path: res.path, type: 'photo', provider: res.provider, status: res.status });
+          console.log(`  ✓ ${page.title} (Provider: ${res.provider})`);
         } catch (error) {
           console.error(`  ✗ ${page.title}: ${error.message}`);
         }

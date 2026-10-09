@@ -1,0 +1,7 @@
+Technical vector diagram illustrating soil grain size distribution for ICSEB production. Shows a settling jar test with distinct layers of sand at the bottom, silt in the middle, clay on top.
+
+Style guidelines:
+- No text in the image.
+- No logos or brands.
+- Soft daylight, front angle, plain neutral background.
+- Consistent book style: clear, clean, professional, modern layout style.

@@ -195,4 +195,11 @@ export async function applyFixesAutomatically(proposal, fixes, recommended) {
   return { ...proposal, explainerHtml: html, wordCount: countWords(html) };
 }
 
+export const ReviewOutcome = {
+  ACCEPT: 'ACCEPT',
+  SKIP: 'SKIP',
+  QUIT: 'QUIT',
+  EDIT: 'EDIT',
+  REGENERATE: 'REGENERATE',
+};
 export {};

@@ -1,0 +1,100 @@
+{
+  "slug": "size-review",
+  "stages": {
+    "parsed": true,
+    "scaffolded": true,
+    "inheritedEdited": true,
+    "planned": true,
+    "pagesPrepared": true,
+    "assetsClassified": true,
+    "pagesRendered": true,
+    "diagramsGenerated": true,
+    "assetsGenerated": true,
+    "buildPassed": true,
+    "checksPassed": true,
+    "screenshotsApproved": true,
+    "pdfExported": true
+  },
+  "approvals": [
+    {
+      "stage": "parsed",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:07.614Z"
+    },
+    {
+      "stage": "scaffolded",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:07.658Z"
+    },
+    {
+      "stage": "inheritedEdited",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:07.665Z"
+    },
+    {
+      "stage": "planned",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:07.671Z"
+    },
+    {
+      "stage": "pagesPrepared",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:07.673Z"
+    },
+    {
+      "stage": "assetsClassified",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:07.680Z"
+    },
+    {
+      "stage": "pagesRendered",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:07.710Z"
+    },
+    {
+      "stage": "diagramsGenerated",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:07.732Z"
+    },
+    {
+      "stage": "assetsGenerated",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:07.746Z"
+    },
+    {
+      "stage": "buildPassed",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:07.855Z"
+    },
+    {
+      "stage": "checksPassed",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:09.614Z"
+    },
+    {
+      "stage": "screenshotsApproved",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:13.624Z"
+    },
+    {
+      "stage": "pdfExported",
+      "approvedBy": "human",
+      "at": "2026-10-09T03:01:18.069Z"
+    }
+  ],
+  "citationStyle": "preserve",
+  "classifications": [
+    {
+      "title": "Soil Composition Basics",
+      "type": "diagram"
+    },
+    {
+      "title": "Hydration Mechanics",
+      "type": "diagram"
+    },
+    {
+      "title": "Curing Chemistry",
+      "type": "diagram"
+    }
+  ]
+}

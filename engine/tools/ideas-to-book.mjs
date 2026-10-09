@@ -115,6 +115,34 @@ function isApproved(bookDir, stage) {
   return state.stages[stage] === true;
 }
 
+export function firstUnapprovedStage(bookDir) {
+  const state = loadApprovalState(bookDir);
+  const STAGE_APPROVAL_MAP = {
+    parse: APPROVAL_STATE.PARSED,
+    scaffold: APPROVAL_STATE.SCAFFOLDED,
+    inherit: APPROVAL_STATE.INHERITED,
+    plan: APPROVAL_STATE.PLANNED,
+    prep: APPROVAL_STATE.PREPARED,
+    classify: APPROVAL_STATE.CLASSIFIED,
+    render: APPROVAL_STATE.RENDERED,
+    diagrams: APPROVAL_STATE.DIAGRAMS,
+    generate: APPROVAL_STATE.GENERATED,
+    build: APPROVAL_STATE.BUILT,
+    check: APPROVAL_STATE.CHECKED,
+    screenshot: APPROVAL_STATE.SCREENSHOTS_APPROVED,
+    approveScreenshots: APPROVAL_STATE.SCREENSHOTS_APPROVED,
+    export: APPROVAL_STATE.EXPORTED,
+  };
+  const allStages = STAGES.filter(s => s !== 'list');
+  for (const stage of allStages) {
+    const approvalKey = STAGE_APPROVAL_MAP[stage];
+    if (!state.stages || !state.stages[approvalKey]) {
+      return stage;
+    }
+  }
+  return null;
+}
+
 function getBookFiles(bookDir) {
   const files = [];
   function walk(dir, relativeBase) {
@@ -136,63 +164,16 @@ function getBookFiles(bookDir) {
 }
 
 async function generateDiagramSVG(bookDir, title, prompt) {
-  const imagesDir = path.join(bookDir, 'images');
-  if (!fs.existsSync(imagesDir)) {
-    fs.mkdirSync(imagesDir, { recursive: true });
-  }
-  
-  const slug = path.basename(bookDir);
-  const safeName = title.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
-  const svgPath = path.join(imagesDir, `${safeName}.svg`);
-  
-  // Get the section color for this page
+  const { processDiagramStage } = await import('./diagram-generator.mjs');
   const manifestPath = path.join(bookDir, '.work', 'idea-manifest.json');
-  let sectionColor = '#6366F1';
+  let pageInfo = { title, imagePrompt: prompt };
   if (fs.existsSync(manifestPath)) {
     const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-    const page = manifest.pages?.find(p => p.title === title);
-    if (page) {
-      const SECTION_COLORS = {
-        Science: '#e61358',
-        Technology: '#ed7d1f',
-        Engineering: '#a0c82f',
-        Arts: '#32b5d3',
-        Mathematics: '#b44b97',
-        Innovation: '#306a50',
-        Entrepreneurship: '#5441ff',
-      };
-      sectionColor = SECTION_COLORS[page.section] || '#6366F1';
-    }
+    const found = manifest.pages?.find((p) => p.title === title);
+    if (found) pageInfo = found;
   }
-  
-  // Create a basic SVG diagram using the prompt as guidance
-  const diagramHeight = 200;
-  const width = 592;
-  
-  // This is a placeholder - in real implementation, this would call the block skill
-  // For now, create a structured SVG with the prompt info
-  const svgContent = `<?xml version="1.0" encoding="UTF-8"?>
-<svg width="${width}" height="${diagramHeight}" viewBox="0 0 ${width} ${diagramHeight}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${title}">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:${sectionColor};stop-opacity:0.1" />
-      <stop offset="100%" style="stop-color:${sectionColor};stop-opacity:0.05" />
-    </linearGradient>
-  </defs>
-  <rect x="1" y="1" width="${width - 2}" height="${diagramHeight - 2}" rx="8" fill="url(#bgGrad)" stroke="${sectionColor}" stroke-width="2" stroke-dasharray="8 4"/>
-  <text x="${width / 2}" y="${diagramHeight / 2 - 20}" text-anchor="middle" dominant-baseline="central" 
-        style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;fill:${sectionColor}">${title}</text>
-  <text x="${width / 2}" y="${diagramHeight / 2 + 10}" text-anchor="middle" dominant-baseline="central" 
-        style="font-family:'Inter',sans-serif;font-size:12px;fill:#5B6472">Diagram generated from prompt</text>
-  <text x="${width / 2}" y="${diagramHeight / 2 + 30}" text-anchor="middle" dominant-baseline="central" 
-        style="font-family:'Inter',sans-serif;font-size:11px;fill:#9CA3AF">${prompt.substring(0, 80)}${prompt.length > 80 ? '...' : ''}</text>
-  <rect x="${width / 2 - 30}" y="${diagramHeight - 40}" width="60" height="24" rx="4" fill="${sectionColor}" opacity="0.2"/>
-  <text x="${width / 2}" y="${diagramHeight - 26}" text-anchor="middle" dominant-baseline="central" 
-        style="font-family:'Inter',sans-serif;font-size:10px;font-weight:500;fill:${sectionColor}">BLOCK SKILL</text>
-</svg>`;
-  
-  fs.writeFileSync(svgPath, svgContent, 'utf8');
-  return svgPath;
+  const result = await processDiagramStage(bookDir, pageInfo, { prompt });
+  return result.svgPath;
 }
 
 async function rollback(bookDir) {
@@ -1140,9 +1121,10 @@ Options:
   --force                Re-approve stages even if already done
   --resume               Continue from last approved stage
   --interactive          Prompt for approval at each gate (default: true)
+  --no-interactive       Run non-interactively without CLI prompts
   --approve-stage <name> Mark a stage as approved without prompt
   --stage <name>         Run only specific stage(s):
-                         parse, scaffold, inherit, plan, prep, assets, render, diagrams, generate,
+                         parse, scaffold, inherit, plan, prep, classify, render, diagrams, generate,
                          build, check, screenshot, approveScreenshots, export
   --list-templates       Show available template folders
   --prep-page            Enable LLM-driven content preparation (opt-in)`);
@@ -1191,33 +1173,61 @@ Options:
     ideaPath = await selectIdeaFile();
   }
 
-  // If no idea path found, fall back to positional arg
-  if (!ideaPath && args[0] && !args[0].startsWith('-')) {
-    ideaPath = args[0];
+  // If no idea path found via extension or --idea, search for positional argument
+  if (!ideaPath) {
+    ideaPath = args.find((a, idx) => {
+      if (a.startsWith('-')) return false;
+      const prev = args[idx - 1];
+      if (prev && ['--idea', '--template', '--slug', '--stage', '--approve-stage'].includes(prev)) return false;
+      return true;
+    });
   }
 
   if (!ideaPath) {
     fail('No idea file specified. Use --list-ideas, --select, --idea, or pass an idea file path.');
   }
 
-  if (!fs.existsSync(ideaPath)) {
-    fail(`Idea file not found: ${ideaPath}`);
+  const resolvedIdeaPath = path.resolve(PROJECT_ROOT, ideaPath);
+  if (!fs.existsSync(ideaPath) && !fs.existsSync(resolvedIdeaPath)) {
+    fail(`Idea file or book directory not found: ${ideaPath}`);
+  }
+  const targetPath = fs.existsSync(ideaPath) ? ideaPath : resolvedIdeaPath;
+
+  // Determine options early to check TTY requirements
+  const hasInteractive = args.includes('--interactive');
+  const hasNoInteractive = args.includes('--no-interactive');
+  const isInteractive = hasInteractive || !hasNoInteractive;
+
+  if (isInteractive && !process.stdin.isTTY) {
+    fail('--interactive mode needs a terminal (TTY). Run with --no-interactive in automated environments or pipes.');
   }
 
-  // Parse idea file
-  console.log(`\n=== Parsing: ${path.basename(ideaPath)} ===`);
+  // Parse idea file or load existing book directory manifest
   let manifest;
-  if (ideaPath.endsWith('.json')) {
-    manifest = loadJsonManifest(ideaPath);
-    console.log('Loaded JSON manifest directly (skipping markdown parser)');
-  } else {
-    manifest = parseIdeaFile(ideaPath);
-  }
+  let bookDir;
+  let slug;
 
-  // Determine slug
-  const slug = slugOverride || manifest.slug || deriveSlugFromTitle(manifest.title);
-  const slugVal = slug;
-  const bookDir = path.join(PROJECT_ROOT, 'books', slugVal);
+  if (fs.existsSync(targetPath) && fs.statSync(targetPath).isDirectory()) {
+    const workManifestPath = path.join(targetPath, '.work', 'idea-manifest.json');
+    if (fs.existsSync(workManifestPath)) {
+      manifest = JSON.parse(fs.readFileSync(workManifestPath, 'utf8'));
+      bookDir = path.resolve(targetPath);
+      slug = path.basename(bookDir);
+      console.log(`\n=== Loaded manifest for existing book: ${slug} ===`);
+    } else {
+      fail(`Directory ${targetPath} does not contain .work/idea-manifest.json`);
+    }
+  } else {
+    console.log(`\n=== Parsing: ${path.basename(targetPath)} ===`);
+    if (targetPath.endsWith('.json')) {
+      manifest = loadJsonManifest(targetPath);
+      console.log('Loaded JSON manifest directly (skipping markdown parser)');
+    } else {
+      manifest = parseIdeaFile(targetPath);
+    }
+    slug = slugOverride || manifest.slug || deriveSlugFromTitle(manifest.title);
+    bookDir = path.join(PROJECT_ROOT, 'books', slug);
+  }
 
   // Determine template path
   let templatePath = path.join(PROJECT_ROOT, templateOverride || DEFAULT_TEMPLATE);
@@ -1251,12 +1261,10 @@ Options:
     // Remove duplicates while preserving order
     stageOrder = stageOrder.filter((stage, index) => stageOrder.indexOf(stage) === index);
   } else if (options.resume) {
-    // Resume from last approved stage
-    const state = loadApprovalState(bookDir);
-    const approvedStages = Object.keys(state.stages).filter(k => state.stages[k]);
-    const lastApproved = approvedStages.length ? approvedStages[approvedStages.length - 1] : null;
+    // Resume from first unapproved stage
+    const nextStage = firstUnapprovedStage(bookDir);
     const allStages = STAGES.filter(s => s !== 'list');
-    const startIdx = lastApproved ? allStages.indexOf(lastApproved) + 1 : 0;
+    const startIdx = nextStage ? allStages.indexOf(nextStage) : allStages.length;
     stageOrder = allStages.slice(startIdx);
     console.log(`\nResuming from stage: ${stageOrder[0] || 'complete'}`);
   } else {
@@ -1266,12 +1274,12 @@ Options:
   // Check for existing book
   if (fs.existsSync(bookDir)) {
     if (options.force || options.resume) {
-      // With --force, delete and start fresh; with --resume, continue from last stage
-      if (options.force && !options.resume) {
+      // With --force without --stage, delete and start fresh; otherwise continue/re-run stage
+      if (options.force && !options.resume && stageIdx === -1) {
         fs.rmSync(bookDir, { recursive: true, force: true });
         console.log(`\nBook folder exists. Deleted for fresh start (--force).`);
       } else {
-        console.log(`\nBook folder exists. Resuming from last approved stage (--resume).`);
+        console.log(`\nBook folder exists. Processing stage(s): ${stageOrder.join(', ')}`);
       }
     } else if (options.noInteractive || !options.interactive) {
       fail(`Book folder exists: ${bookDir}. Use --force to overwrite or --resume to continue.`);
@@ -1327,7 +1335,7 @@ Options:
   let currentManifest = manifest;
   for (const stage of stageOrder) {
     if (stage) {
-      await handleStage(stage, args, { ...currentManifest, slug: slugVal }, bookDir, options);
+      await handleStage(stage, args, { ...currentManifest, slug }, bookDir, options);
       // Reload manifest after prep stage since it updates the file
       if (stage === 'prep') {
         const manifestPath = path.join(bookDir, '.work', 'idea-manifest.json');

@@ -1,0 +1,496 @@
+{
+  "generatedAt": "2026-10-09T16:01:13.653Z",
+  "books": [
+    {
+      "slug": "size-review",
+      "title": "ICSEB Size Review",
+      "subtitle": "3-page review of diagram/photo sizing from ICSEB content",
+      "series": "STEAM-IE for Eco-Construction",
+      "brand": "clicethiopia.netlify.app",
+      "status": "ready",
+      "pageCount": 32,
+      "lastModified": "2026-10-09T05:11:20.413Z",
+      "parts": [
+        {
+          "name": "Science",
+          "eyebrow": "S",
+          "blocks": [
+            "Soil Composition Basics",
+            "Hydration Mechanics",
+            "Curing Chemistry"
+          ],
+          "why": "",
+          "listLabel": ""
+        }
+      ],
+      "editionLabel": "Review Edition"
+    },
+    {
+      "slug": "interlocking-compressed-stabilized-earth-blocks-icseb",
+      "title": "Interlocking Compressed Stabilized Earth Blocks (ICSEB)",
+      "subtitle": "Micro-factory production for eco-construction",
+      "series": "STEAM-IE for Eco-Construction",
+      "brand": "clicethiopia.netlify.app",
+      "status": "ready",
+      "pageCount": 32,
+      "lastModified": "2026-10-06T20:21:15.134Z",
+      "parts": [
+        {
+          "name": "Science",
+          "eyebrow": "S",
+          "blocks": [
+            "Soil Composition Basics",
+            "Hydration Mechanics",
+            "Curing Chemistry",
+            "Compaction Physics",
+            "Clay Plasticity Index",
+            "Erosion & Water Action",
+            "Thermal Mass Physics"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Technology",
+          "eyebrow": "T",
+          "blocks": [
+            "Manual Press Mechanics",
+            "Motorized Hydraulic Systems",
+            "Interlocking Geometry",
+            "Sieve & Mesh Hardware",
+            "Soil Moisture Sensors",
+            "Mold Liner Maintenance",
+            "Automation & Sensors"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Engineering",
+          "eyebrow": "E",
+          "blocks": [
+            "Soil Screening & Pre-treatment",
+            "Mixer Design & Batching",
+            "Foundation & Wall Detailing",
+            "Lintel & Opening Design",
+            "Corner & T-Junction Interlock",
+            "Grouting & Rebar Anchoring",
+            "Roof Tie-Down Connections"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Arts",
+          "eyebrow": "A",
+          "blocks": [
+            "Facade Aesthetics & Texture",
+            "Ergonomics & Layout",
+            "Surface Sealers & Stains",
+            "Joint Rendering & Pointing",
+            "Acoustic & Interior Comfort",
+            "Architectural Mouldings",
+            "Showroom Display Units"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Mathematics",
+          "eyebrow": "M",
+          "blocks": [
+            "Unit Economics",
+            "Structural Yield & Costing",
+            "Factory Yield & Throughput",
+            "Volumetric Batching Math",
+            "Break-Even Capital Analysis",
+            "Transportation Logistics Math",
+            "Wastage & Rejection Rates"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Innovation",
+          "eyebrow": "I",
+          "blocks": [
+            "Alternative Stabilizers",
+            "Mobile Production Units",
+            "Plastic Waste Reinforcement",
+            "Solar-Thermal Curing Kilns",
+            "Geothermal & Earth Cooling",
+            "Biomass Ash Cement Blends",
+            "Compressed Earth Arch Tooling"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Entrepreneurship",
+          "eyebrow": "IE",
+          "blocks": [
+            "Quality Assurance & Standards",
+            "Go-To-Market",
+            "Contractor Training Programs",
+            "Turnkey Wall Contracting",
+            "Permitting & Code Approvals",
+            "Working Capital & Cash Flow"
+          ],
+          "why": "",
+          "listLabel": ""
+        }
+      ],
+      "editionLabel": "First Edition"
+    },
+    {
+      "slug": "starter",
+      "title": "My First Book",
+      "subtitle": "One idea per page, and every page is the same shape.",
+      "series": "My first book",
+      "brand": "yoursite.com",
+      "status": "ready",
+      "pageCount": 2,
+      "lastModified": "2026-09-05T08:37:37.974Z",
+      "parts": [
+        {
+          "name": "Your first part",
+          "eyebrow": "Where to start",
+          "why": "One line telling the reader why these pages belong together.",
+          "blocks": [
+            "SSRF"
+          ]
+        }
+      ],
+      "editionLabel": "Edition 1.0"
+    },
+    {
+      "slug": "solar-dryer-fruit-processing",
+      "title": "Solar Dryer for Fruit Processing",
+      "subtitle": "A practical guide to designing, building, and operating a small solar fruit dryer business.",
+      "series": "STEAM-IE",
+      "brand": "clicethiopia.netlify.app",
+      "status": "ready",
+      "pageCount": 32,
+      "lastModified": "2026-10-06T09:56:00.721Z",
+      "parts": [
+        {
+          "name": "Science",
+          "eyebrow": "S",
+          "blocks": [
+            "Moisture Equilibrium &amp; Psychrometric Drying Curves",
+            "Solar Irradiance, Collector Absorption &amp; Thermal Energy Transfer",
+            "Natural Convection vs. Forced Air Chimney Dynamics",
+            "UV Spectrum Degradation &amp; Color/Nutrient Preservation",
+            "Water Activity ($a_w$) vs. Mold/Bacterial Spoilage Thresholds",
+            "Sugar Concentration (Brix) Dynamics &amp; Case Hardening Prevention",
+            "East African Microclimates: Ambient RH vs. Highland Thermal Lift"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Technology",
+          "eyebrow": "T",
+          "blocks": [
+            "Low-Power 12V DC Axial Fans &amp; Airflow Rate Calibration",
+            "Microcontroller Temperature &amp; Relative Humidity Monitoring",
+            "Thermal Energy Storage: Phase Change Materials &amp; Rock Beds",
+            "Off-Grid Solar PV, Charge Controller &amp; Battery Sizing",
+            "Digital Hygrometers &amp; Grain/Fruit Moisture Probes",
+            "IoT Airflow Sensors &amp; Differential Pressure Gauge Setup"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Engineering",
+          "eyebrow": "E",
+          "blocks": [
+            "Solar Thermal Collector Design: Latitude-Matched Glazing Angle",
+            "Direct Solar Cabinet Dryer Architecture",
+            "Indirect Solar Dryer Architecture",
+            "Tunnel-Style Solar Dryer Architecture",
+            "Cabinet Construction: Food-Grade Insulation, Seals &amp; Framing",
+            "Drying Tray Architecture: Stainless Steel Mesh &amp; Ergonomic Air Gaps",
+            "Chimney Sizing &amp; Exhaust Damper Airflow Control",
+            "Modular Solar Dryer Assembly &amp; Scalable Footprints"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Arts",
+          "eyebrow": "A",
+          "blocks": [
+            "Ergonomic Working Height, Loading Access &amp; Visual Workflow",
+            "Fruit Slicing Aesthetics: Thickness Uniformity, Color Pop &amp; Display Trays",
+            "Eco-Branding &amp; Sustainable Craft Packaging Design",
+            "Clear Labeling: Nutrition, Shelf-Life &amp; Traceability Storytelling",
+            "Visual Inspection Standards: Sorting Graded Dried Mango &amp; Pineapple"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Mathematics",
+          "eyebrow": "M",
+          "blocks": [
+            "Calculating Dryer Sizing: Fruit Wet Weight vs. Target Dry Yield",
+            "Thermal Collector Efficiency &amp; Energy Balance Equations",
+            "Unit Economics: Raw Fruit Input vs. Dried Fruit Retail Value",
+            "Break-Even Point &amp; Capital Payback Schedule ($1,000–$2,500 Tier)",
+            "Batch Processing Timelines &amp; Seasonal Drying Calendars",
+            "Depreciation, Maintenance Costs &amp; Utility Backstop Budgeting"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Innovation",
+          "eyebrow": "I",
+          "blocks": [
+            "Local Material Swaps: Sourcing Sheet Metal, Polycarbonate &amp; Fans in Merkato",
+            "Biomass / Charcoal Auxiliary Thermal Backup for Night Drying",
+            "Upcycled Barrel Collector Hacks for Ultra-Low Cost Auxiliary Heating",
+            "Desiccant Air Pre-Conditioning Dehumidification Chambers",
+            "Hybrid LPG/Biomass Burner Integration for Continuous Industrial Output"
+          ],
+          "why": "",
+          "listLabel": ""
+        },
+        {
+          "name": "Entrepreneurship",
+          "eyebrow": "IE",
+          "blocks": [
+            "Identifying B2B &amp; Retail Buyers: Supermarkets, Exporters &amp; Health Shops",
+            "Quality Assurance: Food Safety Standards, Hygiene &amp; Bureau Compliance",
+            "Cost Control, Cash Flow Management &amp; Seasonal Purchasing Cycles",
+            "Equipment Sales vs. Fruit Processing Dual-Revenue Strategy",
+            "Cooperative Outgrower Model &amp; Contract Drying Services"
+          ],
+          "why": "",
+          "listLabel": ""
+        }
+      ],
+      "editionLabel": "Smart Agriculture"
+    },
+    {
+      "slug": "fadlab-book",
+      "title": "STEAM-IE",
+      "subtitle": "Applied STEAM for Innovation & Entrepreneurship.",
+      "series": "Fad Lab",
+      "brand": "clicethiopia.netlify.app",
+      "status": "ready",
+      "pageCount": 2,
+      "lastModified": "2026-09-07T08:31:57.040Z",
+      "parts": [
+        {
+          "name": "Your first part",
+          "eyebrow": "Where to start",
+          "why": "One line telling the reader why these pages belong together.",
+          "blocks": [
+            "SSRF",
+            "Vertical Hydroponics Farm"
+          ]
+        }
+      ],
+      "editionLabel": "Edition 1.0"
+    },
+    {
+      "slug": "STEAM-IE-FOR-HYDROPONICS",
+      "title": "STEAM-IE FOR HYDROPONICS",
+      "subtitle": "A practical guide for building and running a small hydroponic greenhouse in Addis Ababa.",
+      "series": "STEAM-IE",
+      "brand": "clicethiopia.netlify.app",
+      "status": "ready",
+      "pageCount": 32,
+      "lastModified": "2026-09-15T11:19:40.720Z",
+      "parts": [
+        {
+          "name": "Science",
+          "eyebrow": "S",
+          "why": "Before you grow anything in water, understand how plants actually drink and eat.",
+          "blocks": [
+            "No Need for Soil",
+            "How Plants Drink",
+            "What Light Feeds",
+            "Water Chemistry",
+            "The Nutrient Solution",
+            "Temperature and Growth"
+          ]
+        },
+        {
+          "name": "Technology",
+          "eyebrow": "T",
+          "why": "The tools that replace what nature does for free, and that you can buy in Merkato.",
+          "blocks": [
+            "LED Grow Lights",
+            "The Water Pump",
+            "pH and EC Meters",
+            "Timers and Controllers",
+            "Climate Sensors"
+          ]
+        },
+        {
+          "name": "Engineering",
+          "eyebrow": "E",
+          "why": "The frame, the racks, and the pipes that hold the whole system up.",
+          "blocks": [
+            "The Greenhouse Frame",
+            "Vertical Rack Design",
+            "Channel Routing",
+            "Drainage and Overflow",
+            "Ventilation Basics"
+          ]
+        },
+        {
+          "name": "Arts",
+          "eyebrow": "A",
+          "why": "A greenhouse that is well laid out is a greenhouse people want to work in.",
+          "blocks": [
+            "Layout and Flow",
+            "Light as Design",
+            "Colour in the Greenhouse",
+            "Branding the Harvest"
+          ]
+        },
+        {
+          "name": "Mathematics",
+          "eyebrow": "M",
+          "why": "The numbers tell you, before you spend the money, whether this will pay back.",
+          "blocks": [
+            "Plants per Square Meter",
+            "Cost per Plant",
+            "Break-Even Analysis",
+            "Harvest Calendar"
+          ]
+        },
+        {
+          "name": "Innovation",
+          "eyebrow": "I",
+          "why": "What you swap, rebuild, or reinvent to make this work with what you can find in Addis.",
+          "blocks": [
+            "Local Materials",
+            "Aquaponics Hybrid",
+            "Solar Power",
+            "Floating Rafts"
+          ]
+        },
+        {
+          "name": "Entrepreneurship",
+          "eyebrow": "IE",
+          "why": "The science is wasted if no one buys what you grow. This is where the harvest becomes a business.",
+          "blocks": [
+            "Finding Buyers",
+            "Pricing Your Greens",
+            "Cash Flow Management",
+            "Raising Startup Funds",
+            "Record Keeping"
+          ]
+        }
+      ],
+      "editionLabel": "Smart Agriculture"
+    },
+    {
+      "slug": "STEAM-IE-STARTER",
+      "title": "STEAM-IE Starter",
+      "subtitle": "One idea per page, ordered across the seven letters of the curriculum.",
+      "series": "STEAM-IE",
+      "brand": "yoursite.com",
+      "status": "ready",
+      "pageCount": 7,
+      "lastModified": "2026-09-07T14:17:54.648Z",
+      "parts": [
+        {
+          "name": "Science",
+          "eyebrow": "S",
+          "why": "Before you build anything, understand how the underlying system works.",
+          "blocks": [
+            "SSRF"
+          ]
+        },
+        {
+          "name": "Technology",
+          "eyebrow": "T",
+          "why": "The tools that take the science and make it usable in the field.",
+          "blocks": []
+        },
+        {
+          "name": "Engineering",
+          "eyebrow": "E",
+          "why": "The construction that holds the system together.",
+          "blocks": []
+        },
+        {
+          "name": "Arts",
+          "eyebrow": "A",
+          "why": "The design choices that make the system worth using.",
+          "blocks": []
+        },
+        {
+          "name": "Mathematics",
+          "eyebrow": "M",
+          "why": "The numbers that tell you whether the system is working.",
+          "blocks": []
+        },
+        {
+          "name": "Innovation",
+          "eyebrow": "I",
+          "why": "The adaptations that make the system fit your own context.",
+          "blocks": []
+        },
+        {
+          "name": "Entrepreneurship",
+          "eyebrow": "IE",
+          "why": "The business that turns the system into a livelihood.",
+          "blocks": []
+        }
+      ],
+      "editionLabel": "Edition 1.0"
+    },
+    {
+      "slug": "showcase",
+      "title": "The Showcase",
+      "subtitle": "Ten pages, ten subjects, one engine.",
+      "series": "The showcase",
+      "brand": "yoursite.com",
+      "status": "ready",
+      "pageCount": 10,
+      "lastModified": "2026-09-05T08:37:37.972Z",
+      "parts": [
+        {
+          "name": "Things you make",
+          "eyebrow": "Hands, heat, soil",
+          "why": "Four pages where the thing being taught is physical, so the band carries a photograph.",
+          "blocks": [
+            "Resting meat",
+            "The bloom",
+            "Companion planting",
+            "Packing cubes"
+          ]
+        },
+        {
+          "name": "Things you practise",
+          "eyebrow": "Repeat, adjust, repeat",
+          "why": "Skills that only move when you change what you ask of yourself.",
+          "blocks": [
+            "Golden hour",
+            "Progressive overload",
+            "Spaced repetition",
+            "The fork"
+          ]
+        },
+        {
+          "name": "Things you protect",
+          "eyebrow": "Before it breaks",
+          "why": "Two pages about the buffer you build now so a bad day stays a bad day.",
+          "blocks": [
+            "The emergency fund",
+            "Circuit breaker"
+          ]
+        }
+      ],
+      "editionLabel": "Edition 1.0"
+    }
+  ]
+}
