@@ -386,6 +386,11 @@ class DashboardApp {
     // In single-page mode, inject CSS to hide all pages except current
     let html = this.currentBook.fullBookHtml;
 
+    // ADD BASE TAG HERE - to make sure photos appear in iframe of webui
+    const baseHref = `../../books/${this.currentBook.slug}/`;
+    html = html.replace('<head>', `<head><base href="${baseHref}">`);
+
+
     if (!this.viewFullBook) {
       // Single page mode: inject CSS to show only current page
       const hideOtherPagesCss = `
