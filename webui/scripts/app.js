@@ -854,6 +854,109 @@ class DashboardApp {
         this.closeLLMConfigModal();
       }
     });
+
+    // Populate CLI agents from bridge config
+    this.populateCLIAgentList();
+
+    // Populate API provider models
+    this.updateAPIModels();
+  }
+
+  // Populate CLI Agents list from bridge-config.json
+  async populateCLIAgentList() {
+    try {
+      // Bridge config is at engine/tools/bridge-config.json, accessible via static server
+      const response = await fetch("/engine/tools/bridge-config.json");
+      if (!response.ok) return;
+      const config = await response.json();
+      
+      const listEl = document.getElementById("cli-provider-list");
+      if (!listEl) return;
+
+      const agents = Object.entries(config.clients || {}).map(([id, config]) => ({
+        id,
+        name: id.charAt(0).toUpperCase() + id.slice(1),
+        command: config.command,
+        args: config.args?.join(" ") || "",
+        status: "available" // Could check if binary exists
+      }));
+
+      if (agents.length === 0) {
+        listEl.innerHTML = '<p class="llm-empty-state">No CLI agents configured</p>';
+        return;
+      }
+
+      listEl.innerHTML = agents.map(agent => `
+        <div class="llm-provider-item" data-id="${agent.id}">
+          <div class="llm-provider-info">
+            <span class="llm-provider-name">${agent.name}</span>
+            <span class="llm-provider-meta">${agent.command} ${agent.args}</span>
+          </div>
+          <span class="llm-provider-status ${agent.status}">${agent.status}</span>
+        </div>
+      `).join("");
+    } catch (e) {
+      console.error("Failed to load CLI agents:", e);
+    }
+  }
+
+  // Update API model dropdown based on selected provider
+  updateAPIModels() {
+    const providerSelect = document.getElementById("api-provider-select");
+    const modelSelect = document.getElementById("api-model-select");
+    const baseUrlGroup = document.getElementById("api-base-url-group");
+    
+    if (!providerSelect || !modelSelect) return;
+
+    const models = {
+      gemini: [
+        { value: "gemini-1.5-pro", label: "Gemini 1.5 Pro" },
+        { value: "gemini-1.5-flash", label: "Gemini 1.5 Flash" },
+        { value: "gemini-1.0-pro", label: "Gemini 1.0 Pro" }
+      ],
+      openai: [
+        { value: "gpt-4o", label: "GPT-4o" },
+        { value: "gpt-4o-mini", label: "GPT-4o Mini" },
+        { value: "gpt-4-turbo", label: "GPT-4 Turbo" },
+        { value: "gpt-3.5-turbo", label: "GPT-3.5 Turbo" }
+      ],
+      anthropic: [
+        { value: "claude-3-5-sonnet-20241022", label: "Claude 3.5 Sonnet" },
+        { value: "claude-3-5-haiku-20241022", label: "Claude 3.5 Haiku" },
+        { value: "claude-3-opus-20240229", label: "Claude 3 Opus" }
+      ],
+      openrouter: [
+        { value: "openrouter/auto", label: "Auto (Best Model)" },
+        { value: "anthropic/claude-3.5-sonnet", label: "Claude 3.5 Sonnet" },
+        { value: "openai/gpt-4o", label: "GPT-4o" },
+        { value: "google/gemini-pro-1.5", label: "Gemini 1.5 Pro" },
+        { value: "meta-llama/llama-3.1-405b", label: "Llama 3.1 405B" },
+        { value: "mistralai/mistral-large", label: "Mistral Large" }
+      ],
+      ollama: [
+        { value: "llama3.1:8b", label: "Llama 3.1 8B" },
+        { value: "llama3.1:70b", label: "Llama 3.1 70B" },
+        { value: "mistral:7b", label: "Mistral 7B" },
+        { value: "codellama:13b", label: "CodeLlama 13B" },
+        { value: "phi3:14b", label: "Phi-3 14B" },
+        { value: "gemma2:9b", label: "Gemma 2 9B" }
+      ],
+      lmstudio: [
+        { value: "lmstudio-auto", label: "Auto (Loaded Model)" }
+      ],
+      custom: []
+    };
+
+    const provider = providerSelect.value;
+    const modelList = models[provider] || [];
+
+    // Show/hide base URL for custom and ollama/lmstudio
+    if (baseUrlGroup) {
+      baseUrlGroup.style.display = ["custom", "ollama", "lmstudio"].includes(provider) ? "block" : "none";
+    }
+
+    modelSelect.innerHTML = '<option value="">Select model...</option>' +
+      modelList.map(m => `<option value="${m.value}">${m.label}</option>`).join("");
   }
 
   openLLMConfigModal() {
