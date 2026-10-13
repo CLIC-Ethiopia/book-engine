@@ -28,7 +28,8 @@ class DashboardApp {
     }
 
     this.initChatBridge();
-    this.initFloatingNav();  // ADD THIS LINE
+    this.initFloatingNav();
+    this.initLLMConfigModal();
   }
 
 
@@ -367,6 +368,41 @@ class DashboardApp {
     this.populateEditor(page);
     this.updateHeroPageInfo();
     this.updateCheckStatus("—");
+    
+    // Scroll iframe to top after content loads
+    this.scrollIframeToTop();
+  }
+
+  // Scroll iframe to top after content loads
+  scrollIframeToTop() {
+    const iframe = document.getElementById("page-iframe");
+    if (!iframe) return;
+    
+    // Use onload to ensure content is loaded before scrolling
+    const scrollToTop = () => {
+      if (iframe.contentWindow) {
+        iframe.contentWindow.scrollTo(0, 0);
+      }
+      // Also scroll main window to top
+      window.scrollTo(0, 0);
+      
+      // Remove the one-time listener
+      iframe.removeEventListener("load", scrollToTop);
+    };
+    
+    // If iframe is already loaded, scroll immediately
+    if (iframe.srcdoc) {
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        if (iframe.contentWindow) {
+          iframe.contentWindow.scrollTo(0, 0);
+        }
+        window.scrollTo(0, 0);
+      }, 0);
+    }
+    
+    // Also listen for future loads
+    iframe.addEventListener("load", scrollToTop, { once: true });
   }
 
   getPageDataByTitle(title) {
@@ -562,12 +598,41 @@ class DashboardApp {
       buildBtn.style.display = "none";
       viewFullBtn.style.display = "inline-flex";
       viewFullBtn.textContent = this.viewFullBook ? "Single Page" : "View Full Book";
+      this.styleViewFullButton();
     } else {
       buildBtn.style.display = "inline-flex";
       buildBtn.disabled = false;
       buildBtn.textContent = "Build Book";
       viewFullBtn.style.display = "none";
     }
+  }
+
+  // Style the View Full Book / Single Page button with bold text and good colors
+  styleViewFullButton() {
+    const viewFullBtn = document.getElementById("view-full-book");
+    if (!viewFullBtn) return;
+
+    if (this.viewFullBook) {
+      // Currently in Full Book view - show "Single Page"
+      viewFullBtn.textContent = "Single Page";
+      viewFullBtn.style.background = "var(--color-warning)";
+      viewFullBtn.style.color = "var(--text-on-warning)";
+      viewFullBtn.style.fontWeight = "700";
+      viewFullBtn.style.border = "none";
+      viewFullBtn.style.boxShadow = "var(--shadow-md)";
+    } else {
+      // Currently in Single Page view - show "View Full Book"
+      viewFullBtn.textContent = "View Full Book";
+      viewFullBtn.style.background = "var(--color-primary)";
+      viewFullBtn.style.color = "var(--text-on-primary)";
+      viewFullBtn.style.fontWeight = "700";
+      viewFullBtn.style.border = "none";
+      viewFullBtn.style.boxShadow = "var(--shadow-md)";
+    }
+    // Common styles for both states
+    viewFullBtn.style.fontWeight = "700";
+    viewFullBtn.style.transition = "all var(--transition-fast)";
+    viewFullBtn.style.border = "none";
   }
 
   toggleFullBookView() {
@@ -747,6 +812,81 @@ class DashboardApp {
       welcome.innerHTML = "<strong>AI:</strong> I'm your book-engine assistant to help you compose an entire book. Ask me anything about your book!";
       modalHistoryEl.appendChild(welcome);
     }
+  }
+
+  initLLMConfigModal() {
+    this.llmConfigModal = document.getElementById("llm-config-modal");
+    this.llmConfigModalCloseBtn = document.getElementById("llm-config-modal-close");
+    this.llmConfigModalBackdrop = document.getElementById("llm-config-modal-backdrop");
+    this.llmConfigModalCancelBtn = document.getElementById("llm-config-cancel-btn");
+    this.llmConfigModalSaveBtn = document.getElementById("llm-config-save-btn");
+    this.llmConfigTabs = document.querySelectorAll(".llm-config-tab");
+    this.llmConfigTabPanels = document.querySelectorAll(".llm-config-tab-panel");
+
+    // LLM config button in menu bar
+    const llmConfigBtn = document.getElementById("llm-config-btn");
+    if (llmConfigBtn) {
+      llmConfigBtn.addEventListener("click", () => this.openLLMConfigModal());
+    }
+
+    // Modal close events
+    if (this.llmConfigModalCloseBtn) {
+      this.llmConfigModalCloseBtn.addEventListener("click", () => this.closeLLMConfigModal());
+    }
+    if (this.llmConfigModalBackdrop) {
+      this.llmConfigModalBackdrop.addEventListener("click", () => this.closeLLMConfigModal());
+    }
+    if (this.llmConfigModalCancelBtn) {
+      this.llmConfigModalCancelBtn.addEventListener("click", () => this.closeLLMConfigModal());
+    }
+    if (this.llmConfigModalSaveBtn) {
+      this.llmConfigModalSaveBtn.addEventListener("click", () => this.saveLLMConfig());
+    }
+
+    // Tab switching
+    this.llmConfigTabs.forEach(tab => {
+      tab.addEventListener("click", () => this.switchLLMConfigTab(tab.dataset.tab));
+    });
+
+    // ESC key to close modal
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && this.llmConfigModal?.classList.contains("visible")) {
+        this.closeLLMConfigModal();
+      }
+    });
+  }
+
+  openLLMConfigModal() {
+    if (this.llmConfigModal) {
+      this.llmConfigModal.classList.add("visible", "opening");
+      setTimeout(() => this.llmConfigModal.classList.remove("opening"), 300);
+    }
+  }
+
+  closeLLMConfigModal() {
+    if (this.llmConfigModal) {
+      this.llmConfigModal.classList.add("closing");
+      this.llmConfigModal.classList.remove("visible");
+      setTimeout(() => {
+        this.llmConfigModal.classList.remove("closing");
+      }, 200);
+    }
+  }
+
+  switchLLMConfigTab(tabName) {
+    this.llmConfigTabs.forEach(tab => {
+      tab.classList.toggle("active", tab.dataset.tab === tabName);
+      tab.setAttribute("aria-selected", tab.dataset.tab === tabName);
+    });
+    this.llmConfigTabPanels.forEach(panel => {
+      panel.classList.toggle("active", panel.id === `tab-${tabName}`);
+    });
+  }
+
+  saveLLMConfig() {
+    // TODO: Implement config saving
+    console.log("Save LLM config");
+    this.closeLLMConfigModal();
   }
 
   openChatModal() {
@@ -985,14 +1125,38 @@ class DashboardApp {
 
   goToPrevPage() {
     if (this.currentPageIndex > 0) {
+      // Switch to Single Page view when navigating
+      this.setSinglePageView();
       this.selectPage(this.currentPageIndex - 1);
+      this.scrollPageToTop();
     }
   }
 
   goToNextPage() {
     if (this.currentBook && this.currentPageIndex < this.currentBook.pages.length - 1) {
+      // Switch to Single Page view when navigating
+      this.setSinglePageView();
       this.selectPage(this.currentPageIndex + 1);
+      this.scrollPageToTop();
     }
+  }
+
+  // Switch to Single Page view (for page navigation)
+  setSinglePageView() {
+    if (this.viewFullBook) {
+      this.viewFullBook = false;
+      this.updateBuildButtonVisibility();
+    }
+  }
+
+  // Scroll iframe/page to top so user sees page title
+  scrollPageToTop() {
+    const iframe = document.getElementById('page-iframe');
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.scrollTo(0, 0);
+    }
+    // Also scroll the main page to top
+    window.scrollTo(0, 0);
   }
 
   updateFloatingPageNumber() {
@@ -1111,7 +1275,7 @@ class DashboardApp {
     this.showNewBookSuccess = this.showNewBookSuccess.bind(this);
 
     // New book button
-    const newBookBtn = document.getElementById("new-book-btn");
+    const newBookBtn = document.getElementById("new-book-btn-sidebar");
     if (newBookBtn) {
       newBookBtn.addEventListener("click", this.openNewBookModal);
     }

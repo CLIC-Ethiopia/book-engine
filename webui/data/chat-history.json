@@ -317,5 +317,27 @@
       "totalPages": 48
     },
     "timestamp": "2026-10-13T10:22:13.757Z"
+  },
+  {
+    "role": "user",
+    "content": "Audit this page against the book's overall idea and suggest 3-5 specific improvements",
+    "context": {
+      "book": "ICSEB Size Review",
+      "page": "Hydration Mechanics",
+      "pageIndex": 7,
+      "totalPages": 11
+    },
+    "timestamp": "2026-10-13T11:03:09.066Z"
+  },
+  {
+    "role": "user",
+    "content": "Audit this page against the book's overall idea and suggest 3-5 specific improvements",
+    "context": {
+      "book": "Solar Dryer for Fruit Processing",
+      "page": "Moisture Equilibrium & Psychrometric Drying Curves",
+      "pageIndex": 7,
+      "totalPages": 57
+    },
+    "timestamp": "2026-10-13T11:38:26.115Z"
   }
 ]
