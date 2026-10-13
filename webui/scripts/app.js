@@ -27,8 +27,11 @@ class DashboardApp {
       this.showEmptyState();
     }
 
-    this.initChat();
+    this.initChatBridge();
+    this.initFloatingNav();  // ADD THIS LINE
   }
+
+
 
   // ============================================================
   // Book Index Loading
@@ -471,6 +474,22 @@ class DashboardApp {
     iframe.srcdoc = iframeDoc;
   }
 
+
+  scrollToPageInIframe(pageIndex) {
+    const iframe = document.getElementById('page-iframe');
+    if (!iframe?.contentWindow) return;
+    
+    try {
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      const pageEl = doc.querySelectorAll('section.sheet')[pageIndex];
+      if (pageEl) {
+        pageEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } catch (e) {
+      console.warn('Could not scroll to page:', e);
+    }
+  }
+
   // Mock "Run Check" — returns fixture result
   runCheck() {
     this.updateCheckStatus("0 mm overflow — page fits (mock)");
@@ -571,6 +590,9 @@ class DashboardApp {
     if (pageTitleEl) pageTitleEl.textContent = page?.title || "";
     if (bookTitleEl) bookTitleEl.textContent = this.currentBook?.title || "";
     if (seriesEl) seriesEl.textContent = this.currentBook?.series || "";
+
+    this.updateFloatingPageNumber();  // ADD THIS LINE
+    //this.updateFloatingPageNumber();  // Updates floating nav
   }
 
   // ============================================================
@@ -629,61 +651,363 @@ class DashboardApp {
   }
 
   // ============================================================
-  // Mock AI Chat
+  // AI Chat - File Bridge Client
   // ============================================================
 
-  initChat() {
+  initChatBridge() {
+    this.chatInput = document.getElementById("chat-input");
+    this.sendBtn = document.getElementById("send-chat");
+    this.historyEl = document.getElementById("chat-history");
+
+    // Modal elements
+    this.modal = document.getElementById("chat-modal");
+    this.modalInput = document.getElementById("chat-modal-input");
+    this.modalSendBtn = document.getElementById("chat-modal-send");
+    this.modalHistoryEl = document.getElementById("chat-modal-history");
+    this.modalCloseBtn = document.getElementById("chat-modal-close");
+    this.modalBackdrop = document.getElementById("chat-modal-backdrop");
+    this.maximizeBtn = document.getElementById("maximize-chat");
+
+    if (this.sendBtn) {
+      this.sendBtn.addEventListener("click", () => this.sendChatMessage());
+    }
+    if (this.chatInput) {
+      this.chatInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          this.sendChatMessage();
+        }
+      });
+    }
+
+    // Modal event listeners
+    if (this.maximizeBtn) {
+      this.maximizeBtn.addEventListener("click", () => this.openChatModal());
+    }
+    if (this.modalCloseBtn) {
+      this.modalCloseBtn.addEventListener("click", () => this.closeChatModal());
+    }
+    if (this.modalBackdrop) {
+      this.modalBackdrop.addEventListener("click", () => this.closeChatModal());
+    }
+    if (this.modalSendBtn) {
+      this.modalSendBtn.addEventListener("click", () => this.sendChatMessageFromModal());
+    }
+    if (this.modalInput) {
+      this.modalInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          this.sendChatMessageFromModal();
+        }
+      });
+    }
+
+    // Quick actions - inline (scoped so modal buttons don't double-bind)
+    document.querySelectorAll("#quick-actions .quick-action").forEach(btn => {
+      btn.addEventListener("click", () => {
+        this.chatInput.value = btn.dataset.prompt;
+        this.sendChatMessage();
+      });
+    });
+
+    // Quick actions - modal
+    document.querySelectorAll("#chat-modal-quick-actions .quick-action").forEach(btn => {
+      btn.addEventListener("click", () => {
+        this.modalInput.value = btn.dataset.prompt;
+        this.sendChatMessageFromModal();
+      });
+    });
+
+    // ESC key to close modal
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && this.modal?.style.display === "flex") {
+        this.closeChatModal();
+      }
+    });
+
+    // Initialize chat history
+    this.initChatHistory();
+  }
+
+  initChatHistory() {
     const historyEl = document.getElementById("chat-history");
     if (historyEl) {
       historyEl.innerHTML = "";
       const welcome = document.createElement("div");
       welcome.className = "ai-msg";
-      welcome.innerHTML = "<strong>AI:</strong> I'm connected to the mock responder. The real agent will use the file-bridge pattern (chat-inbox.json → chat-outbox.json). Try a quick-action button below!";
+      welcome.innerHTML = "<strong>AI:</strong> I'm your book-engine assistant to help you compose an entire book. Ask me anything about your book!";
       historyEl.appendChild(welcome);
+    }
+    // Also initialize modal history
+    const modalHistoryEl = document.getElementById("chat-modal-history");
+    if (modalHistoryEl) {
+      modalHistoryEl.innerHTML = "";
+      const welcome = document.createElement("div");
+      welcome.className = "ai-msg";
+      welcome.innerHTML = "<strong>AI:</strong> I'm your book-engine assistant to help you compose an entire book. Ask me anything about your book!";
+      modalHistoryEl.appendChild(welcome);
     }
   }
 
-  async sendMessage() {
-    const input = document.getElementById("chat-input");
-    const historyEl = document.getElementById("chat-history");
-    if (!input || !historyEl) return;
-
-    const text = input.value.trim();
-    if (!text) return;
-
-    // Add user message
-    const userMsg = document.createElement("div");
-    userMsg.className = "user-msg";
-    userMsg.innerHTML = `<strong>You:</strong> ${text}`;
-    historyEl.appendChild(userMsg);
-    input.value = "";
-
-    // Show typing indicator
-    const typing = document.createElement("div");
-    typing.className = "ai-msg";
-    typing.innerHTML = "<strong>AI:</strong> <em>thinking...</em>";
-    historyEl.appendChild(typing);
-    historyEl.scrollTop = historyEl.scrollHeight;
-
-    // Wait then give mock reply
-    const reply = this.getMockReply(text);
-    setTimeout(() => {
-      historyEl.removeChild(typing);
-      const aiMsg = document.createElement("div");
-      aiMsg.className = "ai-msg";
-      aiMsg.innerHTML = `<strong>AI:</strong> ${reply}`;
-      historyEl.appendChild(aiMsg);
-      historyEl.scrollTop = historyEl.scrollHeight;
-    }, 500);
+  openChatModal() {
+    if (this.modal) {
+      this.modal.style.display = "flex";
+      this.modal.classList.add("opening");
+      setTimeout(() => this.modal.classList.remove("opening"), 300);
+      // Focus the modal input
+      if (this.modalInput) this.modalInput.focus();
+      // Sync history to modal
+      this.syncHistoryToModal();
+    }
   }
 
-  getMockReply(text) {
-    const lower = text.toLowerCase();
-    if (lower.includes("overflow") || lower.includes("check")) return "The current page fits within the 176 x 250 mm B5 canvas (0 mm overflow). If you add more content, watch the action box — that's the first element to overflow.";
-    if (lower.includes("diagram")) return "For a 'book' topic, try a 'Protection' diagram: a hit, the buffer, then the outcome. Keep colors explicit: red for the threat, teal for the good outcome.";
-    if (lower.includes("rewrite") || lower.includes("simpler")) return "I'd rephrase that in plainer words, starting with a 'Let's say…' opening and ending with a one-line closer.";
-    if (lower.includes("image")) return "Prompt: A flat-lay photograph of an open book on a wooden desk, soft morning light from the left, neutral linen background. Forbidden: no text in the image, no logos. Same book style as before.";
-    return "I'm a mock responder. Replace me with the file-bridge agent connection when you implement Phase 4. Try one of the quick-action buttons!";
+  closeChatModal() {
+    if (this.modal) {
+      this.modal.classList.add("closing");
+      setTimeout(() => {
+        this.modal.style.display = "none";
+        this.modal.classList.remove("closing");
+      }, 200);
+    }
+  }
+
+  syncHistoryToModal() {
+    if (!this.modalHistoryEl || !this.historyEl) return;
+    // Clone messages from inline to modal
+    this.modalHistoryEl.innerHTML = "";
+    const messages = this.historyEl.querySelectorAll(".user-msg, .ai-msg");
+    messages.forEach(msg => {
+      const clone = msg.cloneNode(true);
+      this.modalHistoryEl.appendChild(clone);
+    });
+    this.modalHistoryEl.scrollTop = this.modalHistoryEl.scrollHeight;
+  }
+
+  syncHistoryFromModal() {
+    if (!this.modalHistoryEl || !this.historyEl) return;
+    // Clone messages from modal to inline
+    this.historyEl.innerHTML = "";
+    const messages = this.modalHistoryEl.querySelectorAll(".user-msg, .ai-msg");
+    messages.forEach(msg => {
+      const clone = msg.cloneNode(true);
+      this.historyEl.appendChild(clone);
+    });
+    this.historyEl.scrollTop = this.historyEl.scrollHeight;
+  }
+
+  // Highlight code blocks in a message element
+  highlightCodeBlocks(element) {
+    if (typeof hljs !== "undefined") {
+      element.querySelectorAll("pre code").forEach(block => {
+        hljs.highlightElement(block);
+      });
+    }
+  }
+
+  addMessage(role, content) {
+    const historyEl = document.getElementById("chat-history");
+    if (!historyEl) return;
+
+    const msg = document.createElement("div");
+    msg.className = `${role}-msg`;
+    
+    // Parse markdown for AI messages only
+    const displayContent = role === "ai" ? this.parseMarkdown(content) : content;
+    msg.innerHTML = `<strong>${role === "user" ? "You" : "AI"}:</strong> ${displayContent}`;
+    historyEl.appendChild(msg);
+    historyEl.scrollTop = historyEl.scrollHeight;
+
+    // Highlight code blocks in main chat
+    this.highlightCodeBlocks(msg);
+
+    // Also add to modal if open
+    if (this.modal?.style.display === "flex" && this.modalHistoryEl) {
+      const modalMsg = msg.cloneNode(true);
+      this.modalHistoryEl.appendChild(modalMsg);
+      this.modalHistoryEl.scrollTop = this.modalHistoryEl.scrollHeight;
+      // Highlight code blocks in modal
+      this.highlightCodeBlocks(modalMsg);
+    }
+    return Date.now();
+  }
+
+  removeLastThinkingMessage() {
+    // Remove from main chat
+    if (this.historyEl) {
+      const messages = this.historyEl.querySelectorAll(".ai-msg");
+      if (messages.length > 0) {
+        const last = messages[messages.length - 1];
+        if (last.innerHTML.includes("thinking")) {
+          last.remove();
+        }
+      }
+    }
+    // Remove from modal
+    if (this.modalHistoryEl) {
+      const modalMessages = this.modalHistoryEl.querySelectorAll(".ai-msg");
+      if (modalMessages.length > 0) {
+        const last = modalMessages[modalMessages.length - 1];
+        if (last.innerHTML.includes("thinking")) {
+          last.remove();
+        }
+      }
+    }
+  }
+
+  async sendChatMessageFromModal() {
+    const text = this.modalInput?.value?.trim();
+    if (!text) return;
+
+    // Temporarily swap input reference
+    const originalInput = this.chatInput;
+    this.chatInput = this.modalInput;
+    await this.sendChatMessage();
+    this.chatInput = originalInput;
+  }
+
+  async sendChatMessage() {
+    const text = this.chatInput?.value?.trim();
+    if (!text) return;
+
+    this.addMessage("user", text);
+
+    // Show thinking indicator
+    const thinkingId = this.addMessage("ai", "<em>thinking...</em>");
+
+    // Write to inbox
+    const requestId = crypto.randomUUID();
+    const inbox = {
+      requestId,
+      timestamp: new Date().toISOString(),
+      skill: "chat",
+      payload: {
+        message: this.chatInput.value.trim(),
+        context: {
+          book: this.currentBook?.title,
+          page: this.currentBook?.pages[this.currentPageIndex]?.title,
+          pageIndex: this.currentPageIndex,
+          totalPages: this.currentBook?.pages.length
+        }
+      }
+    };
+
+    // Write inbox via fetch to bridge handler endpoint
+    await this.writeInbox(inbox);
+
+    this.chatInput.value = "";
+
+    // Poll for response
+    this.pollOutbox(requestId, thinkingId);
+  }
+
+  async writeInbox(inbox) {
+    const response = await fetch("/api/write-inbox", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(inbox)
+    });
+    if (!response.ok) {
+      console.error("Failed to write inbox");
+    }
+  }
+
+  async pollOutbox(requestId, thinkingId) {
+    const check = setInterval(async () => {
+      try {
+        const response = await fetch("/api/read-outbox");
+        if (!response.ok) return;
+        
+        const outbox = await response.json();
+        if (outbox.requestId === requestId) {
+          clearInterval(check);
+          this.removeLastThinkingMessage();
+          this.addMessage("ai", outbox.payload?.response || "No response");
+        }
+      } catch (e) {
+        console.error("Poll error:", e);
+      }
+    }, 1000);
+  }
+
+  // Parse markdown with marked + DOMPurify + highlight.js for AI messages
+  parseMarkdown(text) {
+    if (typeof marked === "undefined" || typeof DOMPurify === "undefined") {
+      return text; // Fallback if libraries not loaded
+    }
+    try {
+      // Configure marked to use highlight.js for code blocks
+      marked.setOptions({
+        highlight: (code, lang) => {
+          if (typeof hljs !== "undefined") {
+            if (lang && hljs.getLanguage(lang)) {
+              return hljs.highlight(code, { language: lang }).value;
+            }
+            return hljs.highlightAuto(code).value;
+          }
+          return code; // fallback
+        },
+        breaks: true,
+        gfm: true
+      });
+      
+      const html = marked.parse(text);
+      // Sanitize with DOMPurify
+      const cleanHtml = DOMPurify.sanitize(html, {
+        ADD_TAGS: ["pre", "code", "span"],
+        ADD_ATTR: ["class"]
+      });
+      return cleanHtml;
+    } catch (e) {
+      console.error("Markdown parsing error:", e);
+      return text; // Fallback to plain text
+    }
+  }
+
+
+  // ============================================================
+  // Floating page nav
+  // ============================================================
+
+  initFloatingNav() {
+    this.prevPageBtn = document.getElementById('prev-page');
+    this.nextPageBtn = document.getElementById('next-page');
+    this.pageNumberEl = document.getElementById('page-number-floating');  // CHANGED
+    
+    if (this.prevPageBtn) {
+      this.prevPageBtn.addEventListener('click', () => this.goToPrevPage());
+    }
+    if (this.nextPageBtn) {
+      this.nextPageBtn.addEventListener('click', () => this.goToNextPage());
+    }
+    
+    this.updateFloatingPageNumber();
+  }
+
+  goToPrevPage() {
+    if (this.currentPageIndex > 0) {
+      this.selectPage(this.currentPageIndex - 1);
+    }
+  }
+
+  goToNextPage() {
+    if (this.currentBook && this.currentPageIndex < this.currentBook.pages.length - 1) {
+      this.selectPage(this.currentPageIndex + 1);
+    }
+  }
+
+  updateFloatingPageNumber() {
+    const pageNumEl = document.getElementById('page-number-floating');  // CHANGED
+    if (pageNumEl && this.currentBook) {
+      pageNumEl.textContent = `${this.currentPageIndex + 1} / ${this.currentBook.pages.length}`;
+    }
+    
+    // Update button states
+    if (this.prevPageBtn) {
+      this.prevPageBtn.disabled = this.currentPageIndex === 0;
+    }
+    if (this.nextPageBtn && this.currentBook) {
+      this.nextPageBtn.disabled = this.currentPageIndex >= this.currentBook.pages.length - 1;
+    }
   }
 
   // ============================================================
@@ -692,6 +1016,8 @@ class DashboardApp {
 
   bindEvents() {
     // Prev page button
+/*
+
     const prevBtn = document.getElementById("prev-page");
     if (prevBtn) {
       prevBtn.addEventListener("click", () => {
@@ -709,6 +1035,7 @@ class DashboardApp {
         }
       });
     }
+    */
 
     // Check button
     const checkBtn = document.getElementById("run-check");
@@ -760,36 +1087,68 @@ class DashboardApp {
     // Chat send
     const sendBtn = document.getElementById("send-chat");
     if (sendBtn) {
-      sendBtn.addEventListener("click", () => this.sendMessage());
+      sendBtn.addEventListener("click", () => this.sendChatMessage());
     }
     const chatInput = document.getElementById("chat-input");
     if (chatInput) {
       chatInput.addEventListener("keypress", (e) => {
         if (e.key === "Enter") {
           e.preventDefault();
-          this.sendMessage();
+          this.sendChatMessage();
         }
       });
     }
 
-    // Quick action buttons
-    const quickActions = document.querySelectorAll(".quick-action");
-    quickActions.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const prompt = btn.dataset.prompt;
-        if (document.getElementById("chat-input")) {
-          document.getElementById("chat-input").value = prompt;
-          this.sendMessage();
-        }
-      });
-    });
+    // Quick action buttons are already bound in initChatBridge()
+    // No duplicate listener needed here
+
+    // New book modal methods
+    this.openNewBookModal = this.openNewBookModal.bind(this);
+    this.closeNewBookModal = this.closeNewBookModal.bind(this);
+    this.generateSlugFromTitle = this.generateSlugFromTitle.bind(this);
+    this.validateSlug = this.validateSlug.bind(this);
+    this.handleNewBookSubmit = this.handleNewBookSubmit.bind(this);
+    this.showNewBookSuccess = this.showNewBookSuccess.bind(this);
 
     // New book button
     const newBookBtn = document.getElementById("new-book-btn");
     if (newBookBtn) {
-      newBookBtn.addEventListener("click", () => {
-        alert("New Book modal would open here. In Phase 1+, this creates a new folder from the starter scaffold.");
-      });
+      newBookBtn.addEventListener("click", this.openNewBookModal);
+    }
+
+    // Modal backdrop click to close
+    const backdrop = document.getElementById("modal-backdrop");
+    if (backdrop) {
+      backdrop.addEventListener("click", this.closeNewBookModal);
+    }
+
+    // Form submit
+    const form = document.getElementById("new-book-form");
+    if (form) {
+      form.addEventListener("submit", this.handleNewBookSubmit);
+    }
+
+    // Real-time slug generation
+    const titleInput = document.getElementById("new-book-title");
+    if (titleInput) {
+      titleInput.addEventListener("input", () => this.generateSlugFromTitle());
+    }
+
+    // Escape key to close modal
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") this.closeNewBookModal();
+    });
+
+    // Modal close button
+    const modalCloseBtn = document.getElementById("modal-close-btn");
+    if (modalCloseBtn) {
+      modalCloseBtn.addEventListener("click", this.closeNewBookModal);
+    }
+
+    // Modal cancel button
+    const modalCancelBtn = document.getElementById("modal-cancel-btn");
+    if (modalCancelBtn) {
+      modalCancelBtn.addEventListener("click", this.closeNewBookModal);
     }
 
     // Collapse/Expand Editor
@@ -807,10 +1166,10 @@ class DashboardApp {
 
     // Collapse/Expand Chat
     const collapseChatBtn = document.getElementById("collapse-chat");
-    const chatArea = document.getElementById("chat-area");
-    if (collapseChatBtn && chatArea) {
+    const chatContainer = document.getElementById("chat-container");
+    if (collapseChatBtn && chatContainer) {
       collapseChatBtn.addEventListener("click", () => {
-        const isCollapsed = chatArea.classList.toggle("collapsed");
+        const isCollapsed = chatContainer.classList.toggle("collapsed");
         collapseChatBtn.textContent = isCollapsed ? "Open" : "Close";
         collapseChatBtn.classList.toggle("expanded", isCollapsed);
         collapseChatBtn.setAttribute("aria-label", isCollapsed ? "Expand chat" : "Collapse chat");
@@ -818,12 +1177,207 @@ class DashboardApp {
       });
     }
   }
+
+  // ============================================================
+  // New Book Modal
+  // ============================================================
+
+  openNewBookModal() {
+    const modal = document.getElementById("new-book-modal");
+    if (modal) {
+      modal.style.display = "flex";
+      modal.classList.add("opening");
+      setTimeout(() => modal.classList.remove("opening"), 300);
+      // Focus the title input
+      const titleInput = document.getElementById("new-book-title");
+      if (titleInput) titleInput.focus();
+      // Validate the slug (in case title has a value already)
+      this.generateSlugFromTitle();
+    }
+  }
+
+  closeNewBookModal() {
+    const modal = document.getElementById("new-book-modal");
+    if (modal) {
+      modal.classList.add("closing");
+      setTimeout(() => {
+        modal.style.display = "none";
+        modal.classList.remove("closing");
+      }, 200);
+    }
+  }
+
+  generateSlugFromTitle() {
+    const titleInput = document.getElementById("new-book-title");
+    const slugDisplay = document.getElementById("new-book-slug-display");
+    const slugInput = document.getElementById("new-book-slug-input");
+    if (!titleInput || !slugDisplay || !slugInput) return;
+
+    const slug = titleInput.value
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-+|-+$/g, "");
+
+    slugDisplay.textContent = slug || "my-new-book";
+    slugInput.value = slug;
+
+    // Update validation
+    this.validateSlug(slug);
+  }
+
+  validateSlug(slug) {
+    const valid = /^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug);
+    const validEl = document.querySelector(".slug-valid");
+    const invalidEl = document.querySelector(".slug-invalid");
+
+    // Ensure the elements start hidden
+    if (validEl) validEl.style.display = valid ? "block" : "none";
+    if (invalidEl) invalidEl.style.display = valid ? "none" : "block";
+
+    const createBtn = document.querySelector(".new-book-modal-create");
+    if (createBtn) {
+      createBtn.disabled = !valid;
+    }
+  }
+
+  async handleNewBookSubmit(e) {
+    e.preventDefault();
+    const titleInput = document.getElementById("new-book-title");
+    const slugInput = document.getElementById("new-book-slug-input");
+    if (!titleInput || !slugInput) return;
+
+    const title = titleInput.value.trim();
+    const slug = slugInput.value.trim();
+    if (!title || !slug) return;
+
+    // Disable the create button to prevent double-submits
+    const createBtn = document.querySelector(".new-book-modal-create");
+    if (createBtn) createBtn.disabled = true;
+
+    try {
+      const newBook = await this.createBookFolder(title, slug);
+      if (newBook) {
+        await this.reloadBookIndex();
+        this.showNewBookSuccess(newBook);
+      }
+    } catch (err) {
+      console.error("Failed to create book:", err);
+      // In a browser environment, creating folders/files requires a backend
+      // Show an informative message
+      const form = document.getElementById("new-book-form");
+      if (form) {
+        const errorP = document.createElement("p");
+        errorP.style.color = "#ef4444";
+        errorP.textContent = `Error: ${err.message}. Book creation requires the Node.js backend server to be running. See the starter scaffold for manual creation instructions.`;
+        form.prepend(errorP);
+        setTimeout(() => errorP.remove(), 5000);
+      }
+    } finally {
+      if (createBtn) createBtn.disabled = false;
+    }
+  }
+
+  async createBookFolder(title, slug) {
+    // This uses Node.js fs/path modules — works in Electron or via a backend API
+    // In a pure browser, this would need to call a /api/create-book endpoint
+    try {
+      const fs = await import("fs");
+      const path = await import("path");
+      const fsPromises = fs.promises;
+
+      const booksDir = path.resolve("../../books", slug);
+      if (fs.existsSync(booksDir)) {
+        throw new Error(`Book folder '${slug}' already exists`);
+      }
+
+      // Create the book directory
+      await fsPromises.mkdir(booksDir, { recursive: true });
+
+      // Copy starter.html as the interior file
+      const starterPath = path.resolve("../../books/starter/starter.html");
+      let interiorContent = "";
+      try {
+        interiorContent = await fsPromises.readFile(starterPath, "utf8");
+      } catch {
+        // If starter doesn't exist, use a minimal template
+        interiorContent = "<html lang=\"en\" data-size=\"b5\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>" + title + "</title>\n  <link rel=\"stylesheet\" href=\"../../engine/sheet.css\">\n  <link rel=\"stylesheet\" href=\"../../engine/sizes/b5.css\">\n  <link rel=\"stylesheet\" href=\"../../engine/themes/studio.css\">\n</head>\n<body>\n  <main class=\"deck\">\n    <section class=\"sheet bb\">\n      <h1 class=\"title\">" + title + "</h1>\n    </section>\n  </main>\n  <script src=\"../../engine/sheet-tools.js\"></script>\n</body>\n</html>";
+      }
+
+      // Write the interior file
+      await fsPromises.writeFile(path.join(booksDir, slug + ".html"), interiorContent);
+
+      // Generate book.json
+      const bookJson = {
+        title: title,
+        subtitle: "One idea per page, and every page is the same shape.",
+        author: "Your Name",
+        series: "STEAM-IE",
+        brand: "yoursite.com",
+        editionLabel: "Edition 1.0",
+        unit: "blocks",
+        numbered: true,
+        contents: true,
+        index: true,
+        cover: {
+          kicker: "A paper-engine book",
+          note: "Written one block at a time."
+        },
+        copyright: {
+          year: new Date().getFullYear(),
+          rights: "© " + new Date().getFullYear() + " Your Name. All rights reserved.",
+          lines: [
+            "Set in Space Grotesk, Inter and JetBrains Mono.",
+            "Built with the paper engine: github.com/hassancs91/paper-engine"
+          ]
+        },
+        parts: [
+          { name: "S", eyebrow: "Science", why: "One line telling the reader why these pages belong together.", blocks: [] },
+          { name: "T", eyebrow: "Technology", why: "One line telling the reader why these pages belong together.", blocks: [] },
+          { name: "E", eyebrow: "Engineering", why: "One line telling the reader why these pages belong together.", blocks: [] },
+          { name: "A", eyebrow: "Arts", why: "One line telling the reader why these pages belong together.", blocks: [] },
+          { name: "M", eyebrow: "Mathematics", why: "One line telling the reader why these pages belong together.", blocks: [] },
+          { name: "I", eyebrow: "Information", why: "One line telling the reader why these pages belong together.", blocks: [] },
+          { name: "E2", eyebrow: "Economics", why: "One line telling the reader why these pages belong together.", blocks: [] }
+        ],
+        editions: { free: [] }
+      };
+
+      await fsPromises.writeFile(path.join(booksDir, "book.json"), JSON.stringify(bookJson, null, 2));
+
+      return { slug, title };
+    } catch (err) {
+      console.error("createBookFolder error:", err);
+      // If fs is not available (browser environment), return null and show manual instructions
+      throw err;
+    }
+  }
+
+  async reloadBookIndex() {
+    // Re-fetch the book index to include the new book
+    this.bookIndex = null;
+    await this.loadBookIndex();
+    this.renderBookList();
+    this.updateQuickStats();
+  }
+
+  showNewBookSuccess(newBook) {
+    this.closeNewBookModal();
+    // Auto-select the new book in the sidebar
+    const bookListItems = document.querySelectorAll("#book-list li");
+    bookListItems.forEach(li => {
+      if (li.dataset.slug === newBook.slug) {
+        li.classList.add("active");
+        li.click();
+      }
+    });
+  }
 }
 
 // Auto-init on page load
 document.addEventListener("DOMContentLoaded", () => {
   window.app = new DashboardApp();
-  window.app.init().then(() => {
-    window.app.initChat();
-  });
+  window.app.init();
 });

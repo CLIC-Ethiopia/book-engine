@@ -6,6 +6,11 @@
   <title>Book Engine Dashboard</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/main.css">
+  <!-- Markdown parsing & syntax highlighting for AI chat -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.8/purify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 </head>
 <body>
   <!-- Single fixed menu bar: info text + all controls in one row -->
@@ -18,17 +23,15 @@
         <span class="dot">·</span>
         <span id="page-title" class="page-title">Resting meat</span>
         <span class="dot">·</span>
-        <span class="quick-stats">
-          <span id="books-count">0</span> books, <span id="pages-count">0</span> pages
-        </span>
+        
       </div>
       <div class="menu-controls">
         <div class="page-nav">
-          <button class="nav-button" id="prev-page" aria-label="Previous page">&#9664; Prev</button>
-          <span id="page-number" class="page-number">1 / 10</span>
-          <button class="nav-button" id="next-page" aria-label="Next page">Next &#9654;</button>
+          
+          <span id="page-number" class="page-number">1 / 10</button>
+          
         </div>
-        <span id="check-status" class="check-status">—</span>
+        
         <div class="action-buttons">
           <button class="action-button" id="run-check">Run Check</button>
           <button class="action-button" id="take-screenshot">Take Screenshot</button>
@@ -36,9 +39,89 @@
           <button class="action-button secondary" id="build-book" style="display:none;">Build Book</button>
           <button class="action-button secondary" id="view-full-book" style="display:none;">View Full Book</button>
         </div>
+        
       </div>
     </div>
   </header>
+
+  <!-- New Book Modal -->
+  <div id="new-book-modal" class="new-book-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display:none">
+    <div class="new-book-modal-backdrop" id="modal-backdrop" ></div>
+    <div class="new-book-modal-panel" id="modal-panel">
+      <header class="new-book-modal-header">
+        <button class="new-book-modal-close" id="modal-close-btn" aria-label="Close modal" title="Close">&times;</button>
+        <h2 id="modal-title">Create a New Book</h2>
+        <p class="new-book-modal-desc">Start a new STEAM-IE field manual one concept at a time.</p>
+      </header>
+      <form class="new-book-modal-form" id="new-book-form">
+        <input type="hidden" id="new-book-slug-input">
+        <div class="new-book-modal-form-group">
+          <label for="new-book-title" class="new-book-modal-label">Title</label>
+          <input type="text" id="new-book-title" class="new-book-modal-input" placeholder="My New Book" required autocomplete="off">
+          <p class="new-book-modal-slug">Slug will be auto-generated: <code>my-new-book</code></p>
+          <div class="new-book-modal-validation slug-valid">✅ Slug is valid</div>
+          <div class="new-book-modal-validation slug-invalid">⚠️ Slug must be lowercase, hyphenated, no special chars</div>
+        </div>
+        <div class="new-book-modal-form-group">
+          <label for="new-book-subtitle" class="new-book-modal-label">Subtitle</label>
+          <input type="text" id="new-book-subtitle" class="new-book-modal-input" placeholder="One-line description..." autocomplete="off">
+        </div>
+        <div class="new-book-modal-form-group">
+          <label for="new-book-series" class="new-book-modal-label">Series</label>
+          <input type="text" id="new-book-series" class="new-book-modal-input" placeholder="STEAM-IE" autocomplete="off">
+        </div>
+        <div class="new-book-modal-form-group">
+          <label for="new-book-brand" class="new-book-modal-label">Brand</label>
+          <input type="text" id="new-book-brand" class="new-book-modal-input" placeholder="yoursite.com" autocomplete="off">
+        </div>
+        <div class="new-book-modal-form-group">
+          <label for="new-book-edition-label" class="new-book-modal-label">Edition Label</label>
+          <input type="text" id="new-book-edition-label" class="new-book-modal-input" placeholder="Edition 1.0" autocomplete="off">
+        </div>
+        <div class="new-book-modal-form-group new-book-modal-info">
+          <h4>What gets created</h4>
+          <ul>
+            <li><strong>Folder:</strong> <code>books/<span id="new-book-slug-display">my-new-book</span>/</code></li>
+            <li><strong>Interior:</strong> <code><span id="new-book-interior-display">starter.html</span></code> with one sample concept page</li>
+            <li><strong>JSON:</strong> <code>book.json</code> with title, subtitle, series, brand, <code>parts</code> for all 7 STEAM-IE letters</code></li>
+            <li><strong>Starter page:</code> <code>SSRF</code> sample (Security: Server-Side Request Forgery)</li>
+          </ul>
+        </div>
+      </form>
+      <footer class="new-book-modal-footer">
+        <button type="button" class="new-book-modal-cancel" id="modal-cancel-btn">Cancel</button>
+        <button type="submit" class="new-book-modal-create" form="new-book-form">Create Book</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Chat Full-Screen Modal -->
+  <div id="chat-modal" class="chat-modal" role="dialog" aria-modal="true" aria-labelledby="chat-modal-title" style="display:none">
+    <div class="chat-modal-backdrop" id="chat-modal-backdrop"></div>
+    <div class="chat-modal-panel" id="chat-modal-panel">
+      <header class="chat-modal-header">
+        <button class="chat-modal-close" id="chat-modal-close" aria-label="Close modal" title="Close">&times;</button>
+        <h2 id="chat-modal-title">AI Chat</h2>
+      </header>
+      <div class="chat-modal-body" id="chat-modal-body">
+        <div class="chat-history" id="chat-modal-history"></div>
+        <div class="chat-input-wrapper">
+          <input type="text" id="chat-modal-input" placeholder="Message the AI...">
+          <button class="send-chat" id="chat-modal-send">Send</button>
+        </div>
+        <div class="quick-actions" id="chat-modal-quick-actions">
+          <button class="quick-action" data-prompt="Audit this page against the book's overall idea and suggest 3-5 specific improvements">Audit Page</button>
+          <button class="quick-action" data-prompt="Suggest a diagram for this concept">Suggest Diagram</button>
+          <button class="quick-action" data-prompt="Rewrite the explainer in simpler words">Rewrite Explainer</button>
+          <button class="quick-action" data-prompt="Generate an image prompt for this page's photo band">Image Prompt</button>
+          <button class="quick-action" data-prompt="Suggest 3-5 alternative action callouts for this page">Action Alternative</button>
+          <button class="quick-action" data-prompt="Review the book's structure and suggest how to reorder or regroup pages for better flow">Improve Book Structure</button>
+          <button class="quick-action" data-prompt="Identify gaps in the book's coverage and suggest 3-5 new page topics to add">Fill Coverage Gaps</button>
+          <button class="quick-action" data-prompt="Review the book's tone and voice consistency across all pages and suggest improvements">Audit Voice Consistency</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Main layout -->
   <div class="layout">
@@ -52,6 +135,24 @@
     <!-- Central Column -->
     <main class="central" id="central">
       <div class="preview-area">
+
+        <!-- Floating page navigation -->
+        <!-- Move outside .preview-area, place at end of body -->
+        <!-- Floating page nav - use UNIQUE IDs -->
+        <div class="page-nav-floating-fixed" id="page-nav-floating">
+          <button class="nav-floating-btn" id="prev-page" aria-label="Previous page" title="Previous page">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <span id="page-number-floating" class="page-number-floating">1 / 10</span>
+          <button class="nav-floating-btn" id="next-page" aria-label="Next page" title="Next page">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
         <iframe id="page-iframe" srcdoc="<!doctype html><html lang='en'><head><meta charset='utf-8'><link rel='stylesheet' href='../../engine/sheet.css'><link rel='stylesheet' href='../../engine/sizes/b5.css'><link rel='stylesheet' href='../../engine/themes/studio.css'></head><body><main class='deck'><section class='sheet bb'><h1 class='title'>Select a book from the sidebar</h1></section></main></body></html>" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation"></iframe>
       </div>
     </main>
@@ -62,7 +163,9 @@
         <div class="editor-area" id="editor-area">
         <div class="card-header">
           <h3>Edit Page Content</h3>
-          <button class="collapse-btn" id="collapse-editor" aria-label="Collapse editor" title="Collapse/Expand">Close</button>
+          <div class="card-header-actions">
+            <button class="collapse-btn" id="collapse-editor" aria-label="Collapse editor" title="Collapse/Expand">Close</button>
+          </div>
         </div>
         <label>
           <span>Title:</span>
@@ -83,11 +186,14 @@
         <button class="save-edit" id="save-edit">Save Changes</button>
       </div>
       </div>
-      <div class="chat-container">
+      <div class="chat-container" id="chat-container">
         <div class="chat-area" id="chat-area">
         <div class="card-header">
           <h3>AI Chat</h3>
-          <button class="collapse-btn" id="collapse-chat" aria-label="Collapse chat" title="Collapse/Expand">Close</button>
+          <div class="card-header-actions">
+            <button class="collapse-btn" id="collapse-chat" aria-label="Collapse chat" title="Collapse/Expand">Close</button>
+            <button class="maximize-btn" id="maximize-chat" aria-label="Maximize chat" title="Open full-screen chat">⛶</button>
+          </div>
         </div>
         <div class="chat-history" id="chat-history"></div>
         <div class="chat-input-wrapper">
@@ -95,10 +201,14 @@
           <button class="send-chat" id="send-chat">Send</button>
         </div>
         <div class="quick-actions" id="quick-actions">
-          <button class="quick-action" data-prompt="Check this page for overflow">Run Check</button>
+          <button class="quick-action" data-prompt="Audit this page against the book's overall idea and suggest 3-5 specific improvements">Audit Page</button>
           <button class="quick-action" data-prompt="Suggest a diagram for this concept">Suggest Diagram</button>
           <button class="quick-action" data-prompt="Rewrite the explainer in simpler words">Rewrite Explainer</button>
           <button class="quick-action" data-prompt="Generate an image prompt for this page's photo band">Image Prompt</button>
+          <button class="quick-action" data-prompt="Suggest 3-5 alternative action callouts for this page">Action Alternative</button>
+          <button class="quick-action" data-prompt="Review the book's structure and suggest how to reorder or regroup pages for better flow">Improve Book Structure</button>
+          <button class="quick-action" data-prompt="Identify gaps in the book's coverage and suggest 3-5 new page topics to add">Fill Coverage Gaps</button>
+          <button class="quick-action" data-prompt="Review the book's tone and voice consistency across all pages and suggest improvements">Audit Voice Consistency</button>
         </div>
       </div>
     </aside>

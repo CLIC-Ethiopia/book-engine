@@ -1,0 +1,25 @@
+{
+  "cli": "auto",
+  "clients": {
+    "opencode": {
+      "command": "cmd",
+      "args": ["/c", "npx", "opencode", "run", "Process the prompt in the attached file", "--file", "{promptFile}"],
+      "env": {}
+    },
+    "claude": {
+      "command": "claude",
+      "args": ["--prompt", "{promptFile}"],
+      "env": {}
+    },
+    "agy": {
+      "command": "agy",
+      "args": ["run", "--file", "{promptFile}"],
+      "env": {}
+    }
+  },
+  "defaults": {
+    "timeout": 300000,
+    "pollInterval": 1000,
+    "workDir": "ideas/.work"
+  }
+}

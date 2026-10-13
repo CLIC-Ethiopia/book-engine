@@ -1,0 +1,321 @@
+[
+  {
+    "role": "user",
+    "content": "Hello test",
+    "context": {
+      "book": "Test Book",
+      "page": "Test Page",
+      "pageIndex": 0,
+      "totalPages": 10
+    },
+    "timestamp": "2026-10-13T06:03:45.751Z"
+  },
+  {
+    "role": "user",
+    "content": "Hello test",
+    "context": {
+      "book": "Test Book",
+      "page": "Test Page",
+      "pageIndex": 0,
+      "totalPages": 10
+    },
+    "timestamp": "2026-10-13T06:05:56.280Z"
+  },
+  {
+    "role": "user",
+    "content": "Hello test",
+    "context": {
+      "book": "Test Book",
+      "page": "Test Page",
+      "pageIndex": 0,
+      "totalPages": 10
+    },
+    "timestamp": "2026-10-13T06:09:31.871Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page?",
+    "context": {
+      "book": "STEAM-IE Starter",
+      "page": "SSRF",
+      "pageIndex": 0,
+      "totalPages": 7
+    },
+    "timestamp": "2026-10-13T06:15:01.684Z"
+  },
+  {
+    "role": "user",
+    "content": "Suggest a diagram for this concept",
+    "context": {
+      "book": "STEAM-IE FOR HYDROPONICS",
+      "page": "No Need for Soil",
+      "pageIndex": 7,
+      "totalPages": 48
+    },
+    "timestamp": "2026-10-13T06:18:23.613Z"
+  },
+  {
+    "role": "user",
+    "content": "Suggest a diagram for this concept",
+    "context": {
+      "book": "STEAM-IE FOR HYDROPONICS",
+      "page": "No Need for Soil",
+      "pageIndex": 7,
+      "totalPages": 48
+    },
+    "timestamp": "2026-10-13T06:18:23.619Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page in the paper engine?",
+    "context": {
+      "book": "STEAM-IE Starter",
+      "page": "SSRF",
+      "pageIndex": 0,
+      "totalPages": 7
+    },
+    "timestamp": "2026-10-13T06:19:46.633Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page in the paper engine?",
+    "context": {
+      "book": "STEAM-IE Starter",
+      "page": "SSRF",
+      "pageIndex": 0,
+      "totalPages": 7
+    },
+    "timestamp": "2026-10-13T06:21:19.274Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page in the paper engine?",
+    "context": {
+      "book": "STEAM-IE Starter",
+      "page": "SSRF",
+      "pageIndex": 0,
+      "totalPages": 7
+    },
+    "timestamp": "2026-10-13T06:23:01.498Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page in the paper engine?",
+    "context": {
+      "book": "STEAM-IE Starter",
+      "page": "SSRF",
+      "pageIndex": 0,
+      "totalPages": 7
+    },
+    "timestamp": "2026-10-13T06:25:52.482Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page in the paper engine?",
+    "context": {
+      "book": "STEAM-IE Starter",
+      "page": "SSRF",
+      "pageIndex": 0,
+      "totalPages": 7
+    },
+    "timestamp": "2026-10-13T06:27:58.235Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page in the paper engine?",
+    "context": {
+      "book": "STEAM-IE Starter",
+      "page": "SSRF",
+      "pageIndex": 0,
+      "totalPages": 7
+    },
+    "timestamp": "2026-10-13T06:30:14.300Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page in the paper engine?",
+    "context": {
+      "book": "STEAM-IE Starter",
+      "page": "SSRF",
+      "pageIndex": 0,
+      "totalPages": 7
+    },
+    "timestamp": "2026-10-13T06:32:51.499Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page in the paper engine?",
+    "context": {
+      "book": "STEAM-IE Starter",
+      "page": "SSRF",
+      "pageIndex": 0,
+      "totalPages": 7
+    },
+    "timestamp": "2026-10-13T06:38:50.089Z"
+  },
+  {
+    "role": "user",
+    "content": "Suggest a diagram for this concept",
+    "context": {
+      "book": "The Showcase",
+      "page": "Cover",
+      "pageIndex": 0,
+      "totalPages": 17
+    },
+    "timestamp": "2026-10-13T06:39:11.355Z"
+  },
+  {
+    "role": "user",
+    "content": "Suggest a diagram for this concept",
+    "context": {
+      "book": "The Showcase",
+      "page": "Cover",
+      "pageIndex": 0,
+      "totalPages": 17
+    },
+    "timestamp": "2026-10-13T06:39:11.359Z"
+  },
+  {
+    "role": "user",
+    "content": "Suggest a diagram for this concept",
+    "context": {
+      "book": "STEAM-IE FOR HYDROPONICS",
+      "page": "No Need for Soil",
+      "pageIndex": 7,
+      "totalPages": 48
+    },
+    "timestamp": "2026-10-13T06:49:44.320Z"
+  },
+  {
+    "role": "user",
+    "content": "Suggest a diagram for this concept",
+    "context": {
+      "book": "STEAM-IE FOR HYDROPONICS",
+      "page": "No Need for Soil",
+      "pageIndex": 7,
+      "totalPages": 48
+    },
+    "timestamp": "2026-10-13T06:49:44.323Z"
+  },
+  {
+    "role": "user",
+    "content": "Rewrite the explainer in simpler words",
+    "context": {
+      "book": "STEAM-IE FOR HYDROPONICS",
+      "page": "No Need for Soil",
+      "pageIndex": 7,
+      "totalPages": 48
+    },
+    "timestamp": "2026-10-13T06:55:52.099Z"
+  },
+  {
+    "role": "user",
+    "content": "Rewrite the explainer in simpler words",
+    "context": {
+      "book": "STEAM-IE FOR HYDROPONICS",
+      "page": "No Need for Soil",
+      "pageIndex": 7,
+      "totalPages": 48
+    },
+    "timestamp": "2026-10-13T06:55:52.103Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page in the paper engine?",
+    "context": {
+      "book": "STEAM-IE Starter",
+      "page": "SSRF",
+      "pageIndex": 0,
+      "totalPages": 7
+    },
+    "timestamp": "2026-10-13T07:02:51.073Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page in the paper engine?\"",
+    "context": {
+      "book": "STEAM-IE FOR HYDROPONICS",
+      "page": "No Need for Soil",
+      "pageIndex": 7,
+      "totalPages": 48
+    },
+    "timestamp": "2026-10-13T07:09:01.447Z"
+  },
+  {
+    "role": "user",
+    "content": "What is the structure of a B5 page in the paper engine?\"",
+    "context": {
+      "book": "STEAM-IE FOR HYDROPONICS",
+      "page": "No Need for Soil",
+      "pageIndex": 7,
+      "totalPages": 48
+    },
+    "timestamp": "2026-10-13T07:09:01.451Z"
+  },
+  {
+    "role": "user",
+    "content": "Test quick action fix",
+    "context": {
+      "book": "Test",
+      "page": "Test",
+      "pageIndex": 0,
+      "totalPages": 1
+    },
+    "timestamp": "2026-10-13T07:27:58.366Z"
+  },
+  {
+    "role": "user",
+    "content": "Generate an image prompt for this page's photo band",
+    "context": {
+      "book": "STEAM-IE FOR HYDROPONICS",
+      "page": "No Need for Soil",
+      "pageIndex": 7,
+      "totalPages": 48
+    },
+    "timestamp": "2026-10-13T07:31:10.797Z"
+  },
+  {
+    "role": "user",
+    "content": "Test modal sync",
+    "context": {
+      "book": "Test Book",
+      "page": "Test Page",
+      "pageIndex": 0,
+      "totalPages": 1
+    },
+    "timestamp": "2026-10-13T07:48:07.440Z"
+  },
+  {
+    "role": "user",
+    "content": "Test collapse",
+    "context": {
+      "book": "Test",
+      "page": "Test",
+      "pageIndex": 0,
+      "totalPages": 1
+    },
+    "timestamp": "2026-10-13T08:13:16.626Z"
+  },
+  {
+    "role": "user",
+    "content": "Test markdown with **bold**, *italic*, `code`, and a code block:\n\n```javascript\nfunction hello() {\n  console.log('Hello, world!');\n}\n```\n\n- List item 1\n- List item 2\n\n> Blockquote",
+    "context": {
+      "book": "Test Book",
+      "page": "Test Page",
+      "pageIndex": 0,
+      "totalPages": 1
+    },
+    "timestamp": "2026-10-13T10:19:05.991Z"
+  },
+  {
+    "role": "user",
+    "content": "Audit this page against the book's overall idea and suggest 3-5 specific improvements",
+    "context": {
+      "book": "STEAM-IE FOR HYDROPONICS",
+      "page": "No Need for Soil",
+      "pageIndex": 7,
+      "totalPages": 48
+    },
+    "timestamp": "2026-10-13T10:22:13.757Z"
+  }
+]

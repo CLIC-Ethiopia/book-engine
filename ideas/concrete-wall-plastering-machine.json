@@ -1,0 +1,545 @@
+{
+  "title": "Concrete Wall Plastering Machine",
+  "slug": "concrete-wall-plastering-machine",
+  "subtitle": "Mechanized spray and plaster application for interior/exterior walls",
+  "editionLabel": "First Edition",
+  "author": "Your Name",
+  "series": "STEAM-IE for Eco-Construction",
+  "audience": "Site Operators / Plasterers who want to learn and build a business in the field",
+  "primaryLocation": "East African highlands, volcanic sand, 230V/50Hz, hot days/cool nights",
+  "coverImage": "concrete-wall-plastering-machine-cover.png",
+  "pages": [
+    {
+      "no": 1,
+      "section": "Science",
+      "title": "Rheology of Cementitious Slurries",
+      "subtitle": "Yield stress, plastic viscosity, and how additives change flow",
+      "content": "Let's say you're spraying plaster on a hot afternoon in Nairobi and the mix keeps sagging off the wall. The problem isn't the cement — it's the rheology. Every cementitious slurry has a yield stress (the force needed to start flow) and a plastic viscosity (resistance once flowing). If yield stress is too low, the plaster slides down. Too high, and it won't pass through the nozzle.\n\nWater reducers (superplasticizers) drop the yield stress without adding water. Viscosity modifiers (welan gum, HPMC) raise the plastic viscosity so the mix holds on vertical surfaces. Accelerators shift the hydration curve. The art is balancing all three so the mix pumps easily, sprays smooth, and sticks instantly.",
+      "imagePrompt": "Shear rate vs. stress curve showing Bingham plastic behavior, yield point, plastic viscosity regions. Clean technical vector diagram with labeled axes, professional engineering aesthetic.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT TODAY",
+        "content": "Do a slump-flow test: 200mm cone, lift, measure spread. Target 180–220mm for spray application. Adjust superplasticizer in 0.05% steps."
+      },
+      "citations": [1, 2, 3]
+    },
+    {
+      "no": 2,
+      "section": "Science",
+      "title": "Hydration Kinetics in Thin Layers",
+      "subtitle": "How thin plaster cures differently than bulk concrete",
+      "content": "Let's say you spray 10mm of plaster at 2 PM. By 4 PM it's hard, but the core of a 200mm column is still warm at midnight. Thin layers hydrate faster — higher surface-to-volume ratio means heat escapes, but also water evaporates faster. The cement grains are closer to the surface, so CO₂ carbonation starts sooner.\n\nIn hot, dry East African afternoons, you lose surface water before hydration completes. That means plastic shrinkage cracks and weak surface zone. The fix: cure immediately — fine mist, wet hessian, or curing compound within 30 minutes of finishing.",
+      "imagePrompt": "Temperature/time curves for 10mm vs 100mm sections, showing accelerated peak temperature in thin layer. Technical illustration style, no text, clean lines.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "OBSERVE TODAY",
+        "content": "Spray a 1m² test panel. Measure surface temperature every 30 min for 6 hours. Plot the curve. Note when it peaks — that's your finishing window."
+      },
+      "citations": [4, 5]
+    },
+    {
+      "no": 3,
+      "section": "Science",
+      "title": "Adhesion Mechanics to Substrates",
+      "subtitle": "Mechanical keying, chemical bonding, and suction control",
+      "content": "Let's say you spray onto sun-baked concrete block. The block sucks water from your plaster in seconds — suction kills adhesion. The plaster skin forms before cement bridges can grow into the substrate pores. Result: hollow sound, delamination.\n\nThree adhesion mechanisms work together: mechanical keying (roughness, raked joints), chemical bonding (cement hydrates growing into pores), and suction management (pre-wetting, bonding agents). On porous substrates (fired brick, aerated block), pre-wet 2–4 hours before. On dense concrete, apply cement slurry bond coat (1:1 cement:water + SBR) just before spraying.",
+      "imagePrompt": "Cross-section showing mechanical interlock, cementitious bridge, suction zones. Technical vector diagram with clean lines and professional engineering aesthetic.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Test substrate suction: flick water on wall. If it darkens instantly → high suction → pre-wet. If it beads → low suction → bond coat."
+      },
+      "citations": [6, 7]
+    },
+    {
+      "no": 4,
+      "section": "Science",
+      "title": "Shrinkage & Cracking Physics",
+      "subtitle": "Plastic vs. drying shrinkage, restraint stresses",
+      "content": "Let's say you finish a perfect wall at noon. By sunset, hairline cracks map the surface. Plastic shrinkage — water evaporates faster than bleed water rises, tensile stress exceeds early-age strength. Drying shrinkage comes later — capillary tension pulls pores together as water leaves.\n\nThree controls: reduce evaporation (windbreaks, misting, curing compound), add fibers (PP 0.9kg/m³ arrests micro-cracks), control restraint (bond breakers at dissimilar materials, control joints at 3–4m centers). In hot, dry wind, plastic shrinkage starts in 20 minutes.",
+      "imagePrompt": "Stress development timeline: plastic shrinkage (0–6h), autogenous (6–72h), drying (days). Technical illustration with stress/strain curves labeled.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT TODAY",
+        "content": "Cast 300×300×10mm restrained ring mold. Spray mix, cover half with curing compound. Count cracks at 24h. Compare."
+      },
+      "citations": [8, 9]
+    },
+    {
+      "no": 5,
+      "section": "Science",
+      "title": "Capillary Action & Moisture Transport",
+      "subtitle": "How water moves in fresh and hardened plaster",
+      "content": "Let's say a ground-floor wall shows efflorescence at 6 months. Water carried dissolved salts up through capillaries, evaporated at surface, left white crystals. Capillary rise in 10mm plaster: 300–600mm depending on pore structure. Vapor diffusion moves water from high to low RH — inward in rainy season, outward in dry.\n\nThe fix: hydrophobic admixture (stearates 0.5–1%) reduces capillary absorption 80%. Vapor-permeable finish (lime wash, silicate paint) lets wall breathe. Never seal with impermeable coating — traps moisture, causes spalling.",
+      "imagePrompt": "Diagram showing capillary rise, vapor diffusion, liquid permeability curves. Technical vector diagram with labeled curves and professional engineering aesthetic.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS WEEK",
+        "content": "Spray two panels: one with 0.5% stearate, one without. Submerge bottom 50mm in water. Measure capillary rise at 1h, 4h, 24h."
+      },
+      "citations": [10, 11]
+    },
+    {
+      "no": 6,
+      "section": "Science",
+      "title": "Thermal & Hygral Behavior",
+      "subtitle": "Expansion, contraction, and vapor permeability",
+      "content": "Let's say a west-facing wall in Mombasa hits 55°C at 2 PM, drops to 22°C at 4 AM. Thermal cycling — 33°C swing daily. Cement plaster α ≈ 12×10⁻⁶/°C → 0.4mm/m expansion/contraction daily. Over 10m wall, that's 4mm movement. Restrained at corners → stress.\n\nVapor permeability (μ-value): cement plaster μ ≈ 15–25. Lime plaster μ ≈ 5–10. Lower μ = breathes better. In humid climates, high μ traps moisture → mold, spalling. Design for vapor-open assemblies — let moisture escape both directions.",
+      "imagePrompt": "Thermal expansion coefficient vs. temperature, μ-value vs. RH curves. Technical vector diagram with dual-axis plot.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "CALCULATE TODAY",
+        "content": "For your project wall length L (meters): daily movement = L × 0.0004 mm. If > 3mm, add control joint."
+      },
+      "citations": [12, 13]
+    },
+    {
+      "no": 7,
+      "section": "Technology",
+      "title": "Rotor-Stator vs. Piston Pumps",
+      "subtitle": "Shear-rate control, pressure stability, wear comparison",
+      "content": "Let's say you're choosing a machine for your Pilot-tier business. Rotor-stator (progressive cavity): continuous flow, low pulsation, handles fibers well, wear parts = rotor + stator (replace pair). Piston pump: high pressure (up to 40 bar), distinct pulses, better for high-rise pumping, wear parts = valves, cups, seals.\n\nFor spray plaster (20–40 bar, 30–50 m²/hr): rotor-stator wins — smoother finish, less rebound, simpler maintenance. Piston only if you also do high-rise concrete pumping. Stator life: 200–400 m³. Rotor life: 2–3 stators. Budget 15% of machine cost/year for wear parts.",
+      "imagePrompt": "Rotor-stator cross-section vs. piston pump, pressure pulsation curves. Technical vector diagram with labeled components and pressure profiles.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS WEEK",
+        "content": "Request wear-part quotes from 3 suppliers for your target machine. Calculate $/m³ at 300 m³ stator life."
+      },
+      "citations": [14, 15]
+    },
+    {
+      "no": 8,
+      "section": "Technology",
+      "title": "Continuous Mixer Design",
+      "subtitle": "Twin-shaft, colloidal, and in-line continuous mixing",
+      "content": "Let's say you're mixing 500kg batches in a drum mixer — inconsistent, slow, labor-intensive. Continuous mixer feeds sand, cement, additives in proportion, outputs homogeneous slurry at 1–3 m³/hr. Twin-shaft paddle: best for fiber dispersion, self-cleaning. Colloidal mill: best for ultra-fine mixes, geopolymers. In-line venturi: lowest cost, mixes at nozzle.\n\nFor Pilot tier: twin-shaft 1.5 m³/hr — handles 0–3mm sand, doses liquid additives (superplasticizer, accelerator) and powder (fibers, pigments) inline. Calibrate daily: weigh output vs. setpoint.",
+      "imagePrompt": "Twin-shaft paddle mixer with additive dosing, material flow arrows. Professional photograph of mixer with clean lighting.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "BUILD THIS WEEK",
+        "content": "Calibrate your mixer: run 10 min at target rate, weigh output, compare to setpoint. Adjust feeder speeds until ±2%."
+      },
+      "citations": [16, 17]
+    },
+    {
+      "no": 9,
+      "section": "Technology",
+      "title": "Spray Nozzle Geometry",
+      "subtitle": "Fan pattern, droplet size, rebound control",
+      "content": "Let's say you're spraying and 30% of material bounces off the wall — rebound waste. Nozzle geometry controls: fan angle (40–60° optimal), orifice size (4–8mm for plaster), air cap design (atomizing air shapes droplets). Droplet size 0.5–2mm: too fine → dust/rebound, too coarse → poor compaction.\n\nAir-assist nozzle (2–4 bar atomizing air) cuts rebound 40% vs. airless. Wide fan (60°) covers more area but thinner layer. Narrow fan (40°) builds thickness faster. Match nozzle to pump output: 25–35 L/min typical.",
+      "imagePrompt": "Nozzle cross-section, fan angle, droplet distribution, rebound zone. Technical vector diagram with labeled flow paths and dimensions.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS WEEK",
+        "content": "Test 3 nozzles at same pressure: measure fan width, layer thickness per pass, rebound % (catch on drop cloth). Pick best."
+      },
+      "citations": [18, 19]
+    },
+    {
+      "no": 10,
+      "section": "Technology",
+      "title": "Hose & Delivery System",
+      "subtitle": "Diameter, length, pressure drop, pulsation damping",
+      "content": "Let's say you're spraying 20m from machine to wall. Hose friction eats pressure: 25mm ID hose at 30 L/min loses ~1.5 bar/10m. 32mm ID cuts loss 60%. Max practical length: 40m (beyond that, pressure loss > pump capacity). Pulsation damper (nitrogen-charged bladder) smooths rotor-stator pressure ripple — cuts nozzle flutter, reduces rebound 15%.\n\nHose wear: inner tube abrasion from sand. Replace at 50% wall thickness. Quick-couple at lance for fast changeover. Ground hose — static discharge shocks operator.",
+      "imagePrompt": "Hose ID vs. pressure loss curve, pulsation damper cross-section. Technical vector diagram with pressure loss curves and labeled components.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT TODAY",
+        "content": "Install pressure gauge at machine and at nozzle. Spray at working rate. Record ΔP. If > 5 bar, upsize hose or shorten run."
+      },
+      "citations": [20, 21]
+    },
+    {
+      "no": 11,
+      "section": "Technology",
+      "title": "Automated Dosing & Additive Injection",
+      "subtitle": "Liquid/powder dosing accuracy, superplasticizer timing",
+      "content": "Let's say you're adding superplasticizer by hand — one batch gets 0.8%, next gets 1.2%. Result: one sags, one flashes. Automated dosing eliminates this. Liquid (superplasticizer, accelerator, air entrainer): peristaltic or diaphragm pump, ±1% accuracy. Powder (fibers, pigment, accelerator): auger feeder with load cell feedback.\n\nCritical: Superplasticizer must hit after cement wets (post-mix injection) — otherwise it adsorbs on dry cement, loses effectiveness. Accelerator at nozzle (set accelerator) for instant set. Pigment in mixer for uniformity.",
+      "imagePrompt": "Peristaltic pump for liquid, auger feeder for powder, PLC screen. Professional photograph of dosing system with clean lighting.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "DO THIS WEEK",
+        "content": "Calibrate liquid doser: run 1 min at setpoint, weigh output. Target ±1%. Check daily — tubes fatigue."
+      },
+      "citations": [22, 23]
+    },
+    {
+      "no": 12,
+      "section": "Technology",
+      "title": "Remote Monitoring & Data Logging",
+      "subtitle": "Pressure, flow, GPS, mix design traceability",
+      "content": "Let's say a client calls: \"Wall you sprayed last month has cracks.\" Data logging answers: what mix? what pressure? which operator? when? IoT module (4G/LoRa) logs: pump pressure, flow rate, GPS coordinates, mix design ID, operator badge, timestamp. Cloud dashboard shows fleet utilization, maintenance alerts, material consumption vs. plan.\n\nFor Pilot tier: basic telemetry (pressure, flow, hours) on tablet. Full IoT at Commercial tier. Data ownership — you own it, export CSV anytime.",
+      "imagePrompt": "Tablet dashboard showing live pressure, flow, location, mix ID. Professional photograph of dashboard UI in field conditions.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "TRY THIS WEEK",
+        "content": "Enable pressure/flow logging on your machine. Spray a test wall. Export CSV. Verify timestamps, pressure stability, flow consistency."
+      },
+      "citations": [24, 25]
+    },
+    {
+      "no": 13,
+      "section": "Engineering",
+      "title": "Frame & Chassis Design",
+      "subtitle": "Vibration isolation, center of gravity, transport width",
+      "content": "Let's say you're towing your plastering machine to a site 50km away on Kenyan B-roads. Chassis design determines if it arrives intact. Vibration isolation: rotor-stator generates 50–100Hz vibration. Rubber isolators (40–60 Shore A) at 4 mounting points cut transmission 90%. Center of gravity < 600mm high for trailer stability. Transport width < 2.4m for standard lane — foldable hopper, removable lance rack.\n\nChassis: 50×50×3mm RHS, hot-dip galvanized. Axle: 1500kg rated, leaf spring. Tires: 185R14C, 8-ply. Lights: LED, ADR compliant. Weight: 850kg empty, 1400kg loaded (within 1500kg trailer limit).",
+      "imagePrompt": "Chassis with isolators, CG mark, transport dimensions. Technical vector diagram with dimensions and force vectors.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT TODAY",
+        "content": "Weigh your machine at each corner. CG height = (Σ(F×h))/W. If > 600mm, lower hopper or redistribute weight."
+      },
+      "citations": [26, 27]
+    },
+    {
+      "no": 14,
+      "section": "Engineering",
+      "title": "Power Pack Selection",
+      "subtitle": "Diesel vs. electric vs. hydraulic, kW sizing",
+      "content": "Let's say you're choosing power for your Pilot machine. Diesel (15–20kW): autonomous, noisy, fumes, 2.5L/hr fuel. Electric (3-phase 15kW): silent, clean, needs 32A 400V supply — rare on site. Hydraulic (from carrier): if truck-mounted, tap into PTO.\n\nFor Pilot trailer: 15kW diesel (Yanmar 3TNV88) — 14.1kW @ 3000rpm, 2.1L/hr at full load. Electric option: 15kW motor + 20kVA generator = same fuel, more complexity. Sizing rule: pump max power × 1.3 safety factor. Rotor-stator 30L/min @ 30bar ≈ 11kW hydraulic → 15kW engine.",
+      "imagePrompt": "Power curves, torque vs. speed, fuel consumption map. Technical vector diagram with labeled curves and operating points.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THE MATH",
+        "content": "Hydraulic power (kW) = Flow(L/min) × Pressure(bar) / 600. Add 30% for losses. Pick engine ≥ result."
+      },
+      "citations": [28, 29]
+    },
+    {
+      "no": 15,
+      "section": "Engineering",
+      "title": "Wear Parts Strategy",
+      "subtitle": "Rotor, stator, hose, nozzle — life cycles & cost/kg",
+      "content": "Let's say your stator fails mid-job — 4 hours downtime, client unhappy. Wear parts are your recurring cost. Track cost per m² sprayed. Typical Pilot machine (300m²/week):\n\n| Part | Life | Cost | Cost/m² |\n|------|------|------|---------|\n| Stator | 300 m³ | $180 | $0.06 |\n| Rotor | 600 m³ | $220 | $0.04 |\n| Hose (25m) | 1500 hrs | $350 | $0.02 |\n| Nozzle set | 200 hrs | $85 | $0.01 |\n\nTotal wear cost: ~$0.13/m². At $4/m² revenue → 3.2% of turnover. Strategy: keep 1 stator + 1 rotor + 1 hose + 5 nozzles in stock. Rotate stators — don't run to failure.",
+      "imagePrompt": "Wear progression photos, cost/kg vs. hours curves. Technical vector diagram with labeled curves and cost annotations.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS WEEK",
+        "content": "Build your wear parts tracker: date, hours, part, cost. After 3 months, calculate actual $/m²."
+      },
+      "citations": [30, 31]
+    },
+    {
+      "no": 16,
+      "section": "Engineering",
+      "title": "Cleaning & Changeover System",
+      "subtitle": "Water demand, pigging, waste management",
+      "content": "Let's say you finish a job Friday 5 PM. Monday 7 AM you need different color. Cleaning speed = changeover speed. Water demand: 200L for full flush (hose + pump + mixer). Foam pig (polyurethane, slightly oversized) pushed by water — cleans hose in 2 passes. Waste: cementitious slurry — let settle, decant water, dry solids to landfill.\n\nQuick-change lance: 2-min color change. Hopper drain valve — empty in 30 sec. Mixer auto-clean cycle: 5 min water flush. Daily water budget: 300L (flush + cleaning + dust suppression).",
+      "imagePrompt": "Cleaning station, foam pig, water tank, waste tote. Professional photograph of cleaning setup in field conditions.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Time your full cleanout: hopper drain → mixer flush → hose pig → lance swap. Target < 20 min."
+      },
+      "citations": [32, 33]
+    },
+    {
+      "no": 17,
+      "section": "Engineering",
+      "title": "Safety Systems",
+      "subtitle": "Emergency stop, guarding, pressure relief, hose whip",
+      "content": "Let's say a hose coupling blows at 30 bar — 25mm hose whips at lethal speed. Safety is not optional. Emergency stop: mushroom button at operator station + remote on lance (wireless). Pressure relief valve set at 1.2× working pressure (e.g., 40 bar set at 48 bar). Hose restraint: steel cable every 3m, rated 3× working pressure. Guarding: all rotating parts, nip points, hot surfaces.\n\nOperator PPE: face shield (not goggles — rebound hits face), nitrile gloves, steel-toe boots, hearing protection (85dB+). Training: 1-day certification — machine ops, safety, basic maintenance. Certification card valid 2 years.",
+      "imagePrompt": "Safety circuit, pressure relief valve, hose restraint. Technical vector diagram with labeled safety components and circuit diagram.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Inspect your machine: E-stop works? Relief valve tagged? Hose restraints fitted? Guarding intact? Document."
+      },
+      "citations": [34, 35]
+    },
+    {
+      "no": 18,
+      "section": "Engineering",
+      "title": "Modular Configurations",
+      "subtitle": "Skid-mount, trailer, truck-mount, scaffold integration",
+      "content": "Let's say you bid a 5-story facade job. Trailer won't reach level 5. Configurations: Skid-mount (forklift pockets, 1.2×1.5m) — rooftop, basement. Trailer (2.4m wide, 3.5m long) — standard sites. Truck-mount (on 3.5t chassis) — mobile, self-powered. Scaffold integration — machine on deck, hose to lower levels.\n\nPilot tier: trailer + skid adapters. Commercial tier: dedicated truck-mount + scaffold kit. Modular design: pump module, mixer module, power module — bolt together in 4 configs. Common base frame = lower inventory cost.",
+      "imagePrompt": "4 configurations side by side, dimensioned. Professional photograph with dimension lines and configuration labels.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "TRY THIS WEEK",
+        "content": "Sketch your next 3 jobs. Which config fits each? List mods needed (hose length, power, access)."
+      },
+      "citations": [36, 37]
+    },
+    {
+      "no": 19,
+      "section": "Arts",
+      "title": "Ergonomic Spray Lance Design",
+      "subtitle": "Weight balance, trigger force, reach, operator fatigue",
+      "content": "Let's say your operator sprays 6 hours/day. Lance weight 2.5kg, trigger force 15N, reach 2.5m overhead. After 4 hours: shoulder fatigue, wrist strain, quality drops. Balance point 150mm behind nozzle — weight between hands. Trigger: progressive force (5N start, 25N max), pistol grip. Carbon fiber tube cuts weight 40%. Articulated nozzle (±30°) avoids overhead reach.\n\nOperator rotation: 2-hour spray / 1-hour prep cycle. Two operators per machine — one sprays, one preps/moves hose.",
+      "imagePrompt": "Operator holding lance, balanced posture, weight distribution diagram. Professional photograph with weight distribution overlay.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "TRY THIS WEEK",
+        "content": "Weigh your lance. Hold at working angle for 5 min. Note fatigue points. Modify grip/balance."
+      },
+      "citations": [38, 39]
+    },
+    {
+      "no": 20,
+      "section": "Arts",
+      "title": "Finish Quality Standards",
+      "subtitle": "Smooth, textured, stippled — visual acceptance criteria",
+      "content": "Let's say the client says \"finish looks rough\" but you think it's fine. No subjective arguments — use standards. Smooth (trowel finish): ≤ 2mm deviation under 2m straightedge. Textured (tyrolean/splatter): uniform stipple, no bare spots, consistent density. Stippled (brush/sponge): pattern repeat < 50mm, no tool marks. Rebound inclusion: < 5 per m² visible.\n\nLighting for inspection: 500 lux, 45° angle, 1.5m distance. Photo documentation: every 100m², date-stamped.",
+      "imagePrompt": "4 finish types side by side with measurement scale. Professional photograph with measurement overlay and labels.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Make 4 reference panels (smooth, textured, stippled, stippled-fine). Label. Use on every job."
+      },
+      "citations": [40, 41]
+    },
+    {
+      "no": 21,
+      "section": "Arts",
+      "title": "Color & Additive Dispersion",
+      "subtitle": "Integral pigment uniformity, visual consistency",
+      "content": "Let's say you spray a colored facade — streaks appear after 2 weeks. Pigment dispersion is everything. Integral color: 1–5% synthetic iron oxide by cement weight. Must disperse in mixer — 3 min minimum after pigment addition. No hand-broadcasting — always integral.\n\nColor consistency: same batch = same day = same silo cement. Colorimeter (ΔE < 2 between panels). Sample panels approved by client before full production. White cement for bright colors — 2× cost, true hue.",
+      "imagePrompt": "Pigment streak test, good vs. bad dispersion, colorimeter. Professional photograph with colorimeter reading overlay.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "DO THIS WEEK",
+        "content": "Mix 3 batches with 3% red oxide. Spray 300×300mm panels. Measure ΔE with phone app. Adjust mix time."
+      },
+      "citations": [42, 43]
+    },
+    {
+      "no": 22,
+      "section": "Arts",
+      "title": "Site Aesthetics & Cleanliness",
+      "subtitle": "Splash protection, masking, cleanup workflow",
+      "content": "Let's say you hand over a beautiful plastered wall — but windows are speckled, paving stained, client furious. Cleanliness = professionalism. Mask before spray: windows, doors, vents, expansion joints (tape + film). Ground protection: 200μm poly sheet, taped edges. Splash guards on lance for tight corners.\n\nDaily cleanup: 30 min end-of-day — wash splashes while wet, fold protection, sweep. Handover walk: client + foreman, photo record. Zero splatter = zero callbacks.",
+      "imagePrompt": "Masked windows, ground protection, clean handover. Professional photograph of protected site with clean workflow.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "DO THIS TODAY",
+        "content": "Create site cleanup checklist: mask → protect → spray → clean → inspect → sign off. Laminate. Use daily."
+      },
+      "citations": [44, 45]
+    },
+    {
+      "no": 23,
+      "section": "Arts",
+      "title": "Branding & Machine Identity",
+      "subtitle": "Livery, decals, operator pride, resale appeal",
+      "content": "Let's say you arrive at site in a rusty, unmarked machine. Client wonders: \"Are these pros?\" Machine = mobile billboard. Livery: company colors, logo, phone, website — vinyl wrap (5-year life). Decals: safety warnings, capacity plate, QR to manual. Operator gear: branded hi-vis, cap, gloves.\n\nResale value: branded, maintained machine sells 20% higher. Fleet identity: consistent livery across machines = company looks established.",
+      "imagePrompt": "Branded machine on site, decal details, operator in branded gear. Professional photograph with branding details highlighted.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "DO THIS WEEK",
+        "content": "Design your livery: logo + phone + \"Spray Plaster Specialists\" + website. Get 3 quotes for wrap."
+      },
+      "citations": [46, 47]
+    },
+    {
+      "no": 24,
+      "section": "Mathematics",
+      "title": "Output Rate Calculation",
+      "subtitle": "m²/hr vs. layer thickness, rebound factor, crew size",
+      "content": "Let's say you bid 2000m² at 15mm thick. How many days? Output = f(thickness, rebound, machine rate, crew). Base machine rate: 40 m²/hr at 10mm (Pilot). Thickness factor: 10mm = 1.0×, 15mm = 0.7×, 20mm = 0.5×. Rebound factor: 15% loss → 0.85×. Crew efficiency: 2 operators = 1.0×, 1 operator = 0.6×.\n\nCalculation: 40 × 0.7 × 0.85 × 1.0 = 24 m²/hr effective. 2000m² ÷ 24 = 83 hours = 11 days (7.5 hr/day). Add 15% contingency = 13 days.",
+      "imagePrompt": "Output nomogram: thickness vs. rate vs. crew. Technical vector diagram with nomogram grid and labeled curves.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THE MATH",
+        "content": "For your next bid: Area × Thickness Factor × 0.85 ÷ Machine Rate ÷ Crew Factor = Hours."
+      },
+      "citations": [48, 49]
+    },
+    {
+      "no": 25,
+      "section": "Mathematics",
+      "title": "Material Consumption & Waste",
+      "subtitle": "Theoretical vs. actual, rebound, overspray, cleanup",
+      "content": "Let's say you order 100 bags for a job — 15 bags left over. Know your consumption. Theoretical: 15mm × 1.8 kg/L × 1000 = 27 kg/m² dry. Actual: +15% rebound + 5% overspray + 3% cleanup + 2% waste = 33.5 kg/m² (+24%).\n\nBag count: 50kg bags → 1.5 bags/m². 2000m² job = 3000 bags theoretical → 3700 actual. Order 3800 (2.7% contingency). Track per job: bags delivered vs. wall area = actual kg/m².",
+      "imagePrompt": "Sankey diagram: cement in → wall / rebound / overspray / cleanup / waste. Technical vector diagram with proportional flow widths.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "MEASURE IT TODAY",
+        "content": "Next job: weigh every bag used. Divide by m² sprayed. Compare to 33.5 kg/m² benchmark."
+      },
+      "citations": [50, 51]
+    },
+    {
+      "no": 26,
+      "section": "Mathematics",
+      "title": "Unit Economics",
+      "subtitle": "Cost/m² vs. hand troweling, breakeven area, labor savings",
+      "content": "Let's say a client asks: \"Why pay machine rate when hand plaster is cheaper?\" Show the math. Hand plaster (Kenya): 2 fundis + 2 helpers = 40m²/day @ KES 2,500/day = KES 62.50/m² labor only. Machine (Pilot): 40m²/hr × 2 operators = 320m²/day @ KES 15,000/day = KES 47/m² (incl. machine, fuel, wear, labor).\n\nBreakeven: machine fixed cost KES 1.5M / (KES 62.50 – 47) = 96,000m² lifetime. At 500m²/month = 16 years — too long. But: machine does 3× speed, better quality, less callbacks. Real value: speed + quality + consistency.",
+      "imagePrompt": "Stacked bar: machine cost/m² vs. hand cost/m², breakeven line. Technical vector diagram with labeled cost components.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THE MATH",
+        "content": "Build your own spreadsheet: local labor rates, machine cost, fuel, wear. Find your breakeven."
+      },
+      "citations": [52, 53]
+    },
+    {
+      "no": 27,
+      "section": "Mathematics",
+      "title": "Maintenance Cost Modeling",
+      "subtitle": "Wear parts $/m², downtime cost, optimal replacement interval",
+      "content": "Let's say you replace stator every 250m³ \"to be safe\" — but data shows 350m³ is safe. Over-maintenance costs money. Optimal interval = where marginal wear cost = marginal downtime cost. Stator: $180 / 300m³ = $0.60/m³. Downtime: 4hr × $50/hr = $200. Optimal: replace at 320m³ (data-driven).\n\nTrack: hours, m³ sprayed, part replaced, cost, reason. Predictive: vibration trend, pressure ripple, output drop → replace before failure.",
+      "imagePrompt": "Bathtub curve: cost vs. replacement interval, optimal point. Technical vector diagram with labeled cost curves and optimal point marker.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THE MATH",
+        "content": "Plot your stator life data. Find the knee of the curve. That's your replacement interval."
+      },
+      "citations": [54, 55]
+    },
+    {
+      "no": 28,
+      "section": "Mathematics",
+      "title": "Project Scheduling & Critical Path",
+      "subtitle": "Machine vs. crew pacing, curing windows, trade coordination",
+      "content": "Let's say plastering holds up the painter — project delayed 2 weeks. Plastering is often on critical path. Schedule drivers: substrate ready → spray → cure (24h min) → next coat/finish. Cure window is float — use for prep next zone.\n\nZone sequencing: spray Zone 1 AM → cure → Zone 2 PM → cure overnight → Zone 3 next AM. 2-zone rotation keeps machine running. Coordinate: electricians (boxes), plumbers (chases) BEFORE plaster. Scaffold: one lift ahead of spray.",
+      "imagePrompt": "Gantt chart: prep → spray → cure → next trade, float, critical path. Technical vector diagram with task bars, dependencies, and critical path highlighted.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS WEEK",
+        "content": "Draw your next project Gantt. Highlight plaster critical path. Identify 2-week float tasks."
+      },
+      "citations": [56, 57]
+    },
+    {
+      "no": 29,
+      "section": "Innovation",
+      "title": "Recycled Aggregate & Binder Substitutes",
+      "subtitle": "Crushed concrete fines, fly ash, GGBS in spray mixes",
+      "content": "Let's say sand costs KES 3,000/ton and supply is unreliable. Crushed concrete fines (0–3mm) from demolition waste: KES 800/ton, 40% of sand replacement. Fly ash (Class F) 20% cement replacement — improves workability, reduces heat. GGBS 30–50% — slower early strength, better durability.\n\nTrial mix: 60% sand, 20% recycled fines, 20% cement, 20% fly ash. Result: 28-day strength 28 MPa (target 25 MPa), 15% cost reduction. Local sourcing: negotiate with demolition contractors — steady supply, lower transport.",
+      "imagePrompt": "Recycled aggregate gradation, trial panels, strength results. Professional photograph of aggregate samples and test panels with strength labels.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "TRY THIS WEEK",
+        "content": "Source 1 ton recycled fines. Run 3 trial mixes: 10/20/30% replacement. Test 7/28-day strength."
+      },
+      "citations": [58, 59]
+    },
+    {
+      "no": 30,
+      "section": "Innovation",
+      "title": "Geopolymer & Alkali-Activated Spray Plasters",
+      "subtitle": "Low-carbon binder systems for spray application",
+      "content": "Let's say you want 80% lower CO₂ plaster. Geopolymer (alkali-activated fly ash/GGBS) — no Portland cement. Activator: sodium silicate + NaOH (molten or solution). Si/Al ratio 1.8–2.2 for strength. Spray challenge: rapid set (5–15 min), high alkali attack on equipment.\n\nSolution: two-component lance — binder + activator mix at nozzle. Set retarder (borax 0.5%) extends pot life to 45 min. Equipment: stainless steel wetted parts, HDPE hoses. Strength: 35 MPa at 24h. CO₂: 80% lower than OPC.",
+      "imagePrompt": "Geopolymer reaction, Si/Al ratio, activator dosage, strength curve. Technical vector diagram with reaction scheme and strength curve.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "TRY THIS WEEK",
+        "content": "Source Class F fly ash. Mix 10L geopolymer trial. Spray panel. Test 24h strength."
+      },
+      "citations": [60, 61]
+    },
+    {
+      "no": 31,
+      "section": "Innovation",
+      "title": "Fiber-Reinforced Spray Systems",
+      "subtitle": "Polypropylene, basalt, steel fiber dosing & dispersion",
+      "content": "Let's say you want crack-free 20mm plaster without mesh. Fibers replace mesh. PP microfibers (0.9kg/m³, 12mm) — plastic shrinkage control, $3/m². Basalt macrofibers (3kg/m³, 24mm) — structural, replaces light mesh, $12/m². Steel fibers (20kg/m³) — heavy duty, industrial floors.\n\nDosing: auger feeder into mixer (not hopper — clumps). Dispersion: 3 min mix after fiber addition. Nozzle wear: +20% with steel fibers. Rebound: fibers increase slightly — use air-assist nozzle.",
+      "imagePrompt": "Fiber hopper, dispersed fibers in matrix, crack bridge micrograph. Professional photograph of fiber hopper and matrix cross-section.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "TRY THIS WEEK",
+        "content": "Spray 3 panels: plain, 0.9kg/m³ PP, 3kg/m³ basalt. Impact test (drop 1kg ball from 1m). Compare cracks."
+      },
+      "citations": [62, 63]
+    },
+    {
+      "no": 32,
+      "section": "Innovation",
+      "title": "Sensor-Guided Thickness Control",
+      "subtitle": "Real-time laser/ultrasonic feedback for uniform layers",
+      "content": "Let's say you spray 15mm target — some spots 10mm, some 22mm. Manual uniformity ±30%. Sensor-guided cuts to ±10%. Laser triangulation (50mm standoff, 0.1mm resolution) or ultrasonic (through wet plaster, 0.5mm). Feedback loop: sensor → tablet → operator alert (green/yellow/red) or auto-flow control (future).\n\nCurrent tech: laser line projector on lance + camera = 2D thickness map. Tablet overlay: green = 13–17mm, yellow = 10–13/17–20, red = <10/>20. Data log per m² for QA.",
+      "imagePrompt": "Laser sensor on lance, tablet display showing thickness map. Professional photograph of sensor setup with tablet overlay visible.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "TRY THIS WEEK",
+        "content": "Mount laser line + phone on lance. Spray panel. Photograph. Measure 10 points. Compare to target."
+      },
+      "citations": [64, 65]
+    },
+    {
+      "no": 33,
+      "section": "Innovation",
+      "title": "Robotic Arm & Gantry Integration",
+      "subtitle": "From handheld to automated wall scanning & spraying",
+      "content": "Let's say you win a 10,000m² hospital facade — hand spraying takes 6 months. Automation cuts to 6 weeks. Gantry system (6m × 4m travel) + 6-axis robot + spray head. Workflow: 3D scan wall → BIM import → auto-generate spray paths (overlap 30%, speed 0.5m/s) → execute.\n\nCurrent Pilot step: semi-auto — operator guides lance on XY carriage, machine controls flow/pressure. Next step: full autonomy with LiDAR scan → path planning → execute. Cost: $80K–150K. ROI: >5,000m²/year.",
+      "imagePrompt": "6-axis robot on gantry, scanning head, spray path visualization. Professional photograph of robotic system with path visualization overlay.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "DO THE MATH",
+        "content": "At your current m²/year, when does $100K automation pay back vs. manual crew?"
+      },
+      "citations": [66, 67]
+    },
+    {
+      "no": 34,
+      "section": "Entrepreneurship",
+      "title": "Business Models",
+      "subtitle": "Contract spraying vs. machine rental vs. turnkey contracts",
+      "content": "Let's say you have the machine — how do you make money? Three models: 1. Contract Spraying (you + machine + crew do the work): highest margin (35–45%), most risk, you control quality. 2. Machine Rental (dry/wet hire): KES 15,000–25,000/day, low margin (15–20%), low risk, client controls crew. 3. Turnkey (design + supply + apply): highest margin (40–50%), highest risk, full responsibility.\n\nPilot recommendation: 70% contract / 20% rental / 10% turnkey. Build reputation on contract work, add rental for off-peak utilization, pursue turnkey for marquee projects.",
+      "imagePrompt": "Revenue mix pie, risk/reward matrix, cash flow timing. Technical vector diagram with labeled segments and annotations.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THE MATH",
+        "content": "At your target 500m²/month: Contract = KES 1.2M revenue. Rental = KES 300K. Turnkey = KES 500K. Total = KES 2M/month."
+      },
+      "citations": [68, 69]
+    },
+    {
+      "no": 35,
+      "section": "Entrepreneurship",
+      "title": "Pricing Strategy",
+      "subtitle": "Per m², per day, per ton — regional benchmarks",
+      "content": "Let's say a client asks for your rate card. Pricing models: Per m² (most common): KES 350–550/m² (15mm, smooth). Per day: KES 20,000–35,000/day (machine + 2 operators). Per ton: KES 18,000–25,000/ton (material + application).\n\nFactors: thickness, finish type, height (scaffolding), access, substrate prep, location. Discount tiers: >1000m² = 5%, >5000m² = 10%. Minimum charge: KES 15,000 (mobilization). Payment: 30% mobilisation, 50% progress, 20% completion.",
+      "imagePrompt": "Price waterfall: cost → margin → discount → final price. Technical vector diagram with labeled steps and percentages.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS WEEK",
+        "content": "Call 3 competitors. Get their rates for 15mm smooth, 500m², ground floor. Build your price floor."
+      },
+      "citations": [70, 71]
+    },
+    {
+      "no": 36,
+      "section": "Entrepreneurship",
+      "title": "Client Acquisition",
+      "subtitle": "General contractors, plastering subs, facade companies",
+      "content": "Let's say you have the machine but no jobs. Clients don't find you — you find them. Tier 1: General contractors (Tier 1/2) — need reliable spray sub, repeat work. Tier 2: Specialist plastering subs — overflow work, peak load. Tier 3: Facade/cladding companies — spray base coat for cladding systems. Tier 4: Developers/owners — direct, higher margin, longer sales cycle.\n\nChannels: site visits (bring sample panel), trade shows (Buildex, Big 5), WhatsApp groups (contractor networks), referrals (pay 2% finder's fee). Portfolio: 10 best projects — photos, m², testimonial, client logo.",
+      "imagePrompt": "Business card, project portfolio, referral network diagram. Professional photograph of portfolio materials and network diagram.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "DO THIS WEEK",
+        "content": "List 20 target clients. Assign owner. Schedule 5 site visits this month."
+      },
+      "citations": [72, 73]
+    },
+    {
+      "no": 37,
+      "section": "Entrepreneurship",
+      "title": "Cash Flow & Fleet Management",
+      "subtitle": "Utilization targets, transport logistics, multi-site ops",
+      "content": "Let's say you have 2 machines but one sits idle 3 weeks/month. Utilization = revenue. Target: 20 days/month (85%). Transport: own truck (KES 80/km) vs. hire (KES 120/km). Multi-site: cluster jobs geographically — same region same week. Fuel: 2.5L/hr × KES 180 = KES 450/hr.\n\nCash flow: 30% mobilisation upfront funds material. Weekly cash forecast: jobs starting, milestones billing, payroll, fuel, wear parts, loan payment. Reserve: 2 months operating cash.",
+      "imagePrompt": "Cash flow waterfall, utilization gauge, route optimization map. Technical vector diagram with labeled cash flow components.",
+      "imageType": "diagram",
+      "actionCallout": {
+        "label": "DO THIS WEEK",
+        "content": "Build 12-week rolling cash flow. Highlight red weeks. Plan bridge financing now."
+      },
+      "citations": [74, 75]
+    },
+    {
+      "no": 38,
+      "section": "Entrepreneurship",
+      "title": "Quality Assurance & Warranty",
+      "subtitle": "Adhesion testing, thickness records, callback management",
+      "content": "Let's say a client calls: \"Plaster fell off after 3 months.\" QA prevents callbacks. In-process: thickness gauge every 50m² (target ±2mm). Adhesion pull-off (ASTM C1583) every 500m² — target > 0.5 MPa. Records: per zone — date, mix ID, operator, thickness, adhesion, photos.\n\nWarranty: 12 months adhesion, 24 months cracking (structural only). Callback process: 48h response, root cause in 5 days, fix in 14 days. Callback rate target: < 2% of m². Insurance: professional indemnity KES 2M/year.",
+      "imagePrompt": "Pull-off tester, thickness gauge, warranty certificate. Professional photograph of QA tools and warranty document.",
+      "imageType": "photo",
+      "actionCallout": {
+        "label": "DO THIS WEEK",
+        "content": "Create QA checklist: thickness grid, adhesion test log, photo log. Print 50 copies. Use from next job."
+      },
+      "citations": [76, 77]
+    }
+  ]
+}

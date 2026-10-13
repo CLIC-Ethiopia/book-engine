@@ -1,0 +1,1 @@
+{"requestId":"test-md","payload":{"message":"Test markdown with **bold**, *italic*, `code`, and a code block:\n\n```javascript\nfunction hello() {\n  console.log('Hello, world!');\n}\n```\n\n- List item 1\n- List item 2\n\n> Blockquote","context":{"book":"Test Book","page":"Test Page","pageIndex":0,"totalPages":1}}}

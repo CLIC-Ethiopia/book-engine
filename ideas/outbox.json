@@ -1,0 +1,40 @@
+{
+  "requestId": "a51926bc-83d4-44d9-8638-a54afb96d3dc",
+  "stage": 2,
+  "payload": {
+    "stage": 2,
+    "sector": "Smart Agriculture",
+    "subSectors": [
+      {
+        "category": "Protected Cultivation",
+        "items": [
+          {
+            "name": "Greenhouse Tomatoes",
+            "description": "Build a simple greenhouse to grow tomatoes year-round",
+            "icon": "🍅"
+          },
+          {
+            "name": "Hydroponic Lettuce",
+            "description": "Grow leafy greens in nutrient films without soil",
+            "icon": "🥬"
+          }
+        ]
+      },
+      {
+        "category": "Inputs & Services",
+        "items": [
+          {
+            "name": "Seedling Nursery",
+            "description": "Raise seedlings for transplanting",
+            "icon": "🌱"
+          },
+          {
+            "name": "Soil Testing",
+            "description": "Analyze soil pH and nutrients",
+            "icon": "🧪"
+          }
+        ]
+      }
+    ]
+  }
+}
