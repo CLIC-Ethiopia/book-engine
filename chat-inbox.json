@@ -1,15 +1,13 @@
 {
-  "requestId": "007840ec-c77d-4753-8f7b-a88e17b7316f",
-  "timestamp": "2026-10-13T11:38:26.095Z",
-  "skill": "chat",
+  "requestId": "test-api-invoke",
   "payload": {
-    "message": "Audit this page against the book's overall idea and suggest 3-5 specific improvements",
+    "message": "Hello from API test",
     "context": {
-      "book": "Solar Dryer for Fruit Processing",
-      "page": "Moisture Equilibrium & Psychrometric Drying Curves",
-      "pageIndex": 7,
-      "totalPages": 57
+      "book": "Test Book",
+      "page": "Test Page",
+      "pageIndex": 0,
+      "totalPages": 1
     },
-    "prompt": "--- CONTEXT ---\nBook: Solar Dryer for Fruit Processing\nPage: Moisture Equilibrium & Psychrometric Drying Curves (8/57)\n--- END CONTEXT ---\n\nUser message: Audit this page against the book's overall idea and suggest 3-5 specific improvements"
+    "prompt": "--- CONTEXT ---\nBook: Test Book\nPage: Test Page (1/1)\n--- END CONTEXT ---\n\nUser message: Hello from API test"
   }
 }

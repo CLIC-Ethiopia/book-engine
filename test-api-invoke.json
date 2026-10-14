@@ -1,0 +1,1 @@
+{"requestId":"test-api-invoke","payload":{"message":"Hello from API test","context":{"book":"Test Book","page":"Test Page","pageIndex":0,"totalPages":1}}}

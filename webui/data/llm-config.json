@@ -1,0 +1,49 @@
+{
+  "activeProvider": "openrouter",
+  "activeProviderType": "api",
+  "cliAgents": {
+    "opencode": { "enabled": true },
+    "claude": { "enabled": false },
+    "agy": { "enabled": false }
+  },
+  "apiProviders": {
+    "openrouter": {
+      "enabled": true,
+      "apiKey": "env:OPENROUTER_API_KEY",
+      "model": "openrouter/auto",
+      "baseUrl": "https://openrouter.ai/api/v1/chat/completions",
+      "temperature": 0.7,
+      "streaming": true
+    },
+    "gemini": {
+      "enabled": true,
+      "apiKey": "env:GEMINI_API_KEY",
+      "model": "gemini-1.5-pro",
+      "baseUrl": "https://generativelanguage.googleapis.com/v1beta/models",
+      "temperature": 0.7,
+      "streaming": true
+    },
+    "ollama": {
+      "enabled": false,
+      "baseUrl": "http://localhost:11434/v1",
+      "model": "llama3.1:8b",
+      "temperature": 0.7,
+      "streaming": true
+    },
+    "lmstudio": {
+      "enabled": false,
+      "baseUrl": "http://localhost:1234/v1",
+      "model": "lmstudio-auto",
+      "temperature": 0.7,
+      "streaming": true
+    }
+  },
+  "mcp": {
+    "enabled": false,
+    "serverUrl": "http://localhost:3456",
+    "skill": "chat",
+    "autoConnect": true
+  },
+  "activeProviderType": "api",
+  "activeProviderId": "openrouter"
+}

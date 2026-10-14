@@ -339,5 +339,27 @@
       "totalPages": 57
     },
     "timestamp": "2026-10-13T11:38:26.115Z"
+  },
+  {
+    "role": "user",
+    "content": "Hello from API test",
+    "context": {
+      "book": "Test Book",
+      "page": "Test Page",
+      "pageIndex": 0,
+      "totalPages": 1
+    },
+    "timestamp": "2026-10-13T15:16:38.075Z"
+  },
+  {
+    "role": "user",
+    "content": "Hello from API test",
+    "context": {
+      "book": "Test Book",
+      "page": "Test Page",
+      "pageIndex": 0,
+      "totalPages": 1
+    },
+    "timestamp": "2026-10-13T15:19:25.415Z"
   }
 ]

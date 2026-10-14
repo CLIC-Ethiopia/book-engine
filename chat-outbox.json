@@ -1,6 +1,6 @@
 {
   "requestId": "error",
-  "timestamp": "2026-10-13T11:38:30.043Z",
+  "timestamp": "2026-10-13T15:19:25.769Z",
   "skill": "chat",
-  "error": "opencode exited with code 1: \u001b[0m\r\n> build · cat-jam-free\r\n\u001b[91m\u001b[1mError: \u001b[0mRate limit exceeded. Please try again later.\r\n"
+  "error": "API key not found for openrouter"
 }
